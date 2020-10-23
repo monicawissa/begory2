@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">45565331266-m55gjsim79v30bu09mr4h84fvfj3pe18.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://begory-924d1.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">45565331266</string>
+    <string name="google_api_key" translatable="false">AIzaSyC-uZSbaDKTkhtH6_QQxAL0qrnRlDIl4wc</string>
+    <string name="google_app_id" translatable="false">1:45565331266:android:1a5b30403e85d2eb496adb</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC-uZSbaDKTkhtH6_QQxAL0qrnRlDIl4wc</string>
+    <string name="google_storage_bucket" translatable="false">begory-924d1.appspot.com</string>
+</resources>

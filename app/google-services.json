@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "45565331266",
+    "firebase_url": "https://begory-924d1.firebaseio.com",
+    "project_id": "begory-924d1",
+    "storage_bucket": "begory-924d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45565331266:android:1a5b30403e85d2eb496adb",
+        "android_client_info": {
+          "package_name": "com.attendance.myproject.begory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "45565331266-m55gjsim79v30bu09mr4h84fvfj3pe18.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-uZSbaDKTkhtH6_QQxAL0qrnRlDIl4wc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "45565331266-m55gjsim79v30bu09mr4h84fvfj3pe18.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

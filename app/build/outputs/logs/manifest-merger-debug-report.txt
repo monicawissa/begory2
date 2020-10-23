@@ -1,0 +1,650 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:2:1-131:12
+INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:2:1-131:12
+INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:2:1-131:12
+INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:2:1-131:12
+MERGED from [com.google.firebase:firebase-core:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-core-11.8.0.aar\05c40d62c7f5791be7d5740568a86e31\AndroidManifest.xml:2:1-6:12
+MERGED from [com.android.support:design:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\44c0618170f1a0620d6a5b18906612a9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\352422958d7a9be34d96f0e7d0481c81\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\26367bca8c716226469b9ca4306f4b53\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\5d40094b0fe0af638fc9996893f0a31e\AndroidManifest.xml:17:1-32:12
+MERGED from [com.google.firebase:firebase-database:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-database-11.8.0.aar\eef3b02d0ac5b0e86341fdd8d767594c\AndroidManifest.xml:2:1-8:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\120d90d40f6e140ff7926a079ec9d413\AndroidManifest.xml:17:1-22:12
+MERGED from [me.dm7.barcodescanner:zxing:1.9.8] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-1.9.8.aar\03db7d219312fc2dfaf8b60f34b971d8\AndroidManifest.xml:2:1-13:12
+MERGED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:17:1-55:12
+MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:17:1-54:12
+MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\8e3ee55eda13fac2385cddc7c16dd752\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.firebase:firebase-database-connection:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-11.8.0.aar\a5332dbba3229180166583925b625a0b\AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\7afe5ad1fc643e623c5b024b33f99037\AndroidManifest.xml:17:1-40:12
+MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:17:1-59:12
+MERGED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\19287b3377200765638dbb2059f98818\AndroidManifest.xml:2:1-15:12
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\ca001629b55f6589487a220c0c896a8f\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\301990cbef9df206fe1aa847475b9eba\AndroidManifest.xml:17:1-28:12
+MERGED from [me.dm7.barcodescanner:core:1.9.8] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\core-1.9.8.aar\6d4483e5bb98db5e7df458cb097af1cf\AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\bd11bd3a44468364caa74fa50447833e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\14bc54c594231d36dfa2d806b4d150bf\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\b47fca5d9107f8cd9ddb5025ac2017d4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\ba9e4ce15a451ac0dad43346706c8f56\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\d57f02525c92b216988d2cc2dca93075\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\83a2cdb8c3e038cf5e2f762ceb261c0c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\f04fc17299e5bdfe0bff1b4220870dd0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\1f9dec2e03187d2efee7fa3cb07b152d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\1fbca6f727134cd5dabf8b3a1f4d1256\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-auth-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-auth-license-11.8.0.aar\2fef9e614a8ab97bd6f98c273cde8ab1\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.firebase:firebase-database-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-database-license-11.8.0.aar\7de63e9c13eebac8ab04059a1a03706f\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.firebase:firebase-analytics-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-11.8.0.aar\01a94a52e85d3af564ca055426f590ac\AndroidManifest.xml:2:1-6:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\11524fb1ac69db1a589b1596044ed360\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\f0905f5bcb576294a5e8923dd11ea1e9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\5dff0fb656e6c8da4653a8d50fed54b0\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\db94df9f1246a011c1a65aa28af2ded0\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-common-license-11.8.0.aar\b563537a6f3835ddd35a67e2c4783beb\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\de96c5a2e01bdd742887c179ab51d065\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.firebase:firebase-database-connection-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-license-11.8.0.aar\eee26f26976eae996e06d8dfb8c92018\AndroidManifest.xml:2:1-6:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\895effaa9cc4639cb5a058dcd45a96dd\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.8.0.aar\cc176d194c70a1e1ad0752ff20b1167e\AndroidManifest.xml:2:1-6:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\515456aab558ab6e7a366fd2a51b06c8\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-iid-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-11.8.0.aar\df8c41a3e62c15d208cd21a41604527b\AndroidManifest.xml:2:1-6:12
+INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:2:1-131:12
+INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:2:1-131:12
+INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:2:1-131:12
+	package
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:3:5-46
+		INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
+		INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:2:1-131:12
+		INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:2:1-131:12
+		INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:5:5-67
+MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\7afe5ad1fc643e623c5b024b33f99037\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\7afe5ad1fc643e623c5b024b33f99037\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:5:22-64
+uses-permission#android.permission.CAMERA
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:6:5-65
+MERGED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:21:5-65
+MERGED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:21:5-65
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:6:22-62
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:7:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:8:5-80
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:8:22-78
+application
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:11:5-129:19
+MERGED from [com.google.firebase:firebase-core:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-core-11.8.0.aar\05c40d62c7f5791be7d5740568a86e31\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-core:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-core-11.8.0.aar\05c40d62c7f5791be7d5740568a86e31\AndroidManifest.xml:5:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\26367bca8c716226469b9ca4306f4b53\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\26367bca8c716226469b9ca4306f4b53\AndroidManifest.xml:9:5-20
+MERGED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\5d40094b0fe0af638fc9996893f0a31e\AndroidManifest.xml:22:5-30:19
+MERGED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\5d40094b0fe0af638fc9996893f0a31e\AndroidManifest.xml:22:5-30:19
+MERGED from [me.dm7.barcodescanner:zxing:1.9.8] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-1.9.8.aar\03db7d219312fc2dfaf8b60f34b971d8\AndroidManifest.xml:11:5-20
+MERGED from [me.dm7.barcodescanner:zxing:1.9.8] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-1.9.8.aar\03db7d219312fc2dfaf8b60f34b971d8\AndroidManifest.xml:11:5-20
+MERGED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:45:5-53:19
+MERGED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:45:5-53:19
+MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:27:5-52:19
+MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:27:5-52:19
+MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\8e3ee55eda13fac2385cddc7c16dd752\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\8e3ee55eda13fac2385cddc7c16dd752\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\7afe5ad1fc643e623c5b024b33f99037\AndroidManifest.xml:27:5-38:19
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\7afe5ad1fc643e623c5b024b33f99037\AndroidManifest.xml:27:5-38:19
+MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:34:5-57:19
+MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:34:5-57:19
+MERGED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\19287b3377200765638dbb2059f98818\AndroidManifest.xml:7:5-13:19
+MERGED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\19287b3377200765638dbb2059f98818\AndroidManifest.xml:7:5-13:19
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\ca001629b55f6589487a220c0c896a8f\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\ca001629b55f6589487a220c0c896a8f\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\301990cbef9df206fe1aa847475b9eba\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\301990cbef9df206fe1aa847475b9eba\AndroidManifest.xml:22:5-26:19
+MERGED from [me.dm7.barcodescanner:core:1.9.8] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\core-1.9.8.aar\6d4483e5bb98db5e7df458cb097af1cf\AndroidManifest.xml:11:5-20
+MERGED from [me.dm7.barcodescanner:core:1.9.8] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\core-1.9.8.aar\6d4483e5bb98db5e7df458cb097af1cf\AndroidManifest.xml:11:5-20
+MERGED from [com.google.firebase:firebase-auth-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-auth-license-11.8.0.aar\2fef9e614a8ab97bd6f98c273cde8ab1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-auth-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-auth-license-11.8.0.aar\2fef9e614a8ab97bd6f98c273cde8ab1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-database-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-database-license-11.8.0.aar\7de63e9c13eebac8ab04059a1a03706f\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-database-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-database-license-11.8.0.aar\7de63e9c13eebac8ab04059a1a03706f\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-11.8.0.aar\01a94a52e85d3af564ca055426f590ac\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-11.8.0.aar\01a94a52e85d3af564ca055426f590ac\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\5dff0fb656e6c8da4653a8d50fed54b0\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\5dff0fb656e6c8da4653a8d50fed54b0\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\db94df9f1246a011c1a65aa28af2ded0\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\db94df9f1246a011c1a65aa28af2ded0\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-common-license-11.8.0.aar\b563537a6f3835ddd35a67e2c4783beb\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-common-license-11.8.0.aar\b563537a6f3835ddd35a67e2c4783beb\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\de96c5a2e01bdd742887c179ab51d065\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\de96c5a2e01bdd742887c179ab51d065\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-database-connection-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-license-11.8.0.aar\eee26f26976eae996e06d8dfb8c92018\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-database-connection-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-license-11.8.0.aar\eee26f26976eae996e06d8dfb8c92018\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.8.0.aar\cc176d194c70a1e1ad0752ff20b1167e\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.8.0.aar\cc176d194c70a1e1ad0752ff20b1167e\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-iid-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-11.8.0.aar\df8c41a3e62c15d208cd21a41604527b\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-iid-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-11.8.0.aar\df8c41a3e62c15d208cd21a41604527b\AndroidManifest.xml:5:5-20
+	android:supportsRtl
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:17:9-36
+	android:label
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:15:9-41
+	android:roundIcon
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:16:9-48
+	android:icon
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:14:9-43
+	android:allowBackup
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:13:9-35
+	android:theme
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:18:9-40
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:12:9-66
+activity#com.attendance.myproject.begory.activites.oldactivities.AddNewStudentActivity
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:19:9-114
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:19:19-111
+activity#com.attendance.myproject.begory.activites.PreLoginActivity
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:20:9-25:70
+	android:screenOrientation
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:23:13-49
+	android:launchMode
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:22:13-43
+	android:windowSoftInputMode
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:25:13-67
+	android:theme
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:24:13-80
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:21:13-86
+activity#com.attendance.myproject.begory.activites.LoginActivity
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:26:9-31:70
+	android:screenOrientation
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:29:13-49
+	android:launchMode
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:28:13-43
+	android:windowSoftInputMode
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:31:13-67
+	android:theme
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:30:13-80
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:27:13-83
+activity#com.attendance.myproject.begory.activites.SplashActivity
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:32:9-44:20
+	android:screenOrientation
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:35:13-49
+	android:launchMode
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:34:13-43
+	android:windowSoftInputMode
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:37:13-67
+	android:theme
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:36:13-80
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:33:13-84
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:38:13-42:29
+action#android.intent.action.MAIN
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:39:17-69
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:39:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:41:17-77
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:41:27-74
+activity#com.attendance.myproject.begory.activites.HomeActivity
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:45:9-50:20
+	android:screenOrientation
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:48:13-49
+	android:launchMode
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:47:13-43
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:46:13-82
+activity#com.attendance.myproject.begory.activites.AddStudentActivity
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:51:9-54:51
+	android:screenOrientation
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:54:13-49
+	android:launchMode
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:52:13-43
+	android:theme
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:53:13-47
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:51:19-94
+activity#com.attendance.myproject.begory.activites.EditStudentActivity
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:56:9-59:51
+	android:screenOrientation
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:59:13-49
+	android:launchMode
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:57:13-43
+	android:theme
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:58:13-47
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:56:19-95
+activity#com.attendance.myproject.begory.activites.AddAdminActivity
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:61:9-64:51
+	android:screenOrientation
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:64:13-49
+	android:launchMode
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:62:13-43
+	android:theme
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:63:13-47
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:61:19-92
+activity#com.attendance.myproject.begory.activites.oldactivities.AddLevelActivity
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:66:9-69:51
+	android:screenOrientation
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:69:13-49
+	android:launchMode
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:67:13-43
+	android:theme
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:68:13-47
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:66:19-106
+activity#com.attendance.myproject.begory.activites.oldactivities.DeactivateLevelActivity
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:71:9-74:51
+	android:screenOrientation
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:74:13-49
+	android:launchMode
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:72:13-43
+	android:theme
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:73:13-47
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:71:19-113
+activity#com.attendance.myproject.begory.activites.DeactivateAdminActivity
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:76:9-79:51
+	android:screenOrientation
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:79:13-49
+	android:launchMode
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:77:13-43
+	android:theme
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:78:13-47
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:76:19-99
+activity#com.attendance.myproject.begory.activites.oldactivities.AddAttendanceActivity
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:81:9-84:51
+	android:screenOrientation
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:84:13-49
+	android:launchMode
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:82:13-43
+	android:theme
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:83:13-47
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:81:19-111
+activity#com.attendance.myproject.begory.activites.oldactivities.QrCodeGeneratorActivity
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:86:9-89:51
+	android:screenOrientation
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:89:13-49
+	android:launchMode
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:87:13-43
+	android:theme
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:88:13-47
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:86:19-113
+activity#com.attendance.myproject.begory.activites.oldactivities.QrCodeStationReaderActivity
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:91:9-92:51
+	android:screenOrientation
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:92:13-49
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:91:19-117
+activity#com.attendance.myproject.begory.activites.oldactivities.StudentAttendanceActivity
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:94:9-98:20
+	android:screenOrientation
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:97:13-49
+	android:launchMode
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:96:13-43
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:95:13-109
+activity#com.attendance.myproject.begory.activites.LevelResultActivity
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:100:9-104:20
+	android:screenOrientation
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:103:13-49
+	android:launchMode
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:102:13-43
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:101:13-89
+activity#com.attendance.myproject.begory.activites.ShowLevelResultActivity
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:106:9-110:20
+	android:screenOrientation
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:109:13-49
+	android:launchMode
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:108:13-43
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:107:13-93
+activity#com.attendance.myproject.begory.activites.ShowLevelAttendanceActivity
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:112:9-116:20
+	android:screenOrientation
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:115:13-49
+	android:launchMode
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:114:13-43
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:113:13-97
+activity#com.attendance.myproject.begory.activites.oldactivities.StudentListActivity
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:118:9-122:20
+	android:screenOrientation
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:121:13-49
+	android:launchMode
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:120:13-43
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:119:13-103
+activity#com.attendance.myproject.begory.activites.LevelAttendanceActivity
+ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:124:9-128:20
+	android:screenOrientation
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:127:13-49
+	android:launchMode
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:126:13-43
+	android:name
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:125:13-93
+uses-sdk
+INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
+INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
+MERGED from [com.google.firebase:firebase-core:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-core-11.8.0.aar\05c40d62c7f5791be7d5740568a86e31\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-core:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-core-11.8.0.aar\05c40d62c7f5791be7d5740568a86e31\AndroidManifest.xml:4:5-43
+MERGED from [com.android.support:design:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\44c0618170f1a0620d6a5b18906612a9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\44c0618170f1a0620d6a5b18906612a9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\352422958d7a9be34d96f0e7d0481c81\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\352422958d7a9be34d96f0e7d0481c81\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\26367bca8c716226469b9ca4306f4b53\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\26367bca8c716226469b9ca4306f4b53\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\5d40094b0fe0af638fc9996893f0a31e\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\5d40094b0fe0af638fc9996893f0a31e\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-database-11.8.0.aar\eef3b02d0ac5b0e86341fdd8d767594c\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-database:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-database-11.8.0.aar\eef3b02d0ac5b0e86341fdd8d767594c\AndroidManifest.xml:6:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\120d90d40f6e140ff7926a079ec9d413\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\120d90d40f6e140ff7926a079ec9d413\AndroidManifest.xml:20:5-44
+MERGED from [me.dm7.barcodescanner:zxing:1.9.8] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-1.9.8.aar\03db7d219312fc2dfaf8b60f34b971d8\AndroidManifest.xml:7:5-9:41
+MERGED from [me.dm7.barcodescanner:zxing:1.9.8] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-1.9.8.aar\03db7d219312fc2dfaf8b60f34b971d8\AndroidManifest.xml:7:5-9:41
+MERGED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:19:5-43
+MERGED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:19:5-43
+MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\8e3ee55eda13fac2385cddc7c16dd752\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\8e3ee55eda13fac2385cddc7c16dd752\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database-connection:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-11.8.0.aar\a5332dbba3229180166583925b625a0b\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-database-connection:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-11.8.0.aar\a5332dbba3229180166583925b625a0b\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\7afe5ad1fc643e623c5b024b33f99037\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\7afe5ad1fc643e623c5b024b33f99037\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\19287b3377200765638dbb2059f98818\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\19287b3377200765638dbb2059f98818\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\ca001629b55f6589487a220c0c896a8f\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\ca001629b55f6589487a220c0c896a8f\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\301990cbef9df206fe1aa847475b9eba\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\301990cbef9df206fe1aa847475b9eba\AndroidManifest.xml:20:5-44
+MERGED from [me.dm7.barcodescanner:core:1.9.8] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\core-1.9.8.aar\6d4483e5bb98db5e7df458cb097af1cf\AndroidManifest.xml:7:5-9:41
+MERGED from [me.dm7.barcodescanner:core:1.9.8] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\core-1.9.8.aar\6d4483e5bb98db5e7df458cb097af1cf\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\bd11bd3a44468364caa74fa50447833e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\bd11bd3a44468364caa74fa50447833e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\14bc54c594231d36dfa2d806b4d150bf\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\14bc54c594231d36dfa2d806b4d150bf\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\b47fca5d9107f8cd9ddb5025ac2017d4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\b47fca5d9107f8cd9ddb5025ac2017d4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\ba9e4ce15a451ac0dad43346706c8f56\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\ba9e4ce15a451ac0dad43346706c8f56\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\d57f02525c92b216988d2cc2dca93075\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\d57f02525c92b216988d2cc2dca93075\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\83a2cdb8c3e038cf5e2f762ceb261c0c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\83a2cdb8c3e038cf5e2f762ceb261c0c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\f04fc17299e5bdfe0bff1b4220870dd0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\f04fc17299e5bdfe0bff1b4220870dd0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\1f9dec2e03187d2efee7fa3cb07b152d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\1f9dec2e03187d2efee7fa3cb07b152d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\1fbca6f727134cd5dabf8b3a1f4d1256\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\1fbca6f727134cd5dabf8b3a1f4d1256\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-auth-license-11.8.0.aar\2fef9e614a8ab97bd6f98c273cde8ab1\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-auth-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-auth-license-11.8.0.aar\2fef9e614a8ab97bd6f98c273cde8ab1\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-database-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-database-license-11.8.0.aar\7de63e9c13eebac8ab04059a1a03706f\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-database-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-database-license-11.8.0.aar\7de63e9c13eebac8ab04059a1a03706f\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-analytics-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-11.8.0.aar\01a94a52e85d3af564ca055426f590ac\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-analytics-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-11.8.0.aar\01a94a52e85d3af564ca055426f590ac\AndroidManifest.xml:4:5-43
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\11524fb1ac69db1a589b1596044ed360\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\11524fb1ac69db1a589b1596044ed360\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\f0905f5bcb576294a5e8923dd11ea1e9\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\f0905f5bcb576294a5e8923dd11ea1e9\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\5dff0fb656e6c8da4653a8d50fed54b0\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\5dff0fb656e6c8da4653a8d50fed54b0\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\db94df9f1246a011c1a65aa28af2ded0\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\db94df9f1246a011c1a65aa28af2ded0\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-common-license-11.8.0.aar\b563537a6f3835ddd35a67e2c4783beb\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-common-license-11.8.0.aar\b563537a6f3835ddd35a67e2c4783beb\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\de96c5a2e01bdd742887c179ab51d065\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\de96c5a2e01bdd742887c179ab51d065\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-database-connection-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-license-11.8.0.aar\eee26f26976eae996e06d8dfb8c92018\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-database-connection-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-license-11.8.0.aar\eee26f26976eae996e06d8dfb8c92018\AndroidManifest.xml:4:5-43
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\895effaa9cc4639cb5a058dcd45a96dd\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\895effaa9cc4639cb5a058dcd45a96dd\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.8.0.aar\cc176d194c70a1e1ad0752ff20b1167e\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.8.0.aar\cc176d194c70a1e1ad0752ff20b1167e\AndroidManifest.xml:4:5-43
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\515456aab558ab6e7a366fd2a51b06c8\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\515456aab558ab6e7a366fd2a51b06c8\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-11.8.0.aar\df8c41a3e62c15d208cd21a41604527b\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-iid-license:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-11.8.0.aar\df8c41a3e62c15d208cd21a41604527b\AndroidManifest.xml:4:5-43
+INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
+INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
+		INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
+		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
+		INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
+activity#com.google.firebase.auth.internal.FederatedSignInActivity
+ADDED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\5d40094b0fe0af638fc9996893f0a31e\AndroidManifest.xml:23:9-29:75
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\5d40094b0fe0af638fc9996893f0a31e\AndroidManifest.xml:25:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\5d40094b0fe0af638fc9996893f0a31e\AndroidManifest.xml:27:13-48
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\5d40094b0fe0af638fc9996893f0a31e\AndroidManifest.xml:26:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\5d40094b0fe0af638fc9996893f0a31e\AndroidManifest.xml:28:13-102
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\5d40094b0fe0af638fc9996893f0a31e\AndroidManifest.xml:29:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\5d40094b0fe0af638fc9996893f0a31e\AndroidManifest.xml:24:13-85
+uses-feature#android.hardware.camera
+ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:24:5-26:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:26:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:25:9-47
+uses-feature#android.hardware.camera.front
+ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:27:5-29:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:29:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:28:9-53
+uses-feature#android.hardware.camera.autofocus
+ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:32:5-34:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:34:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:33:9-57
+uses-feature#android.hardware.camera.flash
+ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:35:5-37:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:37:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:36:9-53
+uses-feature#android.hardware.screen.landscape
+ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:38:5-40:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:40:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:39:9-57
+uses-feature#android.hardware.wifi
+ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:41:5-43:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:43:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:42:9-45
+activity#com.journeyapps.barcodescanner.CaptureActivity
+ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:46:9-52:63
+	android:screenOrientation
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:49:13-56
+	android:clearTaskOnLaunch
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:48:13-45
+	android:stateNotNeeded
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:50:13-42
+	android:windowSoftInputMode
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:52:13-60
+	android:theme
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:51:13-54
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.2.0.aar\2cc247982b392a67a308b62f0d76852f\AndroidManifest.xml:47:13-74
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\7afe5ad1fc643e623c5b024b33f99037\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\7afe5ad1fc643e623c5b024b33f99037\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:24:22-76
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\7afe5ad1fc643e623c5b024b33f99037\AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\7afe5ad1fc643e623c5b024b33f99037\AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:24:5-68
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:25:22-65
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:28:9-32:20
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\7afe5ad1fc643e623c5b024b33f99037\AndroidManifest.xml:28:9-32:20
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\7afe5ad1fc643e623c5b024b33f99037\AndroidManifest.xml:28:9-32:20
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:30:13-35
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:31:13-37
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:29:13-85
+receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
+ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:33:9-41:20
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:35:13-35
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:36:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:37:13-69
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:34:13-100
+intent-filter#action:name:com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:38:13-40:29
+action#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:39:17-79
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:39:25-76
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:43:9-46:40
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\7afe5ad1fc643e623c5b024b33f99037\AndroidManifest.xml:34:9-37:40
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\7afe5ad1fc643e623c5b024b33f99037\AndroidManifest.xml:34:9-37:40
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:45:13-35
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:46:13-37
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:44:13-84
+service#com.google.android.gms.measurement.AppMeasurementJobService
+ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:47:9-51:72
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:49:13-35
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:50:13-37
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:51:13-69
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\6172aa3b6a1e514ce36df20a016f4b6d\AndroidManifest.xml:48:13-87
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\8e3ee55eda13fac2385cddc7c16dd752\AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\8e3ee55eda13fac2385cddc7c16dd752\AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\8e3ee55eda13fac2385cddc7c16dd752\AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\8e3ee55eda13fac2385cddc7c16dd752\AndroidManifest.xml:24:13-79
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:26:5-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:26:22-79
+permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:28:5-30:47
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:30:9-44
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:29:9-63
+permission#com.attendance.myproject.begory.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:28:5-30:47
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:30:9-44
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:29:9-63
+uses-permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:32:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:32:22-76
+uses-permission#com.attendance.myproject.begory.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:32:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:32:22-76
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:35:9-44:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:37:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:38:13-73
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:36:13-78
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE+category:name:${applicationId}
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:39:13-43:29
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE+category:name:com.attendance.myproject.begory
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:39:13-43:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:40:17-81
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:40:25-78
+category#${applicationId}
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:42:17-61
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:42:27-58
+category#com.attendance.myproject.begory
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:42:17-61
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:42:27-58
+service#com.google.firebase.iid.FirebaseInstanceIdService
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:50:9-56:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:52:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:51:13-77
+intent-filter#action:name:com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:53:13-55:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:53:28-51
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:54:17-80
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\2e162e15c63b27ed3e4a59f324e70f2b\AndroidManifest.xml:54:25-77
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\19287b3377200765638dbb2059f98818\AndroidManifest.xml:8:9-12:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\19287b3377200765638dbb2059f98818\AndroidManifest.xml:10:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\19287b3377200765638dbb2059f98818\AndroidManifest.xml:11:13-37
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\19287b3377200765638dbb2059f98818\AndroidManifest.xml:12:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\19287b3377200765638dbb2059f98818\AndroidManifest.xml:9:13-77
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\301990cbef9df206fe1aa847475b9eba\AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\301990cbef9df206fe1aa847475b9eba\AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Moka\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\301990cbef9df206fe1aa847475b9eba\AndroidManifest.xml:24:13-58

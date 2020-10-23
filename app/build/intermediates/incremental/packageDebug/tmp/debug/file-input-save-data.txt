@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Sun Oct 18 00:36:27 GMT+02:00 2020
+0.base=E\:\\android_Projects\\Begory\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+0.path=classes.dex
+count=1
+0.baseType=DIRECTORY
+0.set=DEX

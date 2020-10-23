@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">Begory</string>
+
+    <string name="title">مدرسة السمائيين بكنائس السيدة العذراء ومارجرجس وأبي سيفين بحارة زويلة</string>
+    <string name="start">ابدا</string>
+    <string name="account_key">ادخل الكود السرى</string>
+    <string name="username">اسم الخادم</string>
+    <string name="password">كلمه المرور</string>
+    <string name="login">تسجيل دخول</string>
+    <string name="fill_data">من فضلك ادخل البيانات</string>
+    <string name="account_deactivated">الحساب متوقف</string>
+    <string name="account_not_found">الحساب غير مسجل من قبل</string>
+    <string name="error">حدث خطا</string>
+    <string name="wrong_password">كلمة المرور غير صحيحه</string>
+    <string name="error_code">الكود خاطئ</string>
+
+    <string name="m_level_attendance">كشف حضور</string>
+    <string name="m_add_student">إضافة مخدوم</string>
+    <string name="m_edit_student">تعديل مخدوم</string>
+    <string name="m_add_results">إضافة نتائج المرحلة</string>
+    <string name="m_show_results">عرض نتائج المرحلة</string>
+    <string name="m_add_level">إضافة مستوى</string>
+    <string name="m_add_admin">إضافة خادم</string>
+    <string name="m_add_attendance">إضافة حضور</string>
+    <string name="m_deactive_admin">ادارة خادم</string>
+    <string name="m_deactive_level">ادارة مستوى</string>
+    <string name="m_student_attendance">كشف مخدوم</string>
+    <string name="m_student_list">قائمة المخدومين</string>
+    <string name="m_student_generate_card">إصدار كود</string>
+    <string name="m_signout">تسجيل خروج</string>
+
+    <string name="add">اضف</string>
+    <string name="save_pdf">حفظ PDF</string>
+    <string name="saved_pdf">تم حفظ PDF</string>
+    <string name="or">او</string>
+    <string name="read_code">قراءة الكود</string>
+
+    <string name="id">كود المخدوم</string>
+    <string name="name">الاسم</string>
+    <string name="kodas">القداس</string>
+    <string name="hesa">الحصة</string>
+    <string name="save">حفظ</string>
+    <string name="shamas">شماس</string>
+    <string name="choose_name">اختر الاسم</string>
+    <string name="email">البريد الإلكتروني</string>
+    <string name="mobile">رقم الهاتف</string>
+    <string name="mobile_family">رقم هاتف ولى الأمر</string>
+    <string name="address">العنوان</string>
+    <string name="date">التاريخ</string>
+    <string name="admin_mission">صلاحيات الأدمن</string>
+    <string name="add_directly">إضافة بعد قراءة الكود مباشرتا</string>
+    <string name="update_levels">تعديل المراحل</string>
+
+    <string name="id_found">كود المخدوم  موجود من قبل</string>
+    <string name="added">تمت الإضافة</string>
+    <string name="edited">تم التعديل</string>
+    <string name="year">السنة</string>
+    <string name="choose_level">اختر المرحلة</string>
+    <string name="deactive">إيقاف</string>
+    <string name="activate">تفعيل</string>
+    <string name="image_saved">تم حفظ الكود</string>
+    <string name="choose_term">برجاء اختيار الترم اولا</string>
+
+    <string name="a_lev_1">حضور مرحلة حضانة</string>
+    <string name="a_lev_2">حضور مرحلة أولى و ثانية</string>
+    <string name="a_lev_3">حضور مرحلة ثالثة ورابعة</string>
+    <string name="a_lev_4">حضور مرحلة خامسة و سادسة</string>
+    <string name="a_lev_5">حضور مرحلة أعدادى</string>
+    <string name="a_lev_6">حضور مرحلة ثانوى و جامعة</string>
+
+    <string name="lev_1"> مرحلة حضانة</string>
+    <string name="lev_2"> مرحلة أولى و ثانية</string>
+    <string name="lev_3"> مرحلة ثالثة ورابعة</string>
+    <string name="lev_4"> مرحلة خامسة و سادسة</string>
+    <string name="lev_5"> مرحلة أعدادى</string>
+    <string name="lev_6"> مرحلة ثانوى و جامعة</string>
+
+    <string name="term1_sub1">الحان ترم 1</string>
+    <string name="term1_sub2">قبطي</string>
+
+    <string name="term2_sub1">الحان ترم 2</string>
+    <string name="term2_sub2">طقوس</string>
+
+    <string name="term3_sub1">الحان ترم 3</string>
+    <string name="term3_sub2">محفوظات</string>
+
+    <string name="fear">ض</string>
+    <string name="acceptable">ل</string>
+    <string name="good">ج</string>
+    <string name="very_good">ج.ج</string>
+    <string name="excellent">م</string>
+
+    <string name="total_grade">تقدير عام</string>
+
+    <string name="t_fear">ضعيف</string>
+    <string name="t_acceptable">مقبول</string>
+    <string name="t_good">جيد</string>
+    <string name="t_very_good">جيد جدا</string>
+    <string name="t_excellent">أمتياز</string>
+</resources>
