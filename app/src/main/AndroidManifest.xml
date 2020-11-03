@@ -3,6 +3,7 @@
     package="com.attendance.myproject.begory">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -16,21 +17,14 @@
         android:roundIcon="@mipmap/begory_icon"
         android:supportsRtl="false"
         android:theme="@style/AppTheme">
-        <activity android:name="com.attendance.myproject.begory.activites.oldactivities.AddNewStudentActivity" />
         <activity
-            android:name="com.attendance.myproject.begory.activites.PreLoginActivity"
+            android:name="com.attendance.myproject.begory.presentationLayer.login.LoginActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name="com.attendance.myproject.begory.activites.LoginActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
-            android:windowSoftInputMode="stateHidden|adjustResize" />
-        <activity
-            android:name="com.attendance.myproject.begory.activites.SplashActivity"
+            android:name="com.attendance.myproject.begory.presentationLayer.splash.SplashActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
@@ -43,89 +37,91 @@
 
         </activity>
         <activity
-            android:name="com.attendance.myproject.begory.activites.HomeActivity"
+            android:name="com.attendance.myproject.begory.presentationLayer.main.MainActivity"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name="com.attendance.myproject.begory.activites.AddStudentActivity"
-            android:launchMode="singleTop"
-            android:theme="@style/dialogTheme"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name="com.attendance.myproject.begory.activites.EditStudentActivity"
-            android:launchMode="singleTop"
-            android:theme="@style/dialogTheme"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name="com.attendance.myproject.begory.activites.AddAdminActivity"
-            android:launchMode="singleTop"
-            android:theme="@style/dialogTheme"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name="com.attendance.myproject.begory.activites.oldactivities.AddLevelActivity"
-            android:launchMode="singleTop"
-            android:theme="@style/dialogTheme"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name="com.attendance.myproject.begory.activites.oldactivities.DeactivateLevelActivity"
-            android:launchMode="singleTop"
-            android:theme="@style/dialogTheme"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name="com.attendance.myproject.begory.activites.DeactivateAdminActivity"
-            android:launchMode="singleTop"
-            android:theme="@style/dialogTheme"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name="com.attendance.myproject.begory.activites.oldactivities.AddAttendanceActivity"
-            android:launchMode="singleTop"
-            android:theme="@style/dialogTheme"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name="com.attendance.myproject.begory.activites.oldactivities.QrCodeGeneratorActivity"
-            android:launchMode="singleTop"
-            android:theme="@style/dialogTheme"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name="com.attendance.myproject.begory.activites.oldactivities.QrCodeStationReaderActivity"
-            android:screenOrientation="portrait"/>
-
-        <activity
-            android:name="com.attendance.myproject.begory.activites.oldactivities.StudentAttendanceActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
         </activity>
 
-        <activity
-            android:name="com.attendance.myproject.begory.activites.LevelResultActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait">
-        </activity>
+<!--        <activity android:name="com.attendance.myproject.begory.activites.AddStudentActivity"-->
+<!--            android:launchMode="singleTop"-->
+<!--            android:theme="@style/dialogTheme"-->
+<!--            android:screenOrientation="portrait"/>-->
 
-        <activity
-            android:name="com.attendance.myproject.begory.activites.ShowLevelResultActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait">
-        </activity>
+<!--        <activity android:name="com.attendance.myproject.begory.activites.EditStudentActivity"-->
+<!--            android:launchMode="singleTop"-->
+<!--            android:theme="@style/dialogTheme"-->
+<!--            android:screenOrientation="portrait"/>-->
 
-        <activity
-            android:name="com.attendance.myproject.begory.activites.ShowLevelAttendanceActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait">
-        </activity>
+<!--        <activity android:name="com.attendance.myproject.begory.activites.AddAdminActivity"-->
+<!--            android:launchMode="singleTop"-->
+<!--            android:theme="@style/dialogTheme"-->
+<!--            android:screenOrientation="portrait"/>-->
 
-        <activity
-            android:name="com.attendance.myproject.begory.activites.oldactivities.StudentListActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait">
-        </activity>
+<!--        <activity android:name="com.attendance.myproject.begory.activites.oldactivities.AddLevelActivity"-->
+<!--            android:launchMode="singleTop"-->
+<!--            android:theme="@style/dialogTheme"-->
+<!--            android:screenOrientation="portrait"/>-->
 
-        <activity
-            android:name="com.attendance.myproject.begory.activites.LevelAttendanceActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait">
-        </activity>
+<!--        <activity android:name="com.attendance.myproject.begory.activites.oldactivities.DeactivateLevelActivity"-->
+<!--            android:launchMode="singleTop"-->
+<!--            android:theme="@style/dialogTheme"-->
+<!--            android:screenOrientation="portrait"/>-->
+
+<!--        <activity android:name="com.attendance.myproject.begory.activites.DeactivateAdminActivity"-->
+<!--            android:launchMode="singleTop"-->
+<!--            android:theme="@style/dialogTheme"-->
+<!--            android:screenOrientation="portrait"/>-->
+
+<!--        <activity android:name="com.attendance.myproject.begory.activites.oldactivities.AddAttendanceActivity"-->
+<!--            android:launchMode="singleTop"-->
+<!--            android:theme="@style/dialogTheme"-->
+<!--            android:screenOrientation="portrait"/>-->
+
+<!--        <activity android:name="com.attendance.myproject.begory.activites.oldactivities.QrCodeGeneratorActivity"-->
+<!--            android:launchMode="singleTop"-->
+<!--            android:theme="@style/dialogTheme"-->
+<!--            android:screenOrientation="portrait"/>-->
+
+<!--        <activity android:name="com.attendance.myproject.begory.activites.oldactivities.QrCodeStationReaderActivity"-->
+<!--            android:screenOrientation="portrait"/>-->
+
+<!--        <activity-->
+<!--            android:name="com.attendance.myproject.begory.activites.oldactivities.StudentAttendanceActivity"-->
+<!--            android:launchMode="singleTop"-->
+<!--            android:screenOrientation="portrait">-->
+<!--        </activity>-->
+
+<!--        <activity-->
+<!--            android:name="com.attendance.myproject.begory.activites.LevelResultActivity"-->
+<!--            android:launchMode="singleTop"-->
+<!--            android:screenOrientation="portrait">-->
+<!--        </activity>-->
+
+<!--        <activity-->
+<!--            android:name="com.attendance.myproject.begory.activites.ShowLevelResultActivity"-->
+<!--            android:launchMode="singleTop"-->
+<!--            android:screenOrientation="portrait">-->
+<!--        </activity>-->
+
+<!--        <activity-->
+<!--            android:name="com.attendance.myproject.begory.activites.ShowLevelAttendanceActivity"-->
+<!--            android:launchMode="singleTop"-->
+<!--            android:screenOrientation="portrait">-->
+<!--        </activity>-->
+
+<!--        <activity-->
+<!--            android:name="com.attendance.myproject.begory.activites.oldactivities.StudentListActivity"-->
+<!--            android:launchMode="singleTop"-->
+<!--            android:screenOrientation="portrait">-->
+<!--        </activity>-->
+
+<!--        <activity-->
+<!--            android:name="com.attendance.myproject.begory.activites.LevelAttendanceActivity"-->
+<!--            android:launchMode="singleTop"-->
+<!--            android:screenOrientation="portrait">-->
+<!--        </activity>-->
     </application>
 
 </manifest>

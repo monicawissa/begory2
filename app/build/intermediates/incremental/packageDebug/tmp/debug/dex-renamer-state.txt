@@ -1,4 +1,10 @@
-#Sun Oct 18 00:36:26 GMT+02:00 2020
-base.0=E\:\\android_Projects\\Begory\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
-renamed.0=classes.dex
+#Mon Nov 02 01:42:30 GMT+02:00 2020
+path.2=classes2.dex
+path.1=classes.dex
 path.0=classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+base.2=E\:\\android_Projects\\Begory\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.1=E\:\\android_Projects\\Begory\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
+base.0=E\:\\android_Projects\\Begory\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex

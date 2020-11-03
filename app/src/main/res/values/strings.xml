@@ -1,16 +1,18 @@
 <resources>
     <string name="app_name">Begory</string>
+    <string name="no_internet_connection">No internet connection!</string>
 
     <string name="title">مدرسة السمائيين بكنائس السيدة العذراء ومارجرجس وأبي سيفين بحارة زويلة</string>
     <string name="start">ابدا</string>
     <string name="account_key">ادخل الكود السرى</string>
-    <string name="username">اسم الخادم</string>
+    <string name="username">الأسم </string>
     <string name="password">كلمه المرور</string>
     <string name="login">تسجيل دخول</string>
     <string name="fill_data">من فضلك ادخل البيانات</string>
     <string name="account_deactivated">الحساب متوقف</string>
     <string name="account_not_found">الحساب غير مسجل من قبل</string>
     <string name="error">حدث خطا</string>
+    <string name="wrong_mobile">رقم الهاتف غير صحيح</string>
     <string name="wrong_password">كلمة المرور غير صحيحه</string>
     <string name="error_code">الكود خاطئ</string>
 
@@ -97,4 +99,10 @@
     <string name="t_good">جيد</string>
     <string name="t_very_good">جيد جدا</string>
     <string name="t_excellent">أمتياز</string>
+    //tmp
+    <string name="title_shop">shop</string>
+    <string name="title_profile">profile</string>
+    <string name="title_settings">settings</string>
+    <string name="title_attendance">attendance</string>
+    <string name="title_notifications">notification</string>
 </resources>

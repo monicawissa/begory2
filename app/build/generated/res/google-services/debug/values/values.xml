@@ -7,4 +7,5 @@
     <string name="google_app_id" translatable="false">1:45565331266:android:1a5b30403e85d2eb496adb</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC-uZSbaDKTkhtH6_QQxAL0qrnRlDIl4wc</string>
     <string name="google_storage_bucket" translatable="false">begory-924d1.appspot.com</string>
+    <string name="project_id" translatable="false">begory-924d1</string>
 </resources>

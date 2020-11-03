@@ -4,7 +4,7 @@
             "outputFile": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Moka\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\352422958d7a9be34d96f0e7d0481c81\\res\\values-port\\values-port.xml",
+                    "source": "C:\\Users\\Moka\\.gradle\\caches\\transforms-2\\files-2.1\\f2d38cc41a382d957fd8f17d1cd08b82\\appcompat-1.3.0-alpha02\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

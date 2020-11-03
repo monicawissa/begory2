@@ -4,7 +4,7 @@
             "outputFile": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-he\\values-he.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Moka\\.gradle\\caches\\transforms-1\\files-1.1\\zxing-android-embedded-3.2.0.aar\\2cc247982b392a67a308b62f0d76852f\\res\\values-he\\values-he.xml",
+                    "source": "C:\\Users\\Moka\\.gradle\\caches\\transforms-2\\files-2.1\\554a882b6ae9373684bd5169bdf0c004\\jetified-zxing-android-embedded-3.2.0\\res\\values-he\\values-he.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

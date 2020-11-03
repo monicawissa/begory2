@@ -1,1 +1,0 @@
-E:\android_Projects\Begory\app\src\main\java\com\attendance\myproject\begory\activites\SplashActivity.kt
