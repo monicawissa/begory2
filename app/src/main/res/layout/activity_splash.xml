@@ -1,34 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/p1">
 
-    <data>  <variable
-        name="SplashViewModel"
-        type="com.attendance.myproject.begory.presentationLayer.splash.SplashViewModel"
-        />
-    </data>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
+    <ImageView
+        android:layout_width="wrap"
         android:layout_height="match_parent"
-        android:background="@color/white">
+        android:src="@drawable/begory_logo"
+        />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            android:background="@color/primaryColor"
-            android:adjustViewBounds="true" />
-
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/begory_logo"
-            android:scaleType="fitXY"
-            android:layout_centerInParent="true"
-            android:adjustViewBounds="true" />
-
-    </RelativeLayout>
-</layout>
+</RelativeLayout>

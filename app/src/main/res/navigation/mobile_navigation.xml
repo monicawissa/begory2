@@ -19,12 +19,12 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="np.com.susanthapa.curvedbottomnavigation.ui.NotificationsFragment"
+        android:name="com.attendance.myproject.begory.presentationLayer.main.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
     <fragment
         android:id="@+id/navigation_settings"
-        android:name="np.com.susanthapa.curvedbottomnavigation.ui.SettingsFragment"
+        android:name="com.attendance.myproject.begory.presentationLayer.main.SettingsFragment"
         android:label="@string/title_settings"
         tools:layout="@layout/fragment_settings"/>
     <fragment
