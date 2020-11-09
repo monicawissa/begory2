@@ -1,5 +1,9 @@
 [
     {
+        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
+        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
         "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_splash.xml",
         "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\activity_splash.xml"
     },

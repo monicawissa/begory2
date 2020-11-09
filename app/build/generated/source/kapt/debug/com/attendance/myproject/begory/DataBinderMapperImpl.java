@@ -18,7 +18,9 @@ import java.lang.String;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import javax.annotation.Generated;
 
+@Generated("Android Data Binding")
 public class DataBinderMapperImpl extends DataBinderMapper {
   private static final int LAYOUT_ACTIVITYLOGIN = 1;
 
@@ -44,7 +46,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       }
       switch(localizedLayoutId) {
         case  LAYOUT_ACTIVITYLOGIN: {
-          if ("layout-v21/activity_login_0".equals(tag)) {
+          if ("layout/activity_login_0".equals(tag)) {
             return new ActivityLoginBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for activity_login is invalid. Received: " + tag);
@@ -109,10 +111,10 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     static final SparseArray<String> sKeys = new SparseArray<String>(4);
 
     static {
-      sKeys.put(1, "LoginViewModel");
-      sKeys.put(2, "MainViewModel");
-      sKeys.put(3, "SplashViewModel");
+      sKeys.put(1, "MainViewModel");
+      sKeys.put(2, "SplashViewModel");
       sKeys.put(0, "_all");
+      sKeys.put(3, "loginViewModel");
     }
   }
 
@@ -120,7 +122,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(3);
 
     static {
-      sKeys.put("layout-v21/activity_login_0", com.attendance.myproject.begory.R.layout.activity_login);
+      sKeys.put("layout/activity_login_0", com.attendance.myproject.begory.R.layout.activity_login);
       sKeys.put("layout/activity_main_0", com.attendance.myproject.begory.R.layout.activity_main);
       sKeys.put("layout/activity_splash_0", com.attendance.myproject.begory.R.layout.activity_splash);
     }

@@ -6,11 +6,10 @@ import android.content.Intent
 import android.view.inputmethod.InputMethodManager
 
 object UiManager {
-    fun startActivity(context: Context, activity: Class<*>?) {
-        val mIntent = Intent(context, activity)
+    fun startActivity(context: Context, cls: Class<*>) {
+        val mIntent = Intent(context, cls)
         context.startActivity(mIntent)
     }
-    @JvmStatic
     fun hideKeyboard(activity: Activity?) {
         if (activity == null) return
         val inputManager = activity.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager

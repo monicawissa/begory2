@@ -42,7 +42,7 @@ public abstract class ActivityLoginBinding extends ViewDataBinding {
     this.progressBar = progressBar;
   }
 
-  public abstract void setLoginViewModel(@Nullable LoginViewModel LoginViewModel);
+  public abstract void setLoginViewModel(@Nullable LoginViewModel loginViewModel);
 
   @Nullable
   public LoginViewModel getLoginViewModel() {

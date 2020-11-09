@@ -100,16 +100,16 @@
         "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable\\rect_dialog_box.xml"
     },
     {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_activity_login.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout-v21\\activity_login.xml"
-    },
-    {
         "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_avd_home.xml.flat",
         "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable-v24\\avd_home.xml"
     },
     {
         "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_add_new_student.xml.flat",
         "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\activity_add_new_student.xml"
+    },
+    {
+        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
+        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
         "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_level_result.xml.flat",

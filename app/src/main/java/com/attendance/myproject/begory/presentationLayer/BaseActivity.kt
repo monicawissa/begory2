@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModel
 import com.attendance.myproject.begory.R
-import com.attendance.myproject.begory.Utilities.Internet
 import com.attendance.myproject.begory.Utilities.UiManager
 import com.attendance.myproject.begory.presentationLayer.login.LoginViewModel
 

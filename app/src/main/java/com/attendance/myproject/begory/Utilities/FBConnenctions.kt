@@ -1,22 +1,37 @@
-//package com.attendance.myproject.begory.Utilities
-//
+package com.attendance.myproject.begory.Utilities
+
 //import android.content.Context
 //import android.util.Log
 //import android.view.View
 //import android.widget.ProgressBar
 //import android.widget.Toast
-//import com.attendance.myproject.begory.R
-//import com.attendance.myproject.begory.entites.Admin
-//import com.attendance.myproject.begory.data.Models.Attendance
-//import com.attendance.myproject.begory.data.Models.Level
-//import com.attendance.myproject.begory.data.Models.User
+//import com.attendance.myproject.attendanceregister.R
+//import com.attendance.myproject.attendanceregister.entites.Admin
+//import com.attendance.myproject.attendanceregister.entites.Attendance
+//import com.attendance.myproject.attendanceregister.entites.Level
+//import com.attendance.myproject.attendanceregister.entites.Student
 //import com.google.firebase.database.*
-//
+
+
 //object FBConnenctions {
-//
-//    fun addNewStudent(context: Context?, user: User, progressBar: ProgressBar) {
+//    const val CONST_STUDENTS = "StudentsList"
+//    const val CONST_LEVELS = "LevelsList"
+//    const val CONST_ATTENDANCE = "StudentAttendence"
+//    const val CONST_ADMINS = "AdminsList"
+//    const val CONST_LEVEL_1 = "Level1"
+//    const val CONST_LEVEL_2 = "Level2"
+//    const val CONST_LEVEL_3 = "Level3"
+//    const val CONST_LEVEL_4 = "Level4"
+//    const val CONST_LEVEL_5 = "Level5"
+//    const val CONST_LEVEL_6 = "Level6"
+//    const val CONST_GRADE_FEAR = 0
+//    const val CONST_GRADE_ACCEPTABLE = 1
+//    const val CONST_GRADE_GOOD = 2
+//    const val CONST_GRADE_VERY_GOOD = 3
+//    const val CONST_GRADE_EXCELLENT = 4
+//    fun addNewStudent(context: Context?, student: Student, progressBar: ProgressBar) {
 //        val mDatabase = FirebaseDatabase.getInstance().reference.child(Utils.getKey(context))
-//        mDatabase.child(CONST_STUDENTS).child(user.studentId).setValue(user).addOnSuccessListener { // Write was successful!
+//        mDatabase.child(CONST_STUDENTS).child(student.getStudentId()).setValue(student).addOnSuccessListener { // Write was successful!
 //            // ...
 //            progressBar.visibility = View.GONE
 //            Toast.makeText(context, R.string.added, Toast.LENGTH_SHORT).show()
@@ -28,7 +43,6 @@
 //                }
 //    }
 //
-//    @JvmStatic
 //    fun getStudents(context: Context?) {
 //        try {
 //            val database = FirebaseDatabase.getInstance()
@@ -40,8 +54,8 @@
 //                        // Toast.makeText(StudentInformationActivity.this, "Hello bro Again", Toast.LENGTH_SHORT).show();
 //                        val children = dataSnapshot.child(CONST_STUDENTS).children
 //                        for (child in children) {
-//                            val std1 = child.getValue(User::class.java)!!
-//                            Log.d("student", std1.studentName)
+//                            val std1: Student? = child.getValue(Student::class.java)
+//                            Log.d("student", std1.getStudentName())
 //                        }
 //                    } catch (e: Exception) {
 //                        Log.e("Exception is", e.toString())
@@ -58,12 +72,12 @@
 //    fun getStudentInfo(context: Context?, studentId: String?) {
 //        val database = FirebaseDatabase.getInstance()
 //        val databaseReference = database.reference.child(Utils.getKey(context))
-//        val query: Query = databaseReference.child(CONST_STUDENTS).child(studentId)
+//        val query: Query = databaseReference.child(CONST_STUDENTS).child(studentId!!)
 //        query.addListenerForSingleValueEvent(object : ValueEventListener {
 //            override fun onDataChange(dataSnapshot: DataSnapshot) {
 //                try {
-//                    val std1 = dataSnapshot.getValue(User::class.java)!!
-//                    Log.d("student", std1.studentName)
+//                    val std1: Student? = dataSnapshot.getValue(Student::class.java)
+//                    Log.d("student", std1.getStudentName())
 //                } catch (e: Exception) {
 //                    Log.e("Exception is", e.toString())
 //                }
@@ -77,8 +91,8 @@
 //        val mDatabase = FirebaseDatabase.getInstance().reference.child(Utils.getKey(context))
 //        val databaseReference = mDatabase.child(CONST_LEVELS)
 //        val key = databaseReference.push().key
-//        student.levelId = key
-//        mDatabase.child(key).setValue(student).addOnSuccessListener { // Write was successful!
+//        student.setLevelId(key)
+//        mDatabase.child(key!!).setValue(student).addOnSuccessListener { // Write was successful!
 //            // ...
 //            Toast.makeText(context, "Added", Toast.LENGTH_SHORT).show()
 //        }
@@ -99,8 +113,8 @@
 //                        // Toast.makeText(StudentInformationActivity.this, "Hello bro Again", Toast.LENGTH_SHORT).show();
 //                        val children = dataSnapshot.child(CONST_LEVELS).children
 //                        for (child in children) {
-//                            val std1 = child.getValue(Level::class.java)!!
-//                            Log.d("student", std1.levelName)
+//                            val std1: Level? = child.getValue(Level::class.java)
+//                            Log.d("student", std1.getLevelName())
 //                        }
 //                    } catch (e: Exception) {
 //                        Log.e("Exception is", e.toString())
@@ -120,8 +134,8 @@
 //        val key = attendanceDatabaseReference.push().key
 //
 //        //key += "@@@"+attendance.getLevelId()+"@@@"+attendance.getStudentId(); //here we append levelId & StudentId at end of key to be able to query them
-//        attendance.id = key
-//        attendanceDatabaseReference.child(key).setValue(attendance).addOnSuccessListener { // Write was successful!
+//        attendance.setId(key)
+//        attendanceDatabaseReference.child(key!!).setValue(attendance).addOnSuccessListener { // Write was successful!
 //            // ...
 //            Toast.makeText(context, "Added", Toast.LENGTH_SHORT).show()
 //        }
@@ -140,8 +154,8 @@
 //                    try {
 //                        val children = dataSnapshot.child(CONST_ATTENDANCE).children
 //                        for (child in children) {
-//                            val std1 = child.getValue(Attendance::class.java)!!
-//                            Log.d("student", std1.studentId)
+//                            val std1: Attendance? = child.getValue(Attendance::class.java)
+//                            Log.d("student", std1.getStudentId())
 //                        }
 //                    } catch (e: Exception) {
 //                        Log.e("Exception is", e.toString())
@@ -164,8 +178,8 @@
 //                try {
 //                    val children = dataSnapshot.children
 //                    for (child in children) {
-//                        val std1 = child.getValue(Attendance::class.java)!!
-//                        Log.d("student", std1.id + "     level=" + std1.levelId)
+//                        val std1: Attendance? = child.getValue(Attendance::class.java)
+//                        Log.d("student", std1.getId().toString() + "     level=" + std1.getLevelId())
 //                    }
 //                } catch (e: Exception) {
 //                    Log.e("Exception is", e.toString())
@@ -185,8 +199,8 @@
 //                try {
 //                    val children = dataSnapshot.children
 //                    for (child in children) {
-//                        val std1 = child.getValue(Attendance::class.java)!!
-//                        Log.d("student", std1.id + "     level=" + std1.levelId)
+//                        val std1: Attendance? = child.getValue(Attendance::class.java)
+//                        Log.d("student", std1.getId().toString() + "     level=" + std1.getLevelId())
 //                    }
 //                } catch (e: Exception) {
 //                    Log.e("Exception is", e.toString())
@@ -197,15 +211,14 @@
 //        })
 //    }
 //
-//    @JvmStatic
 //    fun addAdmin(context: Context?, admin: Admin) {
 //        val mDatabase = FirebaseDatabase.getInstance().reference.child(Utils.getKey(context))
 //        val attendanceDatabaseReference = mDatabase.child(CONST_ADMINS)
 //        val key = attendanceDatabaseReference.push().key
 //
 //        //key += "@@@"+attendance.getLevelId()+"@@@"+attendance.getStudentId(); //here we append levelId & StudentId at end of key to be able to query them
-//        admin.adminId = key
-//        attendanceDatabaseReference.child(key).setValue(admin).addOnSuccessListener { // Write was successful!
+//        admin.setAdminId(key)
+//        attendanceDatabaseReference.child(key!!).setValue(admin).addOnSuccessListener { // Write was successful!
 //            // ...
 //            Toast.makeText(context, "Added", Toast.LENGTH_SHORT).show()
 //        }
@@ -218,7 +231,7 @@
 //    fun deactivateAdmin(context: Context?, adminId: String?, admin: Admin?) {
 //        val mDatabase = FirebaseDatabase.getInstance().reference.child(Utils.getKey(context))
 //        val attendanceDatabaseReference = mDatabase.child(CONST_ADMINS)
-//        attendanceDatabaseReference.child(adminId).setValue(admin).addOnSuccessListener { // Write was successful!
+//        attendanceDatabaseReference.child(adminId!!).setValue(admin).addOnSuccessListener { // Write was successful!
 //            // ...
 //            Toast.makeText(context, "Edited", Toast.LENGTH_SHORT).show()
 //        }
@@ -237,8 +250,8 @@
 //                    try {
 //                        val children = dataSnapshot.child(CONST_ADMINS).children
 //                        for (child in children) {
-//                            val std1 = child.getValue(Admin::class.java)!!
-//                            Log.d("student", std1.adminName + "  isActive" + std1.isAccountActive + "adminId" + std1.adminId)
+//                            val std1: Admin? = child.getValue(Admin::class.java)
+//                            Log.d("student", std1.getAdminName().toString() + "  isActive" + std1.isAccountActive() + "adminId" + std1.getAdminId())
 //                        }
 //                    } catch (e: Exception) {
 //                        Log.e("Exception is", e.toString())
@@ -261,8 +274,8 @@
 //                    try {
 //                        val children = dataSnapshot.children
 //                        for (child in children) {
-//                            val std1 = child.getValue(Admin::class.java)!!
-//                            Log.d("student", std1.adminName + "  isActive" + std1.isAccountActive + "adminId" + std1.adminId)
+//                            val std1: Admin? = child.getValue(Admin::class.java)
+//                            Log.d("student", std1.getAdminName().toString() + "  isActive" + std1.isAccountActive() + "adminId" + std1.getAdminId())
 //                        }
 //                    } catch (e: Exception) {
 //                        Log.e("Exception is", e.toString())
