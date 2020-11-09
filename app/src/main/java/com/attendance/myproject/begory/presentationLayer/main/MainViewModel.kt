@@ -20,17 +20,14 @@ import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.attendance.myproject.begory.R
 import com.attendance.myproject.begory.Utilities.ggle.Event
 import com.attendance.myproject.begory.data.Models.User
 import com.attendance.myproject.begory.data.source.AppRepository
 import com.attendance.myproject.begory.data.source.remote.IRemoteDataSource
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
-/**
- * Created by amitshekhar on 07/07/17.
- */
 class MainViewModel @ViewModelInject constructor(private val appRepository: AppRepository) :
         ViewModel()  {
 
@@ -82,7 +79,7 @@ class MainViewModel @ViewModelInject constructor(private val appRepository: AppR
         _isShopAvailable.value=false
         _isLogOut.value=true
         _isProfileAvailable.value=true
-        GlobalScope.launch {
+        viewModelScope.launch {
         getUser()
         }
     }

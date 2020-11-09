@@ -8,11 +8,10 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.attendance.myproject.begory.R
-import com.attendance.myproject.begory.Utilities.Internet
 import com.attendance.myproject.begory.Utilities.UiManager
 import com.attendance.myproject.begory.databinding.ActivityLoginBinding
 import com.attendance.myproject.begory.presentationLayer.BaseActivity
-import com.attendance.myproject.begory.presentationLayer.main.MainActivity
+import com.attendance.myproject.begory.presentationLayer.shop.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

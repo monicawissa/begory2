@@ -1,7 +1,4 @@
 package com.attendance.myproject.begory.presentationLayer.Splash
-import android.content.ContentValues
-import android.text.TextUtils
-import android.util.Log
 import androidx.annotation.StringRes
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData

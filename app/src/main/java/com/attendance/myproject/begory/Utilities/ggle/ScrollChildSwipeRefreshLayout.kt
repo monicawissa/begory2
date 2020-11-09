@@ -3,7 +3,7 @@ package com.attendance.myproject.begory.Utilities.ggle
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+//import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 
 /**
  * Extends [SwipeRefreshLayout] to support non-direct descendant scrolling views.
@@ -13,13 +13,13 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
  * the refresh only when the view is on top. This class adds a way (@link #setScrollUpChild} to
  * define which view controls this behavior.
  */
-class ScrollChildSwipeRefreshLayout @JvmOverloads constructor(
-        context: Context,
-        attrs: AttributeSet? = null
-) : SwipeRefreshLayout(context, attrs) {
-
-    var scrollUpChild: View? = null
-
-    override fun canChildScrollUp() =
-            scrollUpChild?.canScrollVertically(-1) ?: super.canChildScrollUp()
-}
+//class ScrollChildSwipeRefreshLayout @JvmOverloads constructor(
+//        context: Context,
+//        attrs: AttributeSet? = null
+//) : SwipeRefreshLayout(context, attrs) {
+//
+//    var scrollUpChild: View? = null
+//
+//    override fun canChildScrollUp() =
+//            scrollUpChild?.canScrollVertically(-1) ?: super.canChildScrollUp()
+//}
