@@ -16,6 +16,7 @@
 package com.attendance.myproject.begory.presentationLayer.main
 import android.text.TextUtils
 import androidx.annotation.StringRes
+import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -24,11 +25,13 @@ import com.attendance.myproject.begory.Utilities.ggle.Event
 import com.attendance.myproject.begory.data.Models.User
 import com.attendance.myproject.begory.data.source.AppRepository
 import com.attendance.myproject.begory.data.source.remote.IRemoteDataSource
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 /**
  * Created by amitshekhar on 07/07/17.
  */
-class MainViewModel(private val appRepository: AppRepository) :
+class MainViewModel @ViewModelInject constructor(private val appRepository: AppRepository) :
         ViewModel()  {
 
     private lateinit var user: User
@@ -75,24 +78,27 @@ class MainViewModel(private val appRepository: AppRepository) :
 
     init {
         _dataLoading.value=false
-        _isLogOut.value=false
         _isAttendanceAvailable.value=false
         _isShopAvailable.value=false
+        _isLogOut.value=true
         _isProfileAvailable.value=true
+        GlobalScope.launch {
         getUser()
+        }
     }
 
     private fun getUser() {
-        appRepository.getUser(object :IRemoteDataSource.LoginCallback{
-            override fun onResponse(user: User) {
-                // fill profile data if it's the first time
-                //
-            }
+            appRepository.getUser(object :IRemoteDataSource.LoginCallback{
+                override fun onResponse(user: User) {
+                    // fill profile data if it's the first time
+                    // else open the shop fragment
+                }
 
-            override fun onDataNotAvailable(message: Int?) {
-                //logout
-            }
+                override fun onDataNotAvailable(message: Int?) {
+                    logout()
+                }
 
-        })
+            }
+        )
     }
 }

@@ -1,10 +1,17 @@
 package com.attendance.myproject.begory.data.Models
+import com.google.gson.annotations.SerializedName
 
-class Attendance {
-    var id: String? = null
-    var studentId: String? = null
-    var studentLevel: String? = null
-    var attendanceDate: String? = null
-    var date: String? = null
-    var adminId: String? = null
-}
+data class Attendance (
+    @SerializedName("id")
+    var termId :Int = 0,
+    @SerializedName("isAttend")
+    var isAttend :Boolean = false,
+    @SerializedName("isEodas")
+    var isEodas :Boolean= false ,
+    @SerializedName("isE3traf")
+    var isE3traf :Boolean= false,
+    @SerializedName("isTnawel")
+    var isTnawel :Boolean= false,
+    @SerializedName("isShamas")
+    var isShamas:Boolean = false
+)

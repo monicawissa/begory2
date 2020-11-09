@@ -21,6 +21,7 @@ package com.attendance.myproject.begory.Utilities.ggle
 
 import android.app.ProgressDialog.show
 import android.view.View
+import androidx.databinding.BindingAdapter
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer

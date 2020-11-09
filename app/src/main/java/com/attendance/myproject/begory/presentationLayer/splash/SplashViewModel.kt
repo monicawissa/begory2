@@ -21,23 +21,27 @@ import android.os.Parcel
 import android.os.Parcelable
 import androidx.annotation.StringRes
 import androidx.annotation.VisibleForTesting
+import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.attendance.myproject.begory.Utilities.Injection
+import androidx.lifecycle.viewModelScope
+import com.attendance.myproject.begory.R
 import com.attendance.myproject.begory.Utilities.ggle.Event
-import com.attendance.myproject.begory.Utilities.ggle.ViewModelFactory
 import com.attendance.myproject.begory.data.Models.User
 import com.attendance.myproject.begory.data.source.AppRepository
 import com.attendance.myproject.begory.data.source.remote.IRemoteDataSource
+import com.attendance.myproject.begory.di.module.NetworkHelper
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-public class SplashViewModel(private val appRepository: AppRepository): ViewModel() {
+public class SplashViewModel @ViewModelInject constructor(private val appRepository: AppRepository,
+                                                          private val networkHelper: NetworkHelper
+): ViewModel() {
     private val mSplashState = MutableLiveData<SplashState>()
     val splashState: LiveData<SplashState>
-        get() = splashState
+        get() = mSplashState
     private val msnackbarText = MutableLiveData<Event<Int>>()
     val snackBarMessage: LiveData<Event<Int>>
         get() = msnackbarText
@@ -45,10 +49,12 @@ public class SplashViewModel(private val appRepository: AppRepository): ViewMode
 
 
     init {
-        GlobalScope.launch {
+        viewModelScope.launch {
             delay(3000)
-            decideState()
-
+            if (networkHelper.isNetworkConnected()) {
+                decideState()
+            }
+            else showSnackbarMessage(R.string.no_internet_connection)
         }
     }
     private fun showSnackbarMessage(@StringRes message: Int) {

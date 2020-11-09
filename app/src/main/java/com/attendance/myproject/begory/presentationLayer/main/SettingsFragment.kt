@@ -1,4 +1,4 @@
-package np.com.susanthapa.curvedbottomnavigation.ui
+package com.attendance.myproject.begory.presentationLayer.main
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.attendance.myproject.begory.R
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SettingsFragment : Fragment() {
 
     override fun onCreateView(

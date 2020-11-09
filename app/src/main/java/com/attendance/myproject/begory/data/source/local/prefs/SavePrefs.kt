@@ -2,16 +2,23 @@ package com.attendance.myproject.begory.data.source.local.prefs
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.attendance.myproject.begory.Utilities.AppConstants
+import com.attendance.myproject.begory.di.PreferenceInfo
+import com.attendance.myproject.begory.di.module.AppModule
 import com.google.gson.Gson
+import com.google.gson.GsonBuilder
+import dagger.hilt.android.qualifiers.ApplicationContext
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class SavePrefs<T>(activity: Context, private val cls: Class<*>) {
+class SavePrefs<T> @Inject constructor(@ApplicationContext activity: Context, @PreferenceInfo preferenceInfo: String, private val cls: Class<*>) {
 
-    private val USER_PREFS_FILE_NAME: String=AppConstants.PREF_NAME
-    private val prefs: SharedPreferences
+    private val prefs: SharedPreferences = activity.getSharedPreferences(preferenceInfo,
+            Context.MODE_PRIVATE)
+
     fun save(Pref_key:String,obj: T) {
         val editor = prefs.edit()
-        val data = Gson().toJson(obj)
+        val gson =GsonBuilder().serializeNulls().create();
+        val data = gson.toJson(obj )
         editor.putString(Pref_key, data)
         editor.apply()
     }
@@ -23,10 +30,5 @@ class SavePrefs<T>(activity: Context, private val cls: Class<*>) {
 
     fun clear() {
         prefs.edit().clear().apply()
-    }
-
-    init {
-        prefs = activity.getSharedPreferences(USER_PREFS_FILE_NAME,
-                Context.MODE_PRIVATE)
     }
 }
