@@ -77,7 +77,7 @@ class MainViewModel @ViewModelInject constructor(private val appRepository: AppR
         _dataLoading.value=false
         _isAttendanceAvailable.value=false
         _isShopAvailable.value=false
-        _isLogOut.value=true
+        _isLogOut.value=false
         _isProfileAvailable.value=true
         viewModelScope.launch {
         getUser()

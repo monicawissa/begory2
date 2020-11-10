@@ -29,6 +29,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/rect_trans_box"
             android:padding="16dp"
+
             android:layout_marginRight="16dp"
             android:layout_marginLeft="16dp"
             android:layout_alignParentBottom="true"
@@ -77,21 +78,21 @@
                 android:id="@+id/btn_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/et_password"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="12dp"
                 android:background="@drawable/btn_white_selector"
-                android:layout_below="@+id/et_password"
+                android:clickable="@{loginViewModel.isDataAvailable}"
+
+                android:onClick="@{()-> loginViewModel.login()}"
                 android:paddingLeft="16dp"
-                android:paddingRight="16dp"
                 android:paddingTop="4dp"
+                android:paddingRight="16dp"
                 android:paddingBottom="4dp"
-                android:layout_centerHorizontal="true"
                 android:text="@string/login"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                android:onClick="@{()-> loginViewModel.login()}"
-                android:clickable="@{loginViewModel.isDataAvailable}"
-                />
+                android:textStyle="bold" />
 
         </RelativeLayout>
 

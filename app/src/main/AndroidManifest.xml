@@ -26,12 +26,12 @@
             android:name="com.attendance.myproject.begory.presentationLayer.login.LoginActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:theme="@style/AppTheme2"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
             android:name="com.attendance.myproject.begory.presentationLayer.splash.SplashActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:theme="@style/AppTheme2"
             android:windowSoftInputMode="stateHidden|adjustResize"
             >
             <intent-filter>
@@ -42,10 +42,10 @@
 
         </activity>
         <activity
-            android:name="com.attendance.myproject.begory.presentationLayer.shop.MainActivity"
+            android:name="com.attendance.myproject.begory.presentationLayer.main.MainActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden|adjustResize" >
         </activity>
 

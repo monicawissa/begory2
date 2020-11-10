@@ -1,6 +1,8 @@
 package com.attendance.myproject.begory.presentationLayer.main.attendence
 
+import android.content.ContentValues
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,6 +18,7 @@ class AttendanceFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
+        Log.d(ContentValues.TAG, "showMessage: create attend")
         return inflater.inflate(R.layout.fragment_attendance, container, false)
     }
 }
