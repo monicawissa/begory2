@@ -1,135 +1,47 @@
 [
     {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_profile.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable-v24\\ic_profile.xml"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_row_show_result.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\row_show_result.xml"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_notification.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable-v24\\ic_notification.xml"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_row_attendance.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\row_attendance.xml"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_p1.jpg.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable-xhdpi\\p1.jpg"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_splash.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\activity_splash.xml"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\navigation_mobile_navigation.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\navigation\\mobile_navigation.xml"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_avd_profile.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable-v24\\avd_profile.xml"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_deactivate_admin.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\activity_deactivate_admin.xml"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_qr_generator.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\activity_qr_generator.xml"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_row_attendance_count.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\row_attendance_count.xml"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_begory_icon.png.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\mipmap-xxhdpi\\begory_icon.png"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_student_attendance.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\activity_student_attendance.xml"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_begory_icon.png.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\mipmap-xhdpi\\begory_icon.png"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_begory_icon.png.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\mipmap-mdpi\\begory_icon.png"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable_progress_bar_black.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable\\progress_bar_black.xml"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_logo.png.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable-xhdpi\\logo.png"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_row_result.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\row_result.xml"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_avd_settings.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable-v24\\avd_settings.xml"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_add_admin.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\activity_add_admin.xml"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_add_attendance.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\activity_add_attendance.xml"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_level_attendance.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\activity_level_attendance.xml"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_settings.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable-v24\\ic_settings.xml"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_home.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\activity_home.xml"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rect_dialog_box.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable\\rect_dialog_box.xml"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_avd_home.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable-v24\\avd_home.xml"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_add_new_student.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\activity_add_new_student.xml"
-    },
-    {
         "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
         "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_level_result.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\activity_level_result.xml"
+        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable_avd_profile.xml.flat",
+        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable\\avd_profile.xml"
+    },
+    {
+        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable_avd_home.xml.flat",
+        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable\\avd_home.xml"
+    },
+    {
+        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable_avd_dashboard.xml.flat",
+        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable\\avd_dashboard.xml"
     },
     {
         "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu_main.xml.flat",
         "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\menu\\menu_main.xml"
     },
     {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_dashboard.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable-v24\\ic_dashboard.xml"
+        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_profile.xml.flat",
+        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable\\ic_profile.xml"
     },
     {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_shop.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable\\ic_shop.xml"
+        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_p1.jpg.flat",
+        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable-xhdpi\\p1.jpg"
     },
     {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_student_list.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\activity_student_list.xml"
+        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_home.xml.flat",
+        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable\\ic_home.xml"
+    },
+    {
+        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_splash.xml.flat",
+        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_settings.xml.flat",
+        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable\\ic_settings.xml"
+    },
+    {
+        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\navigation_mobile_navigation.xml.flat",
+        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\navigation\\mobile_navigation.xml"
     },
     {
         "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rect_white_box.xml.flat",
@@ -148,44 +60,52 @@
         "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable\\btn_menu_selector.xml"
     },
     {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_deactivate_level.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\activity_deactivate_level.xml"
+        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_dashboard.xml.flat",
+        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable\\ic_dashboard.xml"
     },
     {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_qr_code_station_reader.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\activity_qr_code_station_reader.xml"
+        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_begory_icon.png.flat",
+        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\mipmap-xxhdpi\\begory_icon.png"
     },
     {
         "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_notifications.xml.flat",
         "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\fragment_notifications.xml"
     },
     {
+        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_begory_icon.png.flat",
+        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\mipmap-xhdpi\\begory_icon.png"
+    },
+    {
+        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_notification.xml.flat",
+        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable\\ic_notification.xml"
+    },
+    {
+        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_begory_icon.png.flat",
+        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\mipmap-mdpi\\begory_icon.png"
+    },
+    {
         "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_settings.xml.flat",
         "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\fragment_settings.xml"
     },
     {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_show_level_attendance.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\activity_show_level_attendance.xml"
+        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable_begory_splash.png.flat",
+        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable\\begory_splash.png"
     },
     {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_edit_student.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\activity_edit_student.xml"
+        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable_avd_notification.xml.flat",
+        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable\\avd_notification.xml"
+    },
+    {
+        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable_progress_bar_black.xml.flat",
+        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable\\progress_bar_black.xml"
+    },
+    {
+        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_logo.png.flat",
+        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable-xhdpi\\logo.png"
     },
     {
         "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\anim_item_animation_from_bottom.xml.flat",
         "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\anim\\item_animation_from_bottom.xml"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable_begory_logo.png.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable\\begory_logo.png"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_row_menu.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\row_menu.xml"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_show_level_result.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\activity_show_level_result.xml"
     },
     {
         "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\anim_grid_layout_animation_from_bottom.xml.flat",
@@ -196,28 +116,16 @@
         "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\mipmap-xxxhdpi\\begory_icon.png"
     },
     {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_avd_dashboard.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable-v24\\avd_dashboard.xml"
-    },
-    {
         "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rect_trans_box.xml.flat",
         "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable\\rect_trans_box.xml"
     },
     {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_add_level.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\activity_add_level.xml"
+        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable_avd_settings.xml.flat",
+        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable\\avd_settings.xml"
     },
     {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_avd_notification.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable-v24\\avd_notification.xml"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_add_student.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\activity_add_student.xml"
+        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rect_dialog_box.xml.flat",
+        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable\\rect_dialog_box.xml"
     },
     {
         "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_white_selector.xml.flat",
@@ -238,9 +146,5 @@
     {
         "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
         "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "E:\\android_Projects\\Begory\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     }
 ]

@@ -22,7 +22,7 @@ public abstract class ActivitySplashBinding extends ViewDataBinding {
     super(_bindingComponent, _root, _localFieldCount);
   }
 
-  public abstract void setSplashViewModel(@Nullable SplashViewModel SplashViewModel);
+  public abstract void setSplashViewModel(@Nullable SplashViewModel splashViewModel);
 
   @Nullable
   public SplashViewModel getSplashViewModel() {

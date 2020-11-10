@@ -2,10 +2,11 @@ package com.attendance.myproject.begory.presentationLayer.splash;
 
 import java.lang.System;
 
-@kotlin.Metadata(mv = {1, 4, 0}, bv = {1, 0, 3}, k = 1, d1 = {"\u0000<\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u0004\u0018\u00002\u00020\u0001:\u0001\u0017B\u0017\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006J\b\u0010\u0013\u001a\u00020\u0014H\u0002J\u0012\u0010\u0015\u001a\u00020\u00142\b\b\u0001\u0010\u0016\u001a\u00020\fH\u0002R\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u0007\u001a\b\u0012\u0004\u0012\u00020\t0\bX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001a\u0010\n\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\f0\u000b0\bX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001d\u0010\r\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\f0\u000b0\u000e8F\u00a2\u0006\u0006\u001a\u0004\b\u000f\u0010\u0010R\u0017\u0010\u0011\u001a\b\u0012\u0004\u0012\u00020\t0\u000e8F\u00a2\u0006\u0006\u001a\u0004\b\u0012\u0010\u0010\u00a8\u0006\u0018"}, d2 = {"Lcom/attendance/myproject/begory/presentationLayer/splash/SplashViewModel;", "Landroidx/lifecycle/ViewModel;", "appRepository", "Lcom/attendance/myproject/begory/data/source/AppRepository;", "networkHelper", "Lcom/attendance/myproject/begory/di/module/NetworkHelper;", "(Lcom/attendance/myproject/begory/data/source/AppRepository;Lcom/attendance/myproject/begory/di/module/NetworkHelper;)V", "mSplashState", "Landroidx/lifecycle/MutableLiveData;", "Lcom/attendance/myproject/begory/presentationLayer/splash/SplashViewModel$SplashState;", "msnackbarText", "Lcom/attendance/myproject/begory/Utilities/ggle/Event;", "", "snackBarMessage", "Landroidx/lifecycle/LiveData;", "getSnackBarMessage", "()Landroidx/lifecycle/LiveData;", "splashState", "getSplashState", "decideState", "", "showSnackbarMessage", "message", "SplashState", "app_debug"})
+@kotlin.Metadata(mv = {1, 4, 0}, bv = {1, 0, 3}, k = 1, d1 = {"\u0000B\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0010\u0002\n\u0002\b\u0004\u0018\u00002\u00020\u0001:\u0001\u001bB\u0017\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006J\u0012\u0010\u0017\u001a\u00020\u00182\b\b\u0001\u0010\u0019\u001a\u00020\nH\u0002J\u0010\u0010\u001a\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\fH\u0002R\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001a\u0010\u0007\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\n0\t0\bX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\f0\bX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010\r\u001a\b\u0012\u0004\u0012\u00020\u000e0\bX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001d\u0010\u000f\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\n0\t0\u00108F\u00a2\u0006\u0006\u001a\u0004\b\u0011\u0010\u0012R\u0017\u0010\u0013\u001a\b\u0012\u0004\u0012\u00020\f0\u00108F\u00a2\u0006\u0006\u001a\u0004\b\u0014\u0010\u0012R\u0017\u0010\u0015\u001a\b\u0012\u0004\u0012\u00020\u000e0\u00108F\u00a2\u0006\u0006\u001a\u0004\b\u0016\u0010\u0012\u00a8\u0006\u001c"}, d2 = {"Lcom/attendance/myproject/begory/presentationLayer/splash/SplashViewModel;", "Landroidx/lifecycle/ViewModel;", "appRepository", "Lcom/attendance/myproject/begory/data/source/AppRepository;", "networkHelper", "Lcom/attendance/myproject/begory/di/module/NetworkHelper;", "(Lcom/attendance/myproject/begory/data/source/AppRepository;Lcom/attendance/myproject/begory/di/module/NetworkHelper;)V", "msnackbarText", "Landroidx/lifecycle/MutableLiveData;", "Lcom/attendance/myproject/begory/Utilities/ggle/Event;", "", "msnackbarText2", "", "msplashState", "Lcom/attendance/myproject/begory/presentationLayer/splash/SplashViewModel$SplashState;", "snackbarMessage", "Landroidx/lifecycle/LiveData;", "getSnackbarMessage", "()Landroidx/lifecycle/LiveData;", "snackbarMessage2", "getSnackbarMessage2", "splashState", "getSplashState", "showSnackbarMessage", "", "message", "showSnackbarMessage2", "SplashState", "app_debug"})
 public final class SplashViewModel extends androidx.lifecycle.ViewModel {
-    private final androidx.lifecycle.MutableLiveData<com.attendance.myproject.begory.presentationLayer.splash.SplashViewModel.SplashState> mSplashState = null;
+    private final androidx.lifecycle.MutableLiveData<com.attendance.myproject.begory.presentationLayer.splash.SplashViewModel.SplashState> msplashState = null;
     private final androidx.lifecycle.MutableLiveData<com.attendance.myproject.begory.Utilities.ggle.Event<java.lang.Integer>> msnackbarText = null;
+    private final androidx.lifecycle.MutableLiveData<java.lang.String> msnackbarText2 = null;
     private final com.attendance.myproject.begory.data.source.AppRepository appRepository = null;
     private final com.attendance.myproject.begory.di.module.NetworkHelper networkHelper = null;
     
@@ -15,7 +16,12 @@ public final class SplashViewModel extends androidx.lifecycle.ViewModel {
     }
     
     @org.jetbrains.annotations.NotNull()
-    public final androidx.lifecycle.LiveData<com.attendance.myproject.begory.Utilities.ggle.Event<java.lang.Integer>> getSnackBarMessage() {
+    public final androidx.lifecycle.LiveData<com.attendance.myproject.begory.Utilities.ggle.Event<java.lang.Integer>> getSnackbarMessage() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final androidx.lifecycle.LiveData<java.lang.String> getSnackbarMessage2() {
         return null;
     }
     
@@ -23,7 +29,7 @@ public final class SplashViewModel extends androidx.lifecycle.ViewModel {
     int message) {
     }
     
-    private final void decideState() {
+    private final void showSnackbarMessage2(java.lang.String message) {
     }
     
     @androidx.hilt.lifecycle.ViewModelInject()

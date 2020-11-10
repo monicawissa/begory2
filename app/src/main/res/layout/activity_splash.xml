@@ -13,12 +13,13 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/p1">
+        android:background="@color/primaryColor">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/begory_logo" />
+            android:src="@drawable/begory_splash"
+            />
 
     </RelativeLayout>
 </layout>

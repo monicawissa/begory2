@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -13,22 +14,26 @@ import com.attendance.myproject.begory.R;
 import com.attendance.myproject.begory.presentationLayer.main.MainViewModel;
 import java.lang.Deprecated;
 import java.lang.Object;
-import np.com.susanthapa.curved_bottom_navigation.CurvedBottomNavigationView;
+import me.ibrahimsn.lib.SmoothBottomBar;
 
 public abstract class ActivityMainBinding extends ViewDataBinding {
   @NonNull
-  public final CurvedBottomNavigationView navView;
+  public final SmoothBottomBar bottomBar;
+
+  @NonNull
+  public final ConstraintLayout container;
 
   @Bindable
   protected MainViewModel mMainViewModel;
 
   protected ActivityMainBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CurvedBottomNavigationView navView) {
+      SmoothBottomBar bottomBar, ConstraintLayout container) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.navView = navView;
+    this.bottomBar = bottomBar;
+    this.container = container;
   }
 
-  public abstract void setMainViewModel(@Nullable MainViewModel MainViewModel);
+  public abstract void setMainViewModel(@Nullable MainViewModel mainViewModel);
 
   @Nullable
   public MainViewModel getMainViewModel() {

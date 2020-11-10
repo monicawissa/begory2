@@ -21,7 +21,7 @@ class AppPreferencesHelper @Inject constructor(@ApplicationContext context: Cont
   }
   override fun getUser(callback: IRemoteDataSource.LoginCallback) {
     val user =mPrefs.load(PREF_KEY_ACCESS_TOKEN)
-    if(user==null){
+    if(user!=null){
       callback.onResponse(user)
     }
     else callback.onDataNotAvailable(R.string.account_not_found)

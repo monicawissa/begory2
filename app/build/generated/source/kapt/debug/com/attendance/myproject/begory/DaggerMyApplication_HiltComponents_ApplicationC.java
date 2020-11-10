@@ -68,6 +68,8 @@ public final class DaggerMyApplication_HiltComponents_ApplicationC extends MyApp
 
   private volatile Object iRemoteDataSource = new MemoizedSentinel();
 
+  private volatile Object appPreferencesHelper = new MemoizedSentinel();
+
   private volatile Object iPreferencesHelper = new MemoizedSentinel();
 
   private volatile Object networkHelper = new MemoizedSentinel();
@@ -116,7 +118,17 @@ public final class DaggerMyApplication_HiltComponents_ApplicationC extends MyApp
   }
 
   private AppPreferencesHelper getAppPreferencesHelper() {
-    return new AppPreferencesHelper(ApplicationContextModule_ProvideContextFactory.provideContext(applicationContextModule));
+    Object local = appPreferencesHelper;
+    if (local instanceof MemoizedSentinel) {
+      synchronized (local) {
+        local = appPreferencesHelper;
+        if (local instanceof MemoizedSentinel) {
+          local = new AppPreferencesHelper(ApplicationContextModule_ProvideContextFactory.provideContext(applicationContextModule));
+          appPreferencesHelper = DoubleCheck.reentrantCheck(appPreferencesHelper, local);
+        }
+      }
+    }
+    return (AppPreferencesHelper) local;
   }
 
   private IPreferencesHelper getIPreferencesHelper() {

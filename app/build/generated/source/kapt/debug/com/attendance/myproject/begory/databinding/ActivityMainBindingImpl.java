@@ -15,11 +15,9 @@ public class ActivityMainBindingImpl extends ActivityMainBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.nav_view, 1);
+        sViewsWithIds.put(R.id.bottomBar, 1);
     }
     // views
-    @NonNull
-    private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     // values
     // listeners
@@ -30,10 +28,10 @@ public class ActivityMainBindingImpl extends ActivityMainBinding  {
     }
     private ActivityMainBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (np.com.susanthapa.curved_bottom_navigation.CurvedBottomNavigationView) bindings[1]
+            , (me.ibrahimsn.lib.SmoothBottomBar) bindings[1]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[0]
             );
-        this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
-        this.mboundView0.setTag(null);
+        this.container.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();
@@ -60,7 +58,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding  {
     @Override
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
-        if (BR.MainViewModel == variableId) {
+        if (BR.mainViewModel == variableId) {
             setMainViewModel((com.attendance.myproject.begory.presentationLayer.main.MainViewModel) variable);
         }
         else {
@@ -94,7 +92,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding  {
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): MainViewModel
+        flag 0 (0x1L): mainViewModel
         flag 1 (0x2L): null
     flag mapping end*/
     //end

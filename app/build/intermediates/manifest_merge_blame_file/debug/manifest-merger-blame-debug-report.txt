@@ -115,8 +115,8 @@
 62-->E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:27:13-43
 63            android:screenOrientation="portrait"
 63-->E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:28:13-49
-64            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
-64-->E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:29:13-80
+64            android:theme="@style/Theme.AppCompat.NoActionBar"
+64-->E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:29:13-63
 65            android:windowSoftInputMode="stateHidden|adjustResize" />
 65-->E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:30:13-67
 66        <activity
@@ -142,14 +142,14 @@
 76        </activity>
 77        <activity
 77-->E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:44:9-50:20
-78            android:name="com.attendance.myproject.begory.presentationLayer.main.MainActivity"
+78            android:name="com.attendance.myproject.begory.presentationLayer.shop.MainActivity"
 78-->E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:45:13-95
 79            android:launchMode="singleTop"
 79-->E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:46:13-43
 80            android:screenOrientation="portrait"
 80-->E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:47:13-49
-81            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
-81-->E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:48:13-80
+81            android:theme="@style/Theme.AppCompat.NoActionBar"
+81-->E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:48:13-63
 82            android:windowSoftInputMode="stateHidden|adjustResize" >
 82-->E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:49:13-67
 83        </activity>

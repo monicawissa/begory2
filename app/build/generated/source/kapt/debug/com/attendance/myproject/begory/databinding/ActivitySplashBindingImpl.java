@@ -58,7 +58,7 @@ public class ActivitySplashBindingImpl extends ActivitySplashBinding  {
     @Override
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
-        if (BR.SplashViewModel == variableId) {
+        if (BR.splashViewModel == variableId) {
             setSplashViewModel((com.attendance.myproject.begory.presentationLayer.splash.SplashViewModel) variable);
         }
         else {
@@ -92,7 +92,7 @@ public class ActivitySplashBindingImpl extends ActivitySplashBinding  {
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): SplashViewModel
+        flag 0 (0x1L): splashViewModel
         flag 1 (0x2L): null
     flag mapping end*/
     //end

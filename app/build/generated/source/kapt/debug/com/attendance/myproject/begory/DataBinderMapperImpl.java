@@ -111,10 +111,10 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     static final SparseArray<String> sKeys = new SparseArray<String>(4);
 
     static {
-      sKeys.put(1, "MainViewModel");
-      sKeys.put(2, "SplashViewModel");
       sKeys.put(0, "_all");
-      sKeys.put(3, "loginViewModel");
+      sKeys.put(1, "loginViewModel");
+      sKeys.put(2, "mainViewModel");
+      sKeys.put(3, "splashViewModel");
     }
   }
 
