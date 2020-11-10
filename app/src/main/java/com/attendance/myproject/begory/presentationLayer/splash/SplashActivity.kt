@@ -9,7 +9,7 @@ import com.attendance.myproject.begory.R
 import com.attendance.myproject.begory.Utilities.UiManager
 import com.attendance.myproject.begory.databinding.ActivitySplashBinding
 import com.attendance.myproject.begory.presentationLayer.BaseActivity
-import com.attendance.myproject.begory.presentationLayer.Splash.SplashViewModel
+import com.attendance.myproject.begory.presentationLayer.splash.SplashViewModel
 import com.attendance.myproject.begory.presentationLayer.login.LoginActivity
 import com.attendance.myproject.begory.presentationLayer.main.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
@@ -60,7 +60,7 @@ class SplashActivity: BaseActivity(),SplashNavigator {
                             }
                         }
                     })
-            snackBarMessage.observe(this@SplashActivity,
+            snackbarMessage.observe(this@SplashActivity,
                     Observer { showMessage(getString(it.getContentIfNotHandled()!!)) })
 
 

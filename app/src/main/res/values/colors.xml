@@ -7,5 +7,12 @@
     <color name="secondaryLightColor">#ffc246</color>
     <color name="secondaryDarkColor">#c56200</color>
     <color name="primaryTextColor">#ffffff</color>
+    <color name="white">#ffffff</color>
     <color name="secondaryTextColor">#000000</color>
+    <color name="black">#000000</color>
+
+    <color name="progress_end">#ffffff</color>
+    <color name="progress_center">#ab97CCF0</color>
+
+    <color name="actionbar_opacity">#33000000</color>
 </resources>

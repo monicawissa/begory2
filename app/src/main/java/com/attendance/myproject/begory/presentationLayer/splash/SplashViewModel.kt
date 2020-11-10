@@ -1,4 +1,4 @@
-package com.attendance.myproject.begory.presentationLayer.Splash
+package com.attendance.myproject.begory.presentationLayer.splash
 import androidx.annotation.StringRes
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
@@ -28,7 +28,12 @@ class SplashViewModel  @ViewModelInject constructor(private val appRepository: A
         private val msnackbarText2 = MutableLiveData<String>()
         val snackbarMessage2: LiveData<String>
                 get() = msnackbarText2
+        //same as enum
+        sealed class SplashState {
+                class MainActivity : SplashState()
+                class LoginActivity : SplashState()
 
+        }
         private fun showSnackbarMessage(@StringRes message: Int) {
                 msnackbarText.value = Event(message)
         }
@@ -54,10 +59,4 @@ class SplashViewModel  @ViewModelInject constructor(private val appRepository: A
                         else showSnackbarMessage(R.string.no_internet_connection)
                 }
         }
-}
-//same as enum
-sealed class SplashState {
-        class MainActivity : SplashState()
-        class LoginActivity : SplashState()
-
 }

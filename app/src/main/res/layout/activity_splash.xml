@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/p1">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:layout_width="wrap"
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="splashViewModel"
+            type="com.attendance.myproject.begory.presentationLayer.splash.SplashViewModel"
+            />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/begory_logo"
-        />
+        android:background="@drawable/p1">
 
-</RelativeLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/begory_logo" />
+
+    </RelativeLayout>
+</layout>

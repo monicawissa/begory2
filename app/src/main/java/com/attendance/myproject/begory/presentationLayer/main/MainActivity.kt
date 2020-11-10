@@ -1,4 +1,4 @@
-package com.attendance.myproject.begory.presentationLayer.shop
+package com.attendance.myproject.begory.presentationLayer.main
 
 import android.content.ContentValues
 import android.os.Bundle

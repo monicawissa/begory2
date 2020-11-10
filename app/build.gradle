@@ -68,7 +68,7 @@ dependencies {
     implementation 'com.journeyapps:zxing-android-embedded:3.2.0@aar'
     implementation "org.jetbrains.kotlin:kotlin-script-runtime:1.4.10"
     //curved bottom navigation
-    implementation 'np.com.susanthapa.curved_bottom_navigation:curved_bottom_navigation:0.6.3'
+    implementation 'com.github.ibrahimsn98:SmoothBottomBar:1.7.6'
 
     implementation "androidx.lifecycle:lifecycle-extensions:$archLifecycleVersion"
     kapt "androidx.lifecycle:lifecycle-compiler:$archLifecycleVersion"
