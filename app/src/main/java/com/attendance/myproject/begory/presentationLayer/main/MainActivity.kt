@@ -10,7 +10,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.attendance.myproject.begory.R
 import com.attendance.myproject.begory.Utilities.UiManager
 import com.attendance.myproject.begory.databinding.ActivityMainBinding
