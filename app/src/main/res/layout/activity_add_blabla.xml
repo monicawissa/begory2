@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:padding="12dp"
             android:gravity="center"
-            android:text="@string/m_add_student"
+            android:text="@{addBlaBlaViewModel.mTitleTV}"
             android:textSize="24sp"
             android:background="@color/primaryColor"
             android:textColor="@color/white"
@@ -39,7 +39,8 @@
             android:layout_gravity="center_horizontal|top"
             android:indeterminate="true"
             android:indeterminateDrawable="@drawable/progress_bar_black"
-            android:visibility="gone" />
+            android:visibility="@{addBlaBlaViewModel.dataLoading ?View.VISIBLE: View.GONE  }"
+            />
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -71,6 +72,18 @@
                     android:layout_marginRight="16dp"
                     android:background="@drawable/rect_white_box"
                     tools:setOnItemSelectedListener="@{addBlaBlaViewModel.spinnerListener}"
+                    android:visibility="@{addBlaBlaViewModel.isStudentAvailable ?View.VISIBLE: View.GONE  }"
+
+                    />
+                <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+                    android:id="@+id/multipleItemSelectionSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/rect_white_box"
+                    app:hintText="Multi Item Selection"
+                    android:visibility="@{addBlaBlaViewModel.isStudentAvailable ? View.GONE:View.VISIBLE  }"
                     />
 
                 <EditText
@@ -90,7 +103,9 @@
                     android:padding="12dp"
                     android:textColor="#3F3F3F"
                     android:textColorHint="#3F3F3F"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:visibility="@{addBlaBlaViewModel.isStudentAvailable ?View.VISIBLE: View.GONE  }"
+                    />
 
 
                 <EditText
@@ -112,7 +127,8 @@
                     android:padding="12dp"
                     android:textColor="#3F3F3F"
                     android:textColorHint="#3F3F3F"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    />
 
                 <EditText
                     android:id="@+id/et_mobile2"
@@ -132,7 +148,9 @@
                     android:padding="12dp"
                     android:textColor="#3F3F3F"
                     android:textColorHint="#3F3F3F"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:visibility="@{addBlaBlaViewModel.isStudentAvailable ?View.VISIBLE: View.GONE  }"
+                    />
 
                 <EditText
                     android:id="@+id/et_address"
@@ -140,7 +158,6 @@
                     android:layout_height="42dp"
                     android:background="@drawable/rect_white_box"
                     android:hint="@string/address"
-                    android:visibility="visible"
                     android:imeActionLabel="@string/address"
                     android:text="@={addBlaBlaViewModel.address}"
                     android:imeOptions="actionDone"
@@ -152,7 +169,9 @@
                     android:padding="12dp"
                     android:textColor="#3F3F3F"
                     android:textColorHint="#3F3F3F"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:visibility="@{addBlaBlaViewModel.isStudentAvailable ?View.VISIBLE: View.GONE  }"
+                    />
 
                 <androidx.appcompat.widget.AppCompatCheckBox
                     android:id="@+id/cb_shamas"
@@ -165,6 +184,7 @@
                     android:layout_marginRight="16dp"
                     android:layout_gravity="end"
                     android:checked="@={addBlaBlaViewModel.isshamas}"
+                    android:visibility="@{addBlaBlaViewModel.isStudentAvailable ?View.VISIBLE: View.GONE  }"
                     />
 
                 <Button
@@ -181,9 +201,9 @@
                     android:text="@string/add"
                     android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:clickable="@{addBlaBlaViewModel.isDataAvailable}"
+                    android:clickable="@{addBlaBlaViewModel.isBtnAvailable}"
 
-                    android:onClick="@{()-> addBlaBlaViewModel.r()}"
+                    android:onClick="@{()-> addBlaBlaViewModel.register}"
 
                     android:textStyle="bold" />
 

@@ -25,11 +25,11 @@ data class User (
         @SerializedName("address")
     var address: String? = "",
         @SerializedName("adminLevel")
-    var adminLevel: FirebaseFilterType.LevelFilterType? ,
+    var adminLevel: String?="" ,
         @SerializedName("subAdminLevel")
-    var subAdminLevel: FirebaseFilterType.LevelFilterType?,
+    var subAdminLevel: String?="",
         @SerializedName("studentLevel")
-    var studentLevel: FirebaseFilterType.LevelFilterType?,
+    var studentLevel: FirebaseFilterType.LevelFilterType?=null,
 
         @SerializedName("balanceEqlomat")
     var balanceEqlomat: Double? = 0.0,

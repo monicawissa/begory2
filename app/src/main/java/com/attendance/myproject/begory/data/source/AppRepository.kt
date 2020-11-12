@@ -1,7 +1,6 @@
 package com.attendance.myproject.begory.data.source
 import com.attendance.myproject.begory.data.Models.User
 import com.attendance.myproject.begory.data.source.local.prefs.IPreferencesHelper
-import com.attendance.myproject.begory.data.Models.remote.FirebaseFilterType
 import com.attendance.myproject.begory.data.source.remote.IRemoteDataSource
 import javax.inject.Inject
 
@@ -42,9 +41,9 @@ class AppRepository @Inject constructor(private val mRemoteDataSource: IRemoteDa
         })
     }
 
-    override fun register(user: User,
-                          callback: IRemoteDataSource.MessageCallback) {
-        mRemoteDataSource.register(user,object :IRemoteDataSource.MessageCallback{
+    override fun registerStudent(user: User,
+                                 callback: IRemoteDataSource.MessageCallback) {
+        mRemoteDataSource.registerStudent(user,object :IRemoteDataSource.MessageCallback{
             override fun onResponse(message: Int?) {
                 callback.onResponse(message)
             }
@@ -56,6 +55,29 @@ class AppRepository @Inject constructor(private val mRemoteDataSource: IRemoteDa
         })
     }
 
+    override fun registerSubAdmin(user: User, callback: IRemoteDataSource.MessageCallback) {
+        mRemoteDataSource.registerSubAdmin(user,object :IRemoteDataSource.MessageCallback{
+            override fun onResponse(message: Int?) {
+                callback.onResponse(message)
+            }
 
+            override fun onDataNotAvailable(message: Int?) {
+                callback.onDataNotAvailable(message)
+            }
+
+        })
+    }
+    override fun registerAdmin(user: User, callback: IRemoteDataSource.MessageCallback) {
+        mRemoteDataSource.registerAdmin(user,object :IRemoteDataSource.MessageCallback{
+            override fun onResponse(message: Int?) {
+                callback.onResponse(message)
+            }
+
+            override fun onDataNotAvailable(message: Int?) {
+                callback.onDataNotAvailable(message)
+            }
+
+        })
+    }
 
 }

@@ -14,8 +14,11 @@ public interface IRemoteDataSource {
         fun onDataNotAvailable(message: Int?)
     }
     fun login(mobile: String, password: String, callback: LoginCallback)
-    fun register(user: User
-                 ,callback: IRemoteDataSource.MessageCallback)
+    fun registerStudent(user: User
+                        , callback: IRemoteDataSource.MessageCallback)
+    fun registerSubAdmin(user: User,callback: IRemoteDataSource.MessageCallback)
+    fun registerAdmin(user: User,callback: IRemoteDataSource.MessageCallback)
+
 //    fun getTopRatedMovies(callback: LoadAllMoviesCallback)
 //    fun getMovieActors(callback: IResponseCast, movie_id: Int)
 //    fun getMovieTrailer(callback: IResponseTrailer, movie_id: Int)

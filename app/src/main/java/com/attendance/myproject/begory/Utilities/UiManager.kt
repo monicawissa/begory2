@@ -10,6 +10,11 @@ object UiManager {
         val mIntent = Intent(context, cls)
         context.startActivity(mIntent)
     }
+    fun startActivity(context: Context, cls: Class<*>,key:String, i:String) {
+        val mIntent = Intent(context, cls)
+        mIntent.putExtra(key, i);
+        context.startActivity(mIntent)
+    }
     fun hideKeyboard(activity: Activity?) {
         if (activity == null) return
         val inputManager = activity.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager

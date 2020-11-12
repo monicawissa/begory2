@@ -30,7 +30,17 @@
         android:indeterminate="true"
         android:indeterminateDrawable="@drawable/progress_bar_black"
         android:visibility="gone" />
-
+    <TextView
+        android:id="@+id/d_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:gravity="center"
+        android:text="@string/m_edit_subadmin"
+        android:textSize="24sp"
+        android:background="@color/primaryColor"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

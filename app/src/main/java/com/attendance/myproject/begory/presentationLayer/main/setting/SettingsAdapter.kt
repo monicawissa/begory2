@@ -45,14 +45,14 @@ class SettingsAdapter(private val mContext: Context, private val mlist: List<Int
                     if (pos != RecyclerView.NO_POSITION){
                         val clickedDataItem = mlist[pos];
                         when (mlist[pos]) {
-                            m_add_student -> UiManager.startActivity(mContext,AddBlaBlaActivity::class.java)
-                            m_edit_student -> UiManager.startActivity(mContext,)
-                            m_add_subadmin -> UiManager.startActivity(mContext,)
-                            m_edit_subadmin -> UiManager.startActivity(mContext,)
-                            m_add_admin -> UiManager.startActivity(mContext,)
-                            m_edit_admin -> UiManager.startActivity(mContext,)
-                            m_levels_attendance -> UiManager.startActivity(mContext,)
-
+                            m_add_student -> UiManager.startActivity(mContext,AddBlaBlaActivity::class.java, mContext.getString(settingType),mContext.getString(m_add_student) )
+//                            m_edit_student -> UiManager.startActivity(mContext,mContext.getString(settingType),)
+//                            m_add_subadmin -> UiManager.startActivity(mContext,mContext.getString(settingType),)
+//                            m_edit_subadmin -> UiManager.startActivity(mContext,mContext.getString(settingType),)
+//                            m_add_admin -> UiManager.startActivity(mContext,mContext.getString(settingType),)
+//                            m_edit_admin -> UiManager.startActivity(mContext,mContext.getString(settingType),)
+//                            m_levels_attendance -> UiManager.startActivity(mContext,mContext.getString(settingType),)
+//
 
                         }
                         Toast.makeText(it.context, "You clicked $clickedDataItem", Toast.LENGTH_SHORT).show()

@@ -1,7 +1,10 @@
 package com.attendance.myproject.begory.presentationLayer.main.setting
 
+import android.content.ContentValues
+import android.nfc.Tag
 import android.os.Bundle
 import android.os.Parcelable
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,7 +19,7 @@ import java.util.*
 class SettingsFragment : Fragment() {
 
     private var recyclerView: RecyclerView? = null
-    private var mList: ArrayList<Int>
+    private lateinit var mList: ArrayList<Int>
     var recyclerViewAdapter: SettingsAdapter? = null
     private var savedRecyclerLayoutState: Parcelable? = null
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -30,14 +33,17 @@ class SettingsFragment : Fragment() {
         //GridLayout
         val gridLayoutManager: GridLayoutManager = GridLayoutManager(activity, 2)
         recyclerView!!.layoutManager = gridLayoutManager
-        displayDataFromInstanceState(savedInstanceState)
-        showData(mList)
+        if (savedInstanceState != null) {
+            displayDataFromInstanceState(savedInstanceState)
+        } else {
+            this.mList = fillMenu()!!
+        }
+        Log.d(ContentValues.TAG, "showMessage: create $mList")
+        showData()
         return root
     }
 
-    fun showData(list: ArrayList<Int>?) {
-        this.mList.clear()
-        this.mList.addAll(list!!)
+    private fun showData() {
         recyclerViewAdapter = SettingsAdapter(requireContext(), this.mList)
         recyclerView!!.adapter = recyclerViewAdapter
         recyclerViewAdapter!!.notifyDataSetChanged()
@@ -55,7 +61,6 @@ class SettingsFragment : Fragment() {
 
         // restore Layout Manager Position
         if (savedRecyclerLayoutState != null) checkNotNull(recyclerView!!.layoutManager).onRestoreInstanceState(savedRecyclerLayoutState)
-        showData(mList)
     }
 
     override fun onSaveInstanceState(savedInstanceState: Bundle) {
@@ -78,12 +83,9 @@ class SettingsFragment : Fragment() {
         private const val BUNDLE_RECYCLER_LAYOUT = "recycler_layout"
     }
 
-    init {
-        this.mList = fillMenu()!!
-    }
-
     private fun fillMenu(): ArrayList<Int>? {
         val mItems = ArrayList<Int>()
+        mItems.clear()
         mItems.add(R.string.m_add_student)
         mItems.add(R.string.m_edit_student)
         mItems.add(R.string.m_add_subadmin)

@@ -26,12 +26,12 @@
             android:name="com.attendance.myproject.begory.presentationLayer.login.LoginActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme2"
+            android:theme="@style/AppThemeNoBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
             android:name="com.attendance.myproject.begory.presentationLayer.splash.SplashActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme2"
+            android:theme="@style/AppThemeNoBar"
             android:windowSoftInputMode="stateHidden|adjustResize"
             >
             <intent-filter>
@@ -49,29 +49,14 @@
             android:windowSoftInputMode="stateHidden|adjustResize" >
         </activity>
 
+            <activity android:name="com.attendance.myproject.begory.presentationLayer.main.setting.addBlaBla.AddBlaBlaActivity"
+                android:launchMode="singleTop"
+                android:theme="@style/dialogTheme"
+                android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
 
-    <!--        <activity android:name="com.attendance.myproject.begory.activites.AddStudentActivity"-->
-    <!--            android:launchMode="singleTop"-->
-    <!--            android:theme="@style/dialogTheme"-->
-    <!--            android:screenOrientation="portrait"/>-->
-
-    <!--        <activity android:name="com.attendance.myproject.begory.activites.EditStudentActivity"-->
-    <!--            android:launchMode="singleTop"-->
-    <!--            android:theme="@style/dialogTheme"-->
-    <!--            android:screenOrientation="portrait"/>-->
-
-    <!--        <activity android:name="com.attendance.myproject.begory.activites.AddAdminActivity"-->
-    <!--            android:launchMode="singleTop"-->
-    <!--            android:theme="@style/dialogTheme"-->
-    <!--            android:screenOrientation="portrait"/>-->
-
-    <!--        <activity android:name="com.attendance.myproject.begory.activites.oldactivities.AddLevelActivity"-->
-    <!--            android:launchMode="singleTop"-->
-    <!--            android:theme="@style/dialogTheme"-->
-    <!--            android:screenOrientation="portrait"/>-->
 
     <!--        <activity android:name="com.attendance.myproject.begory.activites.oldactivities.DeactivateLevelActivity"-->
     <!--            android:launchMode="singleTop"-->
