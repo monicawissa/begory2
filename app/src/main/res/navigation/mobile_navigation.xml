@@ -36,7 +36,7 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_settings"
-        android:name="com.attendance.myproject.begory.presentationLayer.main.SettingsFragment"
+        android:name="com.attendance.myproject.begory.presentationLayer.main.setting.SettingsFragment"
         android:label="@string/title_settings"
         tools:layout="@layout/fragment_settings">
         <action

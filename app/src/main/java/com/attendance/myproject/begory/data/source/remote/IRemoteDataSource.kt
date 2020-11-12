@@ -14,10 +14,7 @@ public interface IRemoteDataSource {
         fun onDataNotAvailable(message: Int?)
     }
     fun login(mobile: String, password: String, callback: LoginCallback)
-    fun register(mobile: String
-                 ,admin: FirebaseFilterType.LevelFilterType?=null
-                 ,subAdmin: FirebaseFilterType.LevelFilterType?=null
-                 ,studentLevel: FirebaseFilterType.LevelFilterType?=null
+    fun register(user: User
                  ,callback: IRemoteDataSource.MessageCallback)
 //    fun getTopRatedMovies(callback: LoadAllMoviesCallback)
 //    fun getMovieActors(callback: IResponseCast, movie_id: Int)

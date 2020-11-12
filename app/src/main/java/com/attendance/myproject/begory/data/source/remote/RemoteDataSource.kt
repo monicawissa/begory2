@@ -38,15 +38,12 @@ class RemoteDataSource @Inject constructor(private val firebaseDatabase:Firebase
 
     }
 
-    override fun register(mobile: String, admin: FirebaseFilterType.LevelFilterType?,
-                          subAdmin: FirebaseFilterType.LevelFilterType?,
-                          studentLevel: FirebaseFilterType.LevelFilterType?,
+    override fun register(user: User,
                           callback: IRemoteDataSource.MessageCallback) {
         val query =firebaseDatabase.reference.child(FirebaseFilterType.users)
         Log.d(ContentValues.TAG, "showMessage: "+query)
         val id =query.push().key
-        val user:User= User(mobile = mobile,password = mobile,mobile_password = "$mobile $mobile",id = id,
-                adminLevel = admin,subAdminLevel = subAdmin,studentLevel = studentLevel)
+        user.id=id
         query.child(id!!).setValue(user).addOnSuccessListener {
              callback.onResponse(R.string.added)   }
                 .addOnFailureListener {  callback.onDataNotAvailable(R.string.error) }

@@ -10,23 +10,26 @@ data class User (
     var name: String? = "",
         @SerializedName("mobile")
     var mobile: String? = "",
+        @SerializedName("mobile2")
+    var mobile2: String? = "",
         @SerializedName("password")
     var password: String? = "",
-    //login
+        @SerializedName("isShamas")
+    var isShamas: Boolean? = false,
+
+        //login
         @SerializedName("mobile_password")
     var mobile_password: String? = "",
         @SerializedName("notes")
     var notes: String? = "",
-        @SerializedName("mobile2")
-    var mobile2: String? = "",
         @SerializedName("address")
     var address: String? = "",
         @SerializedName("adminLevel")
-    var adminLevel: FirebaseFilterType.LevelFilterType? = FirebaseFilterType.LevelFilterType.No,
+    var adminLevel: FirebaseFilterType.LevelFilterType? ,
         @SerializedName("subAdminLevel")
-    var subAdminLevel: FirebaseFilterType.LevelFilterType? = FirebaseFilterType.LevelFilterType.No,
+    var subAdminLevel: FirebaseFilterType.LevelFilterType?,
         @SerializedName("studentLevel")
-    var studentLevel: FirebaseFilterType.LevelFilterType? = FirebaseFilterType.LevelFilterType.No,
+    var studentLevel: FirebaseFilterType.LevelFilterType?,
 
         @SerializedName("balanceEqlomat")
     var balanceEqlomat: Double? = 0.0,

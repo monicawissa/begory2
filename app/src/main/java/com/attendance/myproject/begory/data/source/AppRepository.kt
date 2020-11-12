@@ -42,11 +42,9 @@ class AppRepository @Inject constructor(private val mRemoteDataSource: IRemoteDa
         })
     }
 
-    override fun register(mobile: String, admin: FirebaseFilterType.LevelFilterType?,
-                          subAdmin: FirebaseFilterType.LevelFilterType?,
-                          studentLevel: FirebaseFilterType.LevelFilterType?,
+    override fun register(user: User,
                           callback: IRemoteDataSource.MessageCallback) {
-        mRemoteDataSource.register(mobile,admin,subAdmin,studentLevel,object :IRemoteDataSource.MessageCallback{
+        mRemoteDataSource.register(user,object :IRemoteDataSource.MessageCallback{
             override fun onResponse(message: Int?) {
                 callback.onResponse(message)
             }
