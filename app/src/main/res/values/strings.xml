@@ -15,6 +15,7 @@
     <string name="fill__level">من فضلك اختر المرحلة </string>
     <string name="user_exist">هذا الحساب مسجل قم بالتعديل </string>
     <string name="settingType">settingType</string>
+    <string name="userType">userType</string>
     <string name="account_deactivated">الحساب متوقف</string>
     <string name="account_not_found">الحساب غير مسجل من قبل</string>
     <string name="error">حدث خطا</string>
@@ -24,9 +25,9 @@
     <string name="m_add_student">إضافة مخدوم</string>
     <string name="m_edit_student">تعديل مخدوم</string>
     <string name="m_add_subadmin">إضافة خادم</string>
-    <string name="m_edit_subadmin">الغاء خادم</string>
+    <string name="m_edit_subadmin">تعديل خادم</string>
     <string name="m_add_admin">إضافة امين خدمة</string>
-    <string name="m_edit_admin">الغاء امين خدمة</string>
+    <string name="m_edit_admin">تعديل امين خدمة</string>
 
     <string name="m_add_attendance">إضافة حضور</string>
     <string name="m_levels_attendance">كشف حضور</string>
@@ -39,7 +40,10 @@
     <string name="m_student_generate_card">إصدار كود</string>
     <string name="m_signout">تسجيل خروج</string>
 
+
     <string name="add">اضف</string>
+    <string name="check">تعديل</string>
+
     <string name="save_pdf">حفظ PDF</string>
     <string name="saved_pdf">تم حفظ PDF</string>
     <string name="or">او</string>

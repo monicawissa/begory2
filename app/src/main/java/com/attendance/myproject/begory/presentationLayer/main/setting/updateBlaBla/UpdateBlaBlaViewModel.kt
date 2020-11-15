@@ -1,4 +1,4 @@
-package com.attendance.myproject.begory.presentationLayer.main.setting.addBlaBla
+package com.attendance.myproject.begory.presentationLayer.main.setting.updateBlaBla
 import android.content.ContentValues
 import android.text.TextUtils
 import android.util.Log
@@ -19,18 +19,19 @@ import com.attendance.myproject.begory.data.source.AppRepository
 import com.attendance.myproject.begory.data.source.remote.IRemoteDataSource
 
 
-class AddBlaBlaViewModel  @ViewModelInject constructor(private val appRepository: AppRepository,
+class UpdateBlaBlaViewModel  @ViewModelInject constructor(private val appRepository: AppRepository,
                                                        @Assisted private val savedStateHandle: SavedStateHandle
 ) :
         ViewModel() ,LifecycleObserver {
-    var name: String = ""
-    var mobile: String = ""
-    var mobile2: String = ""
-    var address: String = ""
-    var isshamas: Boolean = false
-    var studentLevel: FirebaseFilterType.LevelFilterType? = null
-    var adminLevel: String? = ""
-    var subAdminLevel: String? = ""
+    var usertmp:User=savedStateHandle.getLiveData<User>("userType").value as User
+    var name: String = usertmp.name!!
+    var mobile: String =  usertmp.mobile!!
+    var mobile2: String =  usertmp.mobile2!!
+    var address: String =  usertmp.address!!
+    var isshamas: Boolean =  usertmp.isShamas!!
+    var studentLevel: FirebaseFilterType.LevelFilterType? = usertmp.studentLevel
+    var adminLevel: String? = usertmp.adminLevel!!
+    var subAdminLevel: String? =  usertmp.subAdminLevel!!
     var mTitleTV = savedStateHandle.getLiveData<String>("settingType").value
     var selectedData:String=""
     var selectedItemsListener= MultiSpinnerListener { items -> //The followings are selected items.
@@ -59,6 +60,7 @@ class AddBlaBlaViewModel  @ViewModelInject constructor(private val appRepository
     private val _isBtnAvailable = MutableLiveData<Boolean>()
     val isBtnAvailable: LiveData<Boolean>
         get() = _isBtnAvailable
+
 
     //visibility student spinner
     private val _isStudentAvailable = MutableLiveData<Boolean>()
@@ -91,7 +93,7 @@ class AddBlaBlaViewModel  @ViewModelInject constructor(private val appRepository
     init {
         _ishideKeyboard.value = false
         _isBtnAvailable.value = true
-        _isStudentAvailable.value = (mTitleTV.equals("إضافة مخدوم"))
+        _isStudentAvailable.value = (mTitleTV.equals("تعديل مخدوم"))
     }
 
 
@@ -105,7 +107,7 @@ class AddBlaBlaViewModel  @ViewModelInject constructor(private val appRepository
             showSnackbarMessage(R.string.fill_mobiledata)
             return false
         }
-        if (TextUtils.isEmpty(name) || (mTitleTV.equals("إضافة مخدوم") && studentLevel == null)) {
+        if (TextUtils.isEmpty(name) || (mTitleTV.equals("تعديل مخدوم") && studentLevel == null)) {
             Log.d(ContentValues.TAG, "showMessage: PasswordValid")
             showSnackbarMessage(R.string.fill_name_level)
             return false
@@ -123,7 +125,7 @@ class AddBlaBlaViewModel  @ViewModelInject constructor(private val appRepository
             showSnackbarMessage(R.string.fill_mobiledata)
             return false
         }
-        if ((!mTitleTV.equals("إضافة مخدوم") && selectedData.isEmpty())) {
+        if ((!mTitleTV.equals("تعديل مخدوم") && selectedData.isEmpty())) {
             Log.d(ContentValues.TAG, "showMessage: PasswordValid")
             showSnackbarMessage(R.string.fill__level)
             return false
@@ -132,19 +134,23 @@ class AddBlaBlaViewModel  @ViewModelInject constructor(private val appRepository
     }
 
     fun register() {
-        _ishideKeyboard.value = true
         _dataLoading.value = true
-        if (mTitleTV.equals("إضافة مخدوم")) {
+        _isBtnAvailable.value=false
+        if (mTitleTV.equals("تعديل مخدوم")) {
             if (isDataValid()) {
-                var user: User = User(name = name, mobile = mobile,
-                        mobile2 = mobile2, password = mobile,
-                        mobile_password = "$mobile $mobile", address = address,
-                        isShamas = isshamas, studentLevel = studentLevel)
-                appRepository.registerStudent(user, object : IRemoteDataSource.MessageCallback {
+                usertmp.name=name
+                usertmp.mobile=mobile
+                usertmp.mobile2=mobile2
+                usertmp.mobile_password="$mobile ${usertmp.password}"
+                usertmp.address=address
+                usertmp.isShamas=isshamas
+                usertmp.studentLevel=studentLevel
+                appRepository.updateStudent(usertmp, object : IRemoteDataSource.MessageCallback {
                     override fun onResponse(message: Int?) {
                         showSnackbarMessage(message!!)
-                        _isBtnAvailable.value = false
                         _dataLoading.value = false
+                        _isBtnAvailable.value = true
+
                     }
 
                     override fun onDataNotAvailable(message: Int?) {
@@ -155,17 +161,17 @@ class AddBlaBlaViewModel  @ViewModelInject constructor(private val appRepository
 
                 })
             } else _dataLoading.value = false
-        } else if (mTitleTV.equals("إضافة خادم")) {
+        }
+        else if (mTitleTV.equals("تعديل خادم")) {
             if (isDataValidAdminOrSubAdmin()) {
-                subAdminLevel = selectedData
-                //if( mTitleTV == "إضافة امين خدمة") adminLevel=  selectedItems
-                var user: User = User(mobile = mobile,
-                        subAdminLevel = subAdminLevel)
-                appRepository.registerSubAdmin(user, object : IRemoteDataSource.MessageCallback {
+                usertmp.mobile=mobile
+                usertmp.subAdminLevel=selectedData
+                appRepository.updateSubAdmin(usertmp, object : IRemoteDataSource.MessageCallback {
                     override fun onResponse(message: Int?) {
                         showSnackbarMessage(message!!)
-                        _isBtnAvailable.value = false
                         _dataLoading.value = false
+                        _isBtnAvailable.value = true
+
                     }
 
                     override fun onDataNotAvailable(message: Int?) {
@@ -176,16 +182,17 @@ class AddBlaBlaViewModel  @ViewModelInject constructor(private val appRepository
 
                 })
             } else _dataLoading.value = false
-        } else if (mTitleTV.equals("إضافة امين خدمة")) {
+        }
+        else if (mTitleTV.equals("تعديل امين خدمة")) {
             if (isDataValidAdminOrSubAdmin()) {
-                adminLevel = selectedData
-                var user: User = User(mobile = mobile,
-                        adminLevel = adminLevel)
-                appRepository.registerAdmin(user, object : IRemoteDataSource.MessageCallback {
+                usertmp.mobile=mobile
+                usertmp.adminLevel=selectedData
+                appRepository.updateAdmin(usertmp, object : IRemoteDataSource.MessageCallback {
                     override fun onResponse(message: Int?) {
                         showSnackbarMessage(message!!)
-                        _isBtnAvailable.value = false
                         _dataLoading.value = false
+                        _isBtnAvailable.value = true
+
                     }
 
                     override fun onDataNotAvailable(message: Int?) {

@@ -80,4 +80,52 @@ class AppRepository @Inject constructor(private val mRemoteDataSource: IRemoteDa
         })
     }
 
+    override fun checkUserExist(mobile: String, callback: IRemoteDataSource.LoginCallback) {
+        mRemoteDataSource.checkUserExist(mobile,object :IRemoteDataSource.LoginCallback{
+            override fun onResponse(user: User) {
+                callback.onResponse(user)
+            }
+
+            override fun onDataNotAvailable(message: Int?) {
+                callback.onDataNotAvailable(message)
+            }
+        })
+    }
+
+    override fun updateStudent(user: User, callback: IRemoteDataSource.MessageCallback) {
+        mRemoteDataSource.updateStudent(user,object :IRemoteDataSource.MessageCallback{
+            override fun onResponse(message: Int?) {
+                callback.onResponse(message)
+            }
+
+            override fun onDataNotAvailable(message: Int?) {
+                callback.onDataNotAvailable(message)
+            }
+        })
+    }
+
+    override fun updateSubAdmin(user: User, callback: IRemoteDataSource.MessageCallback) {
+        mRemoteDataSource.updateSubAdmin(user,object :IRemoteDataSource.MessageCallback{
+            override fun onResponse(message: Int?) {
+                callback.onResponse(message)
+            }
+
+            override fun onDataNotAvailable(message: Int?) {
+                callback.onDataNotAvailable(message)
+            }
+        })
+    }
+
+    override fun updateAdmin(user: User, callback: IRemoteDataSource.MessageCallback) {
+        mRemoteDataSource.updateAdmin(user,object :IRemoteDataSource.MessageCallback{
+            override fun onResponse(message: Int?) {
+                callback.onResponse(message)
+            }
+
+            override fun onDataNotAvailable(message: Int?) {
+                callback.onDataNotAvailable(message)
+            }
+        })
+    }
+
 }

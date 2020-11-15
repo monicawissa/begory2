@@ -3,22 +3,11 @@
 //import android.graphics.Color
 //import android.graphics.drawable.ColorDrawable
 //import android.os.Bundle
-//import android.support.v7.app.AppCompatActivity
-//import android.support.v7.widget.GridLayoutManager
-//import android.support.v7.widget.RecyclerView
 //import android.util.Log
 //import android.view.View
 //import android.widget.*
-//import com.attendance.myproject.attendanceregister.R
-//import com.attendance.myproject.attendanceregister.Utils.FBConnenctions
-//import com.attendance.myproject.attendanceregister.Utils.Utils
-//import com.attendance.myproject.attendanceregister.adapters.StudentAttendanceCountAdapter
-//import com.attendance.myproject.attendanceregister.beans.AttendanceItem
-//import com.attendance.myproject.attendanceregister.beans.LevelItem
-//import com.attendance.myproject.attendanceregister.beans.StudentItem
-//import com.attendance.myproject.attendanceregister.beans.StudentWithTotalAttendanceCount
-//import com.attendance.myproject.attendanceregister.entites.Admin
-//import com.attendance.myproject.attendanceregister.entites.Level
+//import androidx.appcompat.app.AppCompatActivity
+//import com.attendance.myproject.begory.data.Models.Level
 //import com.google.firebase.database.*
 //import java.util.*
 //

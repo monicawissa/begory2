@@ -2,6 +2,7 @@ package com.attendance.myproject.begory.data.Models
 
 import com.attendance.myproject.begory.data.Models.remote.FirebaseFilterType
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class User (
         @SerializedName("id")
@@ -39,5 +40,4 @@ data class User (
 
     var listOfAttendence: List<Attendance>? = null,
         @SerializedName("firstTime_ToLogin")
-    var firstTime_ToLogin:Boolean=true)
-
+    var firstTime_ToLogin:Boolean=true) : Serializable

@@ -18,6 +18,11 @@ public interface IRemoteDataSource {
                         , callback: IRemoteDataSource.MessageCallback)
     fun registerSubAdmin(user: User,callback: IRemoteDataSource.MessageCallback)
     fun registerAdmin(user: User,callback: IRemoteDataSource.MessageCallback)
+    fun checkUserExist(mobile: String, callback: LoginCallback)
+    fun updateStudent(user: User
+                        , callback: IRemoteDataSource.MessageCallback)
+    fun updateSubAdmin(user: User,callback: IRemoteDataSource.MessageCallback)
+    fun updateAdmin(user: User,callback: IRemoteDataSource.MessageCallback)
 
 //    fun getTopRatedMovies(callback: LoadAllMoviesCallback)
 //    fun getMovieActors(callback: IResponseCast, movie_id: Int)

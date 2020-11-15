@@ -15,6 +15,8 @@ import com.attendance.myproject.begory.R.string.*
 import com.attendance.myproject.begory.Utilities.UiManager
 import com.attendance.myproject.begory.presentationLayer.main.setting.SettingsAdapter.SettingsViewHolder
 import com.attendance.myproject.begory.presentationLayer.main.setting.addBlaBla.AddBlaBlaActivity
+import com.attendance.myproject.begory.presentationLayer.main.setting.updateBlaBla.UpdateBlaBlaActivity
+import com.attendance.myproject.begory.presentationLayer.main.setting.userExist.UserActivity
 
 class SettingsAdapter(private val mContext: Context, private val mlist: List<Int>)
     : RecyclerView.Adapter<SettingsViewHolder?>() {
@@ -46,13 +48,14 @@ class SettingsAdapter(private val mContext: Context, private val mlist: List<Int
                         val clickedDataItem = mlist[pos];
                         when (mlist[pos]) {
                             m_add_student -> UiManager.startActivity(mContext,AddBlaBlaActivity::class.java, mContext.getString(settingType),mContext.getString(m_add_student) )
-//                            m_edit_student -> UiManager.startActivity(mContext,mContext.getString(settingType),)
-//                            m_add_subadmin -> UiManager.startActivity(mContext,mContext.getString(settingType),)
-//                            m_edit_subadmin -> UiManager.startActivity(mContext,mContext.getString(settingType),)
-//                            m_add_admin -> UiManager.startActivity(mContext,mContext.getString(settingType),)
-//                            m_edit_admin -> UiManager.startActivity(mContext,mContext.getString(settingType),)
-//                            m_levels_attendance -> UiManager.startActivity(mContext,mContext.getString(settingType),)
-//
+                            m_edit_student -> UiManager.startActivity(mContext,UserActivity::class.java, mContext.getString(settingType),mContext.getString(m_edit_student) )
+
+                            m_add_subadmin -> UiManager.startActivity(mContext,AddBlaBlaActivity::class.java, mContext.getString(settingType),mContext.getString(m_add_subadmin) )
+                            m_edit_subadmin -> UiManager.startActivity(mContext,UserActivity::class.java, mContext.getString(settingType),mContext.getString(m_edit_subadmin) )
+
+                            m_add_admin -> UiManager.startActivity(mContext,AddBlaBlaActivity::class.java, mContext.getString(settingType),mContext.getString(m_add_admin) )
+                            m_edit_admin -> UiManager.startActivity(mContext,UserActivity::class.java, mContext.getString(settingType),mContext.getString(m_edit_admin) )
+//                          m_levels_attendance -> UiManager.startActivity(mContext,mContext.getString(settingType),)
 
                         }
                         Toast.makeText(it.context, "You clicked $clickedDataItem", Toast.LENGTH_SHORT).show()
