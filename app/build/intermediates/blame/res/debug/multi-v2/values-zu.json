@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zu\\values-zu.xml",
+            "outputFile": "E:\\android_Projects\\begory\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zu\\values-zu.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Moka\\.gradle\\caches\\transforms-2\\files-2.1\\633a01a88ef22fee3f789011d22b8567\\navigation-ui-2.3.1\\res\\values-zu\\values-zu.xml",

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\android_Projects\\Begory\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ms\\values-ms.xml",
+            "outputFile": "E:\\android_Projects\\begory\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ms\\values-ms.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Moka\\.gradle\\caches\\transforms-2\\files-2.1\\cefabd5be5f720689d3c281169863901\\jetified-play-services-basement-17.0.0\\res\\values-ms\\values.xml",

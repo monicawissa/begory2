@@ -6,9 +6,13 @@ import android.view.View;
 import androidx.databinding.DataBinderMapper;
 import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
+import com.attendance.myproject.begory.databinding.ActivityAddblablaBindingImpl;
+import com.attendance.myproject.begory.databinding.ActivityLevelAttendanceBindingImpl;
 import com.attendance.myproject.begory.databinding.ActivityLoginBindingImpl;
 import com.attendance.myproject.begory.databinding.ActivityMainBindingImpl;
 import com.attendance.myproject.begory.databinding.ActivitySplashBindingImpl;
+import com.attendance.myproject.begory.databinding.ActivityUpdateblablaBindingImpl;
+import com.attendance.myproject.begory.databinding.ActivityUserBindingImpl;
 import java.lang.IllegalArgumentException;
 import java.lang.Integer;
 import java.lang.Object;
@@ -22,18 +26,30 @@ import javax.annotation.Generated;
 
 @Generated("Android Data Binding")
 public class DataBinderMapperImpl extends DataBinderMapper {
-  private static final int LAYOUT_ACTIVITYLOGIN = 1;
+  private static final int LAYOUT_ACTIVITYADDBLABLA = 1;
 
-  private static final int LAYOUT_ACTIVITYMAIN = 2;
+  private static final int LAYOUT_ACTIVITYLEVELATTENDANCE = 2;
 
-  private static final int LAYOUT_ACTIVITYSPLASH = 3;
+  private static final int LAYOUT_ACTIVITYLOGIN = 3;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(3);
+  private static final int LAYOUT_ACTIVITYMAIN = 4;
+
+  private static final int LAYOUT_ACTIVITYSPLASH = 5;
+
+  private static final int LAYOUT_ACTIVITYUPDATEBLABLA = 6;
+
+  private static final int LAYOUT_ACTIVITYUSER = 7;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(7);
 
   static {
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.attendance.myproject.begory.R.layout.activity_addblabla, LAYOUT_ACTIVITYADDBLABLA);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.attendance.myproject.begory.R.layout.activity_level_attendance, LAYOUT_ACTIVITYLEVELATTENDANCE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.attendance.myproject.begory.R.layout.activity_login, LAYOUT_ACTIVITYLOGIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.attendance.myproject.begory.R.layout.activity_main, LAYOUT_ACTIVITYMAIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.attendance.myproject.begory.R.layout.activity_splash, LAYOUT_ACTIVITYSPLASH);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.attendance.myproject.begory.R.layout.activity_updateblabla, LAYOUT_ACTIVITYUPDATEBLABLA);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.attendance.myproject.begory.R.layout.activity_user, LAYOUT_ACTIVITYUSER);
   }
 
   @Override
@@ -45,6 +61,18 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         throw new RuntimeException("view must have a tag");
       }
       switch(localizedLayoutId) {
+        case  LAYOUT_ACTIVITYADDBLABLA: {
+          if ("layout/activity_addblabla_0".equals(tag)) {
+            return new ActivityAddblablaBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for activity_addblabla is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ACTIVITYLEVELATTENDANCE: {
+          if ("layout/activity_level_attendance_0".equals(tag)) {
+            return new ActivityLevelAttendanceBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for activity_level_attendance is invalid. Received: " + tag);
+        }
         case  LAYOUT_ACTIVITYLOGIN: {
           if ("layout/activity_login_0".equals(tag)) {
             return new ActivityLoginBindingImpl(component, view);
@@ -62,6 +90,18 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new ActivitySplashBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for activity_splash is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ACTIVITYUPDATEBLABLA: {
+          if ("layout/activity_updateblabla_0".equals(tag)) {
+            return new ActivityUpdateblablaBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for activity_updateblabla is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ACTIVITYUSER: {
+          if ("layout/activity_user_0".equals(tag)) {
+            return new ActivityUserBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for activity_user is invalid. Received: " + tag);
         }
       }
     }
@@ -108,23 +148,31 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(4);
+    static final SparseArray<String> sKeys = new SparseArray<String>(8);
 
     static {
       sKeys.put(0, "_all");
-      sKeys.put(1, "loginViewModel");
-      sKeys.put(2, "mainViewModel");
-      sKeys.put(3, "splashViewModel");
+      sKeys.put(1, "addBlaBlaViewModel");
+      sKeys.put(2, "levelAttendViewModel");
+      sKeys.put(3, "loginViewModel");
+      sKeys.put(4, "mainViewModel");
+      sKeys.put(5, "splashViewModel");
+      sKeys.put(6, "updateBlaBlaViewModel");
+      sKeys.put(7, "userViewModel");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(3);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(7);
 
     static {
+      sKeys.put("layout/activity_addblabla_0", com.attendance.myproject.begory.R.layout.activity_addblabla);
+      sKeys.put("layout/activity_level_attendance_0", com.attendance.myproject.begory.R.layout.activity_level_attendance);
       sKeys.put("layout/activity_login_0", com.attendance.myproject.begory.R.layout.activity_login);
       sKeys.put("layout/activity_main_0", com.attendance.myproject.begory.R.layout.activity_main);
       sKeys.put("layout/activity_splash_0", com.attendance.myproject.begory.R.layout.activity_splash);
+      sKeys.put("layout/activity_updateblabla_0", com.attendance.myproject.begory.R.layout.activity_updateblabla);
+      sKeys.put("layout/activity_user_0", com.attendance.myproject.begory.R.layout.activity_user);
     }
   }
 }
