@@ -18,6 +18,8 @@
     <string name="userType">userType</string>
     <string name="account_deactivated">الحساب متوقف</string>
     <string name="account_not_found">الحساب غير مسجل من قبل</string>
+    <string name="student_not_found">لا يوجد مخدومين في هذة المرحلة نرجو الاضافة</string>
+
     <string name="error">حدث خطا</string>
     <string name="wrong_mobile">رقم الهاتف غير صحيح</string>
     <string name="wrong_password">كلمة المرور غير صحيحه</string>
@@ -51,9 +53,12 @@
 
     <string name="name">الاسم</string>
     <string name="kodas">القداس</string>
-    <string name="hesa">الحصة</string>
-    <string name="save">حفظ</string>
+    <string name="attend">حضور</string>
+    <string name="a3traf">اعتراف</string>
+    <string name="tnawel">تناول</string>
     <string name="shamas">شماس</string>
+
+    <string name="save">حفظ</string>
     <string name="choose_name">اختر الاسم</string>
     <string name="mobile">رقم الهاتف</string>
     <string name="mobile_family">رقم هاتف ولى الأمر</string>

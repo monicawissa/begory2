@@ -1,5 +1,7 @@
 package com.attendance.myproject.begory.data.source
+import com.attendance.myproject.begory.data.Models.Attendance
 import com.attendance.myproject.begory.data.Models.User
+import com.attendance.myproject.begory.data.Models.remote.FirebaseFilterType
 import com.attendance.myproject.begory.data.source.local.prefs.IPreferencesHelper
 import com.attendance.myproject.begory.data.source.remote.IRemoteDataSource
 import javax.inject.Inject
@@ -128,4 +130,27 @@ class AppRepository @Inject constructor(private val mRemoteDataSource: IRemoteDa
         })
     }
 
+    override fun filterLevel(level: FirebaseFilterType.LevelFilterType, callback: IRemoteDataSource.UsersCallback) {
+        mRemoteDataSource.filterLevel(level,object :IRemoteDataSource.UsersCallback{
+            override fun onResponse(user: List<User>) {
+                callback.onResponse(user)
+            }
+
+            override fun onDataNotAvailable(message: Int?) {
+                callback.onDataNotAvailable(message)
+            }
+        })
+    }
+
+    override fun updateAttendance(listOfAttendence: List<Attendance>?, callback: IRemoteDataSource.MessageCallback) {
+        mRemoteDataSource.updateAttendance(listOfAttendence,object :IRemoteDataSource.MessageCallback{
+            override fun onResponse(message: Int?) {
+                callback.onResponse(message)
+            }
+
+            override fun onDataNotAvailable(message: Int?) {
+                callback.onDataNotAvailable(message)
+            }
+        })
+    }
 }

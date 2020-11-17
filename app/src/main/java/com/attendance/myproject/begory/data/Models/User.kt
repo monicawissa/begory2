@@ -26,7 +26,7 @@ data class User (
         @SerializedName("address")
     var address: String? = "",
         @SerializedName("adminLevel")
-    var adminLevel: String?="" ,
+    var adminLevel: String?="",
         @SerializedName("subAdminLevel")
     var subAdminLevel: String?="",
         @SerializedName("studentLevel")
@@ -38,6 +38,6 @@ data class User (
     var balanceBegory: Double? = 0.0,
         @SerializedName("listOfAttendence")
 
-    var listOfAttendence: List<Attendance>? = null,
+    var listOfAttendence: Map<String,Attendance>? =null,
         @SerializedName("firstTime_ToLogin")
     var firstTime_ToLogin:Boolean=true) : Serializable

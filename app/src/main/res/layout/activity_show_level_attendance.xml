@@ -6,8 +6,8 @@
     <data>
         <import type="android.view.View" />
         <variable
-            name="levelAttendViewModel"
-            type="com.attendance.myproject.begory.presentationLayer.main.attendence.takeAttendance.LevelAttendViewModel"
+            name="showLevelAttendViewModel"
+            type="com.attendance.myproject.begory.presentationLayer.main.setting.showTakedAttendance.ShowLevelAttendViewModel"
             />
     </data>
 
@@ -30,7 +30,7 @@
             android:layout_centerInParent="true"
             android:indeterminate="true"
             android:indeterminateDrawable="@drawable/progress_bar"
-            android:visibility="@{levelAttendViewModel.dataLoading ? View.VISIBLE: View.GONE  }"
+            android:visibility="@{showLevelAttendViewModel.dataLoading ? View.VISIBLE: View.GONE  }"
             />
 
         <LinearLayout
@@ -39,55 +39,52 @@
             android:layout_above="@+id/btn_add"
             android:layout_alignParentTop="true"
             android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:text="@string/choose_level"
+                android:layout_gravity="center_horizontal"
+                android:visibility="invisible"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
 
-            <RadioGroup
+            <Spinner
+                android:id="@+id/sp_levels"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/rect_white_box"
+                tools:setOnItemSelectedListener="@{showLevelAttendViewModel.spinnerListener}"
+                />
+
+            <LinearLayout
                 android:id="@+id/rg_terms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_margin="12dp"
-                android:background="@color/white"
                 android:layout_gravity="center_horizontal">
 
 
-                <androidx.appcompat.widget.AppCompatRadioButton
-                    android:id="@+id/rb_term2"
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cb_term2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="ترم 2" />
 
-                <androidx.appcompat.widget.AppCompatRadioButton
-                    android:id="@+id/rb_term1"
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cb_term1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="ترم 1" />
 
 
-            </RadioGroup>
+            </LinearLayout>
 
-            <EditText
-                android:id="@+id/et_date"
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:background="@drawable/rect_white_box"
-                android:hint="@string/date"
-                android:imeActionLabel="@string/date"
-                android:imeOptions="actionNext"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="12dp"
-                android:inputType="text"
-                android:gravity="center"
-                android:maxLines="1"
-                android:padding="12dp"
-                android:clickable="true"
-                android:cursorVisible="false"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
-                android:textColor="#3F3F3F"
-                android:textColorHint="#3F3F3F"
-                android:textStyle="bold"
-                android:textSize="18sp" />
 
 
             <LinearLayout
@@ -173,26 +170,6 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_add"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="12dp"
-            android:background="@drawable/btn_white_selector"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="4dp"
-            android:layout_alignParentBottom="true"
-            android:paddingBottom="4dp"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/add"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:clickable="@{levelAttendViewModel.isCheckBtnAvailable()}"
-
-            android:onClick="@{()-> levelAttendViewModel.btnadd()}"
-            />
 
     </RelativeLayout>
 </layout>

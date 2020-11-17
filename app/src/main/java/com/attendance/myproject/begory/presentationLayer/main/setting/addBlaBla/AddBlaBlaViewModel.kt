@@ -50,10 +50,8 @@ class AddBlaBlaViewModel  @ViewModelInject constructor(private val appRepository
             studentLevel = FirebaseFilterType.fbConvert(
                     ((parent!!.getItemAtPosition(position)) as Level).levelId!!
             )
-
         }
     }
-
 
     //clickable of button
     private val _isBtnAvailable = MutableLiveData<Boolean>()

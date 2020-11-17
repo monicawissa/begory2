@@ -3,6 +3,7 @@ package com.attendance.myproject.begory.data.source.remote
 import android.content.ContentValues
 import android.util.Log
 import com.attendance.myproject.begory.R
+import com.attendance.myproject.begory.data.Models.Attendance
 import com.attendance.myproject.begory.data.Models.User
 import com.attendance.myproject.begory.data.Models.remote.FirebaseFilterType
 import com.google.firebase.database.DataSnapshot
@@ -156,4 +157,37 @@ class RemoteDataSource @Inject constructor(private val firebaseDatabase: Firebas
                 .addOnFailureListener { callback.onDataNotAvailable(R.string.error) }
     }
 
+    override fun filterLevel(level: FirebaseFilterType.LevelFilterType, callback: IRemoteDataSource.UsersCallback) {
+        val ref = baseRef.child(FirebaseFilterType.users).orderByChild("studentLevel").equalTo(level.toString())
+        ref.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    var mlist:ArrayList<User> = ArrayList()
+                    dataSnapshot.children.forEach {
+                        //var user:User=User(it.value)
+                        mlist.add( it.getValue(User::class.java)!! )
+
+                    }
+                    callback.onResponse(mlist.toList())
+                } else {
+                    callback.onDataNotAvailable(R.string.account_not_found)
+                }
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                callback.onDataNotAvailable(R.string.error)
+            }
+        })
+    }
+
+    override fun updateAttendance(listOfAttendence: List<Attendance>?, callback: IRemoteDataSource.MessageCallback) {
+        var error:Int =0
+        for (i in listOfAttendence!!){
+            baseRef.child(FirebaseFilterType.users).child(i.id).child("listOfAttendence")
+                    .child(i.date).setValue(i)
+                    .addOnFailureListener { error=R.string.error }
+        }
+        if(error==0)callback.onResponse(R.string.edited)
+        else callback.onDataNotAvailable(error)
+    }
 }

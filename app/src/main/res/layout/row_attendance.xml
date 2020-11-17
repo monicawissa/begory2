@@ -12,6 +12,19 @@
         android:layout_weight="2"
         android:layout_gravity="center_vertical"
         android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_a3traf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_height="wrap_content"
@@ -21,11 +34,12 @@
             android:gravity="center">
 
             <androidx.appcompat.widget.AppCompatCheckBox
-                android:id="@+id/cb_hesa"
+                android:id="@+id/cb_tnawel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
+
 
         <LinearLayout
             android:layout_height="wrap_content"
@@ -41,12 +55,26 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_attend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="0dp"
-        android:layout_weight="3"
+        android:layout_weight="2"
         android:layout_height="wrap_content"
         android:padding="8dp"
         android:gravity="start"

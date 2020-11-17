@@ -1,23 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/holo_orange_light"
-    >
+    xmlns:tools="http://schemas.android.com/tools">
 
-  <TextView
-      android:id="@+id/text_profile"
+  <data>
+    <import type="android.view.View" />
+    <variable
+        name="profileViewModel"
+        type="com.attendance.myproject.begory.presentationLayer.main.profile.ProfileViewModel"
+        />
+  </data>
+
+  <ScrollView
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="8dp"
-      android:layout_marginTop="8dp"
-      android:layout_marginEnd="8dp"
-      android:text="@string/title_profile"
-      android:textAlignment="center"
-      android:textSize="20sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+      android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="300dp"
+          android:padding="20dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/p1"
+            app:civ_border_color="#03A9F4"
+            app:civ_border_width="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{profileViewModel.name}"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_toEndOf="@id/profile_image"
+            android:layout_centerVertival="true"
+            android:layout_marginLeft="10dp"
+            />
+      </RelativeLayout>
+
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/name_editText"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="30dp"
+          android:background="@drawable/back_solid_white_transparent"
+          app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+          app:layout_constraintStart_toStartOf="@+id/guideline_start"
+          app:layout_constraintTop_toBottomOf="@id/profile_image"
+          app:passwordToggleEnabled="true"
+          app:passwordToggleTint="@color/blue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:drawableStart="@drawable/ic_person_black_24dp"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:fontFamily="@font/gotham_rounded_light"
+            android:hint="@string/Name"
+            android:inputType="text"
+            android:textSize="20sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/status_editText"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="30dp"
+          android:background="@drawable/back_solid_white_transparent"
+          app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+
+          app:layout_constraintStart_toStartOf="@+id/guideline_start"
+          app:layout_constraintTop_toBottomOf="@id/name_editText"
+          app:passwordToggleEnabled="true"
+          app:passwordToggleTint="@color/blue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableStart="@drawable/ic_error_outline_black_24dp"
+
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:fontFamily="@font/gotham_rounded_light"
+            android:hint="@string/Status"
+            android:inputType="text"
+            android:textSize="20sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/phone_editText"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="30dp"
+          android:background="@drawable/back_solid_white_transparent"
+          app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+
+          app:layout_constraintStart_toStartOf="@+id/guideline_start"
+          app:layout_constraintTop_toBottomOf="@id/status_editText"
+          app:passwordToggleEnabled="true"
+          app:passwordToggleTint="@color/blue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableStart="@drawable/phone_foreground"
+
+            android:drawablePadding="10dp"
+            android:drawableTint="#03A9F4"
+            android:ems="10"
+            android:fontFamily="@font/gotham_rounded_light"
+            android:hint="@string/phone"
+            android:inputType="text"
+            android:textSize="20sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <Button
+          android:id="@+id/update_data"
+          android:layout_width="150dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="25dp"
+          android:layout_marginBottom="30dp"
+          android:background="@color/blue"
+          android:text="@string/save"
+          android:textColor="@color/icons"
+          android:textSize="18sp"
+          android:textStyle="bold"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+          app:layout_constraintTop_toBottomOf="@id/phone_editText" />
+    </LinearLayout>
+  </ScrollView>
+</layout>

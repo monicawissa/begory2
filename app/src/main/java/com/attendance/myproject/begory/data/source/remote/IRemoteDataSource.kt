@@ -1,5 +1,6 @@
 package com.attendance.myproject.begory.data.source.remote
 
+import com.attendance.myproject.begory.data.Models.Attendance
 import com.attendance.myproject.begory.data.Models.remote.FirebaseFilterType
 import com.attendance.myproject.begory.data.Models.User
 
@@ -7,6 +8,10 @@ import com.attendance.myproject.begory.data.Models.User
 public interface IRemoteDataSource {
     interface LoginCallback {
         fun onResponse(user: User)
+        fun onDataNotAvailable(message: Int?)
+    }
+    interface UsersCallback {
+        fun onResponse(user: List<User>)
         fun onDataNotAvailable(message: Int?)
     }
     interface MessageCallback {
@@ -23,6 +28,8 @@ public interface IRemoteDataSource {
                         , callback: IRemoteDataSource.MessageCallback)
     fun updateSubAdmin(user: User,callback: IRemoteDataSource.MessageCallback)
     fun updateAdmin(user: User,callback: IRemoteDataSource.MessageCallback)
+    fun filterLevel(level: FirebaseFilterType.LevelFilterType, callback: UsersCallback)
+    fun updateAttendance(listOfAttendence: List<Attendance>?, callback: MessageCallback)
 
 //    fun getTopRatedMovies(callback: LoadAllMoviesCallback)
 //    fun getMovieActors(callback: IResponseCast, movie_id: Int)

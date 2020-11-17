@@ -18,6 +18,12 @@ object UiManager {
         }
         context.startActivity(mIntent)
     }
+    fun startActivity(context: Context, cls: Class<*>,key:String, i:Int) {
+        val mIntent = Intent(context, cls).apply {
+            putExtra(key, i)
+        }
+        context.startActivity(mIntent)
+    }
     fun startActivity(context: Context, cls: Class<*>,key:String, i:User,key1:String, i1:String) {
         val mIntent = Intent(context, cls).apply {
             putExtra(key, i)
