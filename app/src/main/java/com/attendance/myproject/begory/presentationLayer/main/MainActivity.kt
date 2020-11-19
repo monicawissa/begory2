@@ -37,7 +37,7 @@ class MainActivity : BaseActivity() , MainNavigator {
         super.onCreate(savedInstanceState)
         supportActionBar!!.hide()
         Log.d(ContentValues.TAG, "showMessage: create Main")
-        user=intent.getStringExtra(this.getString(R.string.userType)) as User
+        user=intent.getSerializableExtra(this.getString(R.string.userType)) as User
 
         binding = DataBindingUtil.setContentView(this, layoutId)
         binding.mainViewModel=mainViewModel
@@ -45,6 +45,7 @@ class MainActivity : BaseActivity() , MainNavigator {
         subscribeToNavigationChanges(mainViewModel)
         //nav
         navController = findNavController(R.id.nav_host_fragment)
+        if(user.firstTime_ToLogin)//Todo:open activity
 
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

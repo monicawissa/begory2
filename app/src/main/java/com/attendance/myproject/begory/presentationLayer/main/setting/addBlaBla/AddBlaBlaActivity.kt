@@ -42,7 +42,7 @@ class AddBlaBlaActivity : BaseActivity1() ,AddBlaBlaNavigator{
         val settingType=intent.getStringExtra(this.getString(R.string.settingType))
         binding.addBlaBlaViewModel=addBlaBlaViewModel
         binding.lifecycleOwner = this
-        fillMenu()
+        list=fillMenu()!!
         subscribeToNavigationChanges(addBlaBlaViewModel)
         if(settingType==getString(R.string.m_add_student))initLevelsSpinner()
         else initLevelsMultiSelectSpinner()

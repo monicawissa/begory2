@@ -19,18 +19,16 @@ import com.attendance.myproject.begory.Utilities.UiManager
 import com.attendance.myproject.begory.data.Models.Level
 import com.attendance.myproject.begory.databinding.ActivityUpdateblablaBinding
 import com.attendance.myproject.begory.databinding.FragmentProfileBinding
+import com.attendance.myproject.begory.presentationLayer.login.LoginActivity
 import com.attendance.myproject.begory.presentationLayer.main.setting.updateBlaBla.UpdateBlaBlaViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.ArrayList
 
 @AndroidEntryPoint
-class ProfileFragment : Fragment(R.layout.fragment_profile) {
+class ProfileFragment : Fragment(R.layout.fragment_profile),ProfileNavigator {
     private lateinit var binding:FragmentProfileBinding
 
     private val mLevelsList: ArrayList<Level> = ArrayList<Level>()
-    val list = listOf(R.string.lev_college, R.string.lev_Grad)
-//        val list = listOf(R.string.lev_KG,R.string.lev_1,R.string.lev_2,R.string.lev_3,R.string.lev_4
-//                ,R.string.lev_5,R.string.lev_6,R.string.lev_preparatory,R.string.lev_secondary,R.string.lev_college, R.string.lev_Grad)
 
     private  val profileViewModel: ProfileViewModel by viewModels()
     override fun onCreateView(
@@ -47,10 +45,10 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         return view
     }
 
-//    override fun openMainActivity() {
-//        UiManager.startActivity(this@UpdateBlaBlaActivity, MainActivity::class.java)
-//        finish()
-//    }
+    override fun openLoginActivity() {
+        UiManager.startActivity(requireContext(), LoginActivity::class.java)
+        requireActivity().finish()
+    }
 
     private fun subscribeToNavigationChanges(viewModel: ProfileViewModel) {
 
@@ -63,6 +61,10 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
                     })
             snackbarMessage.observe(viewLifecycleOwner, Observer { showMessage(getString(it.getContentIfNotHandled()!!)) })
             snackbarMessage2.observe(viewLifecycleOwner, Observer { showMessage(it) })
+            isopenLogin.observe(viewLifecycleOwner,
+                    Observer {
+                        if (it == true) openLoginActivity()
+                    })
         }
     }fun showMessage(string: String){
         Toast.makeText(binding.root.context, string, Toast.LENGTH_SHORT).show()

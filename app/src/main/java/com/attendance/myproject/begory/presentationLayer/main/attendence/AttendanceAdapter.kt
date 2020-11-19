@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.attendance.myproject.begory.R
 import com.attendance.myproject.begory.R.string.*
 import com.attendance.myproject.begory.Utilities.UiManager
+import com.attendance.myproject.begory.presentationLayer.main.attendence.takeAttendance.LevelAttendActivity
 import com.attendance.myproject.begory.presentationLayer.main.setting.showTakedAttendance.ShowLevelAttendActivity
 
 class AttendanceAdapter(private val mContext: Context, private val mlist: List<Int>)
@@ -41,8 +42,8 @@ class AttendanceAdapter(private val mContext: Context, private val mlist: List<I
                     if (pos != RecyclerView.NO_POSITION){
                         val clickedDataItem = mlist[pos];
                         when (mlist[pos]) {
-                            a_lev_college -> UiManager.startActivity(mContext,ShowLevelAttendActivity::class.java, mContext.getString(settingType),lev_college)
-                            a_lev_Grad -> UiManager.startActivity(mContext,ShowLevelAttendActivity::class.java, mContext.getString(settingType),lev_Grad )
+                            a_lev_college -> UiManager.startActivity(mContext, LevelAttendActivity::class.java, mContext.getString(settingType),lev_college)
+                            a_lev_Grad -> UiManager.startActivity(mContext,LevelAttendActivity::class.java, mContext.getString(settingType),lev_Grad )
 
                         }
                         Toast.makeText(it.context, "You clicked $clickedDataItem", Toast.LENGTH_SHORT).show()

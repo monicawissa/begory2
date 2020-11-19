@@ -69,7 +69,7 @@ class UpdateBlaBlaActivity : BaseActivity1() {
         val settingType=intent.getStringExtra(this.getString(R.string.settingType))
         binding.updateBlaBlaViewModel=updateBlaBlaViewModel
         binding.lifecycleOwner = this
-        fillMenu()
+        list=fillMenu()!!
         subscribeToNavigationChanges(updateBlaBlaViewModel)
         if(settingType==getString(R.string.m_edit_student))initLevelsSpinner()
         else initLevelsMultiSelectSpinner()

@@ -32,7 +32,7 @@ class ProfileViewModel  @ViewModelInject constructor(private val appRepository: 
     var address: String =  ""
     var balanceBegory:String =""
     var balanceEqlomat:String =""
-    var studentLevel: FirebaseFilterType.LevelFilterType? = usertmp.studentLevel
+    var studentLevel: FirebaseFilterType.LevelFilterType? = null
     //var mTitleTV = savedStateHandle.getLiveData<String>("settingType").value
     var selectedData:String=""
 
@@ -41,7 +41,10 @@ class ProfileViewModel  @ViewModelInject constructor(private val appRepository: 
     private val _isBtnAvailable = MutableLiveData<Boolean>()
     val isBtnAvailable: LiveData<Boolean>
         get() = _isBtnAvailable
-
+    //to open main
+    private val _isopenLogin = MutableLiveData<Boolean>()
+    val isopenLogin: LiveData<Boolean>
+        get() = _isopenLogin
     //progressbar
     private val _dataLoading = MutableLiveData<Boolean>()
     val dataLoading: LiveData<Boolean>
@@ -72,16 +75,23 @@ class ProfileViewModel  @ViewModelInject constructor(private val appRepository: 
     }
 
     private fun getUser() {
-        usertmp=appRepository.getUser()!!
-        if(usertmp==null)
-        else{   name=usertmp.name!!
+        appRepository.getUserLastUpdate(object:IRemoteDataSource.LoginCallback{
+            override fun onResponse(user: User) {
+                name=usertmp.name!!
                 mobile=usertmp.mobile!!
                 mobile2=usertmp.mobile2!!
                 balanceBegory=usertmp.balanceBegory.toString()
                 balanceEqlomat=usertmp.balanceEqlomat.toString()
                 password=usertmp.password!!
                 address=usertmp.address!!
-        }
+                studentLevel=usertmp.studentLevel!!
+            }
+
+            override fun onDataNotAvailable(message: Int?) {
+            }
+
+        })
+
     }
 
 
@@ -124,5 +134,13 @@ class ProfileViewModel  @ViewModelInject constructor(private val appRepository: 
                 })
             } else _dataLoading.value = false
 
+    }
+    fun logout() {
+        _dataLoading.value = true
+        _isBtnAvailable.value=false
+
+            appRepository.setUserAsLoggedOut()
+            _isopenLogin.value=true
+        _dataLoading.value=false
     }
 }

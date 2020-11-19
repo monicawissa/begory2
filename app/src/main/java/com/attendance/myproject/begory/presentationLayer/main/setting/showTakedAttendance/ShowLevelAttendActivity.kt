@@ -76,7 +76,7 @@ class ShowLevelAttendActivity : BaseActivity1() , CompoundButton.OnCheckedChange
 //        settingType= intent.getIntExtra(this.getString(R.string.settingType),0).toString()
         binding.showLevelAttendViewModel=showLevelAttendViewModel
         binding.lifecycleOwner = this
-        fillMenu()
+        list=fillMenu()!!
         // TODO: change id
         (binding.rvAttendance as (RecyclerView)).setHasFixedSize(true)
         //TODO: Choose your layout

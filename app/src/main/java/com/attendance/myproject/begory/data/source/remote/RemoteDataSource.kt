@@ -167,7 +167,7 @@ class RemoteDataSource @Inject constructor(private val firebaseDatabase: Firebas
                     }
                     callback.onResponse(mlist.toList())
                 } else {
-                    callback.onDataNotAvailable(R.string.account_not_found)
+                    callback.onDataNotAvailable(R.string.no_student)
                 }
             }
 

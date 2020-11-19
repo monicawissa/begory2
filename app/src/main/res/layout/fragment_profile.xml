@@ -56,8 +56,19 @@
             android:layout_toEndOf="@id/profile_image"
             android:layout_marginStart="10dp"
             android:layout_below="@id/tv_name"
-
+            android:textColor="@color/white"
             />
+
+        <ImageView
+            android:layout_width="54dp"
+            android:layout_height="43dp"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/logout"
+            android:onClick="@{()-> profileViewModel.logout()}"
+            android:tint="@color/secondaryColor"/>
+
       </RelativeLayout>
       <LinearLayout
           android:layout_height="wrap_content"
@@ -70,7 +81,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:layout_width="0dp"
-            app:cardBackgroundColor="#fece2f"
+            app:cardBackgroundColor="@color/secondaryColor"
             android:theme="@style/Theme.MaterialComponents.Light"
             app:cardElevation="10dp">
 
@@ -112,7 +123,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:layout_width="0dp"
-            app:cardBackgroundColor="#fece2f"
+            app:cardBackgroundColor="@color/secondaryColor"
             app:cardElevation="10dp"
             android:theme="@style/Theme.MaterialComponents.Light">
 
@@ -220,7 +231,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="30dp"
-            android:background="@color/secondaryLightColor"
+            android:background="@color/secondaryColor"
             android:text="@string/save"
             android:textColor="@color/black"
             android:textSize="18sp"

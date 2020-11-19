@@ -65,6 +65,10 @@
             android:launchMode="singleTop"
             android:theme="@style/dialogTheme"
             android:screenOrientation="portrait"/>
+        <activity android:name="com.attendance.myproject.begory.presentationLayer.main.attendence.takeAttendance.LevelAttendActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/dialogTheme"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

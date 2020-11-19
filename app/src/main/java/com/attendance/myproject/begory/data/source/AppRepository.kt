@@ -21,7 +21,17 @@ class AppRepository @Inject constructor(private val mRemoteDataSource: IRemoteDa
     override fun getUser():User? {
          return mIPreferencesHelper.getUser()
     }
+    override fun getUserLastUpdate(callback: IRemoteDataSource.LoginCallback) {
+        mRemoteDataSource.checkUserExist(mIPreferencesHelper.getUser()!!.mobile!!,object :IRemoteDataSource.LoginCallback{
+            override fun onResponse(user: User) {
+                callback.onResponse(user)
+            }
 
+            override fun onDataNotAvailable(message: Int?) {
+                callback.onDataNotAvailable(message)
+            }
+        })
+    }
     override fun setUser(user: User) {
         mIPreferencesHelper.setUser(user)    }
 
