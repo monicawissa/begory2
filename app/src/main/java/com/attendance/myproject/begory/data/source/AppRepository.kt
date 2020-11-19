@@ -18,8 +18,8 @@ import javax.inject.Inject
 class AppRepository @Inject constructor(private val mRemoteDataSource: IRemoteDataSource,private val mIPreferencesHelper: IPreferencesHelper)
     : BaseDataSource {
 
-    override fun getUser(callback: IRemoteDataSource.LoginCallback) {
-         mIPreferencesHelper.getUser(callback)
+    override fun getUser():User? {
+         return mIPreferencesHelper.getUser()
     }
 
     override fun setUser(user: User) {

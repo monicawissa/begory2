@@ -14,6 +14,7 @@ import com.attendance.myproject.begory.data.Models.Level
 import com.attendance.myproject.begory.data.Models.remote.FirebaseFilterType
 import com.attendance.myproject.begory.databinding.ActivityUpdateblablaBinding
 import com.androidbuts.multispinnerfilter.KeyPairBoolData
+import com.attendance.myproject.begory.data.source.local.prefs.AppPreferencesHelper
 
 import com.attendance.myproject.begory.presentationLayer.main.setting.BaseActivity1
 import dagger.hilt.android.AndroidEntryPoint
@@ -24,7 +25,7 @@ import java.util.*
 class UpdateBlaBlaActivity : BaseActivity1() {
     private lateinit var binding: ActivityUpdateblablaBinding
     private val mLevelsList: ArrayList<Level> = ArrayList<Level>()
-    val list = listOf(R.string.lev_college, R.string.lev_Grad)
+    private lateinit var  list :List<Int>
 //        val list = listOf(R.string.lev_KG,R.string.lev_1,R.string.lev_2,R.string.lev_3,R.string.lev_4
 //                ,R.string.lev_5,R.string.lev_6,R.string.lev_preparatory,R.string.lev_secondary,R.string.lev_college, R.string.lev_Grad)
 
@@ -33,7 +34,34 @@ class UpdateBlaBlaActivity : BaseActivity1() {
         get() = R.layout.activity_updateblabla
     override fun initializeView() {
     }
-
+    private fun fillMenu(): List<Int>? {
+        val mItems = ArrayList<Int>()
+        mItems.clear()
+        val v= AppPreferencesHelper (applicationContext)
+        val user=v.getUser()
+        if((user!!.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString())||
+                (user!!.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString()))
+            mItems.add(R.string.a_lev_Grad)
+        if((user!!.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.College).toString())||
+                (user!!.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.College).toString()))
+            mItems.add(R.string.a_lev_college)
+//        } else {
+//            if (mAdmin.getLevels() != null) {
+//                for (i in 0 until mAdmin.getLevels().size()) {
+//                    if (mAdmin.getLevels().get(i).isSelected()) {
+//                        if (mAdmin.getLevels().get(i).getId().equals(FBConnenctions.CONST_LEVEL_2)) mItems.add(R.string.a_lev_2)
+//                        if (mAdmin.getLevels().get(i).getId().equals(FBConnenctions.CONST_LEVEL_1)) mItems.add(R.string.a_lev_1)
+//                        if (mAdmin.getLevels().get(i).getId().equals(FBConnenctions.CONST_LEVEL_4)) mItems.add(R.string.a_lev_4)
+//                        if (mAdmin.getLevels().get(i).getId().equals(FBConnenctions.CONST_LEVEL_3)) mItems.add(R.string.a_lev_3)
+//                        if (mAdmin.getLevels().get(i).getId().equals(FBConnenctions.CONST_LEVEL_6)) mItems.add(R.string.a_lev_6)
+//                        if (mAdmin.getLevels().get(i).getId().equals(FBConnenctions.CONST_LEVEL_5)) mItems.add(R.string.a_lev_5)
+//                    }
+//                }
+//            }
+//            mItems.add(R.string.m_show_results)
+//        }
+        return mItems.toList()
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d(ContentValues.TAG, "showMessage: create UpdateBlaBla")
@@ -41,6 +69,7 @@ class UpdateBlaBlaActivity : BaseActivity1() {
         val settingType=intent.getStringExtra(this.getString(R.string.settingType))
         binding.updateBlaBlaViewModel=updateBlaBlaViewModel
         binding.lifecycleOwner = this
+        fillMenu()
         subscribeToNavigationChanges(updateBlaBlaViewModel)
         if(settingType==getString(R.string.m_edit_student))initLevelsSpinner()
         else initLevelsMultiSelectSpinner()

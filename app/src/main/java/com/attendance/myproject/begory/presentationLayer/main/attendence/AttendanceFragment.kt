@@ -11,6 +11,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.attendance.myproject.begory.R
+import com.attendance.myproject.begory.data.Models.remote.FirebaseFilterType
+import com.attendance.myproject.begory.data.source.local.prefs.AppPreferencesHelper
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
 
@@ -85,8 +87,14 @@ class AttendanceFragment : Fragment() {
     private fun fillMenu(): ArrayList<Int>? {
         val mItems = ArrayList<Int>()
         mItems.clear()
-        mItems.add(R.string.a_lev_Grad)
-        mItems.add(R.string.a_lev_college)
+        val v=AppPreferencesHelper (requireContext())
+        val user=v.getUser()
+        if((user!!.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString())||
+                        (user!!.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString()))
+            mItems.add(R.string.a_lev_Grad)
+        if((user!!.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.College).toString())||
+                (user!!.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.College).toString()))
+                mItems.add(R.string.a_lev_college)
 //        } else {
 //            if (mAdmin.getLevels() != null) {
 //                for (i in 0 until mAdmin.getLevels().size()) {

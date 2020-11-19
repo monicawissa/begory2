@@ -6,7 +6,7 @@ import com.attendance.myproject.begory.data.source.remote.IRemoteDataSource
 
 interface IPreferencesHelper {
 
-    fun getUser(callback: IRemoteDataSource.LoginCallback)
+    fun getUser():User?
     fun setUser(user: User)
     fun setUserAsLoggedOut()
 }

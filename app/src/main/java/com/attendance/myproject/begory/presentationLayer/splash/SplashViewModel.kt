@@ -44,17 +44,10 @@ class SplashViewModel  @ViewModelInject constructor(private val appRepository: A
                 viewModelScope.launch {
                         delay(3000)
                         if(networkHelper.isNetworkConnected()){
-                                appRepository.getUser(object :IRemoteDataSource.LoginCallback{
-                                        override fun onResponse(user: User) {
-                                                msplashState.postValue(Pair(SplashState.MainActivity(),user))
-
-                                        }
-
-                                        override fun onDataNotAvailable(message: Int?) {
-                                                msplashState.postValue(Pair(SplashState.LoginActivity(),null))
-                                        }
-
-                                })
+                                val user=appRepository.getUser()
+                                if(user==null)msplashState.postValue(Pair(SplashState.LoginActivity(),null))
+                                else{  msplashState.postValue(Pair(SplashState.MainActivity(),user))
+                                }
                         }
                         else showSnackbarMessage(R.string.no_internet_connection)
                 }

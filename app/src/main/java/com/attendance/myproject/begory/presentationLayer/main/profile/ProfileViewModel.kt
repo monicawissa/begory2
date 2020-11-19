@@ -72,23 +72,16 @@ class ProfileViewModel  @ViewModelInject constructor(private val appRepository: 
     }
 
     private fun getUser() {
-        appRepository.getUser(object :IRemoteDataSource.LoginCallback{
-            override fun onResponse(user: User) {
-                usertmp=user
-                name=usertmp.name!!
+        usertmp=appRepository.getUser()!!
+        if(usertmp==null)
+        else{   name=usertmp.name!!
                 mobile=usertmp.mobile!!
                 mobile2=usertmp.mobile2!!
                 balanceBegory=usertmp.balanceBegory.toString()
                 balanceEqlomat=usertmp.balanceEqlomat.toString()
                 password=usertmp.password!!
                 address=usertmp.address!!
-
-            }
-
-            override fun onDataNotAvailable(message: Int?) {
-            }
-
-        })
+        }
     }
 
 
