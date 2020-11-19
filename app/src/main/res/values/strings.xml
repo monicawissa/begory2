@@ -13,6 +13,8 @@
     <string name="fill_passworddata"> كلمة السر غير صحيحة </string>
     <string name="fill_name_level">من فضلك ادخل الاسم و اختر مرحلة المخدوم </string>
     <string name="fill__level">من فضلك اختر المرحلة </string>
+    <string name="fill__password">من فضلك ادخل كلمه المرور </string>
+
     <string name="user_exist">هذا الحساب مسجل قم بالتعديل </string>
     <string name="settingType">settingType</string>
     <string name="userType">userType</string>

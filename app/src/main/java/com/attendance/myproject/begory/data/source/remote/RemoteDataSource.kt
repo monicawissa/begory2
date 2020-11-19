@@ -6,10 +6,7 @@ import com.attendance.myproject.begory.R
 import com.attendance.myproject.begory.data.Models.Attendance
 import com.attendance.myproject.begory.data.Models.User
 import com.attendance.myproject.begory.data.Models.remote.FirebaseFilterType
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.*
 import javax.inject.Inject
 
 class RemoteDataSource @Inject constructor(private val firebaseDatabase: FirebaseDatabase):IRemoteDataSource {
@@ -179,6 +176,7 @@ class RemoteDataSource @Inject constructor(private val firebaseDatabase: Firebas
             }
         })
     }
+    fun Boolean.toInt() = if (this) 1 else 0
 
     override fun updateAttendance(listOfAttendence: List<Attendance>?, callback: IRemoteDataSource.MessageCallback) {
         var error:Int =0
@@ -186,6 +184,8 @@ class RemoteDataSource @Inject constructor(private val firebaseDatabase: Firebas
             baseRef.child(FirebaseFilterType.users).child(i.id).child("listOfAttendence")
                     .child(i.date).setValue(i)
                     .addOnFailureListener { error=R.string.error }
+            val cal=(i.isTnawel.toInt()*5)+(i.isA3traf.toInt()*5)+(i.iskodas.toInt()*5)+(i.isAttend.toInt()*5)
+            baseRef.child(FirebaseFilterType.users).child(i.id).child("balanceEqlomat").setValue(ServerValue.increment(cal.toDouble()))
         }
         if(error==0)callback.onResponse(R.string.edited)
         else callback.onDataNotAvailable(error)

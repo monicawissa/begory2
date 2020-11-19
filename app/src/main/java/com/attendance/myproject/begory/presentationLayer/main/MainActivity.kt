@@ -12,6 +12,7 @@ import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.attendance.myproject.begory.R
 import com.attendance.myproject.begory.Utilities.UiManager
+import com.attendance.myproject.begory.data.Models.User
 import com.attendance.myproject.begory.databinding.ActivityMainBinding
 import com.attendance.myproject.begory.presentationLayer.BaseActivity
 import com.attendance.myproject.begory.presentationLayer.login.LoginActivity
@@ -24,7 +25,7 @@ class MainActivity : BaseActivity() , MainNavigator {
     private  val mainViewModel: MainViewModel by viewModels()
     private lateinit var navController: NavController
 
-
+    lateinit var user: User
 
     override val layoutId: Int
         get() = R.layout.activity_main
@@ -36,6 +37,7 @@ class MainActivity : BaseActivity() , MainNavigator {
         super.onCreate(savedInstanceState)
         supportActionBar!!.hide()
         Log.d(ContentValues.TAG, "showMessage: create Main")
+        user=intent.getStringExtra(this.getString(R.string.userType)) as User
 
         binding = DataBindingUtil.setContentView(this, layoutId)
         binding.mainViewModel=mainViewModel
@@ -46,6 +48,8 @@ class MainActivity : BaseActivity() , MainNavigator {
 
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        if(user.subAdminLevel.isNullOrEmpty()&&user.adminLevel.isNullOrEmpty())menu!!.removeItem(R.id.navigation_attendance)
+        if(user.adminLevel.isNullOrEmpty())menu!!.removeItem(R.id.navigation_settings)
         menuInflater.inflate(R.menu.menu_main,menu)
         bottomBar.setupWithNavController(menu!!,navController)
         return true

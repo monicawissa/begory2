@@ -24,6 +24,14 @@ object UiManager {
         }
         context.startActivity(mIntent)
     }
+    //for profile
+    fun startActivity(context: Context, cls: Class<*>,key:String, i:User) {
+        val mIntent = Intent(context, cls).apply {
+            putExtra(key, i)
+        }
+        context.startActivity(mIntent)
+    }
+    //for update profile
     fun startActivity(context: Context, cls: Class<*>,key:String, i:User,key1:String, i1:String) {
         val mIntent = Intent(context, cls).apply {
             putExtra(key, i)

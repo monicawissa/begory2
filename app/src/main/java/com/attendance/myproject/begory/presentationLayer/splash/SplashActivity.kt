@@ -4,12 +4,11 @@ import androidx.databinding.DataBindingUtil
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
 import com.attendance.myproject.begory.R
 import com.attendance.myproject.begory.Utilities.UiManager
+import com.attendance.myproject.begory.data.Models.User
 import com.attendance.myproject.begory.databinding.ActivitySplashBinding
 import com.attendance.myproject.begory.presentationLayer.BaseActivity
-import com.attendance.myproject.begory.presentationLayer.splash.SplashViewModel
 import com.attendance.myproject.begory.presentationLayer.login.LoginActivity
 import com.attendance.myproject.begory.presentationLayer.main.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
@@ -29,8 +28,8 @@ class SplashActivity: BaseActivity(),SplashNavigator {
         UiManager.startActivity(this@SplashActivity, LoginActivity::class.java)
         finish()
     }
-    override fun openMainActivity() {
-        UiManager.startActivity(this@SplashActivity, MainActivity::class.java)
+    override fun openMainActivity(second: User) {
+        UiManager.startActivity(this@SplashActivity, MainActivity::class.java,getString(R.string.userType),second)
         finish()
     }
 
@@ -51,9 +50,9 @@ class SplashActivity: BaseActivity(),SplashNavigator {
         viewModel.run {
             splashState.observe(this@SplashActivity,
                     Observer {
-                        when (it) {
+                        when (it.first) {
                             is SplashViewModel.SplashState.MainActivity -> {
-                                openMainActivity()
+                                openMainActivity(it.second!!)
                             }
                             is SplashViewModel.SplashState.LoginActivity -> {
                                 openLoginActivity()

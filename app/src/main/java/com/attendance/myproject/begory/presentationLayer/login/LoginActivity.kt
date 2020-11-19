@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import com.attendance.myproject.begory.R
 import com.attendance.myproject.begory.Utilities.UiManager
+import com.attendance.myproject.begory.data.Models.User
 import com.attendance.myproject.begory.databinding.ActivityLoginBinding
 import com.attendance.myproject.begory.presentationLayer.BaseActivity
 import com.attendance.myproject.begory.presentationLayer.main.MainActivity
@@ -34,8 +35,8 @@ class LoginActivity : BaseActivity() ,LoginNavigator{
 
     }
 
-    override fun openMainActivity() {
-        UiManager.startActivity(this@LoginActivity, MainActivity::class.java)
+    override fun openMainActivity(second: User?) {
+        UiManager.startActivity(this@LoginActivity, MainActivity::class.java,getString(R.string.userType),second!!)
         finish()
     }
 
@@ -46,7 +47,7 @@ class LoginActivity : BaseActivity() ,LoginNavigator{
         viewModel.run {
             isopenMain.observe(activity,
                     Observer {
-                        if (it==true)openMainActivity()
+                        if (it.first)openMainActivity(it.second!!)
                     })
             ishideKeyboard.observe(activity,
                     Observer {
