@@ -28,6 +28,7 @@ public interface IRemoteDataSource {
                         , callback: IRemoteDataSource.MessageCallback)
     fun updateSubAdmin(user: User,callback: IRemoteDataSource.MessageCallback)
     fun updateAdmin(user: User,callback: IRemoteDataSource.MessageCallback)
+    fun updatePassword(user: User,callback: IRemoteDataSource.LoginCallback)
     fun filterLevel(level: FirebaseFilterType.LevelFilterType, callback: UsersCallback)
     fun updateAttendance(listOfAttendence: List<Attendance>?, callback: MessageCallback)
 

@@ -63,9 +63,13 @@
             android:screenOrientation="portrait"/>
         <activity android:name="com.attendance.myproject.begory.presentationLayer.main.setting.showTakedAttendance.ShowLevelAttendActivity"
             android:launchMode="singleTop"
-            android:theme="@style/dialogTheme"
+            android:theme="@style/AppTheme"
             android:screenOrientation="portrait"/>
         <activity android:name="com.attendance.myproject.begory.presentationLayer.main.attendence.takeAttendance.LevelAttendActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.attendance.myproject.begory.presentationLayer.main.changePassword.PasswordActivity"
             android:launchMode="singleTop"
             android:theme="@style/dialogTheme"
             android:screenOrientation="portrait"/>
@@ -73,62 +77,3 @@
 
 </manifest>
 
-
-    <!--        <activity android:name="com.attendance.myproject.begory.activites.oldactivities.DeactivateLevelActivity"-->
-    <!--            android:launchMode="singleTop"-->
-    <!--            android:theme="@style/dialogTheme"-->
-    <!--            android:screenOrientation="portrait"/>-->
-
-    <!--        <activity android:name="com.attendance.myproject.begory.activites.DeactivateAdminActivity"-->
-    <!--            android:launchMode="singleTop"-->
-    <!--            android:theme="@style/dialogTheme"-->
-    <!--            android:screenOrientation="portrait"/>-->
-
-    <!--        <activity android:name="com.attendance.myproject.begory.activites.oldactivities.AddAttendanceActivity"-->
-    <!--            android:launchMode="singleTop"-->
-    <!--            android:theme="@style/dialogTheme"-->
-    <!--            android:screenOrientation="portrait"/>-->
-
-    <!--        <activity android:name="com.attendance.myproject.begory.activites.oldactivities.QrCodeGeneratorActivity"-->
-    <!--            android:launchMode="singleTop"-->
-    <!--            android:theme="@style/dialogTheme"-->
-    <!--            android:screenOrientation="portrait"/>-->
-
-    <!--        <activity android:name="com.attendance.myproject.begory.activites.oldactivities.QrCodeStationReaderActivity"-->
-    <!--            android:screenOrientation="portrait"/>-->
-
-    <!--        <activity-->
-    <!--            android:name="com.attendance.myproject.begory.activites.oldactivities.StudentAttendanceActivity"-->
-    <!--            android:launchMode="singleTop"-->
-    <!--            android:screenOrientation="portrait">-->
-    <!--        </activity>-->
-
-    <!--        <activity-->
-    <!--            android:name="com.attendance.myproject.begory.activites.LevelResultActivity"-->
-    <!--            android:launchMode="singleTop"-->
-    <!--            android:screenOrientation="portrait">-->
-    <!--        </activity>-->
-
-    <!--        <activity-->
-    <!--            android:name="com.attendance.myproject.begory.activites.ShowLevelResultActivity"-->
-    <!--            android:launchMode="singleTop"-->
-    <!--            android:screenOrientation="portrait">-->
-    <!--        </activity>-->
-
-    <!--        <activity-->
-    <!--            android:name="com.attendance.myproject.begory.activites.ShowLevelAttendanceActivity"-->
-    <!--            android:launchMode="singleTop"-->
-    <!--            android:screenOrientation="portrait">-->
-    <!--        </activity>-->
-
-    <!--        <activity-->
-    <!--            android:name="com.attendance.myproject.begory.activites.oldactivities.StudentListActivity"-->
-    <!--            android:launchMode="singleTop"-->
-    <!--            android:screenOrientation="portrait">-->
-    <!--        </activity>-->
-
-    <!--        <activity-->
-    <!--            android:name="com.attendance.myproject.begory.activites.LevelAttendanceActivity"-->
-    <!--            android:launchMode="singleTop"-->
-    <!--            android:screenOrientation="portrait">-->
-    <!--        </activity>-->

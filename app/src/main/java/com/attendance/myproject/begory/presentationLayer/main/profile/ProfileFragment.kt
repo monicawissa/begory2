@@ -14,10 +14,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.androidbuts.multispinnerfilter.KeyPairBoolData
+import com.attendance.myproject.begory.BR
 import com.attendance.myproject.begory.R
 import com.attendance.myproject.begory.Utilities.UiManager
 import com.attendance.myproject.begory.data.Models.Level
-import com.attendance.myproject.begory.databinding.ActivityUpdateblablaBinding
 import com.attendance.myproject.begory.databinding.FragmentProfileBinding
 import com.attendance.myproject.begory.presentationLayer.login.LoginActivity
 import com.attendance.myproject.begory.presentationLayer.main.setting.updateBlaBla.UpdateBlaBlaViewModel
@@ -42,6 +42,7 @@ class ProfileFragment : Fragment(R.layout.fragment_profile),ProfileNavigator {
         binding.profileViewModel=profileViewModel
         binding.lifecycleOwner = this
         subscribeToNavigationChanges(profileViewModel)
+
         return view
     }
 
@@ -65,8 +66,30 @@ class ProfileFragment : Fragment(R.layout.fragment_profile),ProfileNavigator {
                     Observer {
                         if (it == true) openLoginActivity()
                     })
+//            isDataAvailable.observe(viewLifecycleOwner,
+//                    Observer {
+//                        if (it == true) dataChanged()
+//                    })
         }
-    }fun showMessage(string: String){
+    }
+
+    private fun dataChanged() {
+//        //binding.notifyPropertyChanged(BR.p)
+//        binding.tvName.text=profileViewModel.name
+//        binding.tvLevel.text=profileViewModel.studentLevel
+//        binding.paymentBegory.text=profileViewModel.balanceBegory
+//        binding.eqlomatDesc.text=profileViewModel.balanceEqlomat
+//        binding.tiName
+//        mobile=usertmp.mobile!!
+//        mobile2=usertmp.mobile2!!
+//        balanceBegory=usertmp.balanceBegory.toString()
+//        balanceEqlomat=usertmp.balanceEqlomat.toString()
+//        password=usertmp.password!!
+//        address=usertmp.address!!
+//        studentLevel=usertmp.studentLevel!!.toString()
+    }
+
+    fun showMessage(string: String){
         Toast.makeText(binding.root.context, string, Toast.LENGTH_SHORT).show()
         Log.d(ContentValues.TAG, "showMessage: "+string)
     }

@@ -17,25 +17,31 @@ import com.attendance.myproject.begory.data.Models.User
 import com.attendance.myproject.begory.data.Models.remote.FirebaseFilterType
 import com.attendance.myproject.begory.data.source.AppRepository
 import com.attendance.myproject.begory.data.source.remote.IRemoteDataSource
-import com.attendance.myproject.begory.presentationLayer.splash.SplashViewModel
 
 
 class ProfileViewModel  @ViewModelInject constructor(private val appRepository: AppRepository,
                                                           @Assisted private val savedStateHandle: SavedStateHandle
 ) :
         ViewModel() ,LifecycleObserver {
-    var usertmp:User= User()
-    var name: String = ""
-    var mobile: String =  ""
-    var mobile2: String = ""
-    var password: String =  ""
-    var address: String =  ""
-    var balanceBegory:String =""
-    var balanceEqlomat:String =""
-    var studentLevel: FirebaseFilterType.LevelFilterType? = null
+    var usertmp:User=User()
+    val name = MutableLiveData<String>()
+    //var name: String = "hi"
+    val mobile = MutableLiveData<String>()
+    val mobile2 = MutableLiveData<String>()
+    val password= MutableLiveData<String>()
+    val address= MutableLiveData<String>()
+    val balanceBegory= MutableLiveData<String>()
+    val balanceEqlomat= MutableLiveData<String>()
+    val studentLevel= MutableLiveData<String>()
     //var mTitleTV = savedStateHandle.getLiveData<String>("settingType").value
     var selectedData:String=""
+//    private val _name = MutableLiveData("hi")
+//    val name: LiveData<String> = _name
 
+//    //set Data
+//    private val _isDataAvailable = MutableLiveData<User>()
+//    val isDataAvailable: LiveData<User>
+//        get() = _isDataAvailable
 
     //clickable of button
     private val _isBtnAvailable = MutableLiveData<Boolean>()
@@ -60,6 +66,43 @@ class ProfileViewModel  @ViewModelInject constructor(private val appRepository: 
     val snackbarMessage2: LiveData<String>
         get() = msnackbarText2
 
+    init {
+        _ishideKeyboard.value = false
+        _isBtnAvailable.value = true
+        //_isDataAvailable.value=User()
+        getUser()
+//        address="test"
+    }
+
+    private fun getUser() {
+        appRepository.getUserLastUpdate(object:IRemoteDataSource.LoginCallback{
+            override fun onResponse(user: User) {
+                //name="yes"
+                setuser(user)
+                //_isDataAvailable.value=user
+            }
+            override fun onDataNotAvailable(message: Int?) {
+                //name="No"
+            }
+
+        })
+
+    }
+
+    private fun setuser(user: User) {
+        usertmp=user
+        name.value=usertmp.name!!
+        mobile.value=usertmp.mobile!!
+        mobile2.value=usertmp.mobile2!!
+        balanceBegory.value=usertmp.balanceBegory.toString()
+        balanceEqlomat.value=usertmp.balanceEqlomat.toString()
+        password.value=usertmp.password!!
+        address.value=usertmp.address!!
+        studentLevel.value=usertmp.studentLevel!!.toString()
+        //_isDataAvailable.value=true
+
+    }
+
     private fun showSnackbarMessage(@StringRes message: Int) {
         msnackbarText.value = Event(message)
     }
@@ -68,37 +111,11 @@ class ProfileViewModel  @ViewModelInject constructor(private val appRepository: 
         msnackbarText2.value = message
     }
 
-    init {
-        _ishideKeyboard.value = false
-        _isBtnAvailable.value = true
-        getUser()
-    }
-
-    private fun getUser() {
-        appRepository.getUserLastUpdate(object:IRemoteDataSource.LoginCallback{
-            override fun onResponse(user: User) {
-                name=usertmp.name!!
-                mobile=usertmp.mobile!!
-                mobile2=usertmp.mobile2!!
-                balanceBegory=usertmp.balanceBegory.toString()
-                balanceEqlomat=usertmp.balanceEqlomat.toString()
-                password=usertmp.password!!
-                address=usertmp.address!!
-                studentLevel=usertmp.studentLevel!!
-            }
-
-            override fun onDataNotAvailable(message: Int?) {
-            }
-
-        })
-
-    }
-
 
     private fun isDataValid(): Boolean {
         // validate
         Log.d(ContentValues.TAG, "showMessage: isDataValid")
-        if (password.isEmpty()) {
+        if (password.value==null||password.value!!.isEmpty()) {
             Log.d(ContentValues.TAG, "showMessage: PasswordValid")
             showSnackbarMessage(R.string.fill__password)
             return false
@@ -111,13 +128,12 @@ class ProfileViewModel  @ViewModelInject constructor(private val appRepository: 
         _dataLoading.value = true
         _isBtnAvailable.value=false
             if (isDataValid()) {
-                usertmp.name=name
-                usertmp.mobile=mobile
-                usertmp.mobile2=mobile2
-                usertmp.password=password
-                usertmp.mobile_password="$mobile ${usertmp.password}"
-                usertmp.address=address
-                usertmp.studentLevel=studentLevel
+                usertmp.name=name.value
+                usertmp.mobile=mobile.value
+                usertmp.mobile2=mobile2.value
+                usertmp.password=password.value
+                usertmp.mobile_password="${mobile.value} ${usertmp.password}"
+                usertmp.address=address.value
                 appRepository.updateStudent(usertmp, object : IRemoteDataSource.MessageCallback {
                     override fun onResponse(message: Int?) {
                         showSnackbarMessage(message!!)

@@ -16,6 +16,7 @@ import com.attendance.myproject.begory.data.Models.User
 import com.attendance.myproject.begory.databinding.ActivityMainBinding
 import com.attendance.myproject.begory.presentationLayer.BaseActivity
 import com.attendance.myproject.begory.presentationLayer.login.LoginActivity
+import com.attendance.myproject.begory.presentationLayer.main.changePassword.PasswordActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -45,7 +46,7 @@ class MainActivity : BaseActivity() , MainNavigator {
         subscribeToNavigationChanges(mainViewModel)
         //nav
         navController = findNavController(R.id.nav_host_fragment)
-        if(user.firstTime_ToLogin)//Todo:open activity
+        if(user.firstTime_ToLogin)openFistTimeToLoginActivity()
 
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -63,6 +64,10 @@ class MainActivity : BaseActivity() , MainNavigator {
         UiManager.startActivity(this@MainActivity, LoginActivity::class.java)
         finish()
     }
+    override fun openFistTimeToLoginActivity() {
+        UiManager.startActivity(this@MainActivity, PasswordActivity::class.java)
+        finish()
+    }
 
     override fun onNavigationItemSelected(menu: Menu?): Any {
         TODO("Not yet implemented")
@@ -76,6 +81,7 @@ class MainActivity : BaseActivity() , MainNavigator {
 
             snackbarMessage.observe(activity, Observer { showMessage(getString(it.getContentIfNotHandled()!!)) })
             snackbarMessage2.observe(activity, Observer { showMessage(it) })
+
         }
     }
 }

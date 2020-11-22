@@ -1,4 +1,4 @@
-package com.attendance.myproject.begory.presentationLayer.main.setting.userExist
+package com.attendance.myproject.begory.presentationLayer.main.changePassword
 
 import android.content.ContentValues
 import android.os.Bundle
@@ -8,7 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import com.attendance.myproject.begory.R
 import com.attendance.myproject.begory.Utilities.UiManager
-import com.attendance.myproject.begory.databinding.ActivityUserBinding
+import com.attendance.myproject.begory.databinding.ActivityPasswordBinding
 
 import com.attendance.myproject.begory.presentationLayer.main.setting.BaseActivity1
 import com.attendance.myproject.begory.presentationLayer.main.setting.updateBlaBla.UpdateBlaBlaActivity
@@ -16,12 +16,11 @@ import dagger.hilt.android.AndroidEntryPoint
 
 
 @AndroidEntryPoint
-class UserActivity : BaseActivity1() {
-    private lateinit var binding: ActivityUserBinding
-    private  val userViewModel: UserViewModel by viewModels()
-    lateinit var  settingType:String
+class PasswordActivity : BaseActivity1() {
+    private lateinit var binding: ActivityPasswordBinding
+    private  val passwordViewModel: PasswordViewModel by viewModels()
     override val layoutId: Int
-        get() = R.layout.activity_user
+        get() = R.layout.activity_password
     override fun initializeView() {
     }
 
@@ -29,10 +28,9 @@ class UserActivity : BaseActivity1() {
         super.onCreate(savedInstanceState)
         Log.d(ContentValues.TAG, "showMessage: create UpdateBlaBla")
         binding = DataBindingUtil.setContentView(this, layoutId)
-        settingType=intent.getStringExtra(this.getString(R.string.settingType))
-        binding.userViewModel=userViewModel
+        binding.passwordViewModel=passwordViewModel
         binding.lifecycleOwner = this
-        subscribeToNavigationChanges(userViewModel)
+        subscribeToNavigationChanges(passwordViewModel)
     }
 
 //    override fun openMainActivity() {
@@ -40,10 +38,10 @@ class UserActivity : BaseActivity1() {
 //        finish()
 //    }
 
-    private fun subscribeToNavigationChanges(viewModel: UserViewModel) {
+    private fun subscribeToNavigationChanges(viewModel: PasswordViewModel) {
 
         // The activity observes the navigation commands in the ViewModel
-        val activity = this@UserActivity
+        val activity = this@PasswordActivity
         viewModel.run {
             ishideKeyboard.observe(activity,
                     Observer {
@@ -51,11 +49,6 @@ class UserActivity : BaseActivity1() {
                     })
             snackbarMessage.observe(activity, Observer { showMessage(getString(it.getContentIfNotHandled()!!)) })
             snackbarMessage2.observe(activity, Observer { showMessage(it) })
-            isCheckStatus.observe(activity, Observer {
-                UiManager.startActivity(applicationContext, UpdateBlaBlaActivity::class.java, applicationContext.getString(R.string.userType), usertmp,
-                        getString(R.string.settingType),settingType)
-                finish()
-            })
         }
     }
 }

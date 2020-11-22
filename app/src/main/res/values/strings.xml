@@ -10,6 +10,7 @@
     <string name="login">تسجيل دخول</string>
     <string name="fill_data">من فضلك ادخل البيانات</string>
     <string name="fill_mobiledata">من فضلك ادخل رقم تلفون صحيح</string>
+    <string name="fill_fixedPassword"> كلمة السر يجب ان تكون اكبر من 8 احرف </string>
     <string name="fill_passworddata"> كلمة السر غير صحيحة </string>
     <string name="fill_name_level">من فضلك ادخل الاسم و اختر مرحلة المخدوم </string>
     <string name="fill__level">من فضلك اختر المرحلة </string>

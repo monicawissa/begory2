@@ -1,4 +1,5 @@
 package com.attendance.myproject.begory.data.source
+import com.attendance.myproject.begory.R
 import com.attendance.myproject.begory.data.Models.Attendance
 import com.attendance.myproject.begory.data.Models.User
 import com.attendance.myproject.begory.data.Models.remote.FirebaseFilterType
@@ -140,6 +141,10 @@ class AppRepository @Inject constructor(private val mRemoteDataSource: IRemoteDa
         })
     }
 
+    override fun updatePassword(user: User, callback: IRemoteDataSource.LoginCallback) {
+
+    }
+
     override fun filterLevel(level: FirebaseFilterType.LevelFilterType, callback: IRemoteDataSource.UsersCallback) {
         mRemoteDataSource.filterLevel(level,object :IRemoteDataSource.UsersCallback{
             override fun onResponse(user: List<User>) {
@@ -156,6 +161,21 @@ class AppRepository @Inject constructor(private val mRemoteDataSource: IRemoteDa
         mRemoteDataSource.updateAttendance(listOfAttendence,object :IRemoteDataSource.MessageCallback{
             override fun onResponse(message: Int?) {
                 callback.onResponse(message)
+            }
+
+            override fun onDataNotAvailable(message: Int?) {
+                callback.onDataNotAvailable(message)
+            }
+        })
+    }
+
+    fun updatePassword(password: String, callback: IRemoteDataSource.MessageCallback) {
+        val user=mIPreferencesHelper.getUser()!!
+        user.password=password
+        mRemoteDataSource.updatePassword(user,object :IRemoteDataSource.LoginCallback{
+            override fun onResponse(user: User) {
+                mIPreferencesHelper.setUser(user)
+                callback.onResponse(R.string.edited)
             }
 
             override fun onDataNotAvailable(message: Int?) {

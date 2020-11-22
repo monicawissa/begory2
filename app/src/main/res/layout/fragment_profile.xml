@@ -51,7 +51,7 @@
             android:id="@+id/tv_level"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{profileViewModel.studentLevel.toString()}"
+            android:text="@{profileViewModel.studentLevel}"
             android:textSize="14sp"
             android:layout_toEndOf="@id/profile_image"
             android:layout_marginStart="10dp"
@@ -67,7 +67,7 @@
             android:layout_marginEnd="20dp"
             android:src="@drawable/logout"
             android:onClick="@{()-> profileViewModel.logout()}"
-            android:tint="@color/secondaryColor"/>
+            android:tint="@color/secondaryLightColor"/>
 
       </RelativeLayout>
       <LinearLayout
@@ -81,7 +81,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:layout_width="0dp"
-            app:cardBackgroundColor="@color/secondaryColor"
+            app:cardBackgroundColor="@color/secondaryLightColor"
             android:theme="@style/Theme.MaterialComponents.Light"
             app:cardElevation="10dp">
 
@@ -89,13 +89,6 @@
               android:layout_height="match_parent"
               android:layout_width="match_parent"
               android:padding="5dp">
-
-            <ImageView
-                android:layout_centerHorizontal="true"
-                android:layout_height="30dp"
-                android:layout_width="30dp"
-                android:src="@drawable/ic_baseline_monetization_on_24" />
-
             <TextView
                 android:id="@+id/payment_label"
                 android:includeFontPadding="false"
@@ -106,13 +99,13 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/payment_desc"
+                android:id="@+id/payment_begory"
                 android:includeFontPadding="false"
                 android:layout_below="@id/payment_label"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:text="@={profileViewModel.balanceBegory}"
+                android:text="@{profileViewModel.balanceBegory}"
                 android:textSize="20sp" />
 
           </RelativeLayout>
@@ -123,7 +116,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:layout_width="0dp"
-            app:cardBackgroundColor="@color/secondaryColor"
+            app:cardBackgroundColor="@color/secondaryLightColor"
             app:cardElevation="10dp"
             android:theme="@style/Theme.MaterialComponents.Light">
 
@@ -131,13 +124,6 @@
               android:layout_height="match_parent"
               android:layout_width="match_parent"
               android:padding="5dp">
-
-            <ImageView
-                android:layout_centerHorizontal="true"
-                android:layout_height="30dp"
-                android:layout_width="30dp"
-                android:src="@drawable/ic_baseline_monetization_on_24" />
-
             <TextView
                 android:id="@+id/eqlomat_label"
                 android:includeFontPadding="false"
@@ -154,7 +140,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:text="@={profileViewModel.balanceEqlomat}"
+                android:text="@{profileViewModel.balanceEqlomat}"
                 android:textSize="20sp" />
 
           </RelativeLayout>
@@ -211,7 +197,7 @@
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:hint="Parent Mobile"
-            app:hintTextColor="@color/secondaryColor"
+            app:hintTextColor="@color/progress_center"
             android:id="@+id/ti_mobile2"
             android:layout_height="wrap_content"
             android:layout_width="match_parent">
@@ -231,7 +217,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="30dp"
-            android:background="@color/secondaryColor"
+            android:background="@color/secondaryLightColor"
             android:text="@string/save"
             android:textColor="@color/black"
             android:textSize="18sp"

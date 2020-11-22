@@ -154,6 +154,25 @@ class RemoteDataSource @Inject constructor(private val firebaseDatabase: Firebas
                 .addOnFailureListener { callback.onDataNotAvailable(R.string.error) }
     }
 
+    override fun updatePassword(userr: User, callback: IRemoteDataSource.LoginCallback) {
+        checkUserExist(userr.mobile!!,object : IRemoteDataSource.LoginCallback{
+            override fun onResponse(user: User) {
+                user.password=userr.password
+                user.mobile_password="${user.mobile} ${user.password}"
+                user.firstTime_ToLogin=false
+                baseRef.child(FirebaseFilterType.users).child(user.id!!).setValue(user).addOnSuccessListener {
+                    callback.onResponse(user)
+                }.addOnFailureListener { callback.onDataNotAvailable(R.string.error) }
+            }
+
+            override fun onDataNotAvailable(message: Int?) {
+                callback.onDataNotAvailable(message)
+            }
+
+        })
+
+    }
+
     override fun filterLevel(level: FirebaseFilterType.LevelFilterType, callback: IRemoteDataSource.UsersCallback) {
         val ref = baseRef.child(FirebaseFilterType.users).orderByChild("studentLevel").equalTo(level.toString())
         ref.addListenerForSingleValueEvent(object : ValueEventListener {
