@@ -46,7 +46,6 @@ class AttendanceAdapter(private val mContext: Context, private val mlist: List<I
                             a_lev_Grad -> UiManager.startActivity(mContext,LevelAttendActivity::class.java, mContext.getString(settingType),lev_Grad )
 
                         }
-                        Toast.makeText(it.context, "You clicked $clickedDataItem", Toast.LENGTH_SHORT).show()
                     }
                 })
 

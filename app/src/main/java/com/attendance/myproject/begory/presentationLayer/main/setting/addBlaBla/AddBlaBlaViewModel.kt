@@ -62,7 +62,10 @@ class AddBlaBlaViewModel  @ViewModelInject constructor(private val appRepository
     private val _isStudentAvailable = MutableLiveData<Boolean>()
     val isStudentAvailable: LiveData<Boolean>
         get() = _isStudentAvailable
-
+    //openMain
+    private val _isOpenMain = MutableLiveData<Boolean>()
+    val isOpenMain: LiveData<Boolean>
+        get() = _isOpenMain
     //progressbar
     private val _dataLoading = MutableLiveData<Boolean>()
     val dataLoading: LiveData<Boolean>
@@ -88,6 +91,7 @@ class AddBlaBlaViewModel  @ViewModelInject constructor(private val appRepository
 
     init {
         _ishideKeyboard.value = false
+        _isOpenMain.value=false
         _isBtnAvailable.value = true
         _isStudentAvailable.value = (mTitleTV.equals("إضافة مخدوم"))
     }
@@ -143,12 +147,15 @@ class AddBlaBlaViewModel  @ViewModelInject constructor(private val appRepository
                         showSnackbarMessage(message!!)
                         _isBtnAvailable.value = false
                         _dataLoading.value = false
+                        _isOpenMain.value=true
+
                     }
 
                     override fun onDataNotAvailable(message: Int?) {
                         showSnackbarMessage(message!!)
                         _isBtnAvailable.value = true
                         _dataLoading.value = false
+                        _isOpenMain.value=true
                     }
 
                 })
@@ -158,18 +165,23 @@ class AddBlaBlaViewModel  @ViewModelInject constructor(private val appRepository
                 subAdminLevel = selectedData
                 //if( mTitleTV == "إضافة امين خدمة") adminLevel=  selectedItems
                 var user: User = User(mobile = mobile,
+                        mobile_password = "$mobile $mobile",
                         subAdminLevel = subAdminLevel)
                 appRepository.registerSubAdmin(user, object : IRemoteDataSource.MessageCallback {
                     override fun onResponse(message: Int?) {
                         showSnackbarMessage(message!!)
                         _isBtnAvailable.value = false
                         _dataLoading.value = false
+                        _isOpenMain.value=true
+
                     }
 
                     override fun onDataNotAvailable(message: Int?) {
                         showSnackbarMessage(message!!)
                         _isBtnAvailable.value = true
                         _dataLoading.value = false
+                        _isOpenMain.value=true
+
                     }
 
                 })
@@ -177,19 +189,23 @@ class AddBlaBlaViewModel  @ViewModelInject constructor(private val appRepository
         } else if (mTitleTV.equals("إضافة امين خدمة")) {
             if (isDataValidAdminOrSubAdmin()) {
                 adminLevel = selectedData
-                var user: User = User(mobile = mobile,
+                var user: User = User(mobile = mobile,mobile_password = "$mobile $mobile",
                         adminLevel = adminLevel)
                 appRepository.registerAdmin(user, object : IRemoteDataSource.MessageCallback {
                     override fun onResponse(message: Int?) {
                         showSnackbarMessage(message!!)
                         _isBtnAvailable.value = false
                         _dataLoading.value = false
+                        _isOpenMain.value=true
+
                     }
 
                     override fun onDataNotAvailable(message: Int?) {
                         showSnackbarMessage(message!!)
                         _isBtnAvailable.value = true
                         _dataLoading.value = false
+                        _isOpenMain.value=true
+
                     }
 
                 })

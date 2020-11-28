@@ -41,25 +41,10 @@ class UpdateBlaBlaActivity : BaseActivity1() {
         val user=v.getUser()
         if((user!!.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString())||
                 (user!!.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString()))
-            mItems.add(R.string.a_lev_Grad)
+            mItems.add(R.string.lev_Grad)
         if((user!!.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.College).toString())||
                 (user!!.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.College).toString()))
-            mItems.add(R.string.a_lev_college)
-//        } else {
-//            if (mAdmin.getLevels() != null) {
-//                for (i in 0 until mAdmin.getLevels().size()) {
-//                    if (mAdmin.getLevels().get(i).isSelected()) {
-//                        if (mAdmin.getLevels().get(i).getId().equals(FBConnenctions.CONST_LEVEL_2)) mItems.add(R.string.a_lev_2)
-//                        if (mAdmin.getLevels().get(i).getId().equals(FBConnenctions.CONST_LEVEL_1)) mItems.add(R.string.a_lev_1)
-//                        if (mAdmin.getLevels().get(i).getId().equals(FBConnenctions.CONST_LEVEL_4)) mItems.add(R.string.a_lev_4)
-//                        if (mAdmin.getLevels().get(i).getId().equals(FBConnenctions.CONST_LEVEL_3)) mItems.add(R.string.a_lev_3)
-//                        if (mAdmin.getLevels().get(i).getId().equals(FBConnenctions.CONST_LEVEL_6)) mItems.add(R.string.a_lev_6)
-//                        if (mAdmin.getLevels().get(i).getId().equals(FBConnenctions.CONST_LEVEL_5)) mItems.add(R.string.a_lev_5)
-//                    }
-//                }
-//            }
-//            mItems.add(R.string.m_show_results)
-//        }
+            mItems.add(R.string.lev_college)
         return mItems.toList()
     }
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -101,10 +86,9 @@ class UpdateBlaBlaActivity : BaseActivity1() {
 
     }
 
-//    override fun openMainActivity() {
-//        UiManager.startActivity(this@UpdateBlaBlaActivity, MainActivity::class.java)
-//        finish()
-//    }
+    fun openMainActivity() {
+        finish()
+    }
 
     private fun subscribeToNavigationChanges(viewModel: UpdateBlaBlaViewModel) {
 
@@ -117,6 +101,10 @@ class UpdateBlaBlaActivity : BaseActivity1() {
                     })
             snackbarMessage.observe(activity, Observer { showMessage(getString(it.getContentIfNotHandled()!!)) })
             snackbarMessage2.observe(activity, Observer { showMessage(it) })
+            isOpenMain.observe(activity,
+                    Observer {
+                        if (it == true) openMainActivity()
+                    })
         }
     }
 }

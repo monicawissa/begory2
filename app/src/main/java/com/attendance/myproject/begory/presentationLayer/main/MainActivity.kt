@@ -66,7 +66,6 @@ class MainActivity : BaseActivity() , MainNavigator {
     }
     override fun openFistTimeToLoginActivity() {
         UiManager.startActivity(this@MainActivity, PasswordActivity::class.java)
-        finish()
     }
 
     override fun onNavigationItemSelected(menu: Menu?): Any {

@@ -84,9 +84,7 @@ class ProfileViewModel  @ViewModelInject constructor(private val appRepository: 
             override fun onDataNotAvailable(message: Int?) {
                 //name="No"
             }
-
         })
-
     }
 
     private fun setuser(user: User) {
@@ -98,12 +96,13 @@ class ProfileViewModel  @ViewModelInject constructor(private val appRepository: 
         balanceEqlomat.value=usertmp.balanceEqlomat.toString()
         password.value=usertmp.password!!
         address.value=usertmp.address!!
-        studentLevel.value=usertmp.studentLevel!!.toString()
+        if(usertmp.studentLevel==null)
+            studentLevel.value=""
+        else studentLevel.value=usertmp.studentLevel.toString()
         //_isDataAvailable.value=true
-
     }
 
-    private fun showSnackbarMessage(@StringRes message: Int) {
+    private fun showSnackbarMessage(@StringRes message: Int){
         msnackbarText.value = Event(message)
     }
 

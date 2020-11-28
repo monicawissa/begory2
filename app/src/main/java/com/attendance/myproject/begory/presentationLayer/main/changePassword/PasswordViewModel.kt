@@ -40,6 +40,10 @@ class PasswordViewModel  @ViewModelInject constructor(private val appRepository:
     private val _ishideKeyboard = MutableLiveData<Boolean>()
     val ishideKeyboard: LiveData<Boolean>
         get() = _ishideKeyboard
+    //openMain
+    private val _isOpenMain = MutableLiveData<Boolean>()
+    val isOpenMain: LiveData<Boolean>
+        get() = _isOpenMain
 
     private val msnackbarText = MutableLiveData<Event<Int>>()
     val snackbarMessage: LiveData<Event<Int>>
@@ -59,6 +63,7 @@ class PasswordViewModel  @ViewModelInject constructor(private val appRepository:
     init {
         _ishideKeyboard.value = false
         _isUpdateBtnAvailable.value=true
+        _isOpenMain.value=false
     }
 
 
@@ -83,6 +88,8 @@ class PasswordViewModel  @ViewModelInject constructor(private val appRepository:
                     showSnackbarMessage(message!!)
                     _isUpdateBtnAvailable.value = false
                     _dataLoading.value = false
+                    _isOpenMain.value=true
+
                 }
 
                 override fun onDataNotAvailable(message: Int?) {

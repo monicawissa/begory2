@@ -33,10 +33,9 @@ class PasswordActivity : BaseActivity1() {
         subscribeToNavigationChanges(passwordViewModel)
     }
 
-//    override fun openMainActivity() {
-//        UiManager.startActivity(this@UpdateBlaBlaActivity, MainActivity::class.java)
-//        finish()
-//    }
+    fun openMainActivity() {
+        finish()
+    }
 
     private fun subscribeToNavigationChanges(viewModel: PasswordViewModel) {
 
@@ -49,6 +48,10 @@ class PasswordActivity : BaseActivity1() {
                     })
             snackbarMessage.observe(activity, Observer { showMessage(getString(it.getContentIfNotHandled()!!)) })
             snackbarMessage2.observe(activity, Observer { showMessage(it) })
+            isOpenMain.observe(activity,
+                    Observer {
+                        if (it == true) openMainActivity()
+                    })
         }
     }
 }

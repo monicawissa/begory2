@@ -1,24 +1,20 @@
 package com.attendance.myproject.begory.presentationLayer.main.setting.addBlaBla
 
 import android.content.ContentValues
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
 import android.widget.ArrayAdapter
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
+import com.androidbuts.multispinnerfilter.KeyPairBoolData
 import com.attendance.myproject.begory.R
 import com.attendance.myproject.begory.data.Models.Level
 import com.attendance.myproject.begory.data.Models.remote.FirebaseFilterType
-import com.attendance.myproject.begory.databinding.ActivityAddblablaBinding
-import com.androidbuts.multispinnerfilter.KeyPairBoolData
 import com.attendance.myproject.begory.data.source.local.prefs.AppPreferencesHelper
-
+import com.attendance.myproject.begory.databinding.ActivityAddblablaBinding
 import com.attendance.myproject.begory.presentationLayer.main.setting.BaseActivity1
 import dagger.hilt.android.AndroidEntryPoint
-import java.util.*
 
 
 @AndroidEntryPoint
@@ -74,36 +70,19 @@ class AddBlaBlaActivity : BaseActivity1() ,AddBlaBlaNavigator{
 
     }
 
-//    override fun openMainActivity() {
-//        UiManager.startActivity(this@AddBlaBlaActivity, MainActivity::class.java)
-//        finish()
-//    }
+    fun openMainActivity() {
+        finish()
+    }
     private fun fillMenu(): List<Int>? {
-    val mItems = ArrayList<Int>()
-    mItems.clear()
-    val v= AppPreferencesHelper (applicationContext)
+    val mItems  =ArrayList<Int>()
+        val v= AppPreferencesHelper(applicationContext)
     val user=v.getUser()
     if((user!!.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString())||
             (user!!.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString()))
-        mItems.add(R.string.a_lev_Grad)
+        mItems.add(R.string.lev_Grad)
     if((user!!.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.College).toString())||
             (user!!.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.College).toString()))
-        mItems.add(R.string.a_lev_college)
-//        } else {
-//            if (mAdmin.getLevels() != null) {
-//                for (i in 0 until mAdmin.getLevels().size()) {
-//                    if (mAdmin.getLevels().get(i).isSelected()) {
-//                        if (mAdmin.getLevels().get(i).getId().equals(FBConnenctions.CONST_LEVEL_2)) mItems.add(R.string.a_lev_2)
-//                        if (mAdmin.getLevels().get(i).getId().equals(FBConnenctions.CONST_LEVEL_1)) mItems.add(R.string.a_lev_1)
-//                        if (mAdmin.getLevels().get(i).getId().equals(FBConnenctions.CONST_LEVEL_4)) mItems.add(R.string.a_lev_4)
-//                        if (mAdmin.getLevels().get(i).getId().equals(FBConnenctions.CONST_LEVEL_3)) mItems.add(R.string.a_lev_3)
-//                        if (mAdmin.getLevels().get(i).getId().equals(FBConnenctions.CONST_LEVEL_6)) mItems.add(R.string.a_lev_6)
-//                        if (mAdmin.getLevels().get(i).getId().equals(FBConnenctions.CONST_LEVEL_5)) mItems.add(R.string.a_lev_5)
-//                    }
-//                }
-//            }
-//            mItems.add(R.string.m_show_results)
-//        }
+        mItems.add(R.string.lev_college)
     return mItems.toList()
 }
 
@@ -118,6 +97,10 @@ class AddBlaBlaActivity : BaseActivity1() ,AddBlaBlaNavigator{
                     })
             snackbarMessage.observe(activity, Observer { showMessage(getString(it.getContentIfNotHandled()!!)) })
             snackbarMessage2.observe(activity, Observer { showMessage(it) })
+            isOpenMain.observe(activity,
+                    Observer {
+                        if (it == true) openMainActivity()
+                    })
         }
     }
 }

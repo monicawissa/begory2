@@ -48,10 +48,10 @@ class ShowLevelAttendActivity : BaseActivity1() , CompoundButton.OnCheckedChange
         val user=v.getUser()
         if((user!!.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString())||
                 (user!!.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString()))
-            mItems.add(R.string.a_lev_Grad)
+            mItems.add(R.string.lev_Grad)
         if((user!!.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.College).toString())||
                 (user!!.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.College).toString()))
-            mItems.add(R.string.a_lev_college)
+            mItems.add(R.string.lev_college)
 //        } else {
 //            if (mAdmin.getLevels() != null) {
 //                for (i in 0 until mAdmin.getLevels().size()) {

@@ -55,7 +55,6 @@ class SettingsAdapter(private val mContext: Context, private val mlist: List<Int
                             m_levels_attendance -> UiManager.startActivity(mContext,ShowLevelAttendActivity::class.java, mContext.getString(settingType),mContext.getString(m_levels_attendance) )
 
                         }
-                        Toast.makeText(it.context, "You clicked $clickedDataItem", Toast.LENGTH_SHORT).show()
                     }
                 })
 

@@ -61,7 +61,10 @@ class UpdateBlaBlaViewModel  @ViewModelInject constructor(private val appReposit
     val isBtnAvailable: LiveData<Boolean>
         get() = _isBtnAvailable
 
-
+    //openMain
+    private val _isOpenMain = MutableLiveData<Boolean>()
+    val isOpenMain: LiveData<Boolean>
+        get() = _isOpenMain
     //visibility student spinner
     private val _isStudentAvailable = MutableLiveData<Boolean>()
     val isStudentAvailable: LiveData<Boolean>
@@ -94,6 +97,7 @@ class UpdateBlaBlaViewModel  @ViewModelInject constructor(private val appReposit
         _ishideKeyboard.value = false
         _isBtnAvailable.value = true
         _isStudentAvailable.value = (mTitleTV.equals("تعديل مخدوم"))
+        _isOpenMain.value=false
     }
 
 
@@ -151,12 +155,16 @@ class UpdateBlaBlaViewModel  @ViewModelInject constructor(private val appReposit
                         _dataLoading.value = false
                         _isBtnAvailable.value = true
 
+                        _isOpenMain.value=true
+
                     }
 
                     override fun onDataNotAvailable(message: Int?) {
                         showSnackbarMessage(message!!)
                         _isBtnAvailable.value = true
                         _dataLoading.value = false
+                        _isOpenMain.value=true
+
                     }
 
                 })
@@ -172,12 +180,16 @@ class UpdateBlaBlaViewModel  @ViewModelInject constructor(private val appReposit
                         _dataLoading.value = false
                         _isBtnAvailable.value = true
 
+                        _isOpenMain.value=true
+
                     }
 
                     override fun onDataNotAvailable(message: Int?) {
                         showSnackbarMessage(message!!)
                         _isBtnAvailable.value = true
                         _dataLoading.value = false
+                        _isOpenMain.value=true
+
                     }
 
                 })
@@ -193,12 +205,16 @@ class UpdateBlaBlaViewModel  @ViewModelInject constructor(private val appReposit
                         _dataLoading.value = false
                         _isBtnAvailable.value = true
 
+                        _isOpenMain.value=true
+
                     }
 
                     override fun onDataNotAvailable(message: Int?) {
                         showSnackbarMessage(message!!)
                         _isBtnAvailable.value = true
                         _dataLoading.value = false
+                        _isOpenMain.value=true
+
                     }
 
                 })

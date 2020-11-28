@@ -91,7 +91,7 @@ class ProfileFragment : Fragment(R.layout.fragment_profile),ProfileNavigator {
 
     fun showMessage(string: String){
         Toast.makeText(binding.root.context, string, Toast.LENGTH_SHORT).show()
-        Log.d(ContentValues.TAG, "showMessage: "+string)
+        //Log.d(ContentValues.TAG, "showMessage: "+string)
     }
     fun hide_Keyboard() {
         UiManager.hideKeyboard(activity)
