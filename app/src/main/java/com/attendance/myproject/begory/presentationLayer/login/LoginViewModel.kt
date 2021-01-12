@@ -28,8 +28,8 @@ class LoginViewModel  @ViewModelInject constructor(private val appRepository: Ap
         get() = _dataLoading
 
     //to open main
-    private val _isopenMain = MutableLiveData<Boolean>()
-    val isopenMain: LiveData<Boolean>
+    private val _isopenMain = MutableLiveData<Pair<Boolean,User?>>()
+    val isopenMain: LiveData<Pair<Boolean,User?>>
         get() = _isopenMain
     private val _ishideKeyboard = MutableLiveData<Boolean>()
     val ishideKeyboard: LiveData<Boolean>
@@ -49,7 +49,7 @@ class LoginViewModel  @ViewModelInject constructor(private val appRepository: Ap
         msnackbarText2.value = message
     }
     init {
-        _isopenMain.value=false
+        _isopenMain.value=Pair(false,null)
         _ishideKeyboard.value=false
         _isDataAvailable.value=true
     }
@@ -79,7 +79,7 @@ class LoginViewModel  @ViewModelInject constructor(private val appRepository: Ap
                     showSnackbarMessage2("Welcome " + user.name)
                     _isDataAvailable.value = false
                     _dataLoading.value = false
-                    _isopenMain.value = true
+                    _isopenMain.value = Pair(true,user)
 
                 }
 

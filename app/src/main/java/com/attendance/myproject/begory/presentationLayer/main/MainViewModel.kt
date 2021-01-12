@@ -31,7 +31,7 @@ import kotlinx.coroutines.launch
 class MainViewModel @ViewModelInject constructor(private val appRepository: AppRepository) :
         ViewModel()  {
 
-    private lateinit var user: User
+    private  var user: User?=null
     private val _isDataAvailable = MutableLiveData<Boolean>()
     val isDataAvailable: LiveData<Boolean>
         get() = _isDataAvailable
@@ -85,17 +85,10 @@ class MainViewModel @ViewModelInject constructor(private val appRepository: AppR
     }
 
     private fun getUser() {
-            appRepository.getUser(object :IRemoteDataSource.LoginCallback{
-                override fun onResponse(user: User) {
-                    // fill profile data if it's the first time
-                    // else open the shop fragment
-                }
-
-                override fun onDataNotAvailable(message: Int?) {
-                    logout()
-                }
-
+        user=appRepository.getUser()
+            if(user==null)logout()
+            else{
+              //go to profile if it's first time
             }
-        )
     }
 }

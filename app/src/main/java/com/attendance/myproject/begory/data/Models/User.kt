@@ -2,6 +2,7 @@ package com.attendance.myproject.begory.data.Models
 
 import com.attendance.myproject.begory.data.Models.remote.FirebaseFilterType
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class User (
         @SerializedName("id")
@@ -10,23 +11,26 @@ data class User (
     var name: String? = "",
         @SerializedName("mobile")
     var mobile: String? = "",
+        @SerializedName("mobile2")
+    var mobile2: String? = "",
         @SerializedName("password")
     var password: String? = "",
-    //login
+        @SerializedName("isShamas")
+    var isShamas: Boolean? = false,
+
+        //login
         @SerializedName("mobile_password")
     var mobile_password: String? = "",
         @SerializedName("notes")
     var notes: String? = "",
-        @SerializedName("mobile2")
-    var mobile2: String? = "",
         @SerializedName("address")
     var address: String? = "",
         @SerializedName("adminLevel")
-    var adminLevel: FirebaseFilterType.LevelFilterType? = FirebaseFilterType.LevelFilterType.No,
+    var adminLevel: String?="",
         @SerializedName("subAdminLevel")
-    var subAdminLevel: FirebaseFilterType.LevelFilterType? = FirebaseFilterType.LevelFilterType.No,
+    var subAdminLevel: String?="",
         @SerializedName("studentLevel")
-    var studentLevel: FirebaseFilterType.LevelFilterType? = FirebaseFilterType.LevelFilterType.No,
+    var studentLevel: FirebaseFilterType.LevelFilterType?=null,
 
         @SerializedName("balanceEqlomat")
     var balanceEqlomat: Double? = 0.0,
@@ -34,7 +38,6 @@ data class User (
     var balanceBegory: Double? = 0.0,
         @SerializedName("listOfAttendence")
 
-    var listOfAttendence: List<Attendance>? = null,
+    var listOfAttendence: Map<String,Attendance>? =null,
         @SerializedName("firstTime_ToLogin")
-    var firstTime_ToLogin:Boolean=true)
-
+    var firstTime_ToLogin:Boolean=true) : Serializable

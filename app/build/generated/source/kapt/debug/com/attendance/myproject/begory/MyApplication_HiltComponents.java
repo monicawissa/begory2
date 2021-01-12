@@ -7,9 +7,17 @@ import com.attendance.myproject.begory.presentationLayer.login.LoginViewModel_Hi
 import com.attendance.myproject.begory.presentationLayer.main.MainActivity_GeneratedInjector;
 import com.attendance.myproject.begory.presentationLayer.main.MainViewModel_HiltModule;
 import com.attendance.myproject.begory.presentationLayer.main.NotificationsFragment_GeneratedInjector;
-import com.attendance.myproject.begory.presentationLayer.main.SettingsFragment_GeneratedInjector;
 import com.attendance.myproject.begory.presentationLayer.main.attendence.AttendanceFragment_GeneratedInjector;
+import com.attendance.myproject.begory.presentationLayer.main.attendence.takeAttendance.LevelAttendActivity_GeneratedInjector;
+import com.attendance.myproject.begory.presentationLayer.main.attendence.takeAttendance.LevelAttendViewModel_HiltModule;
 import com.attendance.myproject.begory.presentationLayer.main.profile.ProfileFragment_GeneratedInjector;
+import com.attendance.myproject.begory.presentationLayer.main.setting.SettingsFragment_GeneratedInjector;
+import com.attendance.myproject.begory.presentationLayer.main.setting.addBlaBla.AddBlaBlaActivity_GeneratedInjector;
+import com.attendance.myproject.begory.presentationLayer.main.setting.addBlaBla.AddBlaBlaViewModel_HiltModule;
+import com.attendance.myproject.begory.presentationLayer.main.setting.updateBlaBla.UpdateBlaBlaActivity_GeneratedInjector;
+import com.attendance.myproject.begory.presentationLayer.main.setting.updateBlaBla.UpdateBlaBlaViewModel_HiltModule;
+import com.attendance.myproject.begory.presentationLayer.main.setting.userExist.UserActivity_GeneratedInjector;
+import com.attendance.myproject.begory.presentationLayer.main.setting.userExist.UserViewModel_HiltModule;
 import com.attendance.myproject.begory.presentationLayer.main.shop.ShopFragment_GeneratedInjector;
 import com.attendance.myproject.begory.presentationLayer.splash.SplashActivity_GeneratedInjector;
 import com.attendance.myproject.begory.presentationLayer.splash.SplashViewModel_HiltModule;
@@ -125,6 +133,10 @@ public final class MyApplication_HiltComponents {
   @ActivityScoped
   public abstract static class ActivityC implements LoginActivity_GeneratedInjector,
       MainActivity_GeneratedInjector,
+      LevelAttendActivity_GeneratedInjector,
+      AddBlaBlaActivity_GeneratedInjector,
+      UpdateBlaBlaActivity_GeneratedInjector,
+      UserActivity_GeneratedInjector,
       SplashActivity_GeneratedInjector,
       ActivityComponent,
       DefaultViewModelFactories.ActivityEntryPoint,
@@ -138,10 +150,14 @@ public final class MyApplication_HiltComponents {
 
   @Subcomponent(
       modules = {
+          AddBlaBlaViewModel_HiltModule.class,
+          LevelAttendViewModel_HiltModule.class,
           LoginViewModel_HiltModule.class,
           MainViewModel_HiltModule.class,
           ActivityCBuilderModule.class,
-          SplashViewModel_HiltModule.class
+          SplashViewModel_HiltModule.class,
+          UpdateBlaBlaViewModel_HiltModule.class,
+          UserViewModel_HiltModule.class
       }
   )
   @ActivityRetainedScoped
@@ -178,9 +194,9 @@ public final class MyApplication_HiltComponents {
   )
   @FragmentScoped
   public abstract static class FragmentC implements NotificationsFragment_GeneratedInjector,
-      SettingsFragment_GeneratedInjector,
       AttendanceFragment_GeneratedInjector,
       ProfileFragment_GeneratedInjector,
+      SettingsFragment_GeneratedInjector,
       ShopFragment_GeneratedInjector,
       FragmentComponent,
       DefaultViewModelFactories.FragmentEntryPoint,

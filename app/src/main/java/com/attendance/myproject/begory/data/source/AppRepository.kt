@@ -1,7 +1,9 @@
 package com.attendance.myproject.begory.data.source
+import com.attendance.myproject.begory.R
+import com.attendance.myproject.begory.data.Models.Attendance
 import com.attendance.myproject.begory.data.Models.User
-import com.attendance.myproject.begory.data.source.local.prefs.IPreferencesHelper
 import com.attendance.myproject.begory.data.Models.remote.FirebaseFilterType
+import com.attendance.myproject.begory.data.source.local.prefs.IPreferencesHelper
 import com.attendance.myproject.begory.data.source.remote.IRemoteDataSource
 import javax.inject.Inject
 
@@ -17,10 +19,20 @@ import javax.inject.Inject
 class AppRepository @Inject constructor(private val mRemoteDataSource: IRemoteDataSource,private val mIPreferencesHelper: IPreferencesHelper)
     : BaseDataSource {
 
-    override fun getUser(callback: IRemoteDataSource.LoginCallback) {
-         mIPreferencesHelper.getUser(callback)
+    override fun getUser():User? {
+         return mIPreferencesHelper.getUser()
     }
+    override fun getUserLastUpdate(callback: IRemoteDataSource.LoginCallback) {
+        mRemoteDataSource.checkUserExist(mIPreferencesHelper.getUser()!!.mobile!!,object :IRemoteDataSource.LoginCallback{
+            override fun onResponse(user: User) {
+                callback.onResponse(user)
+            }
 
+            override fun onDataNotAvailable(message: Int?) {
+                callback.onDataNotAvailable(message)
+            }
+        })
+    }
     override fun setUser(user: User) {
         mIPreferencesHelper.setUser(user)    }
 
@@ -42,11 +54,9 @@ class AppRepository @Inject constructor(private val mRemoteDataSource: IRemoteDa
         })
     }
 
-    override fun register(mobile: String, admin: FirebaseFilterType.LevelFilterType?,
-                          subAdmin: FirebaseFilterType.LevelFilterType?,
-                          studentLevel: FirebaseFilterType.LevelFilterType?,
-                          callback: IRemoteDataSource.MessageCallback) {
-        mRemoteDataSource.register(mobile,admin,subAdmin,studentLevel,object :IRemoteDataSource.MessageCallback{
+    override fun registerStudent(user: User,
+                                 callback: IRemoteDataSource.MessageCallback) {
+        mRemoteDataSource.registerStudent(user,object :IRemoteDataSource.MessageCallback{
             override fun onResponse(message: Int?) {
                 callback.onResponse(message)
             }
@@ -58,6 +68,119 @@ class AppRepository @Inject constructor(private val mRemoteDataSource: IRemoteDa
         })
     }
 
+    override fun registerSubAdmin(user: User, callback: IRemoteDataSource.MessageCallback) {
+        mRemoteDataSource.registerSubAdmin(user,object :IRemoteDataSource.MessageCallback{
+            override fun onResponse(message: Int?) {
+                callback.onResponse(message)
+            }
 
+            override fun onDataNotAvailable(message: Int?) {
+                callback.onDataNotAvailable(message)
+            }
 
+        })
+    }
+    override fun registerAdmin(user: User, callback: IRemoteDataSource.MessageCallback) {
+        mRemoteDataSource.registerAdmin(user,object :IRemoteDataSource.MessageCallback{
+            override fun onResponse(message: Int?) {
+                callback.onResponse(message)
+            }
+
+            override fun onDataNotAvailable(message: Int?) {
+                callback.onDataNotAvailable(message)
+            }
+
+        })
+    }
+
+    override fun checkUserExist(mobile: String, callback: IRemoteDataSource.LoginCallback) {
+        mRemoteDataSource.checkUserExist(mobile,object :IRemoteDataSource.LoginCallback{
+            override fun onResponse(user: User) {
+                callback.onResponse(user)
+            }
+
+            override fun onDataNotAvailable(message: Int?) {
+                callback.onDataNotAvailable(message)
+            }
+        })
+    }
+
+    override fun updateStudent(user: User, callback: IRemoteDataSource.MessageCallback) {
+        mRemoteDataSource.updateStudent(user,object :IRemoteDataSource.MessageCallback{
+            override fun onResponse(message: Int?) {
+                callback.onResponse(message)
+            }
+
+            override fun onDataNotAvailable(message: Int?) {
+                callback.onDataNotAvailable(message)
+            }
+        })
+    }
+
+    override fun updateSubAdmin(user: User, callback: IRemoteDataSource.MessageCallback) {
+        mRemoteDataSource.updateSubAdmin(user,object :IRemoteDataSource.MessageCallback{
+            override fun onResponse(message: Int?) {
+                callback.onResponse(message)
+            }
+
+            override fun onDataNotAvailable(message: Int?) {
+                callback.onDataNotAvailable(message)
+            }
+        })
+    }
+
+    override fun updateAdmin(user: User, callback: IRemoteDataSource.MessageCallback) {
+        mRemoteDataSource.updateAdmin(user,object :IRemoteDataSource.MessageCallback{
+            override fun onResponse(message: Int?) {
+                callback.onResponse(message)
+            }
+
+            override fun onDataNotAvailable(message: Int?) {
+                callback.onDataNotAvailable(message)
+            }
+        })
+    }
+
+    override fun updatePassword(user: User, callback: IRemoteDataSource.LoginCallback) {
+
+    }
+
+    override fun filterLevel(level: FirebaseFilterType.LevelFilterType, callback: IRemoteDataSource.UsersCallback) {
+        mRemoteDataSource.filterLevel(level,object :IRemoteDataSource.UsersCallback{
+            override fun onResponse(user: List<User>) {
+                callback.onResponse(user)
+            }
+
+            override fun onDataNotAvailable(message: Int?) {
+                callback.onDataNotAvailable(message)
+            }
+        })
+    }
+
+    override fun updateAttendance(listOfAttendence: List<Attendance>?, callback: IRemoteDataSource.MessageCallback) {
+        mRemoteDataSource.updateAttendance(listOfAttendence,object :IRemoteDataSource.MessageCallback{
+            override fun onResponse(message: Int?) {
+                callback.onResponse(message)
+            }
+
+            override fun onDataNotAvailable(message: Int?) {
+                callback.onDataNotAvailable(message)
+            }
+        })
+    }
+
+    fun updatePassword(password: String, callback: IRemoteDataSource.MessageCallback) {
+        val user=mIPreferencesHelper.getUser()!!
+        user.password=password
+        mRemoteDataSource.updatePassword(user,object :IRemoteDataSource.LoginCallback{
+            override fun onResponse(user: User) {
+                mIPreferencesHelper.setUser(user)
+                callback.onResponse(R.string.edited)
+            }
+
+            override fun onDataNotAvailable(message: Int?) {
+                callback.onDataNotAvailable(message)
+            }
+        })
+    }
 }

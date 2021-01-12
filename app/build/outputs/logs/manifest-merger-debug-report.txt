@@ -1,16 +1,18 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:2:1-54:12
+ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:2:1-70:12
+INJECTED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:2:1-70:12
+INJECTED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:2:1-70:12
+INJECTED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:2:1-70:12
 MERGED from [androidx.databinding:databinding-adapters:4.0.2] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\7c9cb2cb1c266d1d25e5650bc79188a5\databinding-adapters-4.0.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-runtime:4.0.2] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\b594232caf51d7cf873ab0a906774f78\databinding-runtime-4.0.2\AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.ibrahimsn98:SmoothBottomBar:1.7.6] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\05497924254247c18e1bc7405326eb31\jetified-SmoothBottomBar-1.7.6\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.pratikbutani:MultiSelectSpinner:-SNAPSHOT] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\a60821674a6eb8e6deb342e00fd94f18\jetified-MultiSelectSpinner--SNAPSHOT\AndroidManifest.xml:2:1-14:12
 MERGED from [androidx.navigation:navigation-ui-ktx:2.3.1] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\e98ef1951c9ef9f0e635a242e1572f31\navigation-ui-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-ui:2.3.1] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\633a01a88ef22fee3f789011d22b8567\navigation-ui-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.3.0-alpha03] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\281a5d1eeeb243e3efeee3778c8b9ae8\material-1.3.0-alpha03\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\480ef48e57b33b0277d65a581bc69ce8\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.rey5137:material:1.2.2] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\917ea80e4c4c5b602e84acd85e729be9\jetified-material-1.2.2\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\eb241b98d52e47bb8074b4c33f7affb7\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\5a9d4fdaed0f1117d89cd21c7108382e\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.2] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\f2be9666b04db6172a0fe68062f38177\constraintlayout-2.0.2\AndroidManifest.xml:2:1-11:12
@@ -97,27 +99,27 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\Moka\.gradle\caches\transforms
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\5aff5132dd06253eb3292c9331f4c14e\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\1e4259dc096d8f54a3c82d91d73cb59d\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.dagger:dagger-lint-aar:2.28] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\1c774e0e21bdff2ebbf6d15cdd62f591\jetified-dagger-lint-aar-2.28\AndroidManifest.xml:16:1-18:12
-INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:2:1-70:12
+INJECTED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:2:1-70:12
+INJECTED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:2:1-70:12
 	package
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:4:5-46
-		INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
-		INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:4:5-46
+		INJECTED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml
+		INJECTED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:2:1-54:12
-		INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
+		INJECTED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:2:1-70:12
+		INJECTED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:3:5-51
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:2:1-54:12
-		INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
+		INJECTED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:2:1-70:12
+		INJECTED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:6:5-67
+ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:6:5-67
 MERGED from [com.google.firebase:firebase-database:19.5.1] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\6df36de25d814f8590e43dd9ef36e707\jetified-firebase-database-19.5.1\AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-database:19.5.1] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\6df36de25d814f8590e43dd9ef36e707\jetified-firebase-database-19.5.1\AndroidManifest.xml:26:5-67
 MERGED from [com.google.android.gms:play-services-measurement-api:17.6.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\c9e134d1c01c44ffeaa7a7190d1cea42\jetified-play-services-measurement-api-17.6.0\AndroidManifest.xml:22:5-67
@@ -131,9 +133,9 @@ MERGED from [com.google.android.gms:play-services-measurement-impl:17.6.0] C:\Us
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.6.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\791f2424f296c9ceb8032392e4fe6a4f\jetified-play-services-measurement-sdk-api-17.6.0\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.6.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\791f2424f296c9ceb8032392e4fe6a4f\jetified-play-services-measurement-sdk-api-17.6.0\AndroidManifest.xml:23:5-67
 	android:name
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:6:22-64
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:6:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:7:5-79
+ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:7:5-79
 MERGED from [com.google.firebase:firebase-database:19.5.1] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\6df36de25d814f8590e43dd9ef36e707\jetified-firebase-database-19.5.1\AndroidManifest.xml:25:5-79
 MERGED from [com.google.firebase:firebase-database:19.5.1] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\6df36de25d814f8590e43dd9ef36e707\jetified-firebase-database-19.5.1\AndroidManifest.xml:25:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:17.6.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\c9e134d1c01c44ffeaa7a7190d1cea42\jetified-play-services-measurement-api-17.6.0\AndroidManifest.xml:23:5-79
@@ -147,23 +149,25 @@ MERGED from [com.google.android.gms:play-services-measurement-impl:17.6.0] C:\Us
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.6.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\791f2424f296c9ceb8032392e4fe6a4f\jetified-play-services-measurement-sdk-api-17.6.0\AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.6.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\791f2424f296c9ceb8032392e4fe6a4f\jetified-play-services-measurement-sdk-api-17.6.0\AndroidManifest.xml:24:5-79
 	android:name
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:7:22-76
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:7:22-76
 uses-permission#android.permission.CAMERA
-ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:8:5-65
+ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:8:5-65
 MERGED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\e222dd630816b9a8bf1f7c3d287c2221\jetified-zxing-android-embedded-3.2.0\AndroidManifest.xml:21:5-65
 MERGED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\e222dd630816b9a8bf1f7c3d287c2221\jetified-zxing-android-embedded-3.2.0\AndroidManifest.xml:21:5-65
 	android:name
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:8:22-62
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:8:22-62
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:9:5-79
+ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:9:5-79
 	android:name
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:9:22-77
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:9:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:10:5-80
+ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:10:5-80
 	android:name
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:10:22-78
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:10:22-78
 application
-ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:13:5-52:19
+ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:13:5-68:19
+MERGED from [com.github.pratikbutani:MultiSelectSpinner:-SNAPSHOT] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\a60821674a6eb8e6deb342e00fd94f18\jetified-MultiSelectSpinner--SNAPSHOT\AndroidManifest.xml:11:5-12:19
+MERGED from [com.github.pratikbutani:MultiSelectSpinner:-SNAPSHOT] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\a60821674a6eb8e6deb342e00fd94f18\jetified-MultiSelectSpinner--SNAPSHOT\AndroidManifest.xml:11:5-12:19
 MERGED from [com.google.android.material:material:1.3.0-alpha03] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\281a5d1eeeb243e3efeee3778c8b9ae8\material-1.3.0-alpha03\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.3.0-alpha03] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\281a5d1eeeb243e3efeee3778c8b9ae8\material-1.3.0-alpha03\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.2] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\f2be9666b04db6172a0fe68062f38177\constraintlayout-2.0.2\AndroidManifest.xml:9:5-20
@@ -223,27 +227,27 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Mo
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.5.0-alpha02] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\780a2cdb1cb4fc13503b48818db2b490\core-1.5.0-alpha02\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:19:9-35
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:19:9-35
 	android:label
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:17:9-41
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:17:9-41
 	android:roundIcon
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:18:9-48
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:18:9-48
 	android:icon
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:16:9-43
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:16:9-43
 	android:allowBackup
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:15:9-35
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:15:9-35
 	android:theme
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:20:9-40
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:20:9-40
 	android:name
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:14:9-38
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:14:9-38
 activity#com.google.firebase.auth.internal.FederatedSignInActivity
-ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:21:9-24:45
+ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:21:9-24:45
 MERGED from [com.google.firebase:firebase-auth:19.4.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\f3832ea512fc551a928f626f4257c982\jetified-firebase-auth-19.4.0\AndroidManifest.xml:24:9-31:50
 MERGED from [com.google.firebase:firebase-auth:19.4.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\f3832ea512fc551a928f626f4257c982\jetified-firebase-auth-19.4.0\AndroidManifest.xml:24:9-31:50
 	android:excludeFromRecents
 		ADDED from [com.google.firebase:firebase-auth:19.4.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\f3832ea512fc551a928f626f4257c982\jetified-firebase-auth-19.4.0\AndroidManifest.xml:26:13-46
 	android:launchMode
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:24:13-42
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:24:13-42
 		REJECTED from [com.google.firebase:firebase-auth:19.4.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\f3832ea512fc551a928f626f4257c982\jetified-firebase-auth-19.4.0\AndroidManifest.xml:28:13-44
 	android:exported
 		ADDED from [com.google.firebase:firebase-auth:19.4.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\f3832ea512fc551a928f626f4257c982\jetified-firebase-auth-19.4.0\AndroidManifest.xml:27:13-36
@@ -252,63 +256,105 @@ MERGED from [com.google.firebase:firebase-auth:19.4.0] C:\Users\Moka\.gradle\cac
 	android:theme
 		ADDED from [com.google.firebase:firebase-auth:19.4.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\f3832ea512fc551a928f626f4257c982\jetified-firebase-auth-19.4.0\AndroidManifest.xml:30:13-72
 	tools:replace
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:23:13-47
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:23:13-47
 	android:name
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:22:13-85
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:22:13-85
 activity#com.attendance.myproject.begory.presentationLayer.login.LoginActivity
-ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:25:9-30:70
+ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:25:9-30:70
 	android:screenOrientation
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:28:13-49
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:28:13-49
 	android:launchMode
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:27:13-43
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:27:13-43
 	android:windowSoftInputMode
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:30:13-67
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:30:13-67
 	android:theme
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:29:13-63
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:29:13-49
 	android:name
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:26:13-97
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:26:13-97
 activity#com.attendance.myproject.begory.presentationLayer.splash.SplashActivity
-ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:31:9-43:20
+ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:31:9-43:20
 	android:screenOrientation
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:33:13-49
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:33:13-49
 	android:windowSoftInputMode
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:35:13-67
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:35:13-67
 	android:theme
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:34:13-69
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:34:13-49
 	android:name
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:32:13-99
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:32:13-99
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:37:13-41:29
+ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:37:13-41:29
 action#android.intent.action.MAIN
-ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:38:17-69
+ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:38:17-69
 	android:name
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:38:25-66
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:38:25-66
 category#android.intent.category.LAUNCHER
-ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:40:17-77
+ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:40:17-77
 	android:name
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:40:27-74
-activity#com.attendance.myproject.begory.presentationLayer.shop.MainActivity
-ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:44:9-50:20
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:40:27-74
+activity#com.attendance.myproject.begory.presentationLayer.main.MainActivity
+ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:44:9-50:20
 	android:screenOrientation
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:47:13-49
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:47:13-49
 	android:launchMode
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:46:13-43
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:46:13-43
 	android:windowSoftInputMode
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:49:13-67
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:49:13-67
 	android:theme
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:48:13-63
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:48:13-44
 	android:name
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:45:13-95
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:45:13-95
+activity#com.attendance.myproject.begory.presentationLayer.main.setting.addBlaBla.AddBlaBlaActivity
+ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:52:13-55:55
+	android:screenOrientation
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:55:17-53
+	android:launchMode
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:53:17-47
+	android:theme
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:54:17-51
+	android:name
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:52:23-128
+activity#com.attendance.myproject.begory.presentationLayer.main.setting.updateBlaBla.UpdateBlaBlaActivity
+ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:56:9-59:51
+	android:screenOrientation
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:59:13-49
+	android:launchMode
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:57:13-43
+	android:theme
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:58:13-47
+	android:name
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:56:19-130
+activity#com.attendance.myproject.begory.presentationLayer.main.setting.userExist.UserActivity
+ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:60:9-63:51
+	android:screenOrientation
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:63:13-49
+	android:launchMode
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:61:13-43
+	android:theme
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:62:13-47
+	android:name
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:60:19-119
+activity#com.attendance.myproject.begory.presentationLayer.main.attendence.takeAttendance.LevelAttendActivity
+ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:64:9-67:51
+	android:screenOrientation
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:67:13-49
+	android:launchMode
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:65:13-43
+	android:theme
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:66:13-47
+	android:name
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:64:19-134
 uses-sdk
-INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
-INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
+INJECTED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml
+INJECTED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml
 MERGED from [androidx.databinding:databinding-adapters:4.0.2] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\7c9cb2cb1c266d1d25e5650bc79188a5\databinding-adapters-4.0.2\AndroidManifest.xml:22:5-44
 MERGED from [androidx.databinding:databinding-adapters:4.0.2] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\7c9cb2cb1c266d1d25e5650bc79188a5\databinding-adapters-4.0.2\AndroidManifest.xml:22:5-44
 MERGED from [androidx.databinding:databinding-runtime:4.0.2] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\b594232caf51d7cf873ab0a906774f78\databinding-runtime-4.0.2\AndroidManifest.xml:22:5-44
 MERGED from [androidx.databinding:databinding-runtime:4.0.2] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\b594232caf51d7cf873ab0a906774f78\databinding-runtime-4.0.2\AndroidManifest.xml:22:5-44
 MERGED from [com.github.ibrahimsn98:SmoothBottomBar:1.7.6] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\05497924254247c18e1bc7405326eb31\jetified-SmoothBottomBar-1.7.6\AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.ibrahimsn98:SmoothBottomBar:1.7.6] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\05497924254247c18e1bc7405326eb31\jetified-SmoothBottomBar-1.7.6\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.pratikbutani:MultiSelectSpinner:-SNAPSHOT] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\a60821674a6eb8e6deb342e00fd94f18\jetified-MultiSelectSpinner--SNAPSHOT\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.pratikbutani:MultiSelectSpinner:-SNAPSHOT] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\a60821674a6eb8e6deb342e00fd94f18\jetified-MultiSelectSpinner--SNAPSHOT\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.navigation:navigation-ui-ktx:2.3.1] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\e98ef1951c9ef9f0e635a242e1572f31\navigation-ui-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-ui-ktx:2.3.1] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\e98ef1951c9ef9f0e635a242e1572f31\navigation-ui-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-ui:2.3.1] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\633a01a88ef22fee3f789011d22b8567\navigation-ui-2.3.1\AndroidManifest.xml:20:5-22:41
@@ -317,6 +363,8 @@ MERGED from [com.google.android.material:material:1.3.0-alpha03] C:\Users\Moka\.
 MERGED from [com.google.android.material:material:1.3.0-alpha03] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\281a5d1eeeb243e3efeee3778c8b9ae8\material-1.3.0-alpha03\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\480ef48e57b33b0277d65a581bc69ce8\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\480ef48e57b33b0277d65a581bc69ce8\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.rey5137:material:1.2.2] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\917ea80e4c4c5b602e84acd85e729be9\jetified-material-1.2.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.rey5137:material:1.2.2] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\917ea80e4c4c5b602e84acd85e729be9\jetified-material-1.2.2\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\eb241b98d52e47bb8074b4c33f7affb7\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\eb241b98d52e47bb8074b4c33f7affb7\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\5a9d4fdaed0f1117d89cd21c7108382e\cardview-1.0.0\AndroidManifest.xml:20:5-44
@@ -487,16 +535,16 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Moka\.gradle\cac
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\5aff5132dd06253eb3292c9331f4c14e\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\1e4259dc096d8f54a3c82d91d73cb59d\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\1e4259dc096d8f54a3c82d91d73cb59d\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
-INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
-INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
+INJECTED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml
+INJECTED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
-		INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
+		INJECTED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml
+		INJECTED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
-		ADDED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
-		INJECTED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml
+		INJECTED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml
+		ADDED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml
+		INJECTED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml
 service#androidx.room.MultiInstanceInvalidationService
 ADDED from [androidx.room:room-runtime:2.2.3] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\a1ae60501e1e4986588f31191c91f481\room-runtime-2.2.3\AndroidManifest.xml:25:9-27:40
 	android:exported
@@ -674,4 +722,4 @@ ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Moka\.gradle\ca
 	android:name
 		ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Moka\.gradle\caches\transforms-2\files-2.1\cfca91139ab5d24e6c445c8577dcf33e\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:24:13-79
 uses-permission#android.permission.READ_PHONE_STATE
-IMPLIED from E:\android_Projects\Begory\app\src\main\AndroidManifest.xml:2:1-54:12 reason: dagger.lint has a targetSdkVersion < 4
+IMPLIED from E:\android_Projects\begory\app\src\main\AndroidManifest.xml:2:1-70:12 reason: dagger.lint has a targetSdkVersion < 4

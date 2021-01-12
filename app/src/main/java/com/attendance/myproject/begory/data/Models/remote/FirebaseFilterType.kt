@@ -15,19 +15,26 @@
  */
 package com.attendance.myproject.begory.data.Models.remote
 
+import com.attendance.myproject.begory.R
 import com.attendance.myproject.begory.presentationLayer.splash.SplashViewModel
 
 /**
  * Used with the filter spinner in the tasks list.
  */
- class FirebaseFilterType {
+class FirebaseFilterType {
 
     companion object {
     const val users = "Users"
     const val studentAttendance = "StudentAttendances"
+        fun fbConvert( i:Int):LevelFilterType=
+            when(i) {
+                R.string.lev_Grad -> LevelFilterType.Grad
+                R.string.lev_college -> LevelFilterType.College
+                else -> LevelFilterType.Grad
+            }
 
     }
    enum class LevelFilterType {
-      No,College11,College12,College13,College14,Grad
+      College,Grad
    }
 }

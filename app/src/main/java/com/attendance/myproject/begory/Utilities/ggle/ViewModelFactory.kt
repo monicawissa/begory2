@@ -7,7 +7,7 @@ package com.attendance.myproject.begory.Utilities.ggle
 //import androidx.lifecycle.ViewModelProvider
 //import com.attendance.myproject.begory.Utilities.Injection
 //import com.attendance.myproject.begory.data.source.AppRepository
-//import com.attendance.myproject.begory.presentationLayer.login.LoginViewModel
+//import com.attendance.myproject.begory.presentationLayer.login.ProfileViewModel
 //import com.attendance.myproject.begory.presentationLayer.main.MainViewModel
 //import com.attendance.myproject.begory.presentationLayer.splash.SplashViewModel
 ///**
@@ -26,8 +26,8 @@ package com.attendance.myproject.begory.Utilities.ggle
 //                when {
 //                    isAssignableFrom(SplashViewModel::class.java) ->
 //                        SplashViewModel(appRepository)
-//                    isAssignableFrom(LoginViewModel::class.java) ->
-//                        LoginViewModel(appRepository)
+//                    isAssignableFrom(ProfileViewModel::class.java) ->
+//                        ProfileViewModel(appRepository)
 //                    isAssignableFrom(MainViewModel::class.java)->
 //                        MainViewModel(appRepository)
 //                    else ->

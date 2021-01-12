@@ -19,8 +19,8 @@ class SplashViewModel  @ViewModelInject constructor(private val appRepository: A
 ) :
         ViewModel() {
 
-        private val msplashState = MutableLiveData<SplashState>()
-        val splashState: LiveData<SplashState>
+        private val msplashState = MutableLiveData<Pair<SplashState,User?>>()
+        val splashState: LiveData<Pair<SplashState,User?>>
                 get() = msplashState
         private val msnackbarText = MutableLiveData<Event<Int>>()
         val snackbarMessage: LiveData<Event<Int>>
@@ -44,17 +44,10 @@ class SplashViewModel  @ViewModelInject constructor(private val appRepository: A
                 viewModelScope.launch {
                         delay(3000)
                         if(networkHelper.isNetworkConnected()){
-                                appRepository.getUser(object :IRemoteDataSource.LoginCallback{
-                                        override fun onResponse(user: User) {
-                                                msplashState.postValue(SplashState.MainActivity())
-
-                                        }
-
-                                        override fun onDataNotAvailable(message: Int?) {
-                                                msplashState.postValue(SplashState.LoginActivity())
-                                        }
-
-                                })
+                                val user=appRepository.getUser()
+                                if(user==null)msplashState.postValue(Pair(SplashState.LoginActivity(),null))
+                                else{  msplashState.postValue(Pair(SplashState.MainActivity(),user))
+                                }
                         }
                         else showSnackbarMessage(R.string.no_internet_connection)
                 }
