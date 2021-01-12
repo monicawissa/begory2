@@ -1,34 +1,42 @@
 [
     {
-        "merged": "E:\\android_Projects\\begory\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_add_blabla.xml",
-        "source": "E:\\android_Projects\\begory\\app\\src\\main\\res\\layout\\activity_add_blabla.xml"
+        "merged": "E:\\android_Projects\\begoryy\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "E:\\android_Projects\\begoryy\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "E:\\android_Projects\\begory\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
-        "source": "E:\\android_Projects\\begory\\app\\src\\main\\res\\layout\\activity_login.xml"
+        "merged": "E:\\android_Projects\\begoryy\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_splash.xml",
+        "source": "E:\\android_Projects\\begoryy\\app\\src\\main\\res\\layout\\activity_splash.xml"
     },
     {
-        "merged": "E:\\android_Projects\\begory\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_user.xml",
-        "source": "E:\\android_Projects\\begory\\app\\src\\main\\res\\layout\\activity_user.xml"
+        "merged": "E:\\android_Projects\\begoryy\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_user.xml",
+        "source": "E:\\android_Projects\\begoryy\\app\\src\\main\\res\\layout\\activity_user.xml"
     },
     {
-        "merged": "E:\\android_Projects\\begory\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_splash.xml",
-        "source": "E:\\android_Projects\\begory\\app\\src\\main\\res\\layout\\activity_splash.xml"
+        "merged": "E:\\android_Projects\\begoryy\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_profile.xml",
+        "source": "E:\\android_Projects\\begoryy\\app\\src\\main\\res\\layout\\fragment_profile.xml"
     },
     {
-        "merged": "E:\\android_Projects\\begory\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_addblabla.xml",
-        "source": "E:\\android_Projects\\begory\\app\\src\\main\\res\\layout\\activity_addblabla.xml"
+        "merged": "E:\\android_Projects\\begoryy\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_addblabla.xml",
+        "source": "E:\\android_Projects\\begoryy\\app\\src\\main\\res\\layout\\activity_addblabla.xml"
     },
     {
-        "merged": "E:\\android_Projects\\begory\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
-        "source": "E:\\android_Projects\\begory\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "E:\\android_Projects\\begoryy\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_password.xml",
+        "source": "E:\\android_Projects\\begoryy\\app\\src\\main\\res\\layout\\activity_password.xml"
     },
     {
-        "merged": "E:\\android_Projects\\begory\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_level_attendance.xml",
-        "source": "E:\\android_Projects\\begory\\app\\src\\main\\res\\layout\\activity_level_attendance.xml"
+        "merged": "E:\\android_Projects\\begoryy\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_level_attendance.xml",
+        "source": "E:\\android_Projects\\begoryy\\app\\src\\main\\res\\layout\\activity_level_attendance.xml"
     },
     {
-        "merged": "E:\\android_Projects\\begory\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_updateblabla.xml",
-        "source": "E:\\android_Projects\\begory\\app\\src\\main\\res\\layout\\activity_updateblabla.xml"
+        "merged": "E:\\android_Projects\\begoryy\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_updateblabla.xml",
+        "source": "E:\\android_Projects\\begoryy\\app\\src\\main\\res\\layout\\activity_updateblabla.xml"
+    },
+    {
+        "merged": "E:\\android_Projects\\begoryy\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
+        "source": "E:\\android_Projects\\begoryy\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "E:\\android_Projects\\begoryy\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_show_level_attendance.xml",
+        "source": "E:\\android_Projects\\begoryy\\app\\src\\main\\res\\layout\\activity_show_level_attendance.xml"
     }
 ]

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\android_Projects\\begory\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xhdpi-v4\\values-xhdpi-v4.xml",
+            "outputFile": "E:\\android_Projects\\begoryy\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xhdpi-v4\\values-xhdpi-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Moka\\.gradle\\caches\\transforms-2\\files-2.1\\d6136a108b743b35cd149fa8485db2a8\\jetified-core-1.9.8\\res\\values-xhdpi-v4\\values-xhdpi-v4.xml",
+                    "source": "C:\\Users\\Moka\\.gradle\\caches\\transforms-2\\files-2.1\\d1039a94af6cd2cfe9783ee4c84cb73f\\jetified-core-1.9.8\\res\\values-xhdpi-v4\\values-xhdpi-v4.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

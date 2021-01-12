@@ -253,6 +253,10 @@ attr circleCrop
 attr circleRadius
 attr circularInset
 attr circularRadius
+attr civ_border_color
+attr civ_border_overlay
+attr civ_border_width
+attr civ_circle_background_color
 attr clearText
 attr clickAction
 attr closeIcon
@@ -2083,6 +2087,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_baseline_monetization_on_24
 drawable ic_clock_black_24dp
 drawable ic_dashboard
 drawable ic_home
@@ -2095,6 +2100,7 @@ drawable ic_notification
 drawable ic_profile
 drawable ic_settings
 drawable logo
+drawable logout
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -2245,6 +2251,7 @@ id btn_check
 id btn_login
 id btn_read_code
 id btn_select_levels
+id btn_update
 id buffer
 id butt
 id buttonPanel
@@ -2258,6 +2265,8 @@ id cb_is_active
 id cb_is_add_direct
 id cb_kodas
 id cb_shamas
+id cb_term1
+id cb_term2
 id cb_tnawel
 id center
 id centerCrop
@@ -2327,6 +2336,8 @@ id end
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
+id eqlomat_desc
+id eqlomat_label
 id et_address
 id et_checkmobile
 id et_date
@@ -2334,6 +2345,7 @@ id et_mobile
 id et_mobile2
 id et_name
 id et_password
+id et_updatemobile
 id et_user_mobile
 id exitUntilCollapsed
 id expand_activities_button
@@ -2491,11 +2503,14 @@ id parent_matrix
 id password_toggle
 id path
 id pathRelative
+id payment_begory
+id payment_label
 id peekHeight
 id percent
 id pin
 id position
 id postLayout
+id profile_image
 id progressBar
 id progress_circular
 id progress_horizontal
@@ -2604,7 +2619,6 @@ id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
 id text_notifications
-id text_profile
 id text_shop
 id textinput_counter
 id textinput_error
@@ -2612,6 +2626,10 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
+id ti_Name
+id ti_address
+id ti_mobile2
+id ti_password
 id time
 id title
 id titleDividerNoCustom
@@ -2633,6 +2651,8 @@ id tv_a3traf
 id tv_attend
 id tv_hesa
 id tv_kodas
+id tv_level
+id tv_name
 id tv_title
 id tv_tnawel
 id unchecked
@@ -2640,6 +2660,7 @@ id uniform
 id unlabeled
 id untilRelease
 id up
+id update_data
 id useLogo
 id user_exist
 id user_update
@@ -2740,6 +2761,8 @@ layout activity_edit_student
 layout activity_level_attendance
 layout activity_login
 layout activity_main
+layout activity_password
+layout activity_show_level_attendance
 layout activity_splash
 layout activity_student_attendance
 layout activity_student_list
@@ -2949,7 +2972,9 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string fear
 string fill__level
+string fill__password
 string fill_data
+string fill_fixedPassword
 string fill_mobiledata
 string fill_name_level
 string fill_passworddata
@@ -3048,6 +3073,7 @@ string name
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
 string no_internet_connection
+string no_student
 string or
 string password
 string password_toggle_content_description
@@ -3920,6 +3946,7 @@ styleable CardView android_minWidth android_minHeight cardBackgroundColor cardCo
 styleable CheckBoxDrawable cbd_animDuration cbd_boxSize cbd_cornerRadius cbd_height cbd_strokeColor cbd_strokeSize cbd_tickColor cbd_width
 styleable Chip android_textAppearance android_textSize android_textColor android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconTint checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipMinTouchTargetSize chipStartPadding chipStrokeColor chipStrokeWidth chipSurfaceColor closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible ensureMinTouchTargetSize hideMotionSpec iconEndPadding iconStartPadding rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical selectionRequired singleLine singleSelection
+styleable CircleImageView civ_border_color civ_border_overlay civ_border_width civ_circle_background_color
 styleable CircularProgressDrawable cpd_inAnimDuration cpd_inStepColors cpd_inStepPercent cpd_initialAngle cpd_keepDuration cpd_maxSweepAngle cpd_minSweepAngle cpd_outAnimDuration cpd_padding cpd_reverse cpd_rotateDuration cpd_strokeColor cpd_strokeColors cpd_strokeSecondaryColor cpd_strokeSize cpd_transformDuration cpd_transformInterpolator pv_progress pv_progressMode pv_secondaryProgress
 styleable ClockFaceView valueTextColor
 styleable ClockHandView materialCircleRadius selectorSize

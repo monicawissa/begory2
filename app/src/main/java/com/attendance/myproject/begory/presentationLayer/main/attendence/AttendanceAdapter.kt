@@ -42,8 +42,8 @@ class AttendanceAdapter(private val mContext: Context, private val mlist: List<I
                     if (pos != RecyclerView.NO_POSITION){
                         val clickedDataItem = mlist[pos];
                         when (mlist[pos]) {
-                            a_lev_college -> UiManager.startActivity(mContext, LevelAttendActivity::class.java, mContext.getString(settingType),lev_college)
-                            a_lev_Grad -> UiManager.startActivity(mContext,LevelAttendActivity::class.java, mContext.getString(settingType),lev_Grad )
+                            lev_college -> UiManager.startActivity(mContext, LevelAttendActivity::class.java, mContext.getString(settingType),lev_college)
+                            lev_Grad -> UiManager.startActivity(mContext,LevelAttendActivity::class.java, mContext.getString(settingType),lev_Grad )
 
                         }
                     }

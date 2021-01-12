@@ -14,9 +14,15 @@ public class BR {
 
   public static final int mainViewModel = 4;
 
-  public static final int splashViewModel = 5;
+  public static final int passwordViewModel = 5;
 
-  public static final int updateBlaBlaViewModel = 6;
+  public static final int profileViewModel = 6;
 
-  public static final int userViewModel = 7;
+  public static final int showLevelAttendViewModel = 7;
+
+  public static final int splashViewModel = 8;
+
+  public static final int updateBlaBlaViewModel = 9;
+
+  public static final int userViewModel = 10;
 }

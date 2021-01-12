@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\android_Projects\\begory\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hu\\values-hu.xml",
+            "outputFile": "E:\\android_Projects\\begoryy\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hu\\values-hu.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\Moka\\.gradle\\caches\\transforms-2\\files-2.1\\e222dd630816b9a8bf1f7c3d287c2221\\jetified-zxing-android-embedded-3.2.0\\res\\values-hu\\values-hu.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,114,161,287",
-                        "endColumns": "58,46,125,115",
-                        "endOffsets": "109,156,282,398"
-                    },
-                    "to": {
-                        "startLines": "108,109,110,111",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "10649,10708,10755,10881",
-                        "endColumns": "58,46,125,115",
-                        "endOffsets": "10703,10750,10876,10992"
-                    }
-                },
                 {
                     "source": "C:\\Users\\Moka\\.gradle\\caches\\transforms-2\\files-2.1\\633a01a88ef22fee3f789011d22b8567\\navigation-ui-2.3.1\\res\\values-hu\\values-hu.xml",
                     "from": {
@@ -52,6 +35,23 @@
                         "startOffsets": "3401,3514,3730,3870,3981,4208,4348,4500,4875,5104,5214,5430,5569,5800,6002,6103,6201",
                         "endColumns": "112,215,139,110,226,139,151,138,228,109,215,138,230,201,100,97,116",
                         "endOffsets": "3509,3725,3865,3976,4203,4343,4495,4634,5099,5209,5425,5564,5795,5997,6098,6196,6313"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Moka\\.gradle\\caches\\transforms-2\\files-2.1\\de9d34c37bb5505cbe4484cdc0cd6948\\jetified-zxing-android-embedded-3.2.0\\res\\values-hu\\values-hu.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,114,161,287",
+                        "endColumns": "58,46,125,115",
+                        "endOffsets": "109,156,282,398"
+                    },
+                    "to": {
+                        "startLines": "108,109,110,111",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "10649,10708,10755,10881",
+                        "endColumns": "58,46,125,115",
+                        "endOffsets": "10703,10750,10876,10992"
                     }
                 },
                 {

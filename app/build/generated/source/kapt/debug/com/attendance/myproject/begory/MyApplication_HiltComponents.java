@@ -10,10 +10,15 @@ import com.attendance.myproject.begory.presentationLayer.main.NotificationsFragm
 import com.attendance.myproject.begory.presentationLayer.main.attendence.AttendanceFragment_GeneratedInjector;
 import com.attendance.myproject.begory.presentationLayer.main.attendence.takeAttendance.LevelAttendActivity_GeneratedInjector;
 import com.attendance.myproject.begory.presentationLayer.main.attendence.takeAttendance.LevelAttendViewModel_HiltModule;
+import com.attendance.myproject.begory.presentationLayer.main.changePassword.PasswordActivity_GeneratedInjector;
+import com.attendance.myproject.begory.presentationLayer.main.changePassword.PasswordViewModel_HiltModule;
 import com.attendance.myproject.begory.presentationLayer.main.profile.ProfileFragment_GeneratedInjector;
+import com.attendance.myproject.begory.presentationLayer.main.profile.ProfileViewModel_HiltModule;
 import com.attendance.myproject.begory.presentationLayer.main.setting.SettingsFragment_GeneratedInjector;
 import com.attendance.myproject.begory.presentationLayer.main.setting.addBlaBla.AddBlaBlaActivity_GeneratedInjector;
 import com.attendance.myproject.begory.presentationLayer.main.setting.addBlaBla.AddBlaBlaViewModel_HiltModule;
+import com.attendance.myproject.begory.presentationLayer.main.setting.showTakedAttendance.ShowLevelAttendActivity_GeneratedInjector;
+import com.attendance.myproject.begory.presentationLayer.main.setting.showTakedAttendance.ShowLevelAttendViewModel_HiltModule;
 import com.attendance.myproject.begory.presentationLayer.main.setting.updateBlaBla.UpdateBlaBlaActivity_GeneratedInjector;
 import com.attendance.myproject.begory.presentationLayer.main.setting.updateBlaBla.UpdateBlaBlaViewModel_HiltModule;
 import com.attendance.myproject.begory.presentationLayer.main.setting.userExist.UserActivity_GeneratedInjector;
@@ -134,7 +139,9 @@ public final class MyApplication_HiltComponents {
   public abstract static class ActivityC implements LoginActivity_GeneratedInjector,
       MainActivity_GeneratedInjector,
       LevelAttendActivity_GeneratedInjector,
+      PasswordActivity_GeneratedInjector,
       AddBlaBlaActivity_GeneratedInjector,
+      ShowLevelAttendActivity_GeneratedInjector,
       UpdateBlaBlaActivity_GeneratedInjector,
       UserActivity_GeneratedInjector,
       SplashActivity_GeneratedInjector,
@@ -155,6 +162,9 @@ public final class MyApplication_HiltComponents {
           LoginViewModel_HiltModule.class,
           MainViewModel_HiltModule.class,
           ActivityCBuilderModule.class,
+          PasswordViewModel_HiltModule.class,
+          ProfileViewModel_HiltModule.class,
+          ShowLevelAttendViewModel_HiltModule.class,
           SplashViewModel_HiltModule.class,
           UpdateBlaBlaViewModel_HiltModule.class,
           UserViewModel_HiltModule.class
