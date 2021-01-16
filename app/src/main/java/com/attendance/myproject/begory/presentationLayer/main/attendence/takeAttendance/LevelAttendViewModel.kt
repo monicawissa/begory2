@@ -84,7 +84,6 @@ class LevelAttendViewModel  @ViewModelInject constructor(private val appReposito
 
             }
         })
-
     }
 
     var mList: ArrayList<Attendance> = ArrayList()

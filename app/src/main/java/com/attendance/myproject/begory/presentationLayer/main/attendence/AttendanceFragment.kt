@@ -89,27 +89,15 @@ class AttendanceFragment : Fragment() {
         mItems.clear()
         val v=AppPreferencesHelper (requireContext())
         val user=v.getUser()
-        if((user!!.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString())||
-                        (user!!.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString()))
-            mItems.add(R.string.lev_Grad)
         if((user!!.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.College).toString())||
                 (user!!.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.College).toString()))
-                mItems.add(R.string.lev_college)
-//        } else {
-//            if (mAdmin.getLevels() != null) {
-//                for (i in 0 until mAdmin.getLevels().size()) {
-//                    if (mAdmin.getLevels().get(i).isSelected()) {
-//                        if (mAdmin.getLevels().get(i).getId().equals(FBConnenctions.CONST_LEVEL_2)) mItems.add(R.string.a_lev_2)
-//                        if (mAdmin.getLevels().get(i).getId().equals(FBConnenctions.CONST_LEVEL_1)) mItems.add(R.string.a_lev_1)
-//                        if (mAdmin.getLevels().get(i).getId().equals(FBConnenctions.CONST_LEVEL_4)) mItems.add(R.string.a_lev_4)
-//                        if (mAdmin.getLevels().get(i).getId().equals(FBConnenctions.CONST_LEVEL_3)) mItems.add(R.string.a_lev_3)
-//                        if (mAdmin.getLevels().get(i).getId().equals(FBConnenctions.CONST_LEVEL_6)) mItems.add(R.string.a_lev_6)
-//                        if (mAdmin.getLevels().get(i).getId().equals(FBConnenctions.CONST_LEVEL_5)) mItems.add(R.string.a_lev_5)
-//                    }
-//                }
-//            }
-//            mItems.add(R.string.m_show_results)
-//        }
+            mItems.add(R.string.lev_college)
+        if((user!!.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString())||
+                (user!!.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString()))
+            mItems.add(R.string.lev_Grad)
+        if((user!!.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Augustine).toString())||
+                (user!!.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Augustine).toString()))
+            mItems.add(R.string.lev_Augustine)
         return mItems
     }
 

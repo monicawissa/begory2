@@ -74,17 +74,20 @@ class AddBlaBlaActivity : BaseActivity1() ,AddBlaBlaNavigator{
         finish()
     }
     private fun fillMenu(): List<Int>? {
-    val mItems  =ArrayList<Int>()
+        val mItems  =ArrayList<Int>()
         val v= AppPreferencesHelper(applicationContext)
-    val user=v.getUser()
-    if((user!!.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString())||
-            (user!!.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString()))
-        mItems.add(R.string.lev_Grad)
-    if((user!!.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.College).toString())||
-            (user!!.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.College).toString()))
-        mItems.add(R.string.lev_college)
-    return mItems.toList()
-}
+        val user=v.getUser()
+        if((user!!.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.College).toString())||
+                (user!!.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.College).toString()))
+            mItems.add(R.string.lev_college)
+        if((user!!.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString())||
+                (user!!.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString()))
+            mItems.add(R.string.lev_Grad)
+        if((user!!.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Augustine).toString())||
+                (user!!.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Augustine).toString()))
+            mItems.add(R.string.lev_Augustine)
+        return mItems.toList()
+    }
 
     private fun subscribeToNavigationChanges(viewModel: AddBlaBlaViewModel) {
 

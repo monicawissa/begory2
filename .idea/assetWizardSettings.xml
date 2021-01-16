@@ -3,6 +3,11 @@
   <component name="WizardSettings">
     <option name="children">
       <map>
+        <entry key="imageWizard">
+          <value>
+            <PersistentState />
+          </value>
+        </entry>
         <entry key="vectorWizard">
           <value>
             <PersistentState>
@@ -18,7 +23,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material/icons/materialicons/storefront/baseline_storefront_24.xml" />
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material/icons/materialicons/monetization_on/baseline_monetization_on_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,8 +33,9 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_shop" />
-                            <entry key="sourceFile" value="E:\android_Projects\Begory" />
+                            <entry key="color" value="deb61d" />
+                            <entry key="outputName" value="ic_baseline_monetization_on_24" />
+                            <entry key="sourceFile" value="E:\android_Projects\begoryy" />
                           </map>
                         </option>
                       </PersistentState>

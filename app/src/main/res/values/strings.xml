@@ -92,6 +92,7 @@
     <string name="a_lev_secondary">حضور مرحلة ثانوى </string>
     <string name="a_lev_college">حضور مرحلة جامعي </string>
     <string name="a_lev_Grad">حضور مرحلة خريجين </string>
+    <string name="a_lev_Augustine"> مرحلة اغسطينوس </string>
 
     <string name="lev_KG"> مرحلة حضانة</string>
     <string name="lev_1"> مرحلة أولى</string>
@@ -104,6 +105,7 @@
     <string name="lev_secondary"> مرحلة ثانوى </string>
     <string name="lev_college"> مرحلة جامعي </string>
     <string name="lev_Grad"> مرحلة خريجين </string>
+    <string name="lev_Augustine"> مرحلة اغسطينوس </string>
 
     <string name="term1_sub1">الحان ترم 1</string>
     <string name="term1_sub2">قبطي</string>

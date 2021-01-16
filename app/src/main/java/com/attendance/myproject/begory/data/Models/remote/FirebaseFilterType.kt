@@ -30,11 +30,11 @@ class FirebaseFilterType {
             when(i) {
                 R.string.lev_Grad -> LevelFilterType.Grad
                 R.string.lev_college -> LevelFilterType.College
+                R.string.lev_Augustine -> LevelFilterType.Augustine
                 else -> LevelFilterType.Grad
             }
-
     }
-   enum class LevelFilterType {
-      College,Grad
-   }
+    enum class LevelFilterType {
+      College,Grad,Augustine
+    }
 }

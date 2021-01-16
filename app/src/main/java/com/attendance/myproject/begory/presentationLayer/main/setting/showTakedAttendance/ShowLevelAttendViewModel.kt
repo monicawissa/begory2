@@ -34,15 +34,14 @@ class ShowLevelAttendViewModel  @ViewModelInject constructor(private val appRepo
         }
 
         override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-            studentLevel = FirebaseFilterType.fbConvert(
-                    ((parent!!.getItemAtPosition(position)) as Level).levelId!!
-            )
-            mListLast.clear()
-            mStudentList.clear()
-            _mStudentAttendancesList.value=true
-            getStudentList()
-
-
+            var levelId= ((parent!!.getItemAtPosition(position)) as Level).levelId!!
+            if(position!=0){
+                studentLevel = FirebaseFilterType.fbConvert(levelId)
+                mListLast.clear()
+                mStudentList.clear()
+                _mStudentAttendancesList.value=true
+                getStudentList()
+            }
         }
     }
 //    //Btn check Available
@@ -84,7 +83,6 @@ class ShowLevelAttendViewModel  @ViewModelInject constructor(private val appRepo
 //        _isCheckBtnAvailable.value=false
         appRepository.filterLevel(studentLevel!!, object : IRemoteDataSource.UsersCallback {
             override fun onResponse(users: List<User>) {
-
                 mStudentList.addAll(users)
                 manageStudentWithAttendance()
                 _dataLoading.value = false
