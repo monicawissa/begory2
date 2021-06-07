@@ -48,7 +48,14 @@
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden|adjustResize" >
         </activity>
-
+        <activity android:name="com.attendance.myproject.begory.presentationLayer.main.setting.addGift.AddGiftActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/dialogTheme"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
             <activity android:name="com.attendance.myproject.begory.presentationLayer.main.setting.addBlaBla.AddBlaBlaActivity"
                 android:launchMode="singleTop"
                 android:theme="@style/dialogTheme"
@@ -73,6 +80,7 @@
             android:launchMode="singleTop"
             android:theme="@style/dialogTheme"
             android:screenOrientation="portrait"/>
+
     </application>
 
 </manifest>

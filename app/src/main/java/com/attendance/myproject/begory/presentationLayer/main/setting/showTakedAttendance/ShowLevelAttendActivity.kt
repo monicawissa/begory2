@@ -1,16 +1,13 @@
 package com.attendance.myproject.begory.presentationLayer.main.setting.showTakedAttendance
 
-import android.app.DatePickerDialog
 import android.content.ContentValues
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.*
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.attendance.myproject.begory.R
 import com.attendance.myproject.begory.data.Models.Level
 import com.attendance.myproject.begory.data.Models.remote.FirebaseFilterType
@@ -18,7 +15,6 @@ import com.attendance.myproject.begory.data.source.local.prefs.AppPreferencesHel
 import com.attendance.myproject.begory.databinding.ActivityShowLevelAttendanceBinding
 import com.attendance.myproject.begory.presentationLayer.main.setting.BaseActivity1
 import dagger.hilt.android.AndroidEntryPoint
-import java.text.SimpleDateFormat
 import java.util.*
 
 
@@ -27,8 +23,6 @@ class ShowLevelAttendActivity : BaseActivity1() , CompoundButton.OnCheckedChange
     private lateinit var binding: ActivityShowLevelAttendanceBinding
     private val mLevelsList: ArrayList<Level> = ArrayList<Level>()
     private lateinit var  list :List<Int>
-//        val list = listOf(R.string.lev_KG,R.string.lev_1,R.string.lev_2,R.string.lev_3,R.string.lev_4
-//                ,R.string.lev_5,R.string.lev_6,R.string.lev_preparatory,R.string.lev_secondary,R.string.lev_college, R.string.lev_Grad)
 
     private  val showLevelAttendViewModel: ShowLevelAttendViewModel by viewModels()
     var recyclerViewAdapter: ShowLevelAttendanceAdapter? = null
@@ -47,13 +41,13 @@ class ShowLevelAttendActivity : BaseActivity1() , CompoundButton.OnCheckedChange
         val v= AppPreferencesHelper (applicationContext)
         val user=v.getUser()
         if((user!!.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.College).toString())||
-                (user!!.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.College).toString()))
+                (user.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.College).toString()))
             mItems.add(R.string.lev_college)
-        if((user!!.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString())||
-                (user!!.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString()))
+        if((user.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString())||
+                (user.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString()))
             mItems.add(R.string.lev_Grad)
-        if((user!!.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Augustine).toString())||
-                (user!!.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Augustine).toString()))
+        if((user.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Augustine).toString())||
+                (user.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Augustine).toString()))
             mItems.add(R.string.lev_Augustine)
         return mItems.toList()
     }
@@ -66,7 +60,7 @@ class ShowLevelAttendActivity : BaseActivity1() , CompoundButton.OnCheckedChange
         binding.lifecycleOwner = this
         list=fillMenu()!!
         // TODO: change id
-        (binding.rvAttendance as (RecyclerView)).setHasFixedSize(true)
+        binding.rvAttendance.setHasFixedSize(true)
         //TODO: Choose your layout
         //GridLayout
         val gridLayoutManager: GridLayoutManager = GridLayoutManager(this, 1)
@@ -86,11 +80,11 @@ class ShowLevelAttendActivity : BaseActivity1() , CompoundButton.OnCheckedChange
     }
     private fun initLevelsSpinner() {
         mLevelsList.clear()
-        var level = Level(-1, getString(R.string.choose_level))
+        val level = Level(-1, getString(R.string.choose_level))
         mLevelsList.add(level)
         for(i in list){
-            var level = Level(i, getString(i))
-            mLevelsList.add(level)
+
+            mLevelsList.add(Level(i, getString(i)))
         }
         val dataAdapter: ArrayAdapter<Level> = ArrayAdapter<Level>(this,
                 android.R.layout.simple_spinner_item, mLevelsList)
@@ -101,7 +95,7 @@ class ShowLevelAttendActivity : BaseActivity1() , CompoundButton.OnCheckedChange
         initRecyclerView()
     }
 
-//    override fun openMainActivity() {
+    //    override fun openMainActivity() {
 //        UiManager.startActivity(this@UpdateBlaBlaActivity, MainActivity::class.java)
 //        finish()
 //    }

@@ -9,7 +9,7 @@
         android:id="@+id/navigation_shop"
         android:name="com.attendance.myproject.begory.presentationLayer.main.shop.ShopFragment"
         android:label="@string/title_shop"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_shop" >
         <action
             android:id="@+id/action_navigation_shop_to_navigation_attendance"
             app:destination="@id/navigation_attendance" />
@@ -47,5 +47,9 @@
         android:id="@+id/navigation_profile"
         android:name="com.attendance.myproject.begory.presentationLayer.main.profile.ProfileFragment"
         android:label="@string/title_profile"
-        tools:layout="@layout/fragment_profile"/>
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_navigation_profile_to_navigation_shop"
+            app:destination="@id/navigation_shop" />
+    </fragment>
 </navigation>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="addGiftViewModel"
+            type="com.attendance.myproject.begory.presentationLayer.main.setting.addGift.AddGiftViewModel"
+            />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rect_dialog_box">
+
+        <TextView
+            android:id="@+id/d_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:gravity="center"
+            android:text="@{addGiftViewModel.mTitleTV}"
+            android:textSize="24sp"
+            android:background="@color/primaryColor"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_horizontal|top"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/progress_bar_black"
+            android:visibility="@{addGiftViewModel.dataLoading ? View.VISIBLE: View.GONE  }"
+            />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/d_title">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:text="@string/choose_level"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <com.attendance.myproject.begory.multispinnerfilter.MultiSpinnerSearch
+                    android:id="@+id/multipleItemSelectionSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/rect_white_box"
+                    app:hintText="Multi Item Selection"
+                    tools:setItemsListener="@{addGiftViewModel.selectedItemsListener}"
+                    />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/rect_white_box"
+                    android:hint="@string/name"
+                    android:imeActionLabel="@string/name"
+                    android:text="@={addGiftViewModel.name}"
+                    android:imeOptions="actionNext"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="12dp"
+                    android:textColor="#3F3F3F"
+                    android:textColorHint="#3F3F3F"
+                    android:textSize="14sp"
+
+                    />
+
+
+                <EditText
+                    android:id="@+id/et_numberOfItems"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/rect_white_box"
+                    android:hint="العدد"
+                    android:imeActionLabel="العدد"
+                    android:text="@={addGiftViewModel.number}"
+
+                    android:layout_marginTop="8dp"
+                    android:imeOptions="actionNext"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:inputType="number"
+                    android:gravity="end|right"
+                    android:maxLines="1"
+                    android:padding="12dp"
+                    android:textColor="#3F3F3F"
+                    android:textColorHint="#3F3F3F"
+                    android:textSize="14sp"
+                    />
+
+                <EditText
+                    android:id="@+id/et_cosst"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/rect_white_box"
+                    android:hint="السعر"
+                    android:imeActionLabel="السعر"
+                    android:text="@={addGiftViewModel.cost}"
+
+                    android:layout_marginTop="8dp"
+                    android:imeOptions="actionNext"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:inputType="numberDecimal"
+                    android:gravity="end|right"
+                    android:maxLines="1"
+                    android:padding="12dp"
+                    android:textColor="#3F3F3F"
+                    android:textColorHint="#3F3F3F"
+                    android:textSize="14sp"
+                    />
+                <EditText
+                    android:id="@+id/et_notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/rect_white_box"
+                    android:hint="تفاصيل"
+                    android:imeActionLabel="تفاصيل"
+                    android:text="@={addGiftViewModel.notes}"
+                    android:layout_marginTop="8dp"
+                    android:imeOptions="actionNext"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:inputType="text"
+                    android:gravity="end|right"
+                    android:maxLines="1"
+                    android:padding="12dp"
+                    android:textColor="#3F3F3F"
+                    android:textColorHint="#3F3F3F"
+                    android:textSize="14sp"
+
+                    />
+
+                <Button
+                    android:id="@+id/btn_add_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/btn_white_selector"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/add_image"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="12dp"
+                    />
+                <Button
+                    android:id="@+id/btn_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/btn_white_selector"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/add"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:clickable="@{addGiftViewModel.isBtnAvailable}"
+
+                    android:onClick="@{()-> addGiftViewModel.register()}"
+
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+</layout>

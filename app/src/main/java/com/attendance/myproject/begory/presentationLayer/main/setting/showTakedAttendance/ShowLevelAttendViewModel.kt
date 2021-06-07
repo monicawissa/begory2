@@ -34,9 +34,9 @@ class ShowLevelAttendViewModel  @ViewModelInject constructor(private val appRepo
         }
 
         override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-            var levelId= ((parent!!.getItemAtPosition(position)) as Level).levelId!!
-            if(position!=0){
-                studentLevel = FirebaseFilterType.fbConvert(levelId)
+            var levelId= FirebaseFilterType.fbConvert(((parent!!.getItemAtPosition(position)) as Level).levelId!!)
+            if(levelId!=FirebaseFilterType.LevelFilterType.no){
+                studentLevel = levelId
                 mListLast.clear()
                 mStudentList.clear()
                 _mStudentAttendancesList.value=true
@@ -44,7 +44,7 @@ class ShowLevelAttendViewModel  @ViewModelInject constructor(private val appRepo
             }
         }
     }
-//    //Btn check Available
+    //    //Btn check Available
 //    private val _isCheckBtnAvailable = MutableLiveData<Boolean>()
 //    val isCheckBtnAvailable: LiveData<Boolean>
 //        get() = _isCheckBtnAvailable
@@ -73,7 +73,7 @@ class ShowLevelAttendViewModel  @ViewModelInject constructor(private val appRepo
 
     init {
         _ishideKeyboard.value = false
-       // _isStudentAvailable.value = (mTitleTV.equals("تعديل مخدوم"))
+        // _isStudentAvailable.value = (mTitleTV.equals("تعديل مخدوم"))
 //        _isCheckBtnAvailable.value=true
         _mStudentAttendancesList.value=false
     }
@@ -82,8 +82,8 @@ class ShowLevelAttendViewModel  @ViewModelInject constructor(private val appRepo
         _dataLoading.value = true
 //        _isCheckBtnAvailable.value=false
         appRepository.filterLevel(studentLevel!!, object : IRemoteDataSource.UsersCallback {
-            override fun onResponse(users: List<User>) {
-                mStudentList.addAll(users)
+            override fun onResponse(user: List<User>) {
+                mStudentList.addAll(user)
                 manageStudentWithAttendance()
                 _dataLoading.value = false
 //                _isCheckBtnAvailable.value = true
@@ -102,6 +102,7 @@ class ShowLevelAttendViewModel  @ViewModelInject constructor(private val appRepo
 
     var mList: ArrayList<StudentWithTotalAttendanceCount> = ArrayList()
     private fun manageStudentWithAttendance() {
+        mList.clear()
         for (i in mStudentList.indices) {
             val studentWithAttendance = StudentWithTotalAttendanceCount()
             studentWithAttendance.id=(mStudentList[i].id)
@@ -126,7 +127,6 @@ class ShowLevelAttendViewModel  @ViewModelInject constructor(private val appRepo
                 studentWithAttendance.tnawelTotalCountTerm2=0
             }
             else {
-                var found = false
                 for (n in mStudentList[i].listOfAttendence!!) {
                     if (n.value.termId=="1") {
                         studentWithAttendance.hesaTotalCountTerm1++
@@ -156,10 +156,11 @@ class ShowLevelAttendViewModel  @ViewModelInject constructor(private val appRepo
                     }
                 }
             }
+
             mList.add(studentWithAttendance)
         }
-        mListLast!!.clear()
-        mListLast!!.addAll(mList)
+        mListLast.clear()
+        mListLast.addAll(mList)
         _mStudentAttendancesList.value=true
     }
 

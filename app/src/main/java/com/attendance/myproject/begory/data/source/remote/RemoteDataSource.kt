@@ -2,15 +2,50 @@ package com.attendance.myproject.begory.data.source.remote
 
 import android.content.ContentValues
 import android.util.Log
+import android.widget.Toast
+import androidx.core.net.toUri
 import com.attendance.myproject.begory.R
 import com.attendance.myproject.begory.data.Models.Attendance
+import com.attendance.myproject.begory.data.Models.Gift
 import com.attendance.myproject.begory.data.Models.User
 import com.attendance.myproject.begory.data.Models.remote.FirebaseFilterType
 import com.google.firebase.database.*
+import com.google.firebase.storage.FirebaseStorage
+import java.util.*
 import javax.inject.Inject
+import kotlin.collections.ArrayList
 
 class RemoteDataSource @Inject constructor(private val firebaseDatabase: FirebaseDatabase):IRemoteDataSource {
     val baseRef = firebaseDatabase.reference
+    val baseStorage=FirebaseStorage.getInstance().reference.child("images/")
+    override fun addGift(gift: Gift, levels: List<FirebaseFilterType.LevelFilterType>, callback: IRemoteDataSource.MessageCallback) {
+        val i=baseStorage.child(UUID.randomUUID().toString())
+        i.putFile(gift.imagePath!!.toUri()).addOnSuccessListener { // Image uploaded successfully
+            i.path?.let { it1 -> { var r=false
+                for(level in levels){
+                    val ref = baseRef.child(FirebaseFilterType.gifts).child(level.toString())
+                    val id = ref.push().key
+                    gift.id = id
+                    ref.child(id!!).setValue(gift).addOnSuccessListener {
+                        r=true
+                    }.addOnFailureListener { r=false }
+                }
+                if(r) callback.onResponse(R.string.added) else callback.onDataNotAvailable(R.string.error) }}
+        }
+    }
+
+    override fun updateGift(gift: Gift,level: FirebaseFilterType.LevelFilterType,  callback: IRemoteDataSource.MessageCallback) {
+        val ref = baseRef.child(FirebaseFilterType.gifts).child(level.toString())
+        ref.child(gift.id!!).setValue(gift).addOnSuccessListener {
+            callback.onResponse(R.string.edited)
+        }.addOnFailureListener { callback.onDataNotAvailable(R.string.error) }    }
+
+    override fun deleteGift(gift: Gift,level: FirebaseFilterType.LevelFilterType, callback: IRemoteDataSource.MessageCallback) {
+        val ref = baseRef.child(FirebaseFilterType.gifts).child(level.toString())
+        ref.child(gift.id!!).removeValue().addOnSuccessListener {
+            callback.onResponse(R.string.deleted)
+        }.addOnFailureListener { callback.onDataNotAvailable(R.string.error) }
+    }
 
     override fun login(mobile: String, password: String, callback: IRemoteDataSource.LoginCallback){
         val ref = baseRef.child(FirebaseFilterType.users).orderByChild("mobile").equalTo(mobile)
@@ -187,6 +222,66 @@ class RemoteDataSource @Inject constructor(private val firebaseDatabase: Firebas
                     callback.onResponse(mlist.toList())
                 } else {
                     callback.onDataNotAvailable(R.string.no_student)
+                }
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                callback.onDataNotAvailable(R.string.error)
+            }
+        })
+    }
+    //return list of users with changing name of student to the list of his gifts
+    override fun bookingGifts(level: FirebaseFilterType.LevelFilterType, callback: IRemoteDataSource.ShowBookingGiftsCallback) {
+        val ref = baseRef.child(FirebaseFilterType.users).orderByChild("studentLevel").equalTo(level.toString())
+        ref.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    var mlist:ArrayList<User> = ArrayList()
+                    dataSnapshot.children.forEach {
+                        //var user:User=User(it.value)
+                        mlist.add( it.getValue(User::class.java)!! )
+
+                    }
+                    mlist.sortWith((compareByDescending({ it.realPrice })))
+                    for (student in mlist)
+                    {
+                        var bookedItems = ""
+                        if (student.selectedGifts!=null) {
+                            bookedItems = "\n"
+                            for (gift in student.selectedGifts!!)
+                                bookedItems += gift.name + " ( " + gift.price + " )" + "\n"
+                        }
+
+                        if (!bookedItems.equals("")) {
+                            student.name = StringBuilder().append(student.name).append("\n").append(bookedItems).toString()
+                            student.name = student.name!!.substring(0, student.name!!.length-1)
+                        }
+                    }
+                    callback.onResponse(mlist.toList())
+                } else {
+                    callback.onDataNotAvailable(R.string.no_booking_gift)
+                }
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                callback.onDataNotAvailable(R.string.error)
+            }
+        })
+    }
+    override fun filterGift(level: FirebaseFilterType.LevelFilterType, callback: IRemoteDataSource.ShowGiftsCallback) {
+        val ref = baseRef.child(level.toString())
+        ref.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    var mlist:ArrayList<Gift> = ArrayList()
+                    dataSnapshot.children.forEach {
+                        //var user:User=User(it.value)
+                        mlist.add( it.getValue(Gift::class.java)!! )
+                        mlist.sortWith((compareByDescending({ it.price })))
+                    }
+                    callback.onResponse(mlist.toList())
+                } else {
+                    callback.onDataNotAvailable(R.string.no_gift)
                 }
             }
 

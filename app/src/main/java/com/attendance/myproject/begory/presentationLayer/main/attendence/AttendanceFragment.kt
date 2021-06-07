@@ -37,7 +37,7 @@ class AttendanceFragment : Fragment() {
         if (savedInstanceState != null) {
             displayDataFromInstanceState(savedInstanceState)
         } else {
-            this.mList = fillMenu()!!
+            this.mList = fillMenu()
         }
         Log.d(ContentValues.TAG, "showMessage: create $mList")
         showData()
@@ -58,7 +58,7 @@ class AttendanceFragment : Fragment() {
 
     private fun displayDataFromInstanceState(savedInstanceState: Bundle?) {
         mList = savedInstanceState!!.getIntegerArrayList(LIST_STATE)
-        savedRecyclerLayoutState = savedInstanceState!!.getParcelable(BUNDLE_RECYCLER_LAYOUT)
+        savedRecyclerLayoutState = savedInstanceState.getParcelable(BUNDLE_RECYCLER_LAYOUT)
 
         // restore Layout Manager Position
         if (savedRecyclerLayoutState != null) checkNotNull(recyclerView!!.layoutManager).onRestoreInstanceState(savedRecyclerLayoutState)
@@ -84,19 +84,19 @@ class AttendanceFragment : Fragment() {
         private const val BUNDLE_RECYCLER_LAYOUT = "recycler_layout"
     }
 
-    private fun fillMenu(): ArrayList<Int>? {
+    private fun fillMenu(): ArrayList<Int> {
         val mItems = ArrayList<Int>()
         mItems.clear()
         val v=AppPreferencesHelper (requireContext())
         val user=v.getUser()
         if((user!!.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.College).toString())||
-                (user!!.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.College).toString()))
+                (user.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.College).toString()))
             mItems.add(R.string.lev_college)
-        if((user!!.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString())||
-                (user!!.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString()))
+        if((user.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString())||
+                (user.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString()))
             mItems.add(R.string.lev_Grad)
-        if((user!!.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Augustine).toString())||
-                (user!!.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Augustine).toString()))
+        if((user.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Augustine).toString())||
+                (user.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Augustine).toString()))
             mItems.add(R.string.lev_Augustine)
         return mItems
     }

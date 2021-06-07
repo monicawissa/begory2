@@ -17,8 +17,8 @@ class ShowLevelAttendanceAdapter(context: Activity, menuList: ArrayList<StudentW
                                  mTerm1CheckBox: CheckBox, mTerm2CheckBox: CheckBox) : RecyclerView.Adapter<ShowLevelAttendanceAdapter.MyViewHolder?>() {
     private val mMenuList: ArrayList<StudentWithTotalAttendanceCount> ? = menuList
     private val mContext: Activity = context
-    private val mTerm1CheckBox: CheckBox? = mTerm1CheckBox
-    private  var mTerm2CheckBox:CheckBox? = mTerm2CheckBox
+    //    private val mTerm1CheckBox: CheckBox? = mTerm1CheckBox
+//    private  var mTerm2CheckBox:CheckBox? = mTerm2CheckBox
     override fun onCreateViewHolder(parent: ViewGroup,
                                     viewType: Int): MyViewHolder {
         // create a new view
@@ -40,26 +40,26 @@ class ShowLevelAttendanceAdapter(context: Activity, menuList: ArrayList<StudentW
         var totalTnawel = 0
         var attendanceTotalA3traf = 0
         var attendanceTotalTnawel = 0
-        if (mTerm1CheckBox!!.isChecked) {
-            totalHesa += attendance.hesaTotalCountTerm1
-            totalKodas += attendance.kodasTotalCountTerm1
-            attendanceTotalHesa += attendance.hesaAttendanceTotalCountTerm1
-            attendanceTotalKodas += attendance.kodasAttendanceTotalCountTerm1
-            totalA3traf += attendance.a3trafTotalCountTerm1
-            totalTnawel += attendance.tnawelTotalCountTerm1
-            attendanceTotalA3traf += attendance.a3trafAttendanceTotalCountTerm1
-            attendanceTotalTnawel += attendance.tnawelAttendanceTotalCountTerm1
-        }
-        if (mTerm2CheckBox!!.isChecked) {
-            totalHesa += attendance.hesaTotalCountTerm2
-            totalKodas += attendance.kodasTotalCountTerm2
-            attendanceTotalHesa += attendance.hesaAttendanceTotalCountTerm2
-            attendanceTotalKodas += attendance.kodasAttendanceTotalCountTerm2
-            totalA3traf += attendance.a3trafTotalCountTerm2
-            totalTnawel += attendance.tnawelTotalCountTerm2
-            attendanceTotalA3traf += attendance.a3trafAttendanceTotalCountTerm2
-            attendanceTotalTnawel += attendance.tnawelAttendanceTotalCountTerm2
-        }
+//        if (mTerm1CheckBox!!.isChecked) {
+        totalHesa += attendance.hesaTotalCountTerm1
+        totalKodas += attendance.kodasTotalCountTerm1
+        attendanceTotalHesa += attendance.hesaAttendanceTotalCountTerm1
+        attendanceTotalKodas += attendance.kodasAttendanceTotalCountTerm1
+        totalA3traf += attendance.a3trafTotalCountTerm1
+        totalTnawel += attendance.tnawelTotalCountTerm1
+        attendanceTotalA3traf += attendance.a3trafAttendanceTotalCountTerm1
+        attendanceTotalTnawel += attendance.tnawelAttendanceTotalCountTerm1
+//        }
+//        if (mTerm2CheckBox!!.isChecked) {
+        totalHesa += attendance.hesaTotalCountTerm2
+        totalKodas += attendance.kodasTotalCountTerm2
+        attendanceTotalHesa += attendance.hesaAttendanceTotalCountTerm2
+        attendanceTotalKodas += attendance.kodasAttendanceTotalCountTerm2
+        totalA3traf += attendance.a3trafTotalCountTerm2
+        totalTnawel += attendance.tnawelTotalCountTerm2
+        attendanceTotalA3traf += attendance.a3trafAttendanceTotalCountTerm2
+        attendanceTotalTnawel += attendance.tnawelAttendanceTotalCountTerm2
+//        }
         holder.mTextView.setText(attendance.name)
         holder.mHesaTextView.text = "$totalHesa/$attendanceTotalHesa"
         holder.mKodasTextView.text = "$totalKodas/$attendanceTotalKodas"
@@ -69,7 +69,7 @@ class ShowLevelAttendanceAdapter(context: Activity, menuList: ArrayList<StudentW
 
     }
     override fun getItemCount(): Int =
-        mMenuList!!.size
+            mMenuList!!.size
 
     class MyViewHolder(v: View) : RecyclerView.ViewHolder(v) {
         // each data item is just a string in this case

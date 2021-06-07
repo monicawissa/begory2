@@ -15,6 +15,7 @@
     <string name="fill_name_level">من فضلك ادخل الاسم و اختر مرحلة المخدوم </string>
     <string name="fill__level">من فضلك اختر المرحلة </string>
     <string name="fill__password">من فضلك ادخل كلمه المرور </string>
+    <string name="fill_cost_level">من فضلك يجب ادخال الاسم و السعر و المرحلة  </string>
 
     <string name="user_exist">هذا الحساب مسجل قم بالتعديل </string>
     <string name="settingType">settingType</string>
@@ -37,6 +38,10 @@
     <string name="m_add_attendance">إضافة حضور</string>
     <string name="m_levels_attendance">كشف حضور</string>
 
+    <string name="m_add_Gift">إضافة هدية</string>
+    <string name="m_edit_Gift">تعديل هدية</string>
+    <string name="m_delete_Gift">حذف هدية</string>
+
     <string name="m_add_results">إضافة نتائج المرحلة</string>
     <string name="m_show_results">عرض نتائج المرحلة</string>
 
@@ -45,6 +50,7 @@
     <string name="m_student_generate_card">إصدار كود</string>
     <string name="m_signout">تسجيل خروج</string>
 
+    <string name="add_image">اضف صورة</string>
 
     <string name="add">اضف</string>
     <string name="check">تعديل</string>
@@ -74,6 +80,8 @@
     <string name="id_found">كود المخدوم  موجود من قبل</string>
     <string name="added">تمت الإضافة</string>
     <string name="edited">تم التعديل</string>
+    <string name="deleted">تم الحذف</string>
+
     <string name="year">السنة</string>
     <string name="choose_level">اختر المرحلة</string>
     <string name="deactive">إيقاف</string>
@@ -137,4 +145,14 @@
     <string name="title_attendance">attendance</string>
     <string name="title_notifications">notification</string>
     <string name="no_student">لا يوجد مخدومين ..نرجوا اضافتهم اولا</string>
+    <string name="no_gift">لا يوجد عروض هدايا حاليا</string>
+    <string name="no_booking_gift">لا يوجد حجوزات حاليا</string>
+    <string name="available_points">نقاط متاحه</string>
+    <string name="book_now">تأكيد الحجز</string>
+    <string name="book">احجز</string>
+    <string name="booked">محجوز</string>
+    <string name="cancel_booking">الغاء الحجز</string>
+    <string name="booked_success">تم الحجز</string>
+    <string name="points_not_enough">عفوا النقاط غير كافية</string>
+    <string name="point">نقطة</string>
 </resources>
