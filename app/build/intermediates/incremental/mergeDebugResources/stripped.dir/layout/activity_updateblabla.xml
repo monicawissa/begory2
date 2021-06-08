@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                   
+
+    
+                                           
+                 
+                                        
+                                                                                                                    
+              
+           
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rect_dialog_box" android:tag="layout/activity_updateblabla_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+        <TextView
+            android:id="@+id/d_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:gravity="center"
+            android:tag="binding_1"                         
+            android:textSize="24sp"
+            android:background="@color/primaryColor"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_horizontal|top"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/progress_bar_black"
+            android:tag="binding_2"                                                              
+            />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/user_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/d_title"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:text="@string/choose_level"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/sp_levels"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/rect_white_box"
+                    android:tag="binding_3"                                                   
+                                                                                                               
+                    />
+                <com.attendance.myproject.begory.multispinnerfilter.MultiSpinnerSearch
+                    android:id="@+id/multipleItemSelectionSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/rect_white_box"
+                    app:hintText="Multi Item Selection"
+                    android:tag="binding_4"                                                
+                                                                                                               
+                    />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/rect_white_box"
+                    android:hint="@string/name"
+                    android:tag="binding_5"                      
+                    android:imeOptions="actionNext"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="12dp"
+                    android:textColor="#3F3F3F"
+                    android:textColorHint="#3F3F3F"
+                    android:textSize="14sp"
+                                                                                                               
+                    />
+
+
+                <EditText
+                    android:id="@+id/et_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/rect_white_box"
+                    android:hint="@string/mobile"
+                    android:tag="binding_6"                        
+
+                    android:layout_marginTop="8dp"
+                    android:imeOptions="actionNext"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:inputType="phone"
+                    android:gravity="end|right"
+                    android:maxLines="1"
+                    android:padding="12dp"
+                    android:textColor="#3F3F3F"
+                    android:textColorHint="#3F3F3F"
+                    android:textSize="14sp"
+                    />
+
+                <EditText
+                    android:id="@+id/et_mobile2"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/rect_white_box"
+                    android:hint="@string/mobile_family"
+                    android:tag="binding_7"                         
+                    android:layout_marginTop="8dp"
+                    android:imeOptions="actionNext"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:inputType="phone"
+                    android:gravity="end|right"
+                    android:maxLines="1"
+                    android:padding="12dp"
+                    android:textColor="#3F3F3F"
+                    android:textColorHint="#3F3F3F"
+                    android:textSize="14sp"
+                                                                                                               
+                    />
+
+                <EditText
+                    android:id="@+id/et_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/rect_white_box"
+                    android:hint="@string/address"
+                    android:tag="binding_8"                         
+                    android:imeOptions="actionDone"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:inputType="text"
+                    android:lines="2"
+                    android:padding="12dp"
+                    android:textColor="#3F3F3F"
+                    android:textColorHint="#3F3F3F"
+                    android:textSize="14sp"
+                                                                                                               
+                    />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cb_shamas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shamas"
+                    android:gravity="start|center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_gravity="end"
+                    android:tag="binding_9"                             
+                                                                                                               
+                    />
+
+                <Button
+                    android:id="@+id/btn_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/btn_white_selector"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/check"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:tag="binding_10"                                   
+
+                                                                              
+
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+         

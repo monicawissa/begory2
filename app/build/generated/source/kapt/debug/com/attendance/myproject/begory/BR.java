@@ -8,21 +8,27 @@ public class BR {
 
   public static final int addBlaBlaViewModel = 1;
 
-  public static final int levelAttendViewModel = 2;
+  public static final int addGiftViewModel = 2;
 
-  public static final int loginViewModel = 3;
+  public static final int levelAttendViewModel = 3;
 
-  public static final int mainViewModel = 4;
+  public static final int loginViewModel = 4;
 
-  public static final int passwordViewModel = 5;
+  public static final int mainViewModel = 5;
 
-  public static final int profileViewModel = 6;
+  public static final int passwordViewModel = 6;
 
-  public static final int showLevelAttendViewModel = 7;
+  public static final int profileViewModel = 7;
 
-  public static final int splashViewModel = 8;
+  public static final int shopViewModel = 8;
 
-  public static final int updateBlaBlaViewModel = 9;
+  public static final int showGiftBookedViewModel = 9;
 
-  public static final int userViewModel = 10;
+  public static final int showLevelAttendViewModel = 10;
+
+  public static final int splashViewModel = 11;
+
+  public static final int updateBlaBlaViewModel = 12;
+
+  public static final int userViewModel = 13;
 }

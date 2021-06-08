@@ -17,6 +17,10 @@ import com.attendance.myproject.begory.presentationLayer.main.profile.ProfileVie
 import com.attendance.myproject.begory.presentationLayer.main.setting.SettingsFragment_GeneratedInjector;
 import com.attendance.myproject.begory.presentationLayer.main.setting.addBlaBla.AddBlaBlaActivity_GeneratedInjector;
 import com.attendance.myproject.begory.presentationLayer.main.setting.addBlaBla.AddBlaBlaViewModel_HiltModule;
+import com.attendance.myproject.begory.presentationLayer.main.setting.addGift.AddGiftActivity_GeneratedInjector;
+import com.attendance.myproject.begory.presentationLayer.main.setting.addGift.AddGiftViewModel_HiltModule;
+import com.attendance.myproject.begory.presentationLayer.main.setting.showGiftsbooked.ShowGiftBookedActivity_GeneratedInjector;
+import com.attendance.myproject.begory.presentationLayer.main.setting.showGiftsbooked.ShowGiftBookedViewModel_HiltModule;
 import com.attendance.myproject.begory.presentationLayer.main.setting.showTakedAttendance.ShowLevelAttendActivity_GeneratedInjector;
 import com.attendance.myproject.begory.presentationLayer.main.setting.showTakedAttendance.ShowLevelAttendViewModel_HiltModule;
 import com.attendance.myproject.begory.presentationLayer.main.setting.updateBlaBla.UpdateBlaBlaActivity_GeneratedInjector;
@@ -24,6 +28,7 @@ import com.attendance.myproject.begory.presentationLayer.main.setting.updateBlaB
 import com.attendance.myproject.begory.presentationLayer.main.setting.userExist.UserActivity_GeneratedInjector;
 import com.attendance.myproject.begory.presentationLayer.main.setting.userExist.UserViewModel_HiltModule;
 import com.attendance.myproject.begory.presentationLayer.main.shop.ShopFragment_GeneratedInjector;
+import com.attendance.myproject.begory.presentationLayer.main.shop.ShopViewModel_HiltModule;
 import com.attendance.myproject.begory.presentationLayer.splash.SplashActivity_GeneratedInjector;
 import com.attendance.myproject.begory.presentationLayer.splash.SplashViewModel_HiltModule;
 import dagger.Binds;
@@ -141,6 +146,8 @@ public final class MyApplication_HiltComponents {
       LevelAttendActivity_GeneratedInjector,
       PasswordActivity_GeneratedInjector,
       AddBlaBlaActivity_GeneratedInjector,
+      AddGiftActivity_GeneratedInjector,
+      ShowGiftBookedActivity_GeneratedInjector,
       ShowLevelAttendActivity_GeneratedInjector,
       UpdateBlaBlaActivity_GeneratedInjector,
       UserActivity_GeneratedInjector,
@@ -158,12 +165,15 @@ public final class MyApplication_HiltComponents {
   @Subcomponent(
       modules = {
           AddBlaBlaViewModel_HiltModule.class,
+          AddGiftViewModel_HiltModule.class,
           LevelAttendViewModel_HiltModule.class,
           LoginViewModel_HiltModule.class,
           MainViewModel_HiltModule.class,
           ActivityCBuilderModule.class,
           PasswordViewModel_HiltModule.class,
           ProfileViewModel_HiltModule.class,
+          ShopViewModel_HiltModule.class,
+          ShowGiftBookedViewModel_HiltModule.class,
           ShowLevelAttendViewModel_HiltModule.class,
           SplashViewModel_HiltModule.class,
           UpdateBlaBlaViewModel_HiltModule.class,

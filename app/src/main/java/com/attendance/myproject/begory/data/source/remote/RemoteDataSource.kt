@@ -11,6 +11,7 @@ import com.attendance.myproject.begory.data.Models.User
 import com.attendance.myproject.begory.data.Models.remote.FirebaseFilterType
 import com.google.firebase.database.*
 import com.google.firebase.storage.FirebaseStorage
+import java.net.URL
 import java.util.*
 import javax.inject.Inject
 import kotlin.collections.ArrayList
@@ -20,18 +21,26 @@ class RemoteDataSource @Inject constructor(private val firebaseDatabase: Firebas
     val baseStorage=FirebaseStorage.getInstance().reference.child("images/")
     override fun addGift(gift: Gift, levels: List<FirebaseFilterType.LevelFilterType>, callback: IRemoteDataSource.MessageCallback) {
         val i=baseStorage.child(UUID.randomUUID().toString())
-        i.putFile(gift.imagePath!!.toUri()).addOnSuccessListener { // Image uploaded successfully
-            i.path?.let { it1 -> { var r=false
-                for(level in levels){
+        i.putFile(gift.imagePath!!.toUri()).addOnSuccessListener {
+            i.downloadUrl.addOnSuccessListener { it-> gift.imagePath= it.toString()
+                var r=false
+                val y=levels.dropLast(1)
+                //levels.dropLast(1)
+                for(level:FirebaseFilterType.LevelFilterType in y){
                     val ref = baseRef.child(FirebaseFilterType.gifts).child(level.toString())
                     val id = ref.push().key
                     gift.id = id
                     ref.child(id!!).setValue(gift).addOnSuccessListener {
                         r=true
-                    }.addOnFailureListener { r=false }
+                    }.addOnFailureListener {
+                        r=false }
                 }
-                if(r) callback.onResponse(R.string.added) else callback.onDataNotAvailable(R.string.error) }}
-        }
+                if(r) callback.onResponse(R.string.added) else callback.onDataNotAvailable(R.string.error)
+            }// Image uploaded successfully
+
+        }.addOnFailureListener(){
+            callback.onDataNotAvailable(R.string.error)}
+
     }
 
     override fun updateGift(gift: Gift,level: FirebaseFilterType.LevelFilterType,  callback: IRemoteDataSource.MessageCallback) {

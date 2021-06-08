@@ -37,6 +37,7 @@
 
     <string name="m_add_attendance">إضافة حضور</string>
     <string name="m_levels_attendance">كشف حضور</string>
+    <string name="m_Gifts_booked">ليست الحجوزات</string>
 
     <string name="m_add_Gift">إضافة هدية</string>
     <string name="m_edit_Gift">تعديل هدية</string>

@@ -164,12 +164,12 @@ class AddGiftActivity : BaseActivity1() ,AddGiftNavigator{
             // Get the Uri of data
             filePath = data.data
             filePath?.let { cropImage(it) }
-            addGiftViewModel.image_path=filePath.toString()
+
         }
         else if (resultCode == RESULT_OK && requestCode == UCrop.REQUEST_CROP) {
             filePath = data?.let { UCrop.getOutput(it) }
             imagePath = filePath.toString()
-
+            addGiftViewModel.image_path= imagePath as String
             try {
                 // Setting image on image view using Bitmap
                 val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, filePath)

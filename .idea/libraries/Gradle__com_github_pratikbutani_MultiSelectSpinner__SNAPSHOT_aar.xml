@@ -1,12 +1,13 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.pratikbutani:MultiSelectSpinner:-SNAPSHOT@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a60821674a6eb8e6deb342e00fd94f18/jetified-MultiSelectSpinner--SNAPSHOT/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a60821674a6eb8e6deb342e00fd94f18/jetified-MultiSelectSpinner--SNAPSHOT/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/201920adb03c3426e14bce5d8246d797/jetified-MultiSelectSpinner--SNAPSHOT/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/201920adb03c3426e14bce5d8246d797/jetified-MultiSelectSpinner--SNAPSHOT/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/201920adb03c3426e14bce5d8246d797/jetified-MultiSelectSpinner--SNAPSHOT/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.pratikbutani/MultiSelectSpinner/-SNAPSHOT/97af9259be59543ed68e1741935f00f689b5b818/MultiSelectSpinner--SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.pratikbutani/MultiSelectSpinner/-SNAPSHOT/8c834ec7449d7541f19030c1c799a0cd13ac57cf/MultiSelectSpinner--SNAPSHOT-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

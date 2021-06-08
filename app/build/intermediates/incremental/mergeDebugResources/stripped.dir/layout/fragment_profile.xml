@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                   
+
+  
+                                       
+             
+                               
+                                                                                              
+          
+         
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" android:tag="layout/fragment_profile_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="300dp"
+          android:background="@color/primaryLightColor"
+          android:padding="20dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/p1"
+            app:civ_border_color="#591EC1"
+            android:layout_centerVertical="true"
+            app:civ_border_width="5dp" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf ="@id/profile_image"
+            android:layout_marginStart="10dp"
+            android:tag="binding_1"                
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/tv_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="binding_2"                        
+            android:textSize="14sp"
+            android:layout_toEndOf="@id/profile_image"
+            android:layout_marginStart="10dp"
+            android:layout_below="@id/tv_name"
+            android:textColor="@color/white"
+            />
+
+        <ImageView
+            android:layout_width="54dp"
+            android:layout_height="43dp"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/logout"
+            android:tag="binding_3"                            
+            app:tint="@color/secondaryLightColor" />
+
+      </RelativeLayout>
+      <LinearLayout
+          android:layout_height="wrap_content"
+          android:layout_marginTop="-100dp"
+          android:layout_width="match_parent"
+          android:padding="20dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_height="125dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            app:cardBackgroundColor="@color/secondaryLightColor"
+            android:theme="@style/Theme.MaterialComponents.Light"
+            app:cardElevation="10dp">
+
+          <RelativeLayout
+              android:layout_height="match_parent"
+              android:layout_width="match_parent"
+              android:padding="5dp">
+            <TextView
+                android:id="@+id/payment_label"
+                android:includeFontPadding="false"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="النقاط"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/payment_begory"
+                android:includeFontPadding="false"
+                android:layout_below="@id/payment_label"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:tag="binding_4"                            
+                android:textSize="20sp" />
+
+          </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_height="125dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            app:cardBackgroundColor="@color/secondaryLightColor"
+            app:cardElevation="10dp"
+            android:theme="@style/Theme.MaterialComponents.Light">
+
+          <RelativeLayout
+              android:layout_height="match_parent"
+              android:layout_width="match_parent"
+              android:padding="5dp">
+            <TextView
+                android:id="@+id/eqlomat_label"
+                android:includeFontPadding="false"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="المتبقي"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/eqlomat_desc"
+                android:includeFontPadding="false"
+                android:layout_below="@id/eqlomat_label"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:tag="binding_5"                        
+                android:textSize="20sp" />
+
+          </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+      </LinearLayout>
+      <LinearLayout
+          android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+          android:orientation="vertical"
+          android:padding="20dp">
+        <com.google.android.material.textfield.TextInputLayout
+            android:hint="Name"
+            android:id="@+id/ti_Name"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+          <com.google.android.material.textfield.TextInputEditText
+              android:drawablePadding="10dp"
+              android:layout_height="wrap_content"
+              android:layout_width="match_parent"
+              android:tag="binding_6"                 
+              />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:hint="Password"
+            android:id="@+id/ti_password"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+          <com.google.android.material.textfield.TextInputEditText
+              android:drawablePadding="10dp"
+              android:layout_height="wrap_content"
+              android:layout_width="match_parent"
+              android:tag="binding_7"                     
+              />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:hint="Address"
+            android:id="@+id/ti_address"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+          <com.google.android.material.textfield.TextInputEditText
+              android:drawablePadding="10dp"
+              android:layout_height="wrap_content"
+              android:layout_width="match_parent"
+              android:tag="binding_8"                    
+              />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:hint="Parent Mobile"
+            app:hintTextColor="@color/progress_center"
+            android:id="@+id/ti_mobile2"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+          <com.google.android.material.textfield.TextInputEditText
+              android:drawablePadding="10dp"
+              android:layout_height="wrap_content"
+              android:layout_width="match_parent"
+              android:tag="binding_9"                    
+              />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/update_data"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="30dp"
+            android:background="@color/secondaryLightColor"
+            android:text="@string/save"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:tag="binding_10"                           
+
+            />
+      </LinearLayout>
+    </LinearLayout>
+  </ScrollView>
+         

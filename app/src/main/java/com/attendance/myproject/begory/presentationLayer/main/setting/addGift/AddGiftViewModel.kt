@@ -104,7 +104,7 @@ class AddGiftViewModel  @ViewModelInject constructor(private val appRepository: 
         // validate
         Log.d(ContentValues.TAG, "showMessage: isDataValid")
 
-        if (TextUtils.isEmpty(name)||!cost.isDigitsOnly()||cost.toDouble()>0 ||!selectedData.isEmpty()) {
+        if (TextUtils.isEmpty(name)||!cost.isDigitsOnly()||cost.toDouble()<=0 ||selectedData.isEmpty()) {
             showSnackbarMessage(R.string.fill_cost_level)
             return false
         }
@@ -114,13 +114,13 @@ class AddGiftViewModel  @ViewModelInject constructor(private val appRepository: 
     fun register() {
         _ishideKeyboard.value = true
         _dataLoading.value = true
+        _isBtnAvailable.value = false
         if (mTitleTV.equals("إضافة هدية")&&isDataValid()) {
                 var gift: Gift = Gift(name = name, price = cost.toDouble(),
                         notes = notes, numberOfItem = number.toInt(),imagePath =image_path )
                 appRepository.addGift(gift,(selectedData.split("_") as List<FirebaseFilterType.LevelFilterType>), object : IRemoteDataSource.MessageCallback {
                     override fun onResponse(message: Int?) {
                         showSnackbarMessage(message!!)
-                        _isBtnAvailable.value = false
                         _dataLoading.value = false
                         _isOpenMain.value=true
                         name=""

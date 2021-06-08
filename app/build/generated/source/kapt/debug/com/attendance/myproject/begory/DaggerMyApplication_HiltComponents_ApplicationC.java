@@ -40,6 +40,12 @@ import com.attendance.myproject.begory.presentationLayer.main.setting.SettingsFr
 import com.attendance.myproject.begory.presentationLayer.main.setting.addBlaBla.AddBlaBlaActivity;
 import com.attendance.myproject.begory.presentationLayer.main.setting.addBlaBla.AddBlaBlaViewModel_AssistedFactory;
 import com.attendance.myproject.begory.presentationLayer.main.setting.addBlaBla.AddBlaBlaViewModel_AssistedFactory_Factory;
+import com.attendance.myproject.begory.presentationLayer.main.setting.addGift.AddGiftActivity;
+import com.attendance.myproject.begory.presentationLayer.main.setting.addGift.AddGiftViewModel_AssistedFactory;
+import com.attendance.myproject.begory.presentationLayer.main.setting.addGift.AddGiftViewModel_AssistedFactory_Factory;
+import com.attendance.myproject.begory.presentationLayer.main.setting.showGiftsbooked.ShowGiftBookedActivity;
+import com.attendance.myproject.begory.presentationLayer.main.setting.showGiftsbooked.ShowGiftBookedViewModel_AssistedFactory;
+import com.attendance.myproject.begory.presentationLayer.main.setting.showGiftsbooked.ShowGiftBookedViewModel_AssistedFactory_Factory;
 import com.attendance.myproject.begory.presentationLayer.main.setting.showTakedAttendance.ShowLevelAttendActivity;
 import com.attendance.myproject.begory.presentationLayer.main.setting.showTakedAttendance.ShowLevelAttendViewModel_AssistedFactory;
 import com.attendance.myproject.begory.presentationLayer.main.setting.showTakedAttendance.ShowLevelAttendViewModel_AssistedFactory_Factory;
@@ -50,6 +56,8 @@ import com.attendance.myproject.begory.presentationLayer.main.setting.userExist.
 import com.attendance.myproject.begory.presentationLayer.main.setting.userExist.UserViewModel_AssistedFactory;
 import com.attendance.myproject.begory.presentationLayer.main.setting.userExist.UserViewModel_AssistedFactory_Factory;
 import com.attendance.myproject.begory.presentationLayer.main.shop.ShopFragment;
+import com.attendance.myproject.begory.presentationLayer.main.shop.ShopViewModel_AssistedFactory;
+import com.attendance.myproject.begory.presentationLayer.main.shop.ShopViewModel_AssistedFactory_Factory;
 import com.attendance.myproject.begory.presentationLayer.splash.SplashActivity;
 import com.attendance.myproject.begory.presentationLayer.splash.SplashViewModel_AssistedFactory;
 import com.attendance.myproject.begory.presentationLayer.splash.SplashViewModel_AssistedFactory_Factory;
@@ -268,6 +276,8 @@ public final class DaggerMyApplication_HiltComponents_ApplicationC extends MyApp
 
       private volatile Provider<AddBlaBlaViewModel_AssistedFactory> addBlaBlaViewModel_AssistedFactoryProvider;
 
+      private volatile Provider<AddGiftViewModel_AssistedFactory> addGiftViewModel_AssistedFactoryProvider;
+
       private volatile Provider<LevelAttendViewModel_AssistedFactory> levelAttendViewModel_AssistedFactoryProvider;
 
       private volatile Provider<LoginViewModel_AssistedFactory> loginViewModel_AssistedFactoryProvider;
@@ -277,6 +287,10 @@ public final class DaggerMyApplication_HiltComponents_ApplicationC extends MyApp
       private volatile Provider<PasswordViewModel_AssistedFactory> passwordViewModel_AssistedFactoryProvider;
 
       private volatile Provider<ProfileViewModel_AssistedFactory> profileViewModel_AssistedFactoryProvider;
+
+      private volatile Provider<ShopViewModel_AssistedFactory> shopViewModel_AssistedFactoryProvider;
+
+      private volatile Provider<ShowGiftBookedViewModel_AssistedFactory> showGiftBookedViewModel_AssistedFactoryProvider;
 
       private volatile Provider<ShowLevelAttendViewModel_AssistedFactory> showLevelAttendViewModel_AssistedFactoryProvider;
 
@@ -317,6 +331,20 @@ public final class DaggerMyApplication_HiltComponents_ApplicationC extends MyApp
         return (Provider<AddBlaBlaViewModel_AssistedFactory>) local;
       }
 
+      private AddGiftViewModel_AssistedFactory getAddGiftViewModel_AssistedFactory() {
+        return AddGiftViewModel_AssistedFactory_Factory.newInstance(getAppRepositoryProvider());
+      }
+
+      private Provider<AddGiftViewModel_AssistedFactory> getAddGiftViewModel_AssistedFactoryProvider(
+          ) {
+        Object local = addGiftViewModel_AssistedFactoryProvider;
+        if (local == null) {
+          local = new SwitchingProvider<>(2);
+          addGiftViewModel_AssistedFactoryProvider = (Provider<AddGiftViewModel_AssistedFactory>) local;
+        }
+        return (Provider<AddGiftViewModel_AssistedFactory>) local;
+      }
+
       private LevelAttendViewModel_AssistedFactory getLevelAttendViewModel_AssistedFactory() {
         return LevelAttendViewModel_AssistedFactory_Factory.newInstance(getAppRepositoryProvider());
       }
@@ -325,7 +353,7 @@ public final class DaggerMyApplication_HiltComponents_ApplicationC extends MyApp
           ) {
         Object local = levelAttendViewModel_AssistedFactoryProvider;
         if (local == null) {
-          local = new SwitchingProvider<>(2);
+          local = new SwitchingProvider<>(3);
           levelAttendViewModel_AssistedFactoryProvider = (Provider<LevelAttendViewModel_AssistedFactory>) local;
         }
         return (Provider<LevelAttendViewModel_AssistedFactory>) local;
@@ -338,7 +366,7 @@ public final class DaggerMyApplication_HiltComponents_ApplicationC extends MyApp
       private Provider<LoginViewModel_AssistedFactory> getLoginViewModel_AssistedFactoryProvider() {
         Object local = loginViewModel_AssistedFactoryProvider;
         if (local == null) {
-          local = new SwitchingProvider<>(3);
+          local = new SwitchingProvider<>(4);
           loginViewModel_AssistedFactoryProvider = (Provider<LoginViewModel_AssistedFactory>) local;
         }
         return (Provider<LoginViewModel_AssistedFactory>) local;
@@ -351,7 +379,7 @@ public final class DaggerMyApplication_HiltComponents_ApplicationC extends MyApp
       private Provider<MainViewModel_AssistedFactory> getMainViewModel_AssistedFactoryProvider() {
         Object local = mainViewModel_AssistedFactoryProvider;
         if (local == null) {
-          local = new SwitchingProvider<>(4);
+          local = new SwitchingProvider<>(5);
           mainViewModel_AssistedFactoryProvider = (Provider<MainViewModel_AssistedFactory>) local;
         }
         return (Provider<MainViewModel_AssistedFactory>) local;
@@ -365,7 +393,7 @@ public final class DaggerMyApplication_HiltComponents_ApplicationC extends MyApp
           ) {
         Object local = passwordViewModel_AssistedFactoryProvider;
         if (local == null) {
-          local = new SwitchingProvider<>(5);
+          local = new SwitchingProvider<>(6);
           passwordViewModel_AssistedFactoryProvider = (Provider<PasswordViewModel_AssistedFactory>) local;
         }
         return (Provider<PasswordViewModel_AssistedFactory>) local;
@@ -379,10 +407,37 @@ public final class DaggerMyApplication_HiltComponents_ApplicationC extends MyApp
           ) {
         Object local = profileViewModel_AssistedFactoryProvider;
         if (local == null) {
-          local = new SwitchingProvider<>(6);
+          local = new SwitchingProvider<>(7);
           profileViewModel_AssistedFactoryProvider = (Provider<ProfileViewModel_AssistedFactory>) local;
         }
         return (Provider<ProfileViewModel_AssistedFactory>) local;
+      }
+
+      private ShopViewModel_AssistedFactory getShopViewModel_AssistedFactory() {
+        return ShopViewModel_AssistedFactory_Factory.newInstance(getAppRepositoryProvider());
+      }
+
+      private Provider<ShopViewModel_AssistedFactory> getShopViewModel_AssistedFactoryProvider() {
+        Object local = shopViewModel_AssistedFactoryProvider;
+        if (local == null) {
+          local = new SwitchingProvider<>(8);
+          shopViewModel_AssistedFactoryProvider = (Provider<ShopViewModel_AssistedFactory>) local;
+        }
+        return (Provider<ShopViewModel_AssistedFactory>) local;
+      }
+
+      private ShowGiftBookedViewModel_AssistedFactory getShowGiftBookedViewModel_AssistedFactory() {
+        return ShowGiftBookedViewModel_AssistedFactory_Factory.newInstance(getAppRepositoryProvider());
+      }
+
+      private Provider<ShowGiftBookedViewModel_AssistedFactory> getShowGiftBookedViewModel_AssistedFactoryProvider(
+          ) {
+        Object local = showGiftBookedViewModel_AssistedFactoryProvider;
+        if (local == null) {
+          local = new SwitchingProvider<>(9);
+          showGiftBookedViewModel_AssistedFactoryProvider = (Provider<ShowGiftBookedViewModel_AssistedFactory>) local;
+        }
+        return (Provider<ShowGiftBookedViewModel_AssistedFactory>) local;
       }
 
       private ShowLevelAttendViewModel_AssistedFactory getShowLevelAttendViewModel_AssistedFactory(
@@ -394,7 +449,7 @@ public final class DaggerMyApplication_HiltComponents_ApplicationC extends MyApp
           ) {
         Object local = showLevelAttendViewModel_AssistedFactoryProvider;
         if (local == null) {
-          local = new SwitchingProvider<>(7);
+          local = new SwitchingProvider<>(10);
           showLevelAttendViewModel_AssistedFactoryProvider = (Provider<ShowLevelAttendViewModel_AssistedFactory>) local;
         }
         return (Provider<ShowLevelAttendViewModel_AssistedFactory>) local;
@@ -408,7 +463,7 @@ public final class DaggerMyApplication_HiltComponents_ApplicationC extends MyApp
           ) {
         Object local = splashViewModel_AssistedFactoryProvider;
         if (local == null) {
-          local = new SwitchingProvider<>(8);
+          local = new SwitchingProvider<>(11);
           splashViewModel_AssistedFactoryProvider = (Provider<SplashViewModel_AssistedFactory>) local;
         }
         return (Provider<SplashViewModel_AssistedFactory>) local;
@@ -422,7 +477,7 @@ public final class DaggerMyApplication_HiltComponents_ApplicationC extends MyApp
           ) {
         Object local = updateBlaBlaViewModel_AssistedFactoryProvider;
         if (local == null) {
-          local = new SwitchingProvider<>(9);
+          local = new SwitchingProvider<>(12);
           updateBlaBlaViewModel_AssistedFactoryProvider = (Provider<UpdateBlaBlaViewModel_AssistedFactory>) local;
         }
         return (Provider<UpdateBlaBlaViewModel_AssistedFactory>) local;
@@ -435,7 +490,7 @@ public final class DaggerMyApplication_HiltComponents_ApplicationC extends MyApp
       private Provider<UserViewModel_AssistedFactory> getUserViewModel_AssistedFactoryProvider() {
         Object local = userViewModel_AssistedFactoryProvider;
         if (local == null) {
-          local = new SwitchingProvider<>(10);
+          local = new SwitchingProvider<>(13);
           userViewModel_AssistedFactoryProvider = (Provider<UserViewModel_AssistedFactory>) local;
         }
         return (Provider<UserViewModel_AssistedFactory>) local;
@@ -443,7 +498,7 @@ public final class DaggerMyApplication_HiltComponents_ApplicationC extends MyApp
 
       private Map<String, Provider<ViewModelAssistedFactory<? extends ViewModel>>> getMapOfStringAndProviderOfViewModelAssistedFactoryOf(
           ) {
-        return MapBuilder.<String, Provider<ViewModelAssistedFactory<? extends ViewModel>>>newMapBuilder(10).put("com.attendance.myproject.begory.presentationLayer.main.setting.addBlaBla.AddBlaBlaViewModel", (Provider) getAddBlaBlaViewModel_AssistedFactoryProvider()).put("com.attendance.myproject.begory.presentationLayer.main.attendence.takeAttendance.LevelAttendViewModel", (Provider) getLevelAttendViewModel_AssistedFactoryProvider()).put("com.attendance.myproject.begory.presentationLayer.login.LoginViewModel", (Provider) getLoginViewModel_AssistedFactoryProvider()).put("com.attendance.myproject.begory.presentationLayer.main.MainViewModel", (Provider) getMainViewModel_AssistedFactoryProvider()).put("com.attendance.myproject.begory.presentationLayer.main.changePassword.PasswordViewModel", (Provider) getPasswordViewModel_AssistedFactoryProvider()).put("com.attendance.myproject.begory.presentationLayer.main.profile.ProfileViewModel", (Provider) getProfileViewModel_AssistedFactoryProvider()).put("com.attendance.myproject.begory.presentationLayer.main.setting.showTakedAttendance.ShowLevelAttendViewModel", (Provider) getShowLevelAttendViewModel_AssistedFactoryProvider()).put("com.attendance.myproject.begory.presentationLayer.splash.SplashViewModel", (Provider) getSplashViewModel_AssistedFactoryProvider()).put("com.attendance.myproject.begory.presentationLayer.main.setting.updateBlaBla.UpdateBlaBlaViewModel", (Provider) getUpdateBlaBlaViewModel_AssistedFactoryProvider()).put("com.attendance.myproject.begory.presentationLayer.main.setting.userExist.UserViewModel", (Provider) getUserViewModel_AssistedFactoryProvider()).build();
+        return MapBuilder.<String, Provider<ViewModelAssistedFactory<? extends ViewModel>>>newMapBuilder(13).put("com.attendance.myproject.begory.presentationLayer.main.setting.addBlaBla.AddBlaBlaViewModel", (Provider) getAddBlaBlaViewModel_AssistedFactoryProvider()).put("com.attendance.myproject.begory.presentationLayer.main.setting.addGift.AddGiftViewModel", (Provider) getAddGiftViewModel_AssistedFactoryProvider()).put("com.attendance.myproject.begory.presentationLayer.main.attendence.takeAttendance.LevelAttendViewModel", (Provider) getLevelAttendViewModel_AssistedFactoryProvider()).put("com.attendance.myproject.begory.presentationLayer.login.LoginViewModel", (Provider) getLoginViewModel_AssistedFactoryProvider()).put("com.attendance.myproject.begory.presentationLayer.main.MainViewModel", (Provider) getMainViewModel_AssistedFactoryProvider()).put("com.attendance.myproject.begory.presentationLayer.main.changePassword.PasswordViewModel", (Provider) getPasswordViewModel_AssistedFactoryProvider()).put("com.attendance.myproject.begory.presentationLayer.main.profile.ProfileViewModel", (Provider) getProfileViewModel_AssistedFactoryProvider()).put("com.attendance.myproject.begory.presentationLayer.main.shop.ShopViewModel", (Provider) getShopViewModel_AssistedFactoryProvider()).put("com.attendance.myproject.begory.presentationLayer.main.setting.showGiftsbooked.ShowGiftBookedViewModel", (Provider) getShowGiftBookedViewModel_AssistedFactoryProvider()).put("com.attendance.myproject.begory.presentationLayer.main.setting.showTakedAttendance.ShowLevelAttendViewModel", (Provider) getShowLevelAttendViewModel_AssistedFactoryProvider()).put("com.attendance.myproject.begory.presentationLayer.splash.SplashViewModel", (Provider) getSplashViewModel_AssistedFactoryProvider()).put("com.attendance.myproject.begory.presentationLayer.main.setting.updateBlaBla.UpdateBlaBlaViewModel", (Provider) getUpdateBlaBlaViewModel_AssistedFactoryProvider()).put("com.attendance.myproject.begory.presentationLayer.main.setting.userExist.UserViewModel", (Provider) getUserViewModel_AssistedFactoryProvider()).build();
       }
 
       private ViewModelProvider.Factory getProvideFactory() {
@@ -468,6 +523,14 @@ public final class DaggerMyApplication_HiltComponents_ApplicationC extends MyApp
 
       @Override
       public void injectAddBlaBlaActivity(AddBlaBlaActivity addBlaBlaActivity) {
+      }
+
+      @Override
+      public void injectAddGiftActivity(AddGiftActivity addGiftActivity) {
+      }
+
+      @Override
+      public void injectShowGiftBookedActivity(ShowGiftBookedActivity showGiftBookedActivity) {
       }
 
       @Override
@@ -620,31 +683,40 @@ public final class DaggerMyApplication_HiltComponents_ApplicationC extends MyApp
             case 1: // com.attendance.myproject.begory.data.source.AppRepository 
             return (T) ActivityCImpl.this.getAppRepository();
 
-            case 2: // com.attendance.myproject.begory.presentationLayer.main.attendence.takeAttendance.LevelAttendViewModel_AssistedFactory 
+            case 2: // com.attendance.myproject.begory.presentationLayer.main.setting.addGift.AddGiftViewModel_AssistedFactory 
+            return (T) ActivityCImpl.this.getAddGiftViewModel_AssistedFactory();
+
+            case 3: // com.attendance.myproject.begory.presentationLayer.main.attendence.takeAttendance.LevelAttendViewModel_AssistedFactory 
             return (T) ActivityCImpl.this.getLevelAttendViewModel_AssistedFactory();
 
-            case 3: // com.attendance.myproject.begory.presentationLayer.login.LoginViewModel_AssistedFactory 
+            case 4: // com.attendance.myproject.begory.presentationLayer.login.LoginViewModel_AssistedFactory 
             return (T) ActivityCImpl.this.getLoginViewModel_AssistedFactory();
 
-            case 4: // com.attendance.myproject.begory.presentationLayer.main.MainViewModel_AssistedFactory 
+            case 5: // com.attendance.myproject.begory.presentationLayer.main.MainViewModel_AssistedFactory 
             return (T) ActivityCImpl.this.getMainViewModel_AssistedFactory();
 
-            case 5: // com.attendance.myproject.begory.presentationLayer.main.changePassword.PasswordViewModel_AssistedFactory 
+            case 6: // com.attendance.myproject.begory.presentationLayer.main.changePassword.PasswordViewModel_AssistedFactory 
             return (T) ActivityCImpl.this.getPasswordViewModel_AssistedFactory();
 
-            case 6: // com.attendance.myproject.begory.presentationLayer.main.profile.ProfileViewModel_AssistedFactory 
+            case 7: // com.attendance.myproject.begory.presentationLayer.main.profile.ProfileViewModel_AssistedFactory 
             return (T) ActivityCImpl.this.getProfileViewModel_AssistedFactory();
 
-            case 7: // com.attendance.myproject.begory.presentationLayer.main.setting.showTakedAttendance.ShowLevelAttendViewModel_AssistedFactory 
+            case 8: // com.attendance.myproject.begory.presentationLayer.main.shop.ShopViewModel_AssistedFactory 
+            return (T) ActivityCImpl.this.getShopViewModel_AssistedFactory();
+
+            case 9: // com.attendance.myproject.begory.presentationLayer.main.setting.showGiftsbooked.ShowGiftBookedViewModel_AssistedFactory 
+            return (T) ActivityCImpl.this.getShowGiftBookedViewModel_AssistedFactory();
+
+            case 10: // com.attendance.myproject.begory.presentationLayer.main.setting.showTakedAttendance.ShowLevelAttendViewModel_AssistedFactory 
             return (T) ActivityCImpl.this.getShowLevelAttendViewModel_AssistedFactory();
 
-            case 8: // com.attendance.myproject.begory.presentationLayer.splash.SplashViewModel_AssistedFactory 
+            case 11: // com.attendance.myproject.begory.presentationLayer.splash.SplashViewModel_AssistedFactory 
             return (T) ActivityCImpl.this.getSplashViewModel_AssistedFactory();
 
-            case 9: // com.attendance.myproject.begory.presentationLayer.main.setting.updateBlaBla.UpdateBlaBlaViewModel_AssistedFactory 
+            case 12: // com.attendance.myproject.begory.presentationLayer.main.setting.updateBlaBla.UpdateBlaBlaViewModel_AssistedFactory 
             return (T) ActivityCImpl.this.getUpdateBlaBlaViewModel_AssistedFactory();
 
-            case 10: // com.attendance.myproject.begory.presentationLayer.main.setting.userExist.UserViewModel_AssistedFactory 
+            case 13: // com.attendance.myproject.begory.presentationLayer.main.setting.userExist.UserViewModel_AssistedFactory 
             return (T) ActivityCImpl.this.getUserViewModel_AssistedFactory();
 
             default: throw new AssertionError(id);

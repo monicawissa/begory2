@@ -21,7 +21,7 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding implements co
     private final android.widget.RelativeLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback8;
+    private final android.view.View.OnClickListener mCallback10;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -96,7 +96,7 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding implements co
         this.progressBar.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback8 = new com.attendance.myproject.begory.generated.callback.OnClickListener(this, 1);
+        mCallback10 = new com.attendance.myproject.begory.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -251,7 +251,7 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding implements co
         if ((dirtyFlags & 0xdL) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.ViewBindingAdapter.setOnClick(this.btnLogin, mCallback8, androidxDatabindingViewDataBindingSafeUnboxLoginViewModelIsDataAvailableGetValue);
+            androidx.databinding.adapters.ViewBindingAdapter.setOnClick(this.btnLogin, mCallback10, androidxDatabindingViewDataBindingSafeUnboxLoginViewModelIsDataAvailableGetValue);
         }
         if ((dirtyFlags & 0xcL) != 0) {
             // api target 1

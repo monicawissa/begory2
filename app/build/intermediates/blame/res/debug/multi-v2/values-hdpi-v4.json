@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\android_Projects\\begoryy\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
+            "outputFile": "C:\\Users\\monic\\Downloads\\begory2\\begory2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Moka\\.gradle\\caches\\transforms-2\\files-2.1\\d1039a94af6cd2cfe9783ee4c84cb73f\\jetified-core-1.9.8\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "source": "C:\\Users\\monic\\.gradle\\caches\\transforms-2\\files-2.1\\f9596d8cbe839cd0078694e3551a210c\\jetified-core-1.9.8\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Moka\\.gradle\\caches\\transforms-2\\files-2.1\\4bdb84bf787aa6be864c9657b76e4cc5\\appcompat-1.3.0-alpha02\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "source": "C:\\Users\\monic\\.gradle\\caches\\transforms-2\\files-2.1\\4bdb84bf787aa6be864c9657b76e4cc5\\appcompat-1.3.0-alpha02\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

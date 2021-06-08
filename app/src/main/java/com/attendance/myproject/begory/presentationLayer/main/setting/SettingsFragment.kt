@@ -96,6 +96,7 @@ class SettingsFragment : Fragment() {
         mItems.add(R.string.m_add_Gift)
         mItems.add(R.string.m_edit_Gift)
         mItems.add(R.string.m_delete_Gift)
+        mItems.add(R.string.m_levels_attendance)
         return mItems
     }
 
