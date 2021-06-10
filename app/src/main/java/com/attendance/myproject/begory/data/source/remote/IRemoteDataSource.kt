@@ -28,7 +28,7 @@ public interface IRemoteDataSource {
         fun onResponse(users: List<User>)
         fun onDataNotAvailable(message: Int?)
     }
-    fun addGift(gift: Gift,level: List<FirebaseFilterType.LevelFilterType>
+    fun addGift(gift: Gift,level: String
                 , callback: IRemoteDataSource.MessageCallback)
     fun updateGift(gift: Gift,level: FirebaseFilterType.LevelFilterType, callback: IRemoteDataSource.MessageCallback)
 

@@ -1,6 +1,9 @@
 package com.attendance.myproject.begory.presentationLayer.main.shop
 
 import android.content.Context
+import android.content.res.Resources
+import android.graphics.Color
+import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,8 +11,11 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.DrawableRes
 import androidx.recyclerview.widget.RecyclerView
 import com.attendance.myproject.begory.R
+import com.attendance.myproject.begory.R.drawable
+import com.attendance.myproject.begory.R.drawable.*
 import com.attendance.myproject.begory.R.string.*
 import com.attendance.myproject.begory.Utilities.UiManager
 import com.attendance.myproject.begory.data.Models.Gift
@@ -27,31 +33,22 @@ class ShopAdapter(private val mContext: Context, private val mlist: List<Gift>,v
                 .inflate(R.layout.row_book_prize, viewGroup, false)
         return ShopViewHolder(view)
     }
-    init {
-        mPrizesList = mlist
-        mBookedPrizesList = user.selectedGifts!!
-    }
-    companion object {
-        lateinit var mPrizesList: List<Gift>
-        lateinit var mBookedPrizesList: ArrayList<Gift>
-    }
+
         override fun onBindViewHolder(viewHolder: ShopViewHolder, i: Int) {
 
-        val ref2 = mlist[i].imagePath?.let {FirebaseStorage.getInstance()!!.reference.child(it) }
-        if (ref2 != null) {
-            ref2.downloadUrl.addOnSuccessListener(){
-                Glide.with(mContext)
-                        .load(it)
+        Glide.with(mContext)
+                        .load(mlist[i].imagePath)
                         .into(viewHolder.imageView!!)
-            }
-        }
+
+
         viewHolder.nametv?.text = mlist[i].name
         viewHolder.costtv?.text =mlist[i].price!!.toString()+ " " + mContext.getString(R.string.point)
-        if (mlist[i].booked==true)
+        if (mlist[i].booked==mlist[i].numberOfItem)
         {
             viewHolder.btn!!.text = mContext.getString(R.string.booked)
             viewHolder.btn!!.isClickable = false
             viewHolder.btn!!.isEnabled = false
+            viewHolder.btn!!.setBackgroundResource(btn_menu_selector)
         }
         else if (mlist[i].initbooked==true)
         {
@@ -87,6 +84,7 @@ class ShopAdapter(private val mContext: Context, private val mlist: List<Gift>,v
             btn?.setOnClickListener(View.OnClickListener(){
                 val pos = adapterPosition;
                 if (pos != RecyclerView.NO_POSITION){
+                    //ethagazt
                     if (mlist[pos].initbooked==true)
                     {
 
@@ -97,13 +95,15 @@ class ShopAdapter(private val mContext: Context, private val mlist: List<Gift>,v
                         user2!!.price = user2!!.price?.plus(mlist[pos]!!.price!!)
                         updatePoints.onUpdate(user2)
                     }
+                    // not ethagazt
                     else
                     {
                         if (mlist[pos].price!! <= user.price!!)
                         {
                             //user.price!! -= mlist[pos].price!!
                             mlist[pos].initbooked = true
-                            user.selectedGifts!!.add( mlist[pos])
+                            user.selectedGifts=ArrayList<Gift>()
+                            user!!.selectedGifts!!.add( mlist[pos])
                             var user2:User=user
                             user2!!.price = user2!!.price?.minus(mlist[pos]!!.price!!)
                             updatePoints.onUpdate(user2)

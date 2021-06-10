@@ -2382,8 +2382,6 @@ id cb_is_active
 id cb_is_add_direct
 id cb_kodas
 id cb_shamas
-id cb_term1
-id cb_term2
 id cb_tnawel
 id center
 id centerCrop
@@ -2660,12 +2658,9 @@ id progress_horizontal
 id query
 id radio
 id ratio
-id rb_term1
-id rb_term2
 id rectangle
 id rectangles
 id reverseSawtooth
-id rg_terms
 id right
 id rightToLeft
 id right_icon

@@ -110,21 +110,21 @@ class ShowLevelAttendViewModel  @ViewModelInject constructor(private val appRepo
 
             if (mStudentList[i].listOfAttendence == null || mStudentList[i].listOfAttendence!!.isEmpty()) {
                 studentWithAttendance.hesaAttendanceTotalCountTerm1=0
-                studentWithAttendance.hesaAttendanceTotalCountTerm2=0
+//                studentWithAttendance.hesaAttendanceTotalCountTerm2=0
                 studentWithAttendance.kodasAttendanceTotalCountTerm1=0
-                studentWithAttendance.kodasAttendanceTotalCountTerm2=0
+//                studentWithAttendance.kodasAttendanceTotalCountTerm2=0
                 studentWithAttendance.a3trafAttendanceTotalCountTerm1=0
-                studentWithAttendance.a3trafAttendanceTotalCountTerm2=0
+//                studentWithAttendance.a3trafAttendanceTotalCountTerm2=0
                 studentWithAttendance.tnawelAttendanceTotalCountTerm1=0
-                studentWithAttendance.tnawelAttendanceTotalCountTerm2=0
+//                studentWithAttendance.tnawelAttendanceTotalCountTerm2=0
                 studentWithAttendance.hesaTotalCountTerm1=0
-                studentWithAttendance.hesaTotalCountTerm2=0
+//                studentWithAttendance.hesaTotalCountTerm2=0
                 studentWithAttendance.kodasTotalCountTerm1=0
-                studentWithAttendance.kodasTotalCountTerm2=0
+//                studentWithAttendance.kodasTotalCountTerm2=0
                 studentWithAttendance.a3trafTotalCountTerm1=0
-                studentWithAttendance.a3trafTotalCountTerm2=0
+//                studentWithAttendance.a3trafTotalCountTerm2=0
                 studentWithAttendance.tnawelTotalCountTerm1=0
-                studentWithAttendance.tnawelTotalCountTerm2=0
+//                studentWithAttendance.tnawelTotalCountTerm2=0
             }
             else {
                 for (n in mStudentList[i].listOfAttendence!!) {
@@ -142,18 +142,18 @@ class ShowLevelAttendViewModel  @ViewModelInject constructor(private val appRepo
 
 
                     }
-                    if (n.value.termId=="2") {
-                        studentWithAttendance.hesaTotalCountTerm2++
-                        studentWithAttendance.kodasTotalCountTerm2++
-                        studentWithAttendance.tnawelTotalCountTerm2++
-                        studentWithAttendance.a3trafTotalCountTerm2++
-
-                        if (n.value.iskodas) studentWithAttendance.kodasAttendanceTotalCountTerm2++
-
-                        if (n.value.isAttend) studentWithAttendance.hesaAttendanceTotalCountTerm2++
-                        if (n.value.isTnawel) studentWithAttendance.tnawelAttendanceTotalCountTerm2++
-                        if (n.value.isA3traf) studentWithAttendance.a3trafAttendanceTotalCountTerm2++
-                    }
+//                    if (n.value.termId=="2") {
+//                        studentWithAttendance.hesaTotalCountTerm2++
+//                        studentWithAttendance.kodasTotalCountTerm2++
+//                        studentWithAttendance.tnawelTotalCountTerm2++
+//                        studentWithAttendance.a3trafTotalCountTerm2++
+//
+//                        if (n.value.iskodas) studentWithAttendance.kodasAttendanceTotalCountTerm2++
+//
+//                        if (n.value.isAttend) studentWithAttendance.hesaAttendanceTotalCountTerm2++
+//                        if (n.value.isTnawel) studentWithAttendance.tnawelAttendanceTotalCountTerm2++
+//                        if (n.value.isA3traf) studentWithAttendance.a3trafAttendanceTotalCountTerm2++
+//                    }
                 }
             }
 

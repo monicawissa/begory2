@@ -15,16 +15,13 @@ public class ActivityLevelAttendanceBindingImpl extends ActivityLevelAttendanceB
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.rg_terms, 3);
-        sViewsWithIds.put(R.id.rb_term2, 4);
-        sViewsWithIds.put(R.id.rb_term1, 5);
-        sViewsWithIds.put(R.id.et_date, 6);
-        sViewsWithIds.put(R.id.tv_a3traf, 7);
-        sViewsWithIds.put(R.id.tv_tnawel, 8);
-        sViewsWithIds.put(R.id.tv_kodas, 9);
-        sViewsWithIds.put(R.id.tv_attend, 10);
-        sViewsWithIds.put(R.id.tv_title, 11);
-        sViewsWithIds.put(R.id.rv_attendance, 12);
+        sViewsWithIds.put(R.id.et_date, 3);
+        sViewsWithIds.put(R.id.tv_a3traf, 4);
+        sViewsWithIds.put(R.id.tv_tnawel, 5);
+        sViewsWithIds.put(R.id.tv_kodas, 6);
+        sViewsWithIds.put(R.id.tv_attend, 7);
+        sViewsWithIds.put(R.id.tv_title, 8);
+        sViewsWithIds.put(R.id.rv_attendance, 9);
     }
     // views
     @NonNull
@@ -37,22 +34,19 @@ public class ActivityLevelAttendanceBindingImpl extends ActivityLevelAttendanceB
     // Inverse Binding Event Handlers
 
     public ActivityLevelAttendanceBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 13, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 10, sIncludes, sViewsWithIds));
     }
     private ActivityLevelAttendanceBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 2
             , (android.widget.Button) bindings[2]
-            , (android.widget.EditText) bindings[6]
+            , (android.widget.EditText) bindings[3]
             , (android.widget.ProgressBar) bindings[1]
-            , (androidx.appcompat.widget.AppCompatRadioButton) bindings[5]
-            , (androidx.appcompat.widget.AppCompatRadioButton) bindings[4]
-            , (android.widget.RadioGroup) bindings[3]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[12]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[9]
+            , (android.widget.TextView) bindings[4]
             , (android.widget.TextView) bindings[7]
-            , (android.widget.TextView) bindings[10]
-            , (android.widget.TextView) bindings[9]
-            , (android.widget.TextView) bindings[11]
+            , (android.widget.TextView) bindings[6]
             , (android.widget.TextView) bindings[8]
+            , (android.widget.TextView) bindings[5]
             );
         this.btnAdd.setTag(null);
         this.mboundView0 = (android.widget.RelativeLayout) bindings[0];
@@ -141,9 +135,9 @@ public class ActivityLevelAttendanceBindingImpl extends ActivityLevelAttendanceB
         }
         androidx.lifecycle.LiveData<java.lang.Boolean> levelAttendViewModelIsCheckBtnAvailable = null;
         java.lang.Boolean levelAttendViewModelDataLoadingGetValue = null;
+        boolean androidxDatabindingViewDataBindingSafeUnboxLevelAttendViewModelIsCheckBtnAvailableGetValue = false;
         int levelAttendViewModelDataLoadingViewVISIBLEViewGONE = 0;
         com.attendance.myproject.begory.presentationLayer.main.attendence.takeAttendance.LevelAttendViewModel levelAttendViewModel = mLevelAttendViewModel;
-        boolean androidxDatabindingViewDataBindingSafeUnboxLevelAttendViewModelIsCheckBtnAvailableGetValue = false;
         java.lang.Boolean levelAttendViewModelIsCheckBtnAvailableGetValue = null;
         androidx.lifecycle.LiveData<java.lang.Boolean> levelAttendViewModelDataLoading = null;
         boolean androidxDatabindingViewDataBindingSafeUnboxLevelAttendViewModelDataLoadingGetValue = false;

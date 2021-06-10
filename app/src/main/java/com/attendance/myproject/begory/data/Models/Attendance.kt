@@ -10,7 +10,7 @@ data class Attendance(
         @SerializedName("studentId")
         var id: String = "",
         @SerializedName("termId")
-        var termId: String = "",
+        var termId: String = "1",
         @SerializedName("isAttend")
         var isAttend: Boolean = false,
         @SerializedName("isEodas")

@@ -39,7 +39,7 @@ class ShopFragment : Fragment(R.layout.fragment_shop), UpdatePoints {
         binding.lifecycleOwner = this
         subscribeToNavigationChanges(shopViewModel)
         // TODO: change id
-        //(binding.rvMenuu as (RecyclerView)).setHasFixedSize(true)
+        (binding.rvMenuu as (RecyclerView)).setHasFixedSize(true)
         //TODO: Choose your layout
         //GridLayout
         val gridLayoutManager: GridLayoutManager = GridLayoutManager(activity, 1)
@@ -100,7 +100,19 @@ class ShopFragment : Fragment(R.layout.fragment_shop), UpdatePoints {
         //mPresenter.start();
     }
 
-//    private fun displayDataFromInstanceState(savedInstanceState: Bundle?) {
+    companion object {
+        //save state
+        private const val LIST_STATE = "list_state"
+        private const val BUNDLE_RECYCLER_LAYOUT = "recycler_layout"
+    }
+
+
+
+    override fun onUpdate(points: User) {
+        shopViewModel.updateui(points)
+        //binding.tvCurrentPoints.text=points.price.toString()
+    }
+    //    private fun displayDataFromInstanceState(savedInstanceState: Bundle?) {
 //        mList = savedInstanceState!!.getIntegerArrayList(LIST_STATE)
 //        savedRecyclerLayoutState = savedInstanceState!!.getParcelable(BUNDLE_RECYCLER_LAYOUT)
 //
@@ -121,18 +133,4 @@ class ShopFragment : Fragment(R.layout.fragment_shop), UpdatePoints {
 //        }
 //        super.onActivityCreated(savedInstanceState)
 //    }
-
-    companion object {
-        //save state
-        private const val LIST_STATE = "list_state"
-        private const val BUNDLE_RECYCLER_LAYOUT = "recycler_layout"
-    }
-
-
-
-    override fun onUpdate(points: User) {
-        shopViewModel.user=points
-        initRecyclerView()
-        //binding.tvCurrentPoints.text=points.price.toString()
-    }
 }

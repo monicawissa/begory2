@@ -30,12 +30,49 @@ public class FragmentShopBindingImpl extends FragmentShopBinding implements com.
     // values
     // listeners
     // Inverse Binding Event Handlers
+    private androidx.databinding.InverseBindingListener tvCurrentPointsandroidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+        @Override
+        public void onChange() {
+            // Inverse of shopViewModel.mUserPrice.getValue()
+            //         is shopViewModel.mUserPrice.setValue((java.lang.String) callbackArg_0)
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(tvCurrentPoints);
+            // localize variables for thread safety
+            // shopViewModel
+            com.attendance.myproject.begory.presentationLayer.main.shop.ShopViewModel shopViewModel = mShopViewModel;
+            // shopViewModel.mUserPrice
+            androidx.lifecycle.MutableLiveData<java.lang.String> shopViewModelMUserPrice = null;
+            // shopViewModel.mUserPrice != null
+            boolean shopViewModelMUserPriceJavaLangObjectNull = false;
+            // shopViewModel != null
+            boolean shopViewModelJavaLangObjectNull = false;
+            // shopViewModel.mUserPrice.getValue()
+            java.lang.String shopViewModelMUserPriceGetValue = null;
+
+
+
+            shopViewModelJavaLangObjectNull = (shopViewModel) != (null);
+            if (shopViewModelJavaLangObjectNull) {
+
+
+                shopViewModelMUserPrice = shopViewModel.getMUserPrice();
+
+                shopViewModelMUserPriceJavaLangObjectNull = (shopViewModelMUserPrice) != (null);
+                if (shopViewModelMUserPriceJavaLangObjectNull) {
+
+
+
+
+                    shopViewModelMUserPrice.setValue(((java.lang.String) (callbackArg_0)));
+                }
+            }
+        }
+    };
 
     public FragmentShopBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
         this(bindingComponent, root, mapBindings(bindingComponent, root, 8, sIncludes, sViewsWithIds));
     }
     private FragmentShopBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 1
+        super(bindingComponent, root, 2
             , (android.widget.Button) bindings[2]
             , (android.widget.ImageView) bindings[3]
             , (android.widget.LinearLayout) bindings[4]
@@ -57,7 +94,7 @@ public class FragmentShopBindingImpl extends FragmentShopBinding implements com.
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x4L;
+                mDirtyFlags = 0x8L;
         }
         requestRebind();
     }
@@ -87,7 +124,7 @@ public class FragmentShopBindingImpl extends FragmentShopBinding implements com.
     public void setShopViewModel(@Nullable com.attendance.myproject.begory.presentationLayer.main.shop.ShopViewModel ShopViewModel) {
         this.mShopViewModel = ShopViewModel;
         synchronized(this) {
-            mDirtyFlags |= 0x2L;
+            mDirtyFlags |= 0x4L;
         }
         notifyPropertyChanged(BR.shopViewModel);
         super.requestRebind();
@@ -97,14 +134,25 @@ public class FragmentShopBindingImpl extends FragmentShopBinding implements com.
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeShopViewModelIsCheckBtnAvailable((androidx.lifecycle.LiveData<java.lang.Boolean>) object, fieldId);
+                return onChangeShopViewModelDataLoading((androidx.lifecycle.LiveData<java.lang.Boolean>) object, fieldId);
+            case 1 :
+                return onChangeShopViewModelMUserPrice((androidx.lifecycle.MutableLiveData<java.lang.String>) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeShopViewModelIsCheckBtnAvailable(androidx.lifecycle.LiveData<java.lang.Boolean> ShopViewModelIsCheckBtnAvailable, int fieldId) {
+    private boolean onChangeShopViewModelDataLoading(androidx.lifecycle.LiveData<java.lang.Boolean> ShopViewModelDataLoading, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
+            }
+            return true;
+        }
+        return false;
+    }
+    private boolean onChangeShopViewModelMUserPrice(androidx.lifecycle.MutableLiveData<java.lang.String> ShopViewModelMUserPrice, int fieldId) {
+        if (fieldId == BR._all) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2L;
             }
             return true;
         }
@@ -118,63 +166,86 @@ public class FragmentShopBindingImpl extends FragmentShopBinding implements com.
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        boolean shopViewModelDataLoading = false;
+        java.lang.String shopViewModelMUserPriceGetValue = null;
+        java.lang.Boolean shopViewModelDataLoadingGetValue = null;
         com.attendance.myproject.begory.presentationLayer.main.shop.ShopViewModel shopViewModel = mShopViewModel;
-        java.lang.Boolean shopViewModelIsCheckBtnAvailableGetValue = null;
-        java.lang.Double shopViewModelUserPrice = null;
-        androidx.lifecycle.LiveData<java.lang.Boolean> shopViewModelIsCheckBtnAvailable = null;
-        boolean androidxDatabindingViewDataBindingSafeUnboxShopViewModelIsCheckBtnAvailableGetValue = false;
-        java.lang.String shopViewModelUserPriceToString = null;
-        com.attendance.myproject.begory.data.Models.User shopViewModelUser = null;
+        boolean androidxDatabindingViewDataBindingSafeUnboxShopViewModelDataLoadingGetValue = false;
+        androidx.lifecycle.LiveData<java.lang.Boolean> ShopViewModelDataLoading1 = null;
+        androidx.lifecycle.MutableLiveData<java.lang.String> shopViewModelMUserPrice = null;
+        boolean androidxDatabindingViewDataBindingSafeUnboxShopViewModelDataLoading = false;
+        android.graphics.drawable.Drawable shopViewModelDataLoadingBtnBookNowAndroidDrawableBtnMenuSelectorBtnBookNowAndroidDrawableBtnWhiteSelector = null;
 
-        if ((dirtyFlags & 0x7L) != 0) {
-
+        if ((dirtyFlags & 0xfL) != 0) {
 
 
-                if (shopViewModel != null) {
-                    // read shopViewModel.isCheckBtnAvailable()
-                    shopViewModelIsCheckBtnAvailable = shopViewModel.isCheckBtnAvailable();
-                }
-                updateLiveDataRegistration(0, shopViewModelIsCheckBtnAvailable);
-
-
-                if (shopViewModelIsCheckBtnAvailable != null) {
-                    // read shopViewModel.isCheckBtnAvailable().getValue()
-                    shopViewModelIsCheckBtnAvailableGetValue = shopViewModelIsCheckBtnAvailable.getValue();
-                }
-
-
-                // read androidx.databinding.ViewDataBinding.safeUnbox(shopViewModel.isCheckBtnAvailable().getValue())
-                androidxDatabindingViewDataBindingSafeUnboxShopViewModelIsCheckBtnAvailableGetValue = androidx.databinding.ViewDataBinding.safeUnbox(shopViewModelIsCheckBtnAvailableGetValue);
-            if ((dirtyFlags & 0x6L) != 0) {
+            if ((dirtyFlags & 0xdL) != 0) {
 
                     if (shopViewModel != null) {
-                        // read shopViewModel.user
-                        shopViewModelUser = shopViewModel.getUser();
+                        // read shopViewModel.dataLoading
+                        ShopViewModelDataLoading1 = shopViewModel.getDataLoading();
+                    }
+                    updateLiveDataRegistration(0, ShopViewModelDataLoading1);
+
+
+                    if (ShopViewModelDataLoading1 != null) {
+                        // read shopViewModel.dataLoading.getValue()
+                        shopViewModelDataLoadingGetValue = ShopViewModelDataLoading1.getValue();
                     }
 
 
-                    if (shopViewModelUser != null) {
-                        // read shopViewModel.user.price
-                        shopViewModelUserPrice = shopViewModelUser.getPrice();
+                    // read androidx.databinding.ViewDataBinding.safeUnbox(shopViewModel.dataLoading.getValue())
+                    androidxDatabindingViewDataBindingSafeUnboxShopViewModelDataLoadingGetValue = androidx.databinding.ViewDataBinding.safeUnbox(shopViewModelDataLoadingGetValue);
+                if((dirtyFlags & 0xdL) != 0) {
+                    if(androidxDatabindingViewDataBindingSafeUnboxShopViewModelDataLoadingGetValue) {
+                            dirtyFlags |= 0x20L;
                     }
+                    else {
+                            dirtyFlags |= 0x10L;
+                    }
+                }
 
 
-                    if (shopViewModelUserPrice != null) {
-                        // read shopViewModel.user.price.toString()
-                        shopViewModelUserPriceToString = shopViewModelUserPrice.toString();
+                    // read !androidx.databinding.ViewDataBinding.safeUnbox(shopViewModel.dataLoading.getValue())
+                    shopViewModelDataLoading = !androidxDatabindingViewDataBindingSafeUnboxShopViewModelDataLoadingGetValue;
+                    // read androidx.databinding.ViewDataBinding.safeUnbox(shopViewModel.dataLoading.getValue()) ? @android:drawable/btn_menu_selector : @android:drawable/btn_white_selector
+                    shopViewModelDataLoadingBtnBookNowAndroidDrawableBtnMenuSelectorBtnBookNowAndroidDrawableBtnWhiteSelector = ((androidxDatabindingViewDataBindingSafeUnboxShopViewModelDataLoadingGetValue) ? (androidx.appcompat.content.res.AppCompatResources.getDrawable(btnBookNow.getContext(), R.drawable.btn_menu_selector)) : (androidx.appcompat.content.res.AppCompatResources.getDrawable(btnBookNow.getContext(), R.drawable.btn_white_selector)));
+
+
+                    // read androidx.databinding.ViewDataBinding.safeUnbox(!androidx.databinding.ViewDataBinding.safeUnbox(shopViewModel.dataLoading.getValue()))
+                    androidxDatabindingViewDataBindingSafeUnboxShopViewModelDataLoading = androidx.databinding.ViewDataBinding.safeUnbox(shopViewModelDataLoading);
+            }
+            if ((dirtyFlags & 0xeL) != 0) {
+
+                    if (shopViewModel != null) {
+                        // read shopViewModel.mUserPrice
+                        shopViewModelMUserPrice = shopViewModel.getMUserPrice();
+                    }
+                    updateLiveDataRegistration(1, shopViewModelMUserPrice);
+
+
+                    if (shopViewModelMUserPrice != null) {
+                        // read shopViewModel.mUserPrice.getValue()
+                        shopViewModelMUserPriceGetValue = shopViewModelMUserPrice.getValue();
                     }
             }
         }
         // batch finished
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0xdL) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.ViewBindingAdapter.setOnClick(this.btnBookNow, mCallback1, androidxDatabindingViewDataBindingSafeUnboxShopViewModelIsCheckBtnAvailableGetValue);
+            androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.btnBookNow, shopViewModelDataLoadingBtnBookNowAndroidDrawableBtnMenuSelectorBtnBookNowAndroidDrawableBtnWhiteSelector);
+            androidx.databinding.adapters.ViewBindingAdapter.setOnClick(this.btnBookNow, mCallback1, androidxDatabindingViewDataBindingSafeUnboxShopViewModelDataLoading);
         }
-        if ((dirtyFlags & 0x6L) != 0) {
+        if ((dirtyFlags & 0xeL) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvCurrentPoints, shopViewModelUserPriceToString);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvCurrentPoints, shopViewModelMUserPriceGetValue);
+        }
+        if ((dirtyFlags & 0x8L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.tvCurrentPoints, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, tvCurrentPointsandroidTextAttrChanged);
         }
     }
     // Listener Stub Implementations
@@ -198,9 +269,12 @@ public class FragmentShopBindingImpl extends FragmentShopBinding implements com.
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): shopViewModel.isCheckBtnAvailable()
-        flag 1 (0x2L): shopViewModel
-        flag 2 (0x3L): null
+        flag 0 (0x1L): shopViewModel.dataLoading
+        flag 1 (0x2L): shopViewModel.mUserPrice
+        flag 2 (0x3L): shopViewModel
+        flag 3 (0x4L): null
+        flag 4 (0x5L): androidx.databinding.ViewDataBinding.safeUnbox(shopViewModel.dataLoading.getValue()) ? @android:drawable/btn_menu_selector : @android:drawable/btn_white_selector
+        flag 5 (0x6L): androidx.databinding.ViewDataBinding.safeUnbox(shopViewModel.dataLoading.getValue()) ? @android:drawable/btn_menu_selector : @android:drawable/btn_white_selector
     flag mapping end*/
     //end
 }

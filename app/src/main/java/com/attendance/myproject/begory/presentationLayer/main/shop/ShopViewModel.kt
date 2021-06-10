@@ -16,8 +16,7 @@ class ShopViewModel  @ViewModelInject constructor(private val appRepository: App
 ) :
         ViewModel() ,LifecycleObserver {
     var mGiftList: ArrayList<Gift> = ArrayList()
-    var mSelectedGifts: ArrayList<Gift> = ArrayList()
-    var mUserPrice: Double = 0.0
+    val mUserPrice= MutableLiveData<String>()
     var studentLevel: FirebaseFilterType.LevelFilterType? = null
     private val _mGiftListListener= MutableLiveData<Boolean>()
     val mGiftListListener: LiveData<Boolean>
@@ -25,9 +24,9 @@ class ShopViewModel  @ViewModelInject constructor(private val appRepository: App
     var mTitleTV = savedStateHandle.getLiveData<String>("settingType").value
 
 //    //Btn check Available
-    private val _isCheckBtnAvailable = MutableLiveData<Boolean>()
-    val isCheckBtnAvailable: LiveData<Boolean>
-        get() = _isCheckBtnAvailable
+//    private val _isCheckBtnAvailable = MutableLiveData<Boolean>()
+//    val isCheckBtnAvailable: LiveData<Boolean>
+//        get() = _isCheckBtnAvailable
     //progressbar
     private val _dataLoading = MutableLiveData<Boolean>()
     val dataLoading: LiveData<Boolean>
@@ -55,15 +54,19 @@ class ShopViewModel  @ViewModelInject constructor(private val appRepository: App
         getUser()
         _mGiftListListener.value=false
         getGiftsList()
-
     }
      var user: User?=null
 
     private fun getUser() {
         user=appRepository.getUser()
-        getGiftsList()
+    }
+    fun updateui(user: User) {
+        this.user=user
+        mUserPrice.value= user.price.toString()
+        //_mGiftListListener.value=true
     }
     fun getGiftsList() {
+        mUserPrice.value=user!!.price.toString();
         _dataLoading.value = true
 //        _isCheckBtnAvailable.value=false
         appRepository.filterGift(user!!.studentLevel!!, object : IRemoteDataSource.ShowGiftsCallback {
@@ -81,13 +84,51 @@ class ShopViewModel  @ViewModelInject constructor(private val appRepository: App
         })
 
     }
-    fun update() {}
-    fun btnadd(){ _dataLoading.value = true
-        _isCheckBtnAvailable.value = false
+    fun update(gift: Gift, studentLevel: FirebaseFilterType.LevelFilterType?) {
+        appRepository.updateGift(gift!!,studentLevel!!,object :IRemoteDataSource.MessageCallback{
+            override fun onResponse(message: Int?) {
 
-        _isCheckBtnAvailable.value = true
-        _dataLoading.value = false
+                showSnackbarMessage(message!!)
+            }
 
+            override fun onDataNotAvailable(message: Int?) {
+                showSnackbarMessage(message!!)
+            }
+
+        })
+    }
+    fun btnadd(){
+        _dataLoading.value = true
+
+        for (i in user?.selectedGifts!!){
+            if(i.initbooked==true&& i.numberOfItem!! <=(i.booked?.plus(1)!!))
+            {
+
+                i.booked = i.booked?.plus(1);
+                i.initbooked=false
+                update(i, user!!.studentLevel)
+            }
+
+        }
+        appRepository.updateStudent(user!!,object :IRemoteDataSource.MessageCallback{
+            override fun onResponse(message: Int?) {
+                showSnackbarMessage(message!!)
+                _dataLoading.value = false
+            }
+
+            override fun onDataNotAvailable(message: Int?) {
+                showSnackbarMessage(message!!)
+                _dataLoading.value = false
+            }
+
+        })
+
+//        mlist[pos].initbooked = true
+//        user.selectedGifts= java.util.ArrayList<Gift>()
+//        user!!.selectedGifts!!.add( mlist[pos])
+//        var user2:User=user
+//        user2!!.price = user2!!.price?.minus(mlist[pos]!!.price!!)
+//        updatePoints.onUpdate(user2)
 
     }
 }

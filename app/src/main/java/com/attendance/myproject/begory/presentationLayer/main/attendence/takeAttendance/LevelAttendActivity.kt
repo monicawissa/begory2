@@ -68,16 +68,16 @@ class LevelAttendActivity : BaseActivity1() {
             updateLabel()
         }
         (binding.etDate!! as EditText).setOnClickListener(View.OnClickListener {
-            if (levelAttendViewModel.mSelectedTermId == 0) {
-                Toast.makeText(applicationContext, R.string.choose_term, Toast.LENGTH_LONG).show()
-                return@OnClickListener
-            }
+//            if (levelAttendViewModel.mSelectedTermId == 0) {
+//                Toast.makeText(applicationContext, R.string.choose_term, Toast.LENGTH_LONG).show()
+//                return@OnClickListener
+//            }
             DatePickerDialog(this@LevelAttendActivity, date, myCalendar!!
                     .get(Calendar.YEAR), myCalendar!!.get(Calendar.MONTH),
                     myCalendar!!.get(Calendar.DAY_OF_MONTH)).show()
         })
-        binding.rgTerms!!.setOnCheckedChangeListener { radioGroup, id -> levelAttendViewModel.mSelectedTermId = if (id == binding.rbTerm1.id) 1 else 2  }
-        //Todo
+//        binding.rgTerms!!.setOnCheckedChangeListener { radioGroup, id -> levelAttendViewModel.mSelectedTermId = if (id == binding.rbTerm1.id) 1 else 2  }
+//        //Todo
 
     }
 
@@ -93,9 +93,9 @@ class LevelAttendActivity : BaseActivity1() {
         levelAttendViewModel.mStudentList.clear()
         levelAttendViewModel.mListLast.clear()
         initRecyclerView()
-        for (i in 0 until binding.rgTerms!!.childCount) {
-            (binding.rgTerms!!.getChildAt(i) as RadioButton).isEnabled = false
-        }
+//        for (i in 0 until binding.rgTerms!!.childCount) {
+//            (binding.rgTerms!!.getChildAt(i) as RadioButton).isEnabled = false
+//        }
 
         levelAttendViewModel.getStudentList()
     }

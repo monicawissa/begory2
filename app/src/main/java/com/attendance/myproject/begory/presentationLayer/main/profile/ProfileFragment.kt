@@ -20,7 +20,6 @@ import com.attendance.myproject.begory.Utilities.UiManager
 import com.attendance.myproject.begory.data.Models.Level
 import com.attendance.myproject.begory.databinding.FragmentProfileBinding
 import com.attendance.myproject.begory.presentationLayer.login.LoginActivity
-import com.attendance.myproject.begory.presentationLayer.main.setting.updateBlaBla.UpdateBlaBlaViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.ArrayList
 

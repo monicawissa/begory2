@@ -23,7 +23,7 @@ class LevelAttendViewModel  @ViewModelInject constructor(private val appReposito
     var mStudentList: ArrayList<User> = ArrayList<User>()
     var mListLast: ArrayList<Attendance> = ArrayList()
     var mSelectedDate:String=""
-    var mSelectedTermId:Int=0
+//    var mSelectedTermId:Int=0
     private val _mStudentAttendancesList= MutableLiveData<Boolean>()
     val mStudentAttendancesList: LiveData<Boolean>
         get() = _mStudentAttendancesList
@@ -113,7 +113,7 @@ class LevelAttendViewModel  @ViewModelInject constructor(private val appReposito
     private fun setEmptyAttendance(i: Int) {
         val studentWithAttendance = Attendance(
                 id = mStudentList[i].id!!, name = mStudentList[i].name!!, date = mSelectedDate, isAttend = false,
-                isShamas = false, isA3traf = false, iskodas = false, isTnawel = false, termId = mSelectedTermId.toString()
+                isShamas = false, isA3traf = false, iskodas = false, isTnawel = false
         )
         mList.add(studentWithAttendance)
     }

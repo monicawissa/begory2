@@ -65,15 +65,15 @@ class ShowLevelAttendActivity : BaseActivity1() , CompoundButton.OnCheckedChange
         //GridLayout
         val gridLayoutManager: GridLayoutManager = GridLayoutManager(this, 1)
         binding.rvAttendance.layoutManager = gridLayoutManager
-        binding.cbTerm1.setOnCheckedChangeListener(this)
-        binding.cbTerm2.setOnCheckedChangeListener(this)
+//        binding.cbTerm1.setOnCheckedChangeListener(this)
+//        binding.cbTerm2.setOnCheckedChangeListener(this)
 
         initLevelsSpinner()
         subscribeToNavigationChanges(showLevelAttendViewModel)
     }
     private fun initRecyclerView( ) {
         //if()
-        recyclerViewAdapter = ShowLevelAttendanceAdapter(this, showLevelAttendViewModel.mListLast, binding.cbTerm1, binding.cbTerm2)
+        recyclerViewAdapter = ShowLevelAttendanceAdapter(this, showLevelAttendViewModel.mListLast)
         binding.rvAttendance.adapter = recyclerViewAdapter
         recyclerViewAdapter!!.notifyDataSetChanged()
         binding.rvAttendance.smoothScrollToPosition(0)

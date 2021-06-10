@@ -36,32 +36,32 @@
         "source": "C:\\Users\\monic\\Downloads\\begory2\\begory2\\app\\src\\main\\res\\drawable-xhdpi\\logout.png"
     },
     {
-        "merged": "C:\\Users\\monic\\Downloads\\begory2\\begory2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_begory_icon.png.flat",
-        "source": "C:\\Users\\monic\\Downloads\\begory2\\begory2\\app\\src\\main\\res\\mipmap-xxxhdpi\\begory_icon.png"
-    },
-    {
         "merged": "C:\\Users\\monic\\Downloads\\begory2\\begory2\\app\\build\\intermediates\\res\\merged\\debug\\layout_row_book_prize.xml.flat",
         "source": "C:\\Users\\monic\\Downloads\\begory2\\begory2\\app\\src\\main\\res\\layout\\row_book_prize.xml"
+    },
+    {
+        "merged": "C:\\Users\\monic\\Downloads\\begory2\\begory2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_begory_icon.png.flat",
+        "source": "C:\\Users\\monic\\Downloads\\begory2\\begory2\\app\\src\\main\\res\\mipmap-xxxhdpi\\begory_icon.png"
     },
     {
         "merged": "C:\\Users\\monic\\Downloads\\begory2\\begory2\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_add_attendance.xml.flat",
         "source": "C:\\Users\\monic\\Downloads\\begory2\\begory2\\app\\src\\main\\res\\layout\\activity_add_attendance.xml"
     },
     {
-        "merged": "C:\\Users\\monic\\Downloads\\begory2\\begory2\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
-        "source": "C:\\Users\\monic\\Downloads\\begory2\\begory2\\app\\src\\main\\res\\layout\\activity_login.xml"
-    },
-    {
         "merged": "C:\\Users\\monic\\Downloads\\begory2\\begory2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_profile.xml.flat",
         "source": "C:\\Users\\monic\\Downloads\\begory2\\begory2\\app\\src\\main\\res\\drawable\\ic_profile.xml"
     },
     {
-        "merged": "C:\\Users\\monic\\Downloads\\begory2\\begory2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_avd_home.xml.flat",
-        "source": "C:\\Users\\monic\\Downloads\\begory2\\begory2\\app\\src\\main\\res\\drawable\\avd_home.xml"
+        "merged": "C:\\Users\\monic\\Downloads\\begory2\\begory2\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\monic\\Downloads\\begory2\\begory2\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
         "merged": "C:\\Users\\monic\\Downloads\\begory2\\begory2\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_addgift.xml.flat",
         "source": "C:\\Users\\monic\\Downloads\\begory2\\begory2\\app\\src\\main\\res\\layout\\activity_addgift.xml"
+    },
+    {
+        "merged": "C:\\Users\\monic\\Downloads\\begory2\\begory2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_avd_home.xml.flat",
+        "source": "C:\\Users\\monic\\Downloads\\begory2\\begory2\\app\\src\\main\\res\\drawable\\avd_home.xml"
     },
     {
         "merged": "C:\\Users\\monic\\Downloads\\begory2\\begory2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_begory_splash.png.flat",

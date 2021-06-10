@@ -40,30 +40,30 @@
             android:layout_alignParentTop="true"
             android:orientation="vertical">
 
-            <RadioGroup
-                android:id="@+id/rg_terms"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="12dp"
-                android:background="@color/white"
-                android:layout_gravity="center_horizontal">
+<!--            <RadioGroup-->
+<!--                android:id="@+id/rg_terms"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_margin="12dp"-->
+<!--                android:background="@color/white"-->
+<!--                android:layout_gravity="center_horizontal">-->
 
 
-                <androidx.appcompat.widget.AppCompatRadioButton
-                    android:id="@+id/rb_term2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ترم 2" />
+<!--                <androidx.appcompat.widget.AppCompatRadioButton-->
+<!--                    android:id="@+id/rb_term2"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="ترم 2" />-->
 
-                <androidx.appcompat.widget.AppCompatRadioButton
-                    android:id="@+id/rb_term1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ترم 1" />
+<!--                <androidx.appcompat.widget.AppCompatRadioButton-->
+<!--                    android:id="@+id/rb_term1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="ترم 1" />-->
 
 
-            </RadioGroup>
+<!--            </RadioGroup>-->
 
             <EditText
                 android:id="@+id/et_date"

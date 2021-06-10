@@ -19,23 +19,26 @@ import kotlin.collections.ArrayList
 class RemoteDataSource @Inject constructor(private val firebaseDatabase: FirebaseDatabase):IRemoteDataSource {
     val baseRef = firebaseDatabase.reference
     val baseStorage=FirebaseStorage.getInstance().reference.child("images/")
-    override fun addGift(gift: Gift, levels: List<FirebaseFilterType.LevelFilterType>, callback: IRemoteDataSource.MessageCallback) {
+    override fun addGift(gift: Gift, levels: String, callback: IRemoteDataSource.MessageCallback) {
         val i=baseStorage.child(UUID.randomUUID().toString())
         i.putFile(gift.imagePath!!.toUri()).addOnSuccessListener {
             i.downloadUrl.addOnSuccessListener { it-> gift.imagePath= it.toString()
-                var r=false
-                val y=levels.dropLast(1)
+
+                val y=levels.split('_').dropLast(1)
                 //levels.dropLast(1)
-                for(level:FirebaseFilterType.LevelFilterType in y){
+                var p=0
+                for(level in y){
+
                     val ref = baseRef.child(FirebaseFilterType.gifts).child(level.toString())
                     val id = ref.push().key
                     gift.id = id
                     ref.child(id!!).setValue(gift).addOnSuccessListener {
-                        r=true
+                        if (level==y[p])callback.onResponse(R.string.added)
                     }.addOnFailureListener {
-                        r=false }
+                        callback.onDataNotAvailable(R.string.error) }
+                    p++;
                 }
-                if(r) callback.onResponse(R.string.added) else callback.onDataNotAvailable(R.string.error)
+
             }// Image uploaded successfully
 
         }.addOnFailureListener(){
@@ -133,6 +136,7 @@ class RemoteDataSource @Inject constructor(private val firebaseDatabase: Firebas
 
 
     }
+
     override fun registerAdmin(user1: User,
                                callback: IRemoteDataSource.MessageCallback) {
         val ref = baseRef.child(FirebaseFilterType.users).orderByChild("mobile").equalTo(user1.mobile)
@@ -278,7 +282,7 @@ class RemoteDataSource @Inject constructor(private val firebaseDatabase: Firebas
         })
     }
     override fun filterGift(level: FirebaseFilterType.LevelFilterType, callback: IRemoteDataSource.ShowGiftsCallback) {
-        val ref = baseRef.child(level.toString())
+        val ref = baseRef.child(FirebaseFilterType.gifts).child(level.toString())
         ref.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot.exists()) {
@@ -308,8 +312,8 @@ class RemoteDataSource @Inject constructor(private val firebaseDatabase: Firebas
                     .child(i.date).setValue(i)
                     .addOnFailureListener { error=R.string.error }
             val cal=(i.isTnawel.toInt()*5)+(i.isA3traf.toInt()*5)+(i.iskodas.toInt()*5)+(i.isAttend.toInt()*5)
-            baseRef.child(FirebaseFilterType.users).child(i.id).child("balanceEqlomat").setValue(ServerValue.increment(cal.toDouble()))
-        }
+            baseRef.child(FirebaseFilterType.users).child(i.id).child("realPrice").setValue(ServerValue.increment(cal.toDouble()))
+            baseRef.child(FirebaseFilterType.users).child(i.id).child("price").setValue(ServerValue.increment(cal.toDouble()))}
         if(error==0)callback.onResponse(R.string.edited)
         else callback.onDataNotAvailable(error)
     }

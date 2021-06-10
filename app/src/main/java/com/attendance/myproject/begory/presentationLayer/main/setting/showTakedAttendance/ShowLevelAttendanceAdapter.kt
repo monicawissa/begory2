@@ -13,8 +13,7 @@ import com.attendance.myproject.begory.R
 import com.attendance.myproject.begory.data.Models.StudentWithTotalAttendanceCount
 import java.util.*
 
-class ShowLevelAttendanceAdapter(context: Activity, menuList: ArrayList<StudentWithTotalAttendanceCount>?,
-                                 mTerm1CheckBox: CheckBox, mTerm2CheckBox: CheckBox) : RecyclerView.Adapter<ShowLevelAttendanceAdapter.MyViewHolder?>() {
+class ShowLevelAttendanceAdapter(context: Activity, menuList: ArrayList<StudentWithTotalAttendanceCount>?) : RecyclerView.Adapter<ShowLevelAttendanceAdapter.MyViewHolder?>() {
     private val mMenuList: ArrayList<StudentWithTotalAttendanceCount> ? = menuList
     private val mContext: Activity = context
     //    private val mTerm1CheckBox: CheckBox? = mTerm1CheckBox
@@ -51,14 +50,14 @@ class ShowLevelAttendanceAdapter(context: Activity, menuList: ArrayList<StudentW
         attendanceTotalTnawel += attendance.tnawelAttendanceTotalCountTerm1
 //        }
 //        if (mTerm2CheckBox!!.isChecked) {
-        totalHesa += attendance.hesaTotalCountTerm2
-        totalKodas += attendance.kodasTotalCountTerm2
-        attendanceTotalHesa += attendance.hesaAttendanceTotalCountTerm2
-        attendanceTotalKodas += attendance.kodasAttendanceTotalCountTerm2
-        totalA3traf += attendance.a3trafTotalCountTerm2
-        totalTnawel += attendance.tnawelTotalCountTerm2
-        attendanceTotalA3traf += attendance.a3trafAttendanceTotalCountTerm2
-        attendanceTotalTnawel += attendance.tnawelAttendanceTotalCountTerm2
+//        totalHesa += attendance.hesaTotalCountTerm2
+//        totalKodas += attendance.kodasTotalCountTerm2
+//        attendanceTotalHesa += attendance.hesaAttendanceTotalCountTerm2
+//        attendanceTotalKodas += attendance.kodasAttendanceTotalCountTerm2
+//        totalA3traf += attendance.a3trafTotalCountTerm2
+//        totalTnawel += attendance.tnawelTotalCountTerm2
+//        attendanceTotalA3traf += attendance.a3trafAttendanceTotalCountTerm2
+//        attendanceTotalTnawel += attendance.tnawelAttendanceTotalCountTerm2
 //        }
         holder.mTextView.setText(attendance.name)
         holder.mHesaTextView.text = "$totalHesa/$attendanceTotalHesa"

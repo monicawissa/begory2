@@ -60,29 +60,29 @@
                 tools:setOnItemSelectedListener="@{showLevelAttendViewModel.spinnerListener}"
                 />
 
-            <LinearLayout
-                android:id="@+id/rg_terms"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="12dp"
-                android:layout_gravity="center_horizontal">
+<!--            <LinearLayout-->
+<!--                android:id="@+id/rg_terms"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_margin="12dp"-->
+<!--                android:layout_gravity="center_horizontal">-->
 
 
-                <androidx.appcompat.widget.AppCompatCheckBox
-                    android:id="@+id/cb_term2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ترم 2" />
+<!--                <androidx.appcompat.widget.AppCompatCheckBox-->
+<!--                    android:id="@+id/cb_term2"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="ترم 2" />-->
 
-                <androidx.appcompat.widget.AppCompatCheckBox
-                    android:id="@+id/cb_term1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ترم 1" />
+<!--                <androidx.appcompat.widget.AppCompatCheckBox-->
+<!--                    android:id="@+id/cb_term1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="ترم 1" />-->
 
 
-            </LinearLayout>
+<!--            </LinearLayout>-->
 
 
 

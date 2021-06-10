@@ -19,9 +19,8 @@ data class Gift (
         var numberOfItem: Int? = 0,
         //available :no,buy,book
         @SerializedName("booked")
-        var booked: Boolean?=false,
+        var booked: Int?=0,
         @SerializedName("initbooked")
         var initbooked: Boolean?=false,
-        @SerializedName("delivered")
-        var delivered: Boolean?=false
+        //when delivered -> minus the booked and numberOfItem
 )

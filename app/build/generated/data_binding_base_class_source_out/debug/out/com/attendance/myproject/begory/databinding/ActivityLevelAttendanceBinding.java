@@ -7,11 +7,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatRadioButton;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -30,15 +28,6 @@ public abstract class ActivityLevelAttendanceBinding extends ViewDataBinding {
 
   @NonNull
   public final ProgressBar progressBar;
-
-  @NonNull
-  public final AppCompatRadioButton rbTerm1;
-
-  @NonNull
-  public final AppCompatRadioButton rbTerm2;
-
-  @NonNull
-  public final RadioGroup rgTerms;
 
   @NonNull
   public final RecyclerView rvAttendance;
@@ -63,16 +52,12 @@ public abstract class ActivityLevelAttendanceBinding extends ViewDataBinding {
 
   protected ActivityLevelAttendanceBinding(Object _bindingComponent, View _root,
       int _localFieldCount, Button btnAdd, EditText etDate, ProgressBar progressBar,
-      AppCompatRadioButton rbTerm1, AppCompatRadioButton rbTerm2, RadioGroup rgTerms,
       RecyclerView rvAttendance, TextView tvA3traf, TextView tvAttend, TextView tvKodas,
       TextView tvTitle, TextView tvTnawel) {
     super(_bindingComponent, _root, _localFieldCount);
     this.btnAdd = btnAdd;
     this.etDate = etDate;
     this.progressBar = progressBar;
-    this.rbTerm1 = rbTerm1;
-    this.rbTerm2 = rbTerm2;
-    this.rgTerms = rgTerms;
     this.rvAttendance = rvAttendance;
     this.tvA3traf = tvA3traf;
     this.tvAttend = tvAttend;

@@ -41,7 +41,7 @@ class AppRepository @Inject constructor(private val mRemoteDataSource: IRemoteDa
         mIPreferencesHelper.setUserAsLoggedOut()
     }
 
-    override fun addGift(gift: Gift, level: List<FirebaseFilterType.LevelFilterType>, callback: IRemoteDataSource.MessageCallback) {
+    override fun addGift(gift: Gift, level: String, callback: IRemoteDataSource.MessageCallback) {
         mRemoteDataSource.addGift(gift,level,object :IRemoteDataSource.MessageCallback{
             override fun onResponse(message: Int?) {
                 callback.onResponse(message)

@@ -4,13 +4,11 @@ package com.attendance.myproject.begory.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -22,16 +20,7 @@ import java.lang.Object;
 
 public abstract class ActivityShowLevelAttendanceBinding extends ViewDataBinding {
   @NonNull
-  public final AppCompatCheckBox cbTerm1;
-
-  @NonNull
-  public final AppCompatCheckBox cbTerm2;
-
-  @NonNull
   public final ProgressBar progressBar;
-
-  @NonNull
-  public final LinearLayout rgTerms;
 
   @NonNull
   public final RecyclerView rvAttendance;
@@ -58,14 +47,10 @@ public abstract class ActivityShowLevelAttendanceBinding extends ViewDataBinding
   protected ShowLevelAttendViewModel mShowLevelAttendViewModel;
 
   protected ActivityShowLevelAttendanceBinding(Object _bindingComponent, View _root,
-      int _localFieldCount, AppCompatCheckBox cbTerm1, AppCompatCheckBox cbTerm2,
-      ProgressBar progressBar, LinearLayout rgTerms, RecyclerView rvAttendance, Spinner spLevels,
+      int _localFieldCount, ProgressBar progressBar, RecyclerView rvAttendance, Spinner spLevels,
       TextView tvA3traf, TextView tvAttend, TextView tvKodas, TextView tvTitle, TextView tvTnawel) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.cbTerm1 = cbTerm1;
-    this.cbTerm2 = cbTerm2;
     this.progressBar = progressBar;
-    this.rgTerms = rgTerms;
     this.rvAttendance = rvAttendance;
     this.spLevels = spLevels;
     this.tvA3traf = tvA3traf;

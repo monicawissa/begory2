@@ -103,8 +103,8 @@ class AddGiftViewModel  @ViewModelInject constructor(private val appRepository: 
     private fun isDataValid(): Boolean {
         // validate
         Log.d(ContentValues.TAG, "showMessage: isDataValid")
-
-        if (TextUtils.isEmpty(name)||!cost.isDigitsOnly()||cost.toDouble()<=0 ||selectedData.isEmpty()) {
+        val cost2=cost.toDouble()
+        if (TextUtils.isEmpty(name)||!cost.isDigitsOnly()||cost2<=0 ||TextUtils.isEmpty(selectedData)) {
             showSnackbarMessage(R.string.fill_cost_level)
             return false
         }
@@ -118,7 +118,7 @@ class AddGiftViewModel  @ViewModelInject constructor(private val appRepository: 
         if (mTitleTV.equals("إضافة هدية")&&isDataValid()) {
                 var gift: Gift = Gift(name = name, price = cost.toDouble(),
                         notes = notes, numberOfItem = number.toInt(),imagePath =image_path )
-                appRepository.addGift(gift,(selectedData.split("_") as List<FirebaseFilterType.LevelFilterType>), object : IRemoteDataSource.MessageCallback {
+                appRepository.addGift(gift,selectedData, object : IRemoteDataSource.MessageCallback {
                     override fun onResponse(message: Int?) {
                         showSnackbarMessage(message!!)
                         _dataLoading.value = false

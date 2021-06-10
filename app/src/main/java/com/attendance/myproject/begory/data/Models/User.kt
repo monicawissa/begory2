@@ -42,4 +42,4 @@ data class User (
         @SerializedName("firstTime_ToLogin")
     var firstTime_ToLogin:Boolean=true,
         @SerializedName("selectedGifts")
-        var selectedGifts: ArrayList<Gift>? = null) : Serializable
+        var selectedGifts: ArrayList<Gift>? = ArrayList<Gift>()) : Serializable

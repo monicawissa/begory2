@@ -15,15 +15,12 @@ public class ActivityShowLevelAttendanceBindingImpl extends ActivityShowLevelAtt
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.rg_terms, 3);
-        sViewsWithIds.put(R.id.cb_term2, 4);
-        sViewsWithIds.put(R.id.cb_term1, 5);
-        sViewsWithIds.put(R.id.tv_a3traf, 6);
-        sViewsWithIds.put(R.id.tv_tnawel, 7);
-        sViewsWithIds.put(R.id.tv_kodas, 8);
-        sViewsWithIds.put(R.id.tv_attend, 9);
-        sViewsWithIds.put(R.id.tv_title, 10);
-        sViewsWithIds.put(R.id.rv_attendance, 11);
+        sViewsWithIds.put(R.id.tv_a3traf, 3);
+        sViewsWithIds.put(R.id.tv_tnawel, 4);
+        sViewsWithIds.put(R.id.tv_kodas, 5);
+        sViewsWithIds.put(R.id.tv_attend, 6);
+        sViewsWithIds.put(R.id.tv_title, 7);
+        sViewsWithIds.put(R.id.rv_attendance, 8);
     }
     // views
     @NonNull
@@ -34,21 +31,18 @@ public class ActivityShowLevelAttendanceBindingImpl extends ActivityShowLevelAtt
     // Inverse Binding Event Handlers
 
     public ActivityShowLevelAttendanceBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 12, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 9, sIncludes, sViewsWithIds));
     }
     private ActivityShowLevelAttendanceBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.appcompat.widget.AppCompatCheckBox) bindings[5]
-            , (androidx.appcompat.widget.AppCompatCheckBox) bindings[4]
             , (android.widget.ProgressBar) bindings[1]
-            , (android.widget.LinearLayout) bindings[3]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[11]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[8]
             , (android.widget.Spinner) bindings[2]
+            , (android.widget.TextView) bindings[3]
             , (android.widget.TextView) bindings[6]
-            , (android.widget.TextView) bindings[9]
-            , (android.widget.TextView) bindings[8]
-            , (android.widget.TextView) bindings[10]
+            , (android.widget.TextView) bindings[5]
             , (android.widget.TextView) bindings[7]
+            , (android.widget.TextView) bindings[4]
             );
         this.mboundView0 = (android.widget.RelativeLayout) bindings[0];
         this.mboundView0.setTag(null);
