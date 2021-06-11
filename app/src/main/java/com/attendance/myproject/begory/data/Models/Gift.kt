@@ -23,4 +23,4 @@ data class Gift (
         @SerializedName("initbooked")
         var initbooked: Boolean?=false,
         //when delivered -> minus the booked and numberOfItem
-)
+):Serializable

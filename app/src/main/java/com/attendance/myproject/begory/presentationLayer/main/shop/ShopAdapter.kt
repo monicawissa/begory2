@@ -102,7 +102,6 @@ class ShopAdapter(private val mContext: Context, private val mlist: List<Gift>,v
                         {
                             //user.price!! -= mlist[pos].price!!
                             mlist[pos].initbooked = true
-                            user.selectedGifts=ArrayList<Gift>()
                             user!!.selectedGifts!!.add( mlist[pos])
                             var user2:User=user
                             user2!!.price = user2!!.price?.minus(mlist[pos]!!.price!!)

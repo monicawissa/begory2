@@ -151,6 +151,7 @@ class AppRepository @Inject constructor(private val mRemoteDataSource: IRemoteDa
                 callback.onDataNotAvailable(message)
             }
         })
+        mIPreferencesHelper.setUser(user)
     }
 
     override fun updateSubAdmin(user: User, callback: IRemoteDataSource.MessageCallback) {

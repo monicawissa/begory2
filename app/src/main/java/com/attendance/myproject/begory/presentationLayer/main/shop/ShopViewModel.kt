@@ -101,7 +101,7 @@ class ShopViewModel  @ViewModelInject constructor(private val appRepository: App
         _dataLoading.value = true
 
         for (i in user?.selectedGifts!!){
-            if(i.initbooked==true&& i.numberOfItem!! <=(i.booked?.plus(1)!!))
+            if(i.initbooked==true&& i.numberOfItem!! >=(i.booked?.plus(1)!!))
             {
 
                 i.booked = i.booked?.plus(1);
@@ -110,10 +110,14 @@ class ShopViewModel  @ViewModelInject constructor(private val appRepository: App
             }
 
         }
+        for (i in mGiftList)
+            if (i.initbooked==true)i.initbooked=false
+
         appRepository.updateStudent(user!!,object :IRemoteDataSource.MessageCallback{
             override fun onResponse(message: Int?) {
                 showSnackbarMessage(message!!)
                 _dataLoading.value = false
+                _mGiftListListener.value=true
             }
 
             override fun onDataNotAvailable(message: Int?) {

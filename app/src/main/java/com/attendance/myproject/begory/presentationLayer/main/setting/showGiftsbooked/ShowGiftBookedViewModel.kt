@@ -25,9 +25,7 @@ class ShowGiftBookedViewModel  @ViewModelInject constructor(private val appRepos
     val mStudentAttendancesList: LiveData<Boolean>
         get() = _mStudentAttendancesList
 
-    var mSelectedDate:String=""
-    var mSelectedTermId:Int=0
-    var studentLevel: FirebaseFilterType.LevelFilterType? = null
+      var studentLevel: FirebaseFilterType.LevelFilterType? = null
 
 
     var mTitleTV = savedStateHandle.getLiveData<String>("settingType").value
@@ -42,7 +40,6 @@ class ShowGiftBookedViewModel  @ViewModelInject constructor(private val appRepos
                 studentLevel = levelId
                 mListLast.clear()
                 mStudentList.clear()
-                _mStudentAttendancesList.value=true
                 getStudentList()
             }
         }
