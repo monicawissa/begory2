@@ -30,11 +30,11 @@ public interface IRemoteDataSource {
     }
     fun addGift(gift: Gift,level: String
                 , callback: IRemoteDataSource.MessageCallback)
-    fun updateGift(gift: Gift,level: FirebaseFilterType.LevelFilterType, callback: IRemoteDataSource.MessageCallback)
+    fun updateGift(gift: Gift, level: String, callback: MessageCallback)
 
     fun deleteGift(gift: Gift,level: FirebaseFilterType.LevelFilterType, callback: IRemoteDataSource.MessageCallback)
 
-    fun login(mobile: String, password: String, callback: LoginCallback)
+    fun login(mobile: String, password: String, selectedLevel: String, callback: LoginCallback)
     fun registerStudent(user: User
                         , callback: IRemoteDataSource.MessageCallback)
     fun registerSubAdmin(user: User,callback: IRemoteDataSource.MessageCallback)
@@ -47,7 +47,7 @@ public interface IRemoteDataSource {
     fun updatePassword(user: User,callback: IRemoteDataSource.LoginCallback)
     fun filterLevel(level: FirebaseFilterType.LevelFilterType, callback: UsersCallback)
     fun updateAttendance(listOfAttendence: List<Attendance>?, callback: MessageCallback)
-    fun filterGift(studentLevel: FirebaseFilterType.LevelFilterType, giftsCallback: IRemoteDataSource.ShowGiftsCallback)
+    fun filterGift(studentLevel: String, giftsCallback: ShowGiftsCallback)
     fun bookingGifts(level: FirebaseFilterType.LevelFilterType, showBookingGiftsCallback: IRemoteDataSource.ShowBookingGiftsCallback)
 
 //    fun getTopRatedMovies(callback: LoadAllMoviesCallback)

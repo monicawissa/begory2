@@ -31,6 +31,7 @@ data class User (
     var subAdminLevel: String?="",
         @SerializedName("studentLevel")
     var studentLevel:  String?="",
+
         @SerializedName("price")
         var price: Double? = 0.0,
         @SerializedName("realPrice")

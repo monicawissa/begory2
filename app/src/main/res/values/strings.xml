@@ -26,7 +26,7 @@
 
     <string name="error">حدث خطا</string>
     <string name="wrong_mobile">رقم الهاتف غير صحيح</string>
-    <string name="wrong_password">كلمة المرور غير صحيحه</string>
+    <string name="wrong_password">كلمة المرور او المرحلة غير صحيحه</string>
 
     <string name="m_add_student">إضافة مخدوم</string>
     <string name="m_edit_student">تعديل مخدوم</string>

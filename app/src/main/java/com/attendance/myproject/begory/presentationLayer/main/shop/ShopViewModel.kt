@@ -69,7 +69,7 @@ class ShopViewModel  @ViewModelInject constructor(private val appRepository: App
         mUserPrice.value=user!!.price.toString();
         _dataLoading.value = true
 //        _isCheckBtnAvailable.value=false
-        appRepository.filterGift(user!!.studentLevel!!, object : IRemoteDataSource.ShowGiftsCallback {
+        appRepository.filterGift(appRepository.getUser()!!.studentLevel!!, object : IRemoteDataSource.ShowGiftsCallback {
             override fun onResponse(gifts: List<Gift>) {
                 mGiftList.addAll(gifts)
                 _mGiftListListener.value=true
@@ -84,7 +84,7 @@ class ShopViewModel  @ViewModelInject constructor(private val appRepository: App
         })
 
     }
-    fun update(gift: Gift, studentLevel: FirebaseFilterType.LevelFilterType?) {
+    fun update(gift: Gift, studentLevel: String) {
         appRepository.updateGift(gift!!,studentLevel!!,object :IRemoteDataSource.MessageCallback{
             override fun onResponse(message: Int?) {
 
@@ -106,7 +106,7 @@ class ShopViewModel  @ViewModelInject constructor(private val appRepository: App
 
                 i.booked = i.booked?.plus(1);
                 i.initbooked=false
-                update(i, user!!.studentLevel)
+                update(i, appRepository.getUser()!!.studentLevel!!)
             }
 
         }

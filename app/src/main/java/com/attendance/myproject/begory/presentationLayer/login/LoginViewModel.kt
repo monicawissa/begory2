@@ -2,6 +2,8 @@ package com.attendance.myproject.begory.presentationLayer.login
 import android.content.ContentValues
 import android.text.TextUtils
 import android.util.Log
+import android.view.View
+import android.widget.AdapterView
 import androidx.annotation.StringRes
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
@@ -9,7 +11,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.attendance.myproject.begory.R
 import com.attendance.myproject.begory.Utilities.ggle.Event
+import com.attendance.myproject.begory.data.Models.Level
 import com.attendance.myproject.begory.data.Models.User
+import com.attendance.myproject.begory.data.Models.remote.FirebaseFilterType
 import com.attendance.myproject.begory.data.source.AppRepository
 import com.attendance.myproject.begory.data.source.remote.IRemoteDataSource
 
@@ -18,6 +22,16 @@ class LoginViewModel  @ViewModelInject constructor(private val appRepository: Ap
 
     var mobile:String = ""
     var password :String=""
+    var selectedLevel:String=""
+    val spinnerListener = object : AdapterView.OnItemSelectedListener {
+        override fun onNothingSelected(parent: AdapterView<*>?) {
+
+        }
+
+        override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+            selectedLevel+= FirebaseFilterType.fbConvert(((parent!!.getItemAtPosition(position)) as Level).levelId!!)
+        }
+    }
     //clickable of button
     private val _isDataAvailable = MutableLiveData<Boolean>()
     val isDataAvailable: LiveData<Boolean>
@@ -74,7 +88,7 @@ class LoginViewModel  @ViewModelInject constructor(private val appRepository: Ap
         _ishideKeyboard.value=true
         _dataLoading.value=true
         if(ismobileAndPasswordValid()){
-            appRepository.login(mobile, password, object : IRemoteDataSource.LoginCallback {
+            appRepository.login(mobile, password,selectedLevel, object : IRemoteDataSource.LoginCallback {
                 override fun onResponse(user: User) {
                     showSnackbarMessage2("Welcome " + user.name)
                     _isDataAvailable.value = false

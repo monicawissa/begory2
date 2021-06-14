@@ -27,7 +27,15 @@ class SavePrefs<T> @Inject constructor(@ApplicationContext activity: Context, @P
         val data = prefs.getString(Pref_key,"")
         return Gson().fromJson(data, cls) as T
     }
+    fun savestring(Pref_key:String,obj: String) {
+        val editor = prefs.edit()
+        editor.putString(Pref_key, obj)
+        editor.apply()
+    }
 
+    fun loadstring(Pref_key:String): String {
+        return prefs.getString(Pref_key,"")
+    }
     fun clear() {
         prefs.edit().clear().apply()
     }

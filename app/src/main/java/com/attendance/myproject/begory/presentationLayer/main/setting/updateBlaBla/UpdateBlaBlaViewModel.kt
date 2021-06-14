@@ -48,9 +48,10 @@ class UpdateBlaBlaViewModel  @ViewModelInject constructor(private val appReposit
         }
 
         override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-            studentLevel = FirebaseFilterType.fbConvert(
+            studentLevel += FirebaseFilterType.fbConvert(
                     ((parent!!.getItemAtPosition(position)) as Level).levelId!!
             )
+            studentLevel+='_'
 
         }
     }

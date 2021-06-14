@@ -17,6 +17,7 @@ class AppPreferencesHelper @Inject constructor(@ApplicationContext context: Cont
 
   companion object {
     private val PREF_KEY_ACCESS_TOKEN: String = "PREF_KEY_ACCESS_TOKEN"
+    private val PREF_KEY_Level: String = "PREF_KEY_Level"
 
   }
   override fun getUser():User? {
@@ -26,7 +27,13 @@ class AppPreferencesHelper @Inject constructor(@ApplicationContext context: Cont
   override fun setUser(user: User) {
     mPrefs.save(PREF_KEY_ACCESS_TOKEN,user)
   }
+  override fun getLevel():String {
+    return mPrefs.loadstring(PREF_KEY_Level)
+  }
 
+  override fun setLevel(l: String) {
+    mPrefs.savestring(PREF_KEY_Level,l)
+  }
   override fun setUserAsLoggedOut() {
     mPrefs.clear()
   }

@@ -28,7 +28,7 @@ class AddBlaBlaViewModel  @ViewModelInject constructor(private val appRepository
     var mobile2: String = ""
     var address: String = ""
     var isshamas: Boolean = false
-    var studentLevel: FirebaseFilterType.LevelFilterType? = null
+    var studentLevel: String? = null
     var adminLevel: String? = ""
     var subAdminLevel: String? = ""
     var mTitleTV = savedStateHandle.getLiveData<String>("settingType").value
@@ -47,9 +47,10 @@ class AddBlaBlaViewModel  @ViewModelInject constructor(private val appRepository
         }
 
         override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-            studentLevel = FirebaseFilterType.fbConvert(
+            studentLevel += FirebaseFilterType.fbConvert(
                     ((parent!!.getItemAtPosition(position)) as Level).levelId!!
             )
+            studentLevel+='_'
         }
     }
 
@@ -107,7 +108,7 @@ class AddBlaBlaViewModel  @ViewModelInject constructor(private val appRepository
             showSnackbarMessage(R.string.fill_mobiledata)
             return false
         }
-        if (TextUtils.isEmpty(name) || (mTitleTV.equals("إضافة مخدوم") && studentLevel == null)) {
+        if (TextUtils.isEmpty(name) || (mTitleTV.equals("إضافة مخدوم") && studentLevel!!.isEmpty())) {
             Log.d(ContentValues.TAG, "showMessage: PasswordValid")
             showSnackbarMessage(R.string.fill_name_level)
             return false

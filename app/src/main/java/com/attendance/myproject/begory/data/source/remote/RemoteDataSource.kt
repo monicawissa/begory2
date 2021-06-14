@@ -2,7 +2,6 @@ package com.attendance.myproject.begory.data.source.remote
 
 import android.content.ContentValues
 import android.util.Log
-import android.widget.Toast
 import androidx.core.net.toUri
 import com.attendance.myproject.begory.R
 import com.attendance.myproject.begory.data.Models.Attendance
@@ -11,7 +10,6 @@ import com.attendance.myproject.begory.data.Models.User
 import com.attendance.myproject.begory.data.Models.remote.FirebaseFilterType
 import com.google.firebase.database.*
 import com.google.firebase.storage.FirebaseStorage
-import java.net.URL
 import java.util.*
 import javax.inject.Inject
 import kotlin.collections.ArrayList
@@ -46,7 +44,7 @@ class RemoteDataSource @Inject constructor(private val firebaseDatabase: Firebas
 
     }
 
-    override fun updateGift(gift: Gift,level: FirebaseFilterType.LevelFilterType,  callback: IRemoteDataSource.MessageCallback) {
+    override fun updateGift(gift: Gift, level: String, callback: IRemoteDataSource.MessageCallback) {
         val ref = baseRef.child(FirebaseFilterType.gifts).child(level.toString())
         ref.child(gift.id!!).setValue(gift).addOnSuccessListener {
             callback.onResponse(R.string.edited)
@@ -59,14 +57,14 @@ class RemoteDataSource @Inject constructor(private val firebaseDatabase: Firebas
         }.addOnFailureListener { callback.onDataNotAvailable(R.string.error) }
     }
 
-    override fun login(mobile: String, password: String, callback: IRemoteDataSource.LoginCallback){
+    override fun login(mobile: String, password: String, selectedLevel: String, callback: IRemoteDataSource.LoginCallback){
         val ref = baseRef.child(FirebaseFilterType.users).orderByChild("mobile").equalTo(mobile)
         ref.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot.exists()) {
                     dataSnapshot.children.forEach {
                         val user = it.getValue(User::class.java);
-                        if (user!!.mobile_password.equals("$mobile $password"))
+                        if (user!!.mobile_password.equals("$mobile $password")&&user!!.studentLevel!!.contains(selectedLevel))
                             callback.onResponse(user)
                         else callback.onDataNotAvailable(R.string.wrong_password)
                     }
@@ -86,7 +84,15 @@ class RemoteDataSource @Inject constructor(private val firebaseDatabase: Firebas
         ref.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot.exists()) {
-                    callback.onDataNotAvailable(R.string.user_exist)
+                    dataSnapshot.children.forEach {
+                        val user2 = it.getValue(User::class.java);
+                        if (user2!!.studentLevel!!.contains(user!!.studentLevel!!) )callback.onDataNotAvailable(R.string.user_exist)
+                        else{user2.studentLevel+=user.studentLevel
+                            baseRef.child(FirebaseFilterType.users).child(user.id!!).setValue(user2).addOnSuccessListener { callback.onResponse(R.string.added) }
+                                    .addOnFailureListener { callback.onDataNotAvailable(R.string.error) }
+                        }
+                    }
+
                 } else {
                     val query =baseRef.child(FirebaseFilterType.users)
                     Log.d(ContentValues.TAG, "showMessage: " + query)
@@ -281,7 +287,7 @@ class RemoteDataSource @Inject constructor(private val firebaseDatabase: Firebas
             }
         })
     }
-    override fun filterGift(level: FirebaseFilterType.LevelFilterType, callback: IRemoteDataSource.ShowGiftsCallback) {
+    override fun filterGift(level: String, callback: IRemoteDataSource.ShowGiftsCallback) {
         val ref = baseRef.child(FirebaseFilterType.gifts).child(level.toString())
         ref.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {

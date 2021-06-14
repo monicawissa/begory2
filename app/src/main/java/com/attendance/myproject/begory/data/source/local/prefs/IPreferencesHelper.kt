@@ -9,4 +9,6 @@ interface IPreferencesHelper {
     fun getUser():User?
     fun setUser(user: User)
     fun setUserAsLoggedOut()
+    fun getLevel(): String
+    fun setLevel(l: String)
 }

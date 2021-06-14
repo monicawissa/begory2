@@ -23,8 +23,11 @@ class AppRepository @Inject constructor(private val mRemoteDataSource: IRemoteDa
     override fun getUser():User? {
         return mIPreferencesHelper.getUser()
     }
+
+
     override fun getUserLastUpdate(callback: IRemoteDataSource.LoginCallback) {
-        mRemoteDataSource.checkUserExist(mIPreferencesHelper.getUser()!!.mobile!!,object :IRemoteDataSource.LoginCallback{
+        val u=getUser()
+        mRemoteDataSource.checkUserExist(u!!.mobile!!,object :IRemoteDataSource.LoginCallback{
             override fun onResponse(user: User) {
                 callback.onResponse(user)
             }
@@ -41,6 +44,14 @@ class AppRepository @Inject constructor(private val mRemoteDataSource: IRemoteDa
         mIPreferencesHelper.setUserAsLoggedOut()
     }
 
+    override fun getLevel(): String {
+        return mIPreferencesHelper.getLevel()
+    }
+
+    override fun setLevel(l: String) {
+        mIPreferencesHelper.setLevel(l)
+    }
+
     override fun addGift(gift: Gift, level: String, callback: IRemoteDataSource.MessageCallback) {
         mRemoteDataSource.addGift(gift,level,object :IRemoteDataSource.MessageCallback{
             override fun onResponse(message: Int?) {
@@ -53,7 +64,7 @@ class AppRepository @Inject constructor(private val mRemoteDataSource: IRemoteDa
 
         })    }
 
-    override fun updateGift(gift: Gift, level: FirebaseFilterType.LevelFilterType, callback: IRemoteDataSource.MessageCallback) {
+    override fun updateGift(gift: Gift, level: String, callback: IRemoteDataSource.MessageCallback) {
         mRemoteDataSource.updateGift(gift,level,object :IRemoteDataSource.MessageCallback{
             override fun onResponse(message: Int?) {
                 callback.onResponse(message)
@@ -76,9 +87,10 @@ class AppRepository @Inject constructor(private val mRemoteDataSource: IRemoteDa
             }
         })    }
 
-    override fun login(mobile: String, password: String, callback: IRemoteDataSource.LoginCallback) {
-        mRemoteDataSource.login(mobile,password,object :IRemoteDataSource.LoginCallback{
+    override fun login(mobile: String, password: String,  selectedLevel: String, callback: IRemoteDataSource.LoginCallback) {
+        mRemoteDataSource.login(mobile,password,selectedLevel,object :IRemoteDataSource.LoginCallback{
             override fun onResponse(user: User) {
+                mIPreferencesHelper.setLevel(selectedLevel)
                 mIPreferencesHelper.setUser(user)
                 callback.onResponse(user)
             }
@@ -140,17 +152,6 @@ class AppRepository @Inject constructor(private val mRemoteDataSource: IRemoteDa
             }
         })
     }
-    override fun updateStudentelse(user: User, callback: IRemoteDataSource.MessageCallback) {
-        mRemoteDataSource.updateStudent(user,object :IRemoteDataSource.MessageCallback{
-            override fun onResponse(message: Int?) {
-                callback.onResponse(message)
-            }
-
-            override fun onDataNotAvailable(message: Int?) {
-                callback.onDataNotAvailable(message)
-            }
-        })
-    }
     override fun updateStudent(user: User, callback: IRemoteDataSource.MessageCallback) {
         mRemoteDataSource.updateStudent(user,object :IRemoteDataSource.MessageCallback{
             override fun onResponse(message: Int?) {
@@ -161,7 +162,7 @@ class AppRepository @Inject constructor(private val mRemoteDataSource: IRemoteDa
                 callback.onDataNotAvailable(message)
             }
         })
-        mIPreferencesHelper.setUser(user)
+
     }
 
     override fun updateSubAdmin(user: User, callback: IRemoteDataSource.MessageCallback) {
@@ -244,7 +245,7 @@ class AppRepository @Inject constructor(private val mRemoteDataSource: IRemoteDa
             }
         })
     }
-    override fun filterGift(level: FirebaseFilterType.LevelFilterType, callback: IRemoteDataSource.ShowGiftsCallback) {
+    override fun filterGift(level: String, callback: IRemoteDataSource.ShowGiftsCallback) {
         mRemoteDataSource.filterGift(level,object : IRemoteDataSource.ShowGiftsCallback{
             override fun onResponse(gift: List<Gift>) {
                 callback.onResponse(gift)

@@ -96,9 +96,7 @@ class ProfileViewModel  @ViewModelInject constructor(private val appRepository: 
         balancePrice.value=usertmp.price.toString()
         password.value=usertmp.password!!
         address.value=usertmp.address!!
-        if(usertmp.studentLevel==null)
-            studentLevel.value=""
-        else studentLevel.value=usertmp.studentLevel.toString()
+        studentLevel.value=usertmp.studentLevel
         //_isDataAvailable.value=true
     }
 
@@ -136,6 +134,7 @@ class ProfileViewModel  @ViewModelInject constructor(private val appRepository: 
                 appRepository.updateStudent(usertmp, object : IRemoteDataSource.MessageCallback {
                     override fun onResponse(message: Int?) {
                         showSnackbarMessage(message!!)
+                        appRepository.setUser(usertmp)
                         _dataLoading.value = false
                         _isBtnAvailable.value = true
                     }
@@ -147,6 +146,7 @@ class ProfileViewModel  @ViewModelInject constructor(private val appRepository: 
                     }
 
                 })
+
             } else _dataLoading.value = false
 
     }

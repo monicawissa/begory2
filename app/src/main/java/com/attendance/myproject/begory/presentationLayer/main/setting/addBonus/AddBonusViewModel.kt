@@ -112,7 +112,7 @@ class AddBonusViewModel  @ViewModelInject constructor(private val appRepository:
         for (i in mListLast){
 
             if(_mStudentList[y].price!=i.price){
-                appRepository.updateStudentelse(i!!,object :IRemoteDataSource.MessageCallback{
+                appRepository.updateStudent(i!!,object :IRemoteDataSource.MessageCallback{
                     override fun onResponse(message: Int?) {
                         showSnackbarMessage(message!!)
                         if(y==(mListLast.size))_dataLoading.value = false
