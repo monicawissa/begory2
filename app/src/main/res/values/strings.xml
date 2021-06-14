@@ -38,6 +38,7 @@
     <string name="m_add_attendance">إضافة حضور</string>
     <string name="m_levels_attendance">كشف حضور</string>
     <string name="m_Gifts_booked">ليست الحجوزات</string>
+    <string name="m_Add_Bonus">أضافة بونص </string>
 
     <string name="m_add_Gift">إضافة هدية</string>
     <string name="m_edit_Gift">تعديل هدية</string>
@@ -150,10 +151,13 @@
     <string name="no_booking_gift">لا يوجد حجوزات حاليا</string>
     <string name="available_points">نقاط متاحه</string>
     <string name="book_now">تأكيد الحجز</string>
+    <string name="book_now2">تأكيد </string>
+
     <string name="book">احجز</string>
     <string name="booked">محجوز</string>
     <string name="cancel_booking">الغاء الحجز</string>
     <string name="booked_success">تم الحجز</string>
     <string name="points_not_enough">عفوا النقاط غير كافية</string>
     <string name="point">نقطة</string>
+    <string name="todo">TODO</string>
 </resources>

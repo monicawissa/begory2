@@ -12,6 +12,7 @@ import com.attendance.myproject.begory.R.string.*
 import com.attendance.myproject.begory.Utilities.UiManager
 import com.attendance.myproject.begory.presentationLayer.main.setting.SettingsAdapter.SettingsViewHolder
 import com.attendance.myproject.begory.presentationLayer.main.setting.addBlaBla.AddBlaBlaActivity
+import com.attendance.myproject.begory.presentationLayer.main.setting.addBonus.AddBonusActivity
 import com.attendance.myproject.begory.presentationLayer.main.setting.addGift.AddGiftActivity
 import com.attendance.myproject.begory.presentationLayer.main.setting.showGiftsbooked.ShowGiftBookedActivity
 import com.attendance.myproject.begory.presentationLayer.main.setting.showTakedAttendance.ShowLevelAttendActivity
@@ -59,7 +60,7 @@ class SettingsAdapter(private val mContext: Context, private val mlist: List<Int
                             //m_edit_Gift -> UiManager.startActivity(mContext, UserActivity::class.java, mContext.getString(settingType),mContext.getString(m_edit_admin) )
                             //m_delete_Gift -> UiManager.startActivity(mContext,AddBlaBlaActivity::class.java, mContext.getString(settingType),mContext.getString(m_add_admin) )
                             m_Gifts_booked -> UiManager.startActivity(mContext, ShowGiftBookedActivity::class.java, mContext.getString(settingType),mContext.getString(m_Gifts_booked) )
-
+                            m_Add_Bonus -> UiManager.startActivity(mContext, AddBonusActivity::class.java, mContext.getString(settingType),mContext.getString(m_Add_Bonus) )
                         }
                     }
                 })

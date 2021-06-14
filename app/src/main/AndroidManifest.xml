@@ -54,7 +54,11 @@
             android:screenOrientation="portrait"/>
         <activity android:name="com.attendance.myproject.begory.presentationLayer.main.setting.showGiftsbooked.ShowGiftBookedActivity"
             android:launchMode="singleTop"
-            android:theme="@style/dialogTheme"
+            android:theme="@style/AppThemeNoBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.attendance.myproject.begory.presentationLayer.main.setting.addBonus.AddBonusActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeNoBar"
             android:screenOrientation="portrait"/>
         <activity
             android:name="com.yalantis.ucrop.UCropActivity"

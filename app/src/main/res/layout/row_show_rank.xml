@@ -12,24 +12,6 @@ android:orientation="vertical">
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/tv_total_grade"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@drawable/circle_score"
-            android:gravity="center"
-            android:inputType="number"
-            android:text=""
-            android:hint="-"
-            android:textColorHint="@color/white"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
-    </LinearLayout>
 
     <TextView
         android:id="@+id/tv_student_name"
@@ -41,6 +23,24 @@ android:orientation="vertical">
         android:layout_gravity="center_vertical"
         android:textColor="@color/white"
         android:textSize="18sp" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_total_grade"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/circle_score_top2"
+            android:gravity="center"
+            android:inputType="number"
+            android:text=""
+            android:hint="-"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
 
 </LinearLayout>
 

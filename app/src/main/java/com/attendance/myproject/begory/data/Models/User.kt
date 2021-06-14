@@ -30,8 +30,7 @@ data class User (
         @SerializedName("subAdminLevel")
     var subAdminLevel: String?="",
         @SerializedName("studentLevel")
-    var studentLevel: FirebaseFilterType.LevelFilterType?=null,
-
+    var studentLevel:  String?="",
         @SerializedName("price")
         var price: Double? = 0.0,
         @SerializedName("realPrice")

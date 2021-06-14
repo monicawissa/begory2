@@ -84,6 +84,7 @@
                     android:indeterminate="true"
                     android:indeterminateDrawable="@drawable/progress_bar"
                     android:visibility="@{shopViewModel.dataLoading ? View.VISIBLE: View.GONE  }"
+
                     />
 
                 <androidx.recyclerview.widget.RecyclerView
@@ -103,7 +104,6 @@
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="12dp"
-                    android:background="@{shopViewModel.dataLoading ? @drawable/btn_menu_selector :@drawable/btn_white_selector }"
                     android:paddingLeft="16dp"
                     android:paddingRight="16dp"
                     android:paddingTop="4dp"
@@ -114,8 +114,7 @@
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:onClick="@{()-> shopViewModel.btnadd()}"
-                    android:clickable="@{!shopViewModel.dataLoading}"
+
                     />
 
         </RelativeLayout>

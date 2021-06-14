@@ -29,7 +29,7 @@ class UpdateBlaBlaViewModel  @ViewModelInject constructor(private val appReposit
     var mobile2: String =  usertmp.mobile2!!
     var address: String =  usertmp.address!!
     var isshamas: Boolean =  usertmp.isShamas!!
-    var studentLevel: FirebaseFilterType.LevelFilterType? = usertmp.studentLevel
+    var studentLevel:  String? = usertmp.studentLevel
     var adminLevel: String? = usertmp.adminLevel!!
     var subAdminLevel: String? =  usertmp.subAdminLevel!!
     var mTitleTV = savedStateHandle.getLiveData<String>("settingType").value
@@ -149,7 +149,7 @@ class UpdateBlaBlaViewModel  @ViewModelInject constructor(private val appReposit
                 usertmp.address=address
                 usertmp.isShamas=isshamas
                 usertmp.studentLevel=studentLevel
-                appRepository.updateStudent(usertmp, object : IRemoteDataSource.MessageCallback {
+                appRepository.updateStudentelse(usertmp, object : IRemoteDataSource.MessageCallback {
                     override fun onResponse(message: Int?) {
                         showSnackbarMessage(message!!)
                         _dataLoading.value = false
