@@ -50,7 +50,7 @@ class AddBlaBlaViewModel  @ViewModelInject constructor(private val appRepository
             studentLevel += FirebaseFilterType.fbConvert(
                     ((parent!!.getItemAtPosition(position)) as Level).levelId!!
             )
-            studentLevel+='_'
+            //studentLevel+='_'
         }
     }
 

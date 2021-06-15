@@ -84,10 +84,6 @@ class AddGiftActivity : BaseActivity1() ,AddGiftNavigator{
         binding.multipleItemSelectionSpinner.setItems(mLevelsList)
 
     }
-
-    fun openMainActivity() {
-        finish()
-    }
     private fun fillMenu(): List<Int>? {
         val mItems  =ArrayList<Int>()
         val v= AppPreferencesHelper(applicationContext)
@@ -102,6 +98,10 @@ class AddGiftActivity : BaseActivity1() ,AddGiftNavigator{
                 (user!!.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Augustine).toString()))
             mItems.add(R.string.lev_Augustine)
         return mItems.toList()
+    }
+
+    fun openMainActivity() {
+        finish()
     }
 
     private fun subscribeToNavigationChanges(viewModel: AddGiftViewModel) {

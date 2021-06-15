@@ -51,7 +51,7 @@ class UpdateBlaBlaViewModel  @ViewModelInject constructor(private val appReposit
             studentLevel += FirebaseFilterType.fbConvert(
                     ((parent!!.getItemAtPosition(position)) as Level).levelId!!
             )
-            studentLevel+='_'
+            //studentLevel+='_'
 
         }
     }
@@ -150,14 +150,12 @@ class UpdateBlaBlaViewModel  @ViewModelInject constructor(private val appReposit
                 usertmp.address=address
                 usertmp.isShamas=isshamas
                 usertmp.studentLevel=studentLevel
-                appRepository.updateStudentelse(usertmp, object : IRemoteDataSource.MessageCallback {
+                appRepository.updateStudent(usertmp, object : IRemoteDataSource.MessageCallback {
                     override fun onResponse(message: Int?) {
                         showSnackbarMessage(message!!)
                         _dataLoading.value = false
                         _isBtnAvailable.value = true
-
                         _isOpenMain.value=true
-
                     }
 
                     override fun onDataNotAvailable(message: Int?) {

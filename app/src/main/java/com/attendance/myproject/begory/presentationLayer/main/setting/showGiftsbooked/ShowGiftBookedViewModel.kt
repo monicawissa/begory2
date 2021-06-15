@@ -25,7 +25,7 @@ class ShowGiftBookedViewModel  @ViewModelInject constructor(private val appRepos
     val mStudentAttendancesList: LiveData<Boolean>
         get() = _mStudentAttendancesList
 
-      var studentLevel: FirebaseFilterType.LevelFilterType? = null
+      var studentLevel: String? = null
 
 
     var mTitleTV = savedStateHandle.getLiveData<String>("settingType").value
@@ -37,7 +37,7 @@ class ShowGiftBookedViewModel  @ViewModelInject constructor(private val appRepos
         override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
             var levelId= FirebaseFilterType.fbConvert(((parent!!.getItemAtPosition(position)) as Level).levelId!!)
             if(levelId!=FirebaseFilterType.LevelFilterType.no){
-                studentLevel = levelId
+                studentLevel += levelId
                 mListLast.clear()
                 mStudentList.clear()
                 getStudentList()

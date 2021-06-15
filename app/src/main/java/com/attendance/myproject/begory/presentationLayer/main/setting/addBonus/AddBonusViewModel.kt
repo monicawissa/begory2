@@ -25,7 +25,7 @@ class AddBonusViewModel  @ViewModelInject constructor(private val appRepository:
     val mStudentAttendancesList: LiveData<Boolean>
         get() = _mStudentAttendancesList
 
-      var studentLevel: FirebaseFilterType.LevelFilterType? = null
+      var studentLevel: String? = ""
 
 
     var mTitleTV = savedStateHandle.getLiveData<String>("settingType").value
@@ -37,7 +37,7 @@ class AddBonusViewModel  @ViewModelInject constructor(private val appRepository:
         override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
             var levelId= FirebaseFilterType.fbConvert(((parent!!.getItemAtPosition(position)) as Level).levelId!!)
             if(levelId!=FirebaseFilterType.LevelFilterType.no){
-                studentLevel = levelId
+                studentLevel += levelId
                 mListLast.clear()
                 _mStudentList.clear()
                 getStudentList()

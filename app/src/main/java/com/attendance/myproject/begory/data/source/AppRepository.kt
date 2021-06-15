@@ -193,7 +193,7 @@ class AppRepository @Inject constructor(private val mRemoteDataSource: IRemoteDa
 
     }
 
-    override fun filterLevel(level: FirebaseFilterType.LevelFilterType, callback: IRemoteDataSource.UsersCallback) {
+    override fun filterLevel(level: String, callback: IRemoteDataSource.UsersCallback) {
         mRemoteDataSource.filterLevel(level,object :IRemoteDataSource.UsersCallback{
             override fun onResponse(user: List<User>) {
                 callback.onResponse(user)

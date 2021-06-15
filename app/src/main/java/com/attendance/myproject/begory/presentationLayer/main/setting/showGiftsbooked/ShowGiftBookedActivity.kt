@@ -48,6 +48,19 @@ class ShowGiftBookedActivity : BaseActivity1() , CompoundButton.OnCheckedChangeL
             mItems.add(R.string.lev_Augustine)
         return mItems.toList()
     }
+    private fun initLevelsSpinner() {
+        mLevelsList.clear()
+        val level = Level(-1, getString(R.string.choose_level))
+        mLevelsList.add(level)
+        for(i in list){
+
+            mLevelsList.add(Level(i, getString(i)))
+        }
+        val dataAdapter: ArrayAdapter<Level> = ArrayAdapter<Level>(this,
+                android.R.layout.simple_spinner_item, mLevelsList)
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.spLevels.adapter = dataAdapter
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d(ContentValues.TAG, "showMessage: create UpdateBlaBla")
@@ -72,19 +85,7 @@ class ShowGiftBookedActivity : BaseActivity1() , CompoundButton.OnCheckedChangeL
         recyclerViewAdapter!!.notifyDataSetChanged()
         binding.rvAttendance.smoothScrollToPosition(0)
     }
-    private fun initLevelsSpinner() {
-        mLevelsList.clear()
-        val level = Level(-1, getString(R.string.choose_level))
-        mLevelsList.add(level)
-        for(i in list){
 
-            mLevelsList.add(Level(i, getString(i)))
-        }
-        val dataAdapter: ArrayAdapter<Level> = ArrayAdapter<Level>(this,
-                android.R.layout.simple_spinner_item, mLevelsList)
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        binding.spLevels.adapter = dataAdapter
-    }
     override fun onCheckedChanged(compoundButton: CompoundButton?, b: Boolean) {
         initRecyclerView()
     }

@@ -227,7 +227,7 @@ class RemoteDataSource @Inject constructor(private val firebaseDatabase: Firebas
 
     }
 
-    override fun filterLevel(level: FirebaseFilterType.LevelFilterType, callback: IRemoteDataSource.UsersCallback) {
+    override fun filterLevel(level: String, callback: IRemoteDataSource.UsersCallback) {
         val ref = baseRef.child(FirebaseFilterType.users).orderByChild("studentLevel").equalTo(level.toString())
         ref.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {

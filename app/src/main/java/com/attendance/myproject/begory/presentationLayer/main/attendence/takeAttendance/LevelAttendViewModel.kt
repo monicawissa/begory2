@@ -1,6 +1,4 @@
 package com.attendance.myproject.begory.presentationLayer.main.attendence.takeAttendance
-import android.view.View
-import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.hilt.Assisted
 import androidx.hilt.lifecycle.ViewModelInject
@@ -11,8 +9,6 @@ import com.attendance.myproject.begory.data.Models.User
 import com.attendance.myproject.begory.data.Models.remote.FirebaseFilterType
 import com.attendance.myproject.begory.data.source.AppRepository
 import com.attendance.myproject.begory.data.source.remote.IRemoteDataSource
-import com.google.firebase.database.FirebaseDatabase
-import java.util.*
 import kotlin.collections.ArrayList
 
 
@@ -67,7 +63,7 @@ class LevelAttendViewModel  @ViewModelInject constructor(private val appReposito
     fun getStudentList() {
         _dataLoading.value = true
         _isCheckBtnAvailable.value=false
-        appRepository.filterLevel(FirebaseFilterType.fbConvert(mTitleTV!!), object : IRemoteDataSource.UsersCallback {
+        appRepository.filterLevel(""+FirebaseFilterType.fbConvert(mTitleTV!!), object : IRemoteDataSource.UsersCallback {
             override fun onResponse(users: List<User>) {
 
                 mStudentList.addAll(users)

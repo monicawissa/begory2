@@ -3,16 +3,21 @@ package com.attendance.myproject.begory.presentationLayer.login
 import android.content.ContentValues
 import android.os.Bundle
 import android.util.Log
+import android.widget.ArrayAdapter
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import com.attendance.myproject.begory.R
 import com.attendance.myproject.begory.Utilities.UiManager
+import com.attendance.myproject.begory.data.Models.Level
 import com.attendance.myproject.begory.data.Models.User
+import com.attendance.myproject.begory.data.Models.remote.FirebaseFilterType
+import com.attendance.myproject.begory.data.source.local.prefs.AppPreferencesHelper
 import com.attendance.myproject.begory.databinding.ActivityLoginBinding
 import com.attendance.myproject.begory.presentationLayer.BaseActivity
 import com.attendance.myproject.begory.presentationLayer.main.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
+import java.util.ArrayList
 
 @AndroidEntryPoint
 class LoginActivity : BaseActivity() ,LoginNavigator{
@@ -20,6 +25,8 @@ class LoginActivity : BaseActivity() ,LoginNavigator{
     private  val loginViewModel: LoginViewModel by viewModels()
     override val layoutId: Int
         get() = R.layout.activity_login
+    private val mLevelsList: ArrayList<Level> = ArrayList<Level>()
+    private lateinit var  list :List<Int>
 
     override fun initializeView() {
     }
@@ -32,9 +39,39 @@ class LoginActivity : BaseActivity() ,LoginNavigator{
         binding.loginViewModel=loginViewModel
         binding.lifecycleOwner = this
         subscribeToNavigationChanges(loginViewModel)
+        list=fillMenu()!!
+        initLevelsSpinner()
 
     }
+    private fun fillMenu(): List<Int>? {
+        val mItems = ArrayList<Int>()
+        mItems.clear()
+        val v= AppPreferencesHelper (applicationContext)
+        val user=v.getUser()
+        if((user!!.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.College).toString())||
+                (user.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.College).toString()))
+            mItems.add(R.string.lev_college)
+        if((user.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString())||
+                (user.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Grad).toString()))
+            mItems.add(R.string.lev_Grad)
+        if((user.subAdminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Augustine).toString())||
+                (user.adminLevel.toString()).contains((FirebaseFilterType.LevelFilterType.Augustine).toString()))
+            mItems.add(R.string.lev_Augustine)
+        return mItems.toList()
+    }
+    private fun initLevelsSpinner() {
+        mLevelsList.clear()
+        val level = Level(-1, getString(R.string.choose_level))
+        mLevelsList.add(level)
+        for(i in list){
 
+            mLevelsList.add(Level(i, getString(i)))
+        }
+        val dataAdapter: ArrayAdapter<Level> = ArrayAdapter<Level>(this,
+                android.R.layout.simple_spinner_item, mLevelsList)
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.spLevels.adapter = dataAdapter
+    }
     override fun openMainActivity(second: User?) {
         UiManager.startActivity(this@LoginActivity, MainActivity::class.java,getString(R.string.userType),second!!)
         finish()
