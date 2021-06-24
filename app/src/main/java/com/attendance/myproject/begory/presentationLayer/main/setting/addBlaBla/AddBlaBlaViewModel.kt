@@ -28,7 +28,7 @@ class AddBlaBlaViewModel  @ViewModelInject constructor(private val appRepository
     var mobile2: String = ""
     var address: String = ""
     var isshamas: Boolean = false
-    var studentLevel: String? = null
+    var studentLevel: String? = ""
     var adminLevel: String? = ""
     var subAdminLevel: String? = ""
     var mTitleTV = savedStateHandle.getLiveData<String>("settingType").value
@@ -47,9 +47,11 @@ class AddBlaBlaViewModel  @ViewModelInject constructor(private val appRepository
         }
 
         override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-            studentLevel += FirebaseFilterType.fbConvert(
-                    ((parent!!.getItemAtPosition(position)) as Level).levelId!!
-            )
+            var levelId= FirebaseFilterType.fbConvert(((parent!!.getItemAtPosition(position)) as Level).levelId!!)
+            if(levelId!=FirebaseFilterType.LevelFilterType.no){
+                studentLevel=""
+                studentLevel += levelId
+            }
             //studentLevel+='_'
         }
     }
@@ -167,7 +169,7 @@ class AddBlaBlaViewModel  @ViewModelInject constructor(private val appRepository
                 //if( mTitleTV == "إضافة امين خدمة") adminLevel=  selectedItems
                 var user: User = User(mobile = mobile,
                         mobile_password = "$mobile $mobile",
-                        subAdminLevel = subAdminLevel)
+                        subAdminLevel = subAdminLevel,name = name, studentLevel = FirebaseFilterType.LevelFilterType.Servant.toString()+'_')
                 appRepository.registerSubAdmin(user, object : IRemoteDataSource.MessageCallback {
                     override fun onResponse(message: Int?) {
                         showSnackbarMessage(message!!)
@@ -191,7 +193,7 @@ class AddBlaBlaViewModel  @ViewModelInject constructor(private val appRepository
             if (isDataValidAdminOrSubAdmin()) {
                 adminLevel = selectedData
                 var user: User = User(mobile = mobile,mobile_password = "$mobile $mobile",
-                        adminLevel = adminLevel)
+                        adminLevel = adminLevel,name = name, studentLevel = FirebaseFilterType.LevelFilterType.Servant.toString()+'_')
                 appRepository.registerAdmin(user, object : IRemoteDataSource.MessageCallback {
                     override fun onResponse(message: Int?) {
                         showSnackbarMessage(message!!)

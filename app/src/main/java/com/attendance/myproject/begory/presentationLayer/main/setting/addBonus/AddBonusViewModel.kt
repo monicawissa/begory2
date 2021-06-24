@@ -37,6 +37,7 @@ class AddBonusViewModel  @ViewModelInject constructor(private val appRepository:
         override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
             var levelId= FirebaseFilterType.fbConvert(((parent!!.getItemAtPosition(position)) as Level).levelId!!)
             if(levelId!=FirebaseFilterType.LevelFilterType.no){
+                studentLevel=""
                 studentLevel += levelId
                 mListLast.clear()
                 _mStudentList.clear()
@@ -112,7 +113,7 @@ class AddBonusViewModel  @ViewModelInject constructor(private val appRepository:
         for (i in mListLast){
 
             if(_mStudentList[y].price!=i.price){
-                appRepository.updateStudent(i!!,object :IRemoteDataSource.MessageCallback{
+                appRepository.updateStudentbyLevel(i!!, studentLevel!!,object :IRemoteDataSource.MessageCallback{
                     override fun onResponse(message: Int?) {
                         showSnackbarMessage(message!!)
                         if(y==(mListLast.size))_dataLoading.value = false

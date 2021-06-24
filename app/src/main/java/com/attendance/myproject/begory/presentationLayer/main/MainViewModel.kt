@@ -85,10 +85,20 @@ class MainViewModel @ViewModelInject constructor(private val appRepository: AppR
     }
 
     private fun getUser() {
-        user=appRepository.getUser()
-            if(user==null)logout()
-            else{
-              //go to profile if it's first time
+        appRepository.getUserbyLevel(object :IRemoteDataSource.LoginCallback{
+            override fun onResponse(i: User) {
+                user=i
+                if(user==null)logout()
+                else{
+                    //go to profile if it's first time
+                }
             }
+
+            override fun onDataNotAvailable(message: Int?) {
+                TODO("Not yet implemented")
+            }
+
+        })
+
     }
 }

@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="8dp"
-    android:layout_marginBottom="8dp"
-    app:cardCornerRadius="13dp"
     android:orientation="vertical"
-    >
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/rect_dialog_box"
-        >
+    android:background="@drawable/btn_menu_selector"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="13dp">
 
         <TextView
             android:id="@+id/tv_prize_cost"
@@ -30,10 +21,11 @@
             android:textSize="28sp" />
 
         <ImageView
-            android:id="@+id/iv_prize"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:gravity="center" />
+        android:id="@+id/iv_prize"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+
+        android:gravity="center"/>
 
         <TextView
             android:id="@+id/tv_prize_name"
@@ -63,7 +55,3 @@
             android:textStyle="bold" />
 
     </LinearLayout>
-
-
-
-</androidx.cardview.widget.CardView>

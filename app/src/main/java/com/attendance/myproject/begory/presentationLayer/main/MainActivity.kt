@@ -4,12 +4,13 @@ import android.content.ContentValues
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
+import android.view.View
 import androidx.activity.viewModels
-import androidx.annotation.NonNull
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
 import com.attendance.myproject.begory.R
 import com.attendance.myproject.begory.Utilities.UiManager
 import com.attendance.myproject.begory.data.Models.User
@@ -17,8 +18,10 @@ import com.attendance.myproject.begory.databinding.ActivityMainBinding
 import com.attendance.myproject.begory.presentationLayer.BaseActivity
 import com.attendance.myproject.begory.presentationLayer.login.LoginActivity
 import com.attendance.myproject.begory.presentationLayer.main.changePassword.PasswordActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 @AndroidEntryPoint
 class MainActivity : BaseActivity() , MainNavigator {
@@ -46,16 +49,19 @@ class MainActivity : BaseActivity() , MainNavigator {
         subscribeToNavigationChanges(mainViewModel)
         //nav
         navController = findNavController(R.id.nav_host_fragment)
-        if(user.firstTime_ToLogin)openFistTimeToLoginActivity()
 
+
+        if(user.firstTime_ToLogin)openFistTimeToLoginActivity()
+        val bottomNavigationView = findViewById<View>(R.id.bottomBar) as BottomNavigationView
+        if(user.subAdminLevel.isNullOrEmpty()&&user.adminLevel.isNullOrEmpty())
+            bottomNavigationView.menu.removeItem(R.id.navigation_attendance)
+        if(user.adminLevel.isNullOrEmpty())
+            bottomNavigationView.menu.removeItem(R.id.navigation_settings)
+        //bottomNavigationView.menu.removeItem(R.id.navigation_notifications)
+
+        bottomNavigationView.setupWithNavController(navController)
     }
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        if(user.subAdminLevel.isNullOrEmpty()&&user.adminLevel.isNullOrEmpty())menu!!.removeItem(R.id.navigation_attendance)
-        if(user.adminLevel.isNullOrEmpty())menu!!.removeItem(R.id.navigation_settings)
-        menuInflater.inflate(R.menu.menu_main,menu)
-        bottomBar.setupWithNavController(menu!!,navController)
-        return true
-    }
+
 //    override fun onSupportNavigateUp(): Boolean {
 //        navController.navigateUp()
 //        return true

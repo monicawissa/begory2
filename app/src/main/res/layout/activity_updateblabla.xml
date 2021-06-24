@@ -66,16 +66,16 @@
                     android:textColor="@color/white"
                     android:textStyle="bold" />
 
-                <Spinner
-                    android:id="@+id/sp_levels"
-                    android:layout_width="match_parent"
-                    android:layout_height="42dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:background="@drawable/rect_white_box"
-                    tools:setOnItemSelectedListener="@{updateBlaBlaViewModel.spinnerListener}"
-                    android:visibility="@{updateBlaBlaViewModel.isStudentAvailable ?View.VISIBLE: View.GONE  }"
-                    />
+<!--                <Spinner-->
+<!--                    android:id="@+id/sp_levels"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="42dp"-->
+<!--                    android:layout_marginLeft="16dp"-->
+<!--                    android:layout_marginRight="16dp"-->
+<!--                    android:background="@drawable/rect_white_box"-->
+<!--                    tools:setOnItemSelectedListener="@{updateBlaBlaViewModel.spinnerListener}"-->
+<!--                    android:visibility="@{updateBlaBlaViewModel.isStudentAvailable ?View.VISIBLE: View.GONE  }"-->
+<!--                    />-->
                 <com.attendance.myproject.begory.multispinnerfilter.MultiSpinnerSearch
                     android:id="@+id/multipleItemSelectionSpinner"
                     android:layout_width="match_parent"

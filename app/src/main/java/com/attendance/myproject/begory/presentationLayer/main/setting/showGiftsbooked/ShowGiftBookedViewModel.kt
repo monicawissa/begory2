@@ -37,6 +37,7 @@ class ShowGiftBookedViewModel  @ViewModelInject constructor(private val appRepos
         override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
             var levelId= FirebaseFilterType.fbConvert(((parent!!.getItemAtPosition(position)) as Level).levelId!!)
             if(levelId!=FirebaseFilterType.LevelFilterType.no){
+                studentLevel=""
                 studentLevel += levelId
                 mListLast.clear()
                 mStudentList.clear()

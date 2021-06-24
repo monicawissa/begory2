@@ -59,20 +59,9 @@ class UpdateBlaBlaActivity : BaseActivity1() {
         binding.lifecycleOwner = this
         list=fillMenu()!!
         subscribeToNavigationChanges(updateBlaBlaViewModel)
-        if(settingType==getString(R.string.m_edit_student))initLevelsSpinner()
-        else initLevelsMultiSelectSpinner()
+        initLevelsMultiSelectSpinner()
     }
-    private fun initLevelsSpinner() {
-        mLevelsList.clear()
-        for(i in list){
-        var level = Level(i, getString(i))
-        mLevelsList.add(level)
-        }
-        val dataAdapter: ArrayAdapter<Level> = ArrayAdapter<Level>(this,
-                android.R.layout.simple_spinner_item, mLevelsList)
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        binding.spLevels.adapter = dataAdapter
-    }
+
     private fun initLevelsMultiSelectSpinner() {
         val mLevelsList: MutableList<KeyPairBoolData> = ArrayList()
 

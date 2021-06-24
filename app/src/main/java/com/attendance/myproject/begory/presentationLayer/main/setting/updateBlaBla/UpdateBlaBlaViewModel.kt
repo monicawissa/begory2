@@ -42,19 +42,21 @@ class UpdateBlaBlaViewModel  @ViewModelInject constructor(private val appReposit
         }
         selectedData=str
     }
-    val spinnerListener = object : AdapterView.OnItemSelectedListener {
-        override fun onNothingSelected(parent: AdapterView<*>?) {
-
-        }
-
-        override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-            studentLevel += FirebaseFilterType.fbConvert(
-                    ((parent!!.getItemAtPosition(position)) as Level).levelId!!
-            )
-            //studentLevel+='_'
-
-        }
-    }
+//    val spinnerListener = object : AdapterView.OnItemSelectedListener {
+//        override fun onNothingSelected(parent: AdapterView<*>?) {
+//
+//        }
+//
+//        override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+//            var levelId= FirebaseFilterType.fbConvert(((parent!!.getItemAtPosition(position)) as Level).levelId!!)
+//            if(levelId!=FirebaseFilterType.LevelFilterType.no){
+//                studentLevel=""
+//                studentLevel += levelId
+//            }
+//            //studentLevel+='_'
+//
+//        }
+//    }
 
 
     //clickable of button
@@ -97,7 +99,7 @@ class UpdateBlaBlaViewModel  @ViewModelInject constructor(private val appReposit
     init {
         _ishideKeyboard.value = false
         _isBtnAvailable.value = true
-        _isStudentAvailable.value = (mTitleTV.equals("تعديل مخدوم"))
+        _isStudentAvailable.value = false
         _isOpenMain.value=false
     }
 
@@ -112,7 +114,7 @@ class UpdateBlaBlaViewModel  @ViewModelInject constructor(private val appReposit
             showSnackbarMessage(R.string.fill_mobiledata)
             return false
         }
-        if (TextUtils.isEmpty(name) || (mTitleTV.equals("تعديل مخدوم") && studentLevel == null)) {
+        if (TextUtils.isEmpty(name) || (mTitleTV.equals("تعديل مخدوم") && selectedData.isEmpty())) {
             Log.d(ContentValues.TAG, "showMessage: PasswordValid")
             showSnackbarMessage(R.string.fill_name_level)
             return false
@@ -150,7 +152,7 @@ class UpdateBlaBlaViewModel  @ViewModelInject constructor(private val appReposit
                 usertmp.address=address
                 usertmp.isShamas=isshamas
                 usertmp.studentLevel=studentLevel
-                appRepository.updateStudent(usertmp, object : IRemoteDataSource.MessageCallback {
+                appRepository.updateStudent(usertmp,selectedData!!, object : IRemoteDataSource.MessageCallback {
                     override fun onResponse(message: Int?) {
                         showSnackbarMessage(message!!)
                         _dataLoading.value = false

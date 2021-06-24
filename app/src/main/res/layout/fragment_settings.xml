@@ -8,12 +8,11 @@
     android:background="@drawable/p1"
     >
 
-        <com.attendance.myproject.begory.Utilities.GridRecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_menu"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:padding="16dp"
-            android:layoutAnimation="@anim/grid_layout_animation_from_bottom"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

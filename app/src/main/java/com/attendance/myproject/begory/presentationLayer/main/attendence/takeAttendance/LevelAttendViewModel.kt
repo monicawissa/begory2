@@ -25,6 +25,10 @@ class LevelAttendViewModel  @ViewModelInject constructor(private val appReposito
         get() = _mStudentAttendancesList
 
     var mTitleTV = savedStateHandle.getLiveData<Int>("settingType").value
+    //Btn close page
+    private val _isclose = MutableLiveData<Boolean>()
+    val isclose: LiveData<Boolean>
+        get() = _isclose
 
     //Btn check Available
     private val _isCheckBtnAvailable = MutableLiveData<Boolean>()
@@ -119,9 +123,10 @@ class LevelAttendViewModel  @ViewModelInject constructor(private val appReposito
         _ishideKeyboard.value = true
         _dataLoading.value = true
         _isCheckBtnAvailable.value = false
-        appRepository.updateAttendance(mListLast, object : IRemoteDataSource.MessageCallback {
+        appRepository.updateAttendance(mListLast,""+FirebaseFilterType.fbConvert(mTitleTV!!), object : IRemoteDataSource.MessageCallback {
             override fun onResponse(message: Int?) {
                 showSnackbarMessage(message!!)
+                _isclose.value=true
                 _isCheckBtnAvailable.value = true
                 _dataLoading.value = false
             }

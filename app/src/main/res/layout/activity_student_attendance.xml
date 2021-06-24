@@ -69,13 +69,19 @@
             android:layout_marginRight="16dp"
             android:background="@drawable/rect_white_box"/>
 
-
-        <com.attendance.myproject.begory.Utilities.GridRecyclerView
-            android:id="@+id/rv_attendance"
+        <RecyclerView
+            android:id="@+id/rv_students"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layoutAnimation="@anim/grid_layout_animation_from_bottom"
-            android:padding="16dp"/>
+            android:padding="16dp"
+            tools:listitem="@layout/row_menu"
+            />
+<!--        <com.attendance.myproject.begory.Utilities.GridRecyclerView-->
+<!--            android:id="@+id/rv_attendance"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layoutAnimation="@anim/grid_layout_animation_from_bottom"-->
+<!--            android:padding="16dp"/>-->
 
     </LinearLayout>
 

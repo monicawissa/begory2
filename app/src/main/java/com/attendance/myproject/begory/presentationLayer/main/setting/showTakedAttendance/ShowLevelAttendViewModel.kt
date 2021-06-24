@@ -36,6 +36,7 @@ class ShowLevelAttendViewModel  @ViewModelInject constructor(private val appRepo
         override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
             var levelId= FirebaseFilterType.fbConvert(((parent!!.getItemAtPosition(position)) as Level).levelId!!)
             if(levelId!=FirebaseFilterType.LevelFilterType.no){
+                studentLevel=""
                 studentLevel += levelId
                 mListLast.clear()
                 mStudentList.clear()

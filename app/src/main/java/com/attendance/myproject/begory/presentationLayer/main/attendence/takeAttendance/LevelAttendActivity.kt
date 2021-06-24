@@ -108,9 +108,11 @@ class LevelAttendActivity : BaseActivity1() {
                     Observer {
                         if (it == true) hide_Keyboard()
                     })
+            isclose.observe(activity,{if(it)finish()})
             mStudentAttendancesList.observe(activity, Observer {if (it == true) initRecyclerView()})
             snackbarMessage.observe(activity, Observer { showMessage(getString(it.getContentIfNotHandled()!!)) })
             snackbarMessage2.observe(activity, Observer { showMessage(it) })
+
         }
     }
 }

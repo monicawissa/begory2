@@ -75,7 +75,7 @@ class ProfileViewModel  @ViewModelInject constructor(private val appRepository: 
     }
 
     private fun getUser() {
-        appRepository.getUserLastUpdate(object:IRemoteDataSource.LoginCallback{
+        appRepository.getUserbyLevel(object:IRemoteDataSource.LoginCallback{
             override fun onResponse(user: User) {
                 //name="yes"
                 setuser(user)
@@ -131,7 +131,7 @@ class ProfileViewModel  @ViewModelInject constructor(private val appRepository: 
                 usertmp.password=password.value
                 usertmp.mobile_password="${mobile.value} ${usertmp.password}"
                 usertmp.address=address.value
-                appRepository.updateStudent(usertmp, object : IRemoteDataSource.MessageCallback {
+                appRepository.updateStudent(usertmp, "",object : IRemoteDataSource.MessageCallback {
                     override fun onResponse(message: Int?) {
                         showSnackbarMessage(message!!)
                         appRepository.setUser(usertmp)

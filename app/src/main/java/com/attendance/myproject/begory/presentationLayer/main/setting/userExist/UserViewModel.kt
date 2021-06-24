@@ -89,7 +89,7 @@ class UserViewModel  @ViewModelInject constructor(private val appRepository: App
         _ishideKeyboard.value = true
         _dataLoading.value = true
         if (ismobileValid()) {
-            appRepository.checkUserExist(mobile, object : IRemoteDataSource.LoginCallback {
+            appRepository.getUserbyLevel(object : IRemoteDataSource.LoginCallback {
                 override fun onResponse(user: User) {
                     _isCheckBtnAvailable.value = false
                     _dataLoading.value = false

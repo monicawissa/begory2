@@ -39,14 +39,16 @@ public interface IRemoteDataSource {
                         , callback: IRemoteDataSource.MessageCallback)
     fun registerSubAdmin(user: User,callback: IRemoteDataSource.MessageCallback)
     fun registerAdmin(user: User,callback: IRemoteDataSource.MessageCallback)
-    fun checkUserExist(mobile: String, callback: LoginCallback)
+    fun getUserbyLevel(mobile: String,level: String, callback: LoginCallback)
     fun updateStudent(user: User
-                      , callback: IRemoteDataSource.MessageCallback)
+                      ,level:String,  callback: IRemoteDataSource.MessageCallback)
+    fun updateStudentbyLevel(user: User
+                      ,level:String,  callback: IRemoteDataSource.MessageCallback)
     fun updateSubAdmin(user: User,callback: IRemoteDataSource.MessageCallback)
     fun updateAdmin(user: User,callback: IRemoteDataSource.MessageCallback)
-    fun updatePassword(user: User,callback: IRemoteDataSource.LoginCallback)
+    fun updatePassword(user: User,level: String,callback: IRemoteDataSource.LoginCallback)
     fun filterLevel(level: String, callback: UsersCallback)
-    fun updateAttendance(listOfAttendence: List<Attendance>?, callback: MessageCallback)
+    fun updateAttendance(listOfAttendence: List<Attendance>?,level:String,  callback: MessageCallback)
     fun filterGift(studentLevel: String, giftsCallback: ShowGiftsCallback)
     fun bookingGifts(level: FirebaseFilterType.LevelFilterType, showBookingGiftsCallback: IRemoteDataSource.ShowBookingGiftsCallback)
 

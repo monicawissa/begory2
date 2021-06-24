@@ -7,7 +7,12 @@
         android:icon="@drawable/ic_home"
         android:visibility="visible"
         />
-
+    <item
+        android:id="@+id/navigation_booked"
+        android:title="@string/title_booked"
+        android:icon="@drawable/shop"
+        android:visibility="visible"
+        />
     <item
         android:id="@+id/navigation_attendance"
         android:title="@string/title_attendance"
@@ -15,12 +20,12 @@
         android:visibility="visible"
         />
 
-    <item
-        android:id="@+id/navigation_notifications"
-        android:title="@string/title_notifications"
-        android:icon="@drawable/ic_notification"
-        android:visibility="gone"
-        />
+<!--    <item-->
+<!--        android:id="@+id/navigation_notifications"-->
+<!--        android:title="@string/title_notifications"-->
+<!--        android:icon="@drawable/ic_notification"-->
+<!--        android:visibility="gone"-->
+<!--        />-->
 
     <item
         android:id="@+id/navigation_settings"

@@ -29,7 +29,11 @@ class LoginViewModel  @ViewModelInject constructor(private val appRepository: Ap
         }
 
         override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-            selectedLevel+= FirebaseFilterType.fbConvert(((parent!!.getItemAtPosition(position)) as Level).levelId!!)
+            var levelId= FirebaseFilterType.fbConvert(((parent!!.getItemAtPosition(position)) as Level).levelId!!)
+            if(levelId!=FirebaseFilterType.LevelFilterType.no){
+                selectedLevel=""
+                selectedLevel += levelId
+            }
         }
     }
     //clickable of button

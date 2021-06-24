@@ -29,19 +29,18 @@
                     android:layout_height="match_parent"
                     android:background="#6B000000"/>
 
-                <ImageView
-                    android:id="@+id/logo"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:scaleType="fitXY"
-                    android:layout_centerHorizontal="true"
-                    android:background="@drawable/begory_splash"/>
+<!--                <ImageView-->
+<!--                    android:id="@+id/logo"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:scaleType="fitXY"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:background="@drawable/begory_splash"/>-->
 
                 <LinearLayout
                     android:id="@+id/lv_header"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/logo"
                     android:layout_centerHorizontal="true"
                     android:orientation="horizontal">
 
@@ -95,7 +94,6 @@
                     android:padding="16dp"
                     android:layout_above="@+id/btn_book_now"
                     android:paddingBottom="8dp"
-                    android:layoutAnimation="@anim/grid_layout_animation_from_bottom"
                     tools:listitem="@layout/row_menu"
                     />
 
@@ -114,7 +112,9 @@
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold"
-
+                    android:background="@{shopViewModel.dataLoading ? @drawable/btn_menu_selector :@drawable/btn_white_selector }"
+                    android:onClick="@{()-> shopViewModel.btnadd()}"
+                    android:clickable="@{!shopViewModel.dataLoading}"
                     />
 
         </RelativeLayout>

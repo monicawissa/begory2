@@ -105,7 +105,6 @@
                     android:textColor="#3F3F3F"
                     android:textColorHint="#3F3F3F"
                     android:textSize="14sp"
-                    android:visibility="@{addBlaBlaViewModel.isStudentAvailable ?View.VISIBLE: View.GONE  }"
                     />
 
 

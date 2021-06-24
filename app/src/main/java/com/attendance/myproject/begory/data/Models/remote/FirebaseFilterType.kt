@@ -27,16 +27,18 @@ class FirebaseFilterType {
     const val users = "Users"
     const val selectedGifts = "SelectedGifts"
     const val gifts = "Gifts"
+        const val levels = "Levels"
     const val studentAttendance = "StudentAttendances"
         fun fbConvert( i:Int):LevelFilterType=
             when(i) {
                 R.string.lev_Grad -> LevelFilterType.Grad
                 R.string.lev_college -> LevelFilterType.College
                 R.string.lev_Augustine -> LevelFilterType.Augustine
+                R.string.lev_Servant -> LevelFilterType.Servant
                 else -> LevelFilterType.no
             }
     }
     enum class LevelFilterType {
-      College,Grad,Augustine,no
+      College,Grad,Augustine,no,Servant,
     }
 }
